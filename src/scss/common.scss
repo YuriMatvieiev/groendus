@@ -1,0 +1,63 @@
+// Заголовки, общие БЄМ блоки и проче...
+
+.blue-button {
+  color: #FFFFFF;
+  font-weight: 700;
+  @include adaptiveValue("font-size", 15, 12);
+    @include adaptiveValue("line-height", 17, 13);
+    background-color: $blue-light;
+    display: inline-block;
+    text-align: center; 
+
+    @media (any-hover: hover){
+      &:hover{
+        background-color: $mainColor;
+        transition: all 0.3s ease 0s;
+      }
+    }
+}
+.black-button {
+  color: #FFFFFF;
+  font-weight: 700;
+  @include adaptiveValue("font-size", 15, 12);
+    @include adaptiveValue("line-height", 17, 13);
+    background-color: $mainColor;
+    display: inline-block;
+    text-align: center; 
+
+    @media (any-hover: hover){
+      &:hover{
+        background-color: #020202;
+        transition: all 0.3s ease 0s;
+      }
+    }
+}
+.white-button {
+  color: $blue-light;
+  font-weight: 700;
+  @include adaptiveValue("font-size", 15, 12);
+    @include adaptiveValue("line-height", 17, 13);
+    background-color: #FFFFFF;
+    display: inline-block;
+    text-align: center; 
+    @media (any-hover: hover){
+      &:hover{
+        color: #FFFFFF;
+        background-color: #020202;
+        transition: all 0.3s ease 0s;
+      }
+    }
+}
+.blue-text {
+  color: $blue-light;
+}
+
+.rotated {
+  transform: rotate(270deg) !important;
+}
+
+.rotated-arrow {
+  &::before{
+    transform: rotate(270deg) !important;
+  }
+}

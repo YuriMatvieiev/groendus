@@ -1,0 +1,145 @@
+.duurzaam{
+
+  .ovner{
+    @include adaptiveValue("margin-bottom", 135, 55);
+    @media (max-width:$mobile){
+       background-color: $blue-light ; 
+       
+    }
+    .ovner__box{
+      @media (max-width:$mobile){
+        background-color: $blue-light; 
+        border-bottom:   none;
+      }
+    }
+    .ovner__text-block{
+      color: #fff;
+    }
+    .ovner__button{
+      background-color: #141414;
+    }
+  }
+}
+
+//========================================================================================================================================================
+
+.duurzaam-steps {
+  @include adaptiveValue("padding-top", 169, 223);
+  @include adaptiveValue("padding-bottom", 133, 48);
+  // .duurzaam-steps__container
+  &__container {
+  }
+  // .duurzaam-steps__title
+  &__title {
+    font-weight: 700;
+    @include adaptiveValue("font-size", 46, 30);
+    @include adaptiveValue("line-height", 51, 33);
+    text-align: center;
+    margin-bottom: rem(8);
+  }
+  // .duurzaam-steps__desc
+  &__desc {
+    font-size: rem(18);
+    line-height: math.div(25 , 18);
+    text-align: center;
+  }
+  // .duurzaam-steps__box
+  &__box {
+    margin-top: rem(133);
+    display: flex;
+    flex-direction: column;
+    @include adaptiveValue("gap", 155, 100);
+    position: relative;
+    @media (max-width:$mobile){
+       padding-top: 100px; 
+       margin-top: 25px;
+    }
+  }
+  // .duurzaam-steps__item
+  &__item {
+    display: flex;
+    gap: 127px;
+    @include adaptiveValue("gap", 127, 90, 0, 1240, 768);
+    background-color: #fff;
+    
+    @media (max-width:$mobile){
+      position: relative;
+      z-index: 2; 
+      padding: 25px 0;
+      max-width: rem(500);
+      margin: 0 auto;
+    }
+  }
+  // .duurzaam-steps__item-img
+  &__item-img {
+    img{
+      @include adaptiveValue("width", 310, 273, 0, 1240, 768);
+    }
+  }
+  // .duurzaam-steps__item-text
+  &__item-text {
+    @media (max-width:$mobile){
+       text-align: center; 
+    }
+  }
+  // .duurzaam-steps__item-subtitle
+  &__item-subtitle {
+    color: $blue-light;
+    @include adaptiveValue("font-size", 16, 14);
+    @include adaptiveValue("line-height", 18, 15);
+    @include adaptiveValue("margin-bottom", 16, 8);
+  }
+  // .duurzaam-steps__item-title
+  &__item-title {
+    font-weight: 700;
+    color: #020202;
+    @include adaptiveValue("font-size", 36, 22);
+    @include adaptiveValue("line-height", 40, 24);
+    @include adaptiveValue("margin-bottom", 12, 27);
+  }
+  // .duurzaam-steps__item-desc
+  &__item-desc {
+    color: #020202;
+    @include adaptiveValue("font-size", 18, 14);
+    @include adaptiveValue("line-height", 29, 20);
+    @include adaptiveValue("margin-bottom", 22, 24);
+    @media (max-width:$mobile){
+       margin-top: rem(24); 
+    }
+  }
+  // .duurzaam-steps__item-button
+  &__item-button {
+    padding: 14px 27px;
+  }
+  .steps {
+    // .steps__line
+    &__line{
+      @include adaptiveValue("left", 371, 316, 0, 1240, 768);
+      @include adaptiveValue("height", 825, 890, 0, 1240, 768);
+      @media (max-width:$mobile){
+         left: 50%;
+         height: 100%; 
+      }
+    }
+    &__top-circle{
+      @include adaptiveValue("left", 330, 275, 0, 1240, 768);
+      @media (max-width:$mobile){
+         display: none; 
+      }
+    }
+    &__step1-circle{
+      @include adaptiveValue("top", 422, 425, 0, 1240, 768);
+      @include adaptiveValue("left", 361, 306, 0, 1240, 768);
+      @media (max-width:$mobile){
+         display: none; 
+      }
+    }
+    &__step2-circle{
+      @include adaptiveValue("top", 815, 880, 0, 1240, 768);
+      @include adaptiveValue("left", 361, 306, 0, 1240, 768);
+      @media (max-width:$mobile){
+         display: none; 
+      }
+    }
+  }
+}

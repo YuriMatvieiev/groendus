@@ -1,0 +1,65 @@
+//====================================================================================================
+.footer {
+  color: $gray;
+  font-size: rem(14);
+  line-height: math.div(15 , 14);
+  padding-top: 56px;
+  @include adaptiveValue("padding-bottom", 66, 18);
+  border-top: 1px solid rgba(20, 20, 20, 0.1);
+  // .footer__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width:$tablet){
+      flex-direction: column;
+    }
+  }
+  // .footer__copy
+  &__copy {
+    @media (max-width:$tablet){
+      order: 3;
+    }
+  }
+  // .footer__menu
+  &__menu {
+    display: flex;
+    align-items: center;
+    @include adaptiveValue("gap", 47, 20, 0, 1240, 991.98);
+    a{
+      @media (any-hover: hover){
+        &:hover{
+          color: $blue-light;
+          transition: all 0.3s ease 0s;
+        }
+      }
+    }
+    @media (max-width:$tablet){
+      order: 1;
+      margin-bottom: rem(27);
+    }
+    @media (max-width:$mobile){
+       flex-wrap: wrap; 
+       justify-content: center;
+    }
+  }
+  // .footer__socials
+  &__socials {
+    display: flex;
+    @include adaptiveValue("gap", 34, 22);
+    @include adaptiveValue("font-size", 24, 16);
+    a{
+      @media (any-hover: hover){
+        &:hover{
+          color: $blue-light;
+          transition: all 0.3s ease 0s;
+        }
+      }
+    }
+    @media (max-width:$tablet){
+      order: 2;
+      margin-bottom: rem(64);
+    }
+  }
+}
+//====================================================================================================

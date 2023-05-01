@@ -1,0 +1,483 @@
+.opwekken{
+  .wrapper {
+    overflow: visible;
+    overflow-x: clip;
+}
+}
+
+//========================================================================================================================================================
+
+.ovner.blue-border {
+  position: static;
+  margin-top: rem(133);
+  @include adaptiveValue("padding-bottom", 80, 45);
+  @media (max-width:$mobile){
+     margin-top: rem(186); 
+  }
+  .ovner__box{
+    box-shadow: none;
+    padding: 0;
+    border: none;
+  }
+  .ovner__subtitle{
+    margin-bottom: rem(8);
+    color: $blue-light;
+    @include adaptiveValue("font-size", 16, 14);
+    @include adaptiveValue("line-height", 18, 15);
+  }
+  .ovner__text-block {
+@include adaptiveValue("max-width", 612, 390, 0, 1240, 768);
+@include adaptiveValue("padding-left", 87, 20, 0, 1240, 768);
+@media (max-width:$mobile){
+  padding: 0;
+    max-width: rem(545);
+    @media (max-width:$mobile){
+       text-align: center; 
+    }
+}
+  }
+  .ovner__img-block{
+    @include adaptiveValue("margin-right", -25, 0, 0, 1240, 768);
+    @include adaptiveValue("width", 334, 327, 0, 1240, 768);
+    @include adaptiveValue("height", 394, 385, 0, 1240, 768);
+  }
+  .ovner__img-border{
+top: 0;
+@include adaptiveValue("width", 334, 300, 0, 1240, 768);
+@media (max-width:$mobile){
+@include adaptiveValue("width", 334, 327, 0, 767.98, 375);
+}
+  }
+  .ovner__img-ovner{
+    top: 6%;
+    @include adaptiveValue("width", 260, 235, 0, 1240, 768);
+    @include adaptiveValue("right", 37, 32, 0, 1240, 768);
+    @include adaptiveValue("height", 370, 350, 0, 1240, 768);
+    @media (max-width:$mobile){
+      @include adaptiveValue("width", 260, 255, 0, 767.98, 375);
+      @include adaptiveValue("height", 370, 362, 0, 767.98, 375);
+      @include adaptiveValue("right", 37, 36, 0, 767.98, 375);
+    }
+  }
+  .ovner__desc{
+    margin-top: rem(22);
+    display: block;
+    margin-bottom: 0;
+  }
+}
+//========================================================================================================================================================
+
+.house-items {
+  @include adaptiveValue("padding-top", 80, 45);
+  @include adaptiveValue("padding-bottom", 140, 60);
+  // .house-items__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width:$mobile){
+       flex-direction: column; 
+    }
+  }
+  // .house-items__item
+  &__item {
+         @media (max-width:$mobile){
+            &:not(:last-child) {
+        border-bottom: 1px solid rgba(20, 20, 20, 0.1);
+        padding: 45px 0 40px;
+      }
+      &:last-child{
+        padding-top: 45px;
+      } 
+         }
+  }
+  &__box{
+@media (max-width:$mobile){
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+      @include adaptiveValue("gap", 150, 10, 0, 767.98, 375);
+margin-bottom: rem(27);
+    }
+  }
+  &__button{
+    display: none;
+    padding: 14px 0;
+    @media (max-width:$mobile){
+       display: block; 
+    }
+  }
+  // .house-items__img
+  &__img {
+    margin-bottom: rem(30);
+    @media (max-width:$mobile){
+       margin-bottom: 0; 
+    }
+    img{
+      @include adaptiveValue("width", 194, 113);
+    }
+  }
+  // .house-items__text
+  &__text {
+    @include adaptiveValue("width", 320, 220, 0, 1240, 768);
+    @media (max-width:$mobile){
+       width: 100%; 
+    }
+  }
+  // .house-items__title
+  &__title {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 8px;
+    justify-content: flex-end;
+    font-weight: 700;
+    color: #000;
+    font-size: rem(18);
+    line-height: math.div(20 , 18);
+    @media (max-width:$mobile){
+       margin-bottom: rem(12); 
+    }
+    &::before{
+      font-size: rem(8);
+      @media (max-width:$mobile){
+         display: none; 
+      }
+    }
+  }
+  // .house-items__desc
+  &__desc {
+    @include adaptiveValue("font-size", 18, 14);
+    @include adaptiveValue("line-height", 31, 20);
+    color: #020202;
+  }
+}
+//========================================================================================================================================================
+
+.full-width-banner {
+  background: url("@img/opwekken/ful-width-bannerX2.png") no-repeat 100%; 
+  background-size: cover !important;
+  @include adaptiveValue("height", 593, 354);
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  @media (max-width:$mobile){
+    background: url("@img/opwekken/ful-width-banner.png") no-repeat center left 75%; 
+  }
+  // .full-width-banner__container
+  &__container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    @media (max-width:$mobile){
+       justify-content: center; 
+    }
+  }
+}
+//========================================================================================================================================================
+
+.opwekken-steps {
+  padding-top: rem(165);
+  @include adaptiveValue("padding-bottom", 145, 65);
+  @media (max-width:$mobile){
+     padding-top: rem(296); 
+  }
+  // .opwekken-steps__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width:$mobile){
+       flex-direction: column-reverse; 
+       gap: 50px;
+    }
+  }
+  // .opwekken-steps__left
+  &__left {
+    width: 50%;
+    @media (max-width:$mobile){
+       width: 100%; 
+    }
+  }
+  // .opwekken-steps__item
+  &__item {
+    @include adaptiveValue("padding-left", 150, 70, 0, 1240, 768);
+    position: relative;
+    @media (max-width:$mobile){
+       padding: 0; 
+    }
+    &::before{
+      content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 0px;
+    @include adaptiveValue("left", 44, 30, 0, 1240, 768);
+    top: 0px;
+    border-left: 1px dashed rgba(0, 0, 0, 0.2);
+    @media (max-width:$mobile){
+       display: none; 
+    }
+    }
+    &::after{
+      content:'';
+      display: block;
+    position: absolute;
+    height: rem(22);
+    width: rem(22);
+    @include adaptiveValue("left", 44, 30, 0, 1240, 768);
+    top: 0px;
+    transform: translate(-50%);
+    background-color: $blue-light;
+    border-radius: 50%;
+    @media (max-width:$mobile){
+      display: none; 
+   }
+    }
+    &:first-child{
+      &::after{
+        content: url("@img/beheren/Group 698.svg");
+
+      @include adaptiveValue("width", 84, 60, 0, 1240, 768);
+      @include adaptiveValue("height", 84, 60, 0, 1240, 768);
+      background-color: #fff;
+      box-shadow: 0px 20px 24px rgba(0, 0, 0, 0.07);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @media (max-width:$mobile){
+        display: none; 
+     }
+      }
+    }
+    &:last-child{
+      &::before{
+        border: none;
+      }
+    }
+&:not(:last-child) {
+  @include adaptiveValue("padding-bottom", 130, 45);
+}
+  }
+  // .opwekken-steps__item-title
+  &__item-title {
+    @include adaptiveValue("font-size", 24, 22);
+@include adaptiveValue("line-height", 26, 24);
+    font-weight: 700;
+    margin-bottom: rem(8);
+    color: $blue-light;
+  }
+  // .opwekken-steps__item-subtitle
+  &__item-subtitle {
+    font-weight: 700;
+    @include adaptiveValue("margin-bottom", 21, 8);
+    @include adaptiveValue("font-size", 16, 14);
+    @include adaptiveValue("line-height", 19, 17);
+  }
+  // .opwekken-steps__item-text
+  &__item-text {
+    @include adaptiveValue("font-size", 18, 14);
+    @include adaptiveValue("line-height", 25, 27);
+    @include adaptiveValue("margin-bottom", 34, 13);
+  }
+  // .opwekken-steps__item-button
+  &__item-button {
+    padding: 14px 21px;
+    @media (max-width:$mobile){
+       width: 100%; 
+    }
+  }
+  // .opwekken-steps__right
+  &__right {
+    position: relative;
+    @include adaptiveValue("margin-top", -400, -300, 0, 1240, 768);
+    @include adaptiveValue("margin-right", 60, 0, 0, 1240, 768);
+    @media (max-width:$mobile){
+        @include adaptiveValue("margin-top", -375, -420, 0, 767.98, 370);
+    }
+  }
+  // .opwekken-steps__tip
+  &__tip {
+    @include adaptiveValue("width", 445, 327, 0, 1240, 768);
+    padding: 54px 36px 50px 58px;
+    box-shadow: 0px 20px 24px rgba(0, 0, 0, 0.07);
+    background-color: #fff;
+    position: sticky;
+    top: 20vh;
+    @media (max-width:$tablet){
+       padding: 25px; 
+    }
+    @media (max-width:$mobile){
+       position: static; 
+       width: 100%;
+    }
+  }
+  // .opwekken-steps__tip-title
+  &__tip-title {
+    @include adaptiveValue("font-size", 25, 22);
+    @include adaptiveValue("line-height", 28, 24);
+    @include adaptiveValue("margin-bottom", 25, 20);
+    font-weight: 700;
+  }
+  // .opwekken-steps__tip-list
+  &__tip-list {
+    @include adaptiveValue("margin-bottom", 38, 25);
+    li{
+      @include adaptiveValue("font-size", 16, 14);
+    @include adaptiveValue("line-height", 22, 20);
+    &:not(:last-child) {
+      margin-bottom: rem(25);
+    }
+    }
+  }
+  // .opwekken-steps__tip-button
+  &__tip-button {
+    padding: 14px 21px;
+    @media (max-width:$mobile){
+       width: 100%; 
+    }
+  }
+}
+//========================================================================================================================================================
+
+.mobile-text-button {
+  display: none;
+  background-color: $blue-light;
+  padding: 15px 0;
+  @media (max-width:$mobile){
+     display: block; 
+  }
+  // .mobile-text-button__container
+  &__container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  // .mobile-text-button__text
+  &__text {
+    font-weight: 700;
+    font-size: rem(14);
+    line-height: math.div(15 , 14);
+    color: #fff;
+    @media (max-width:520px){
+      width: rem(166); 
+    }
+  }
+  // .mobile-text-button__button
+  &__button {
+    padding: 14px 21px;
+  }
+}
+
+//========================================================================================================================================================
+
+.ovner.ovner-blue{
+  margin-top: 0;
+  .ovner__box{
+    background-color: $blue-light;
+    @media (max-width:$mobile){
+       background-color: #fff; 
+    }
+  }
+  .ovner__text-block{
+    color: #fff ;
+    @media (max-width:$mobile){
+       color: #020202; 
+    }
+  }
+  .ovner__button{
+    @media (max-width:$mobile){
+       background-color: $blue-light; 
+       @media (any-hover: hover){
+        &:hover{
+          background-color: #020202;
+        }
+       }
+    }
+  }
+}
+
+//========================================================================================================================================================
+
+.opwekken-slider {
+  @include adaptiveValue("padding-top", 135, 60);
+  @include adaptiveValue("padding-bottom", 110, 75);
+  // .opwekken-slider__container
+  &__container {
+    text-align: center;
+
+  }
+  // .opwekken-slider__subtitle
+  &__subtitle {
+    color: $blue-light;
+    @include adaptiveValue("font-size", 16, 14);
+    @include adaptiveValue("line-height", 18, 15);
+    @include adaptiveValue("margin-bottom", 12, 5);
+    @media (max-width:$mobile){
+       text-align: left; 
+    }
+  }
+  // .opwekken-slider__title
+  &__title {
+    color: #000000;
+    font-weight: 700;
+    @include adaptiveValue("font-size", 32, 22);
+    @include adaptiveValue("line-height", 35, 24);
+    @include adaptiveValue("margin-bottom", 28, 23);
+    @media (max-width:$mobile){
+      text-align: left; 
+   }
+  }
+  // .opwekken-slider__slider
+  &__slider {
+    padding: 75px;
+      margin: -75px;
+      overflow: visible !important;
+      @media (min-width:$mobile){
+        cursor: url("@img/cursor.svg") 50 50, move;
+    }
+  }
+  // .opwekken-slider__wrapper
+  &__wrapper {
+    
+  }
+  // .opwekken-slider__slide
+  &__slide {
+    @include adaptiveValue("width", 377, 262);
+    @include adaptiveValue("height", 491, 397);
+    padding: 45px 55px;
+    -webkit-filter: drop-shadow(0px 24px 20px rgba(0, 0, 0, 0.04));
+    filter: drop-shadow(0px 24px 20px rgba(0, 0, 0, 0.04));
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width:$mobile){
+        padding: 52px 20px 37px;
+    }
+  }
+  // .opwekken-slider__slide-img-block
+  &__slide-img-block {
+    img{
+      @include adaptiveValue("width", 210, 163);
+    }
+  }
+  // .opwekken-slider__slide-text-block
+  &__slide-text-block {
+  }
+  // .opwekken-slider__slide-title
+  &__slide-title {
+    @include adaptiveValue("margin-top", 35, 30);
+    font-weight: 700;
+    color: $blue-light;
+    @include adaptiveValue("font-size", 22, 19);
+    @include adaptiveValue("line-height", 24, 21);
+  }
+  // .opwekken-slider__slide-desc
+  &__slide-desc {
+    @include adaptiveValue("font-size", 16, 12);
+    @include adaptiveValue("line-height", 22, 16);
+  }
+}
+
