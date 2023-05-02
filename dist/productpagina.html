@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230502005326">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230502233629">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -63,20 +63,24 @@
 									<div class="menu__submenu-item">
 										<div class="menu__submenu-item-first">
 											<div class="menu__submenu-title">Onze integrale energie-oplossing:</div>
+											<div class="menu__submenu-main-nav-back _icon-arrow-right">Terug</div>
 											<ul class="menu__submenu-main-nav">
-												<li><a class="active" href="#" id="opwekken-link"> <img src="img/plug.svg" alt="">
-														<div class="menu__submenu-main-nav-item"> Opwekken, opslaan & opladen <i class="_icon-arrow-right"></i></div>
-													</a>
+												<li id="opwekken-list">
+													<div class="menu__submenu-main-nav-item-wrap active" id="opwekken-link"> <img src="img/plug.svg" alt="">
+														<div class="menu__submenu-main-nav-item"> <span>Opwekken, opslaan & opladen</span> <i class="_icon-arrow-right open"></i></div>
+													</div>
 												</li>
-												<li><a class="" href="#" id="inzicht-link"><img src="img/curve.svg" alt="">
+												<li id="inzicht-list">
+													<div class="menu__submenu-main-nav-item-wrap" id="inzicht-link"><img src="img/curve.svg" alt="">
 														<div class="menu__submenu-main-nav-item">Inzicht & sturing <i class="_icon-arrow-right"></i>
 														</div>
-													</a>
+													</div>
 												</li>
-												<li><a class="" href="#" id="duurzaam-link"><img src="img/euro.svg" alt="">
+												<li id="duurzaam-list">
+													<div class="menu__submenu-main-nav-item-wrap" id="duurzaam-link"><img src="img/euro.svg" alt="">
 														<div class="menu__submenu-main-nav-item">Duurzaam inkopen <i class="_icon-arrow-right"></i>
-														</div></i>
-													</a>
+														</div>
+													</div>
 												</li>
 											</ul>
 										</div>
@@ -85,7 +89,7 @@
 									<div id="opwekken" class="menu__submenu-item">
 										<div class="menu__submenu-item-first">
 											<div class="menu__submenu-title">Oplossingen</div>
-											<ul class="menu__submenu-sub-nav">
+											<ul data-da="#opwekken-list, 991.98" class="menu__submenu-sub-nav">
 												<li><a class="active" href="#">Zonnepanelen</a></li>
 												<li><a href="#">Energieopslag</a></li>
 												<li><a href="#">Slimme meters</a></li>
@@ -106,7 +110,7 @@
 									<div id="inzicht" class="menu__submenu-item">
 										<div class="menu__submenu-item-first">
 											<div class="menu__submenu-title">Inzicht & sturing</div>
-											<ul class="menu__submenu-sub-nav">
+											<ul data-da="#inzicht-list, 991.98" class="menu__submenu-sub-nav">
 												<li><a class="active" href="#">Inzicht met energiedashboards</a></li>
 												<li><a href="#">Geavanceerde energiesturing</a></li>
 											</ul>
@@ -124,7 +128,7 @@
 									<div id="duurzaam" class="menu__submenu-item">
 										<div class="menu__submenu-item-first">
 											<div class="menu__submenu-title">Duurzaam inkopen</div>
-											<ul class="menu__submenu-sub-nav">
+											<ul data-da="#duurzaam-list, 991.98" class="menu__submenu-sub-nav">
 												<li><a class="active" href="#">Energiemarktplaats</a></li>
 											</ul>
 										</div>
@@ -140,7 +144,8 @@
 									</div>
 								</div>
 							</li>
-							<li class="menu__item"><a href="ons-platform.html" class="menu__link">Ons platform</a></li>
+							<li class="menu__item"><a href="ons-platform.html" class="menu__link">Ons platform</a>
+							</li>
 							<li class="menu__item"><a href="#" class="menu__link">Klantverhalen</a></li>
 							<li class="menu__item"><a href="#" class="menu__link">Energiekennis</a></li>
 						</ul>
@@ -154,8 +159,11 @@
 					</nav>
 				</div>
 				<div class="header__item-second">
-					<div data-da=".header__mobile-bottom, 991.98" class="header__search _icon-search"></div>
-					<a data-da=".header__mobile-bottom, 991.98" href="#" class="header__contact-button">Neem contact op</a>
+					<div data-da=".header__mobile-bottom, 991.98" class="header__search-wrapper">
+						<input type="text" class="header__search-input " placeholder="Zoek...">
+						<button class="header__search-icon _icon-search"></button>
+					</div>
+					<a data-da=".header__mobile-bottom, 991.98" href="#" class="header__contact-button _icon-user">Neem contact op</a>
 					<ul class="header__lang">
 						<li><a href="#">EN</a></li>
 						<span></span>
@@ -368,7 +376,6 @@
 						</div>
 						<div class="productpagina-steps__item">
 							<div class="productpagina-steps__blue-ball"></div>
-
 							<div class="productpagina-steps__left">
 								<div class="productpagina-steps__left-subtitle">Duurzaam investeren</div>
 								<div class="productpagina-steps__left-title">Met één laadbeurt per dag maak je al winst</div>
@@ -528,7 +535,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20230502005326"></script>
+	<script src="js/app.min.js?_v=20230502233629"></script>
 </body>
 
 </html>

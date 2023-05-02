@@ -5167,6 +5167,8 @@
     const onsAanbodLink = document.querySelector(".menu__link");
     const submenu = document.querySelector(".menu__submenu");
     const script_arrow = document.querySelector(".menu-arrow");
+    const backButtonMenu = document.querySelector(".icon-menu");
+    const backButton = document.querySelector(".menu__submenu-main-nav-back");
     let timeoutId;
     let script_menuOpen = false;
     const toggleMenu = () => {
@@ -5175,24 +5177,59 @@
         script_menuOpen = submenu.classList.contains("submenu-open");
     };
     onsAanbodLink.addEventListener("click", toggleMenu);
-    onsAanbodLink.addEventListener("mouseenter", (() => {
-        clearTimeout(timeoutId);
-        if (!script_menuOpen) toggleMenu();
-    }));
-    const closeMenu = () => {
+    backButtonMenu.addEventListener("click", (() => {
         submenu.classList.remove("submenu-open");
-        script_arrow.classList.remove("rotated");
-        script_menuOpen = false;
-    };
-    onsAanbodLink.addEventListener("mouseleave", (() => {
-        timeoutId = setTimeout(closeMenu, 1e3);
+        script_arrow.classList.toggle("rotated");
     }));
-    submenu.addEventListener("mouseleave", (() => {
-        timeoutId = setTimeout(closeMenu, 500);
+    backButton.addEventListener("click", (() => {
+        submenu.classList.remove("submenu-open");
+        script_arrow.classList.toggle("rotated");
     }));
-    submenu.addEventListener("mouseenter", (() => {
-        clearTimeout(timeoutId);
-    }));
+    if (window.innerWidth > 991.98) {
+        onsAanbodLink.addEventListener("mouseenter", (() => {
+            clearTimeout(timeoutId);
+            if (!script_menuOpen) toggleMenu();
+        }));
+        const closeMenu = () => {
+            submenu.classList.remove("submenu-open");
+            script_arrow.classList.remove("rotated");
+            script_menuOpen = false;
+        };
+        onsAanbodLink.addEventListener("mouseleave", (() => {
+            timeoutId = setTimeout(closeMenu, 1e3);
+        }));
+        submenu.addEventListener("mouseleave", (() => {
+            timeoutId = setTimeout(closeMenu, 500);
+        }));
+        submenu.addEventListener("mouseenter", (() => {
+            clearTimeout(timeoutId);
+        }));
+    }
+    if (window.innerWidth < 991.98) {
+        const spoilerLinks = document.querySelectorAll(".menu__submenu-main-nav-item-wrap");
+        const firstSubmenu = document.querySelector(".menu__submenu-sub-nav");
+        firstSubmenu.style.display = "flex";
+        spoilerLinks.forEach((link => {
+            link.addEventListener("click", (e => {
+                e.preventDefault();
+                const submenu = link.nextElementSibling;
+                const arrow = link.querySelector("._icon-arrow-right");
+                if (submenu.style.display === "flex") {
+                    submenu.style.display = "none";
+                    arrow.classList.remove("open");
+                } else {
+                    const openSubmenus = document.querySelectorAll('.menu__submenu-sub-nav[style="display: flex;"]');
+                    openSubmenus.forEach((openSubmenu => {
+                        openSubmenu.style.display = "none";
+                        const openArrow = openSubmenu.previousElementSibling.querySelector("._icon-arrow-right");
+                        openArrow.classList.remove("open");
+                    }));
+                    submenu.style.display = "flex";
+                    arrow.classList.add("open");
+                }
+            }));
+        }));
+    }
     const script_button = document.querySelector(".header__top-first-button");
     const menu = document.querySelector(".header__top-menu");
     script_button.addEventListener("click", (() => {

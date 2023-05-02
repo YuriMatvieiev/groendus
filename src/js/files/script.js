@@ -3,47 +3,102 @@ import { isMobile } from "./functions.js";
 // Подключение списка активных модулей
 import { flsModules } from "./modules.js";
 
-// Отримання ширини скролу
 
+// Cache elements for better performance
 const onsAanbodLink = document.querySelector('.menu__link');
 const submenu = document.querySelector('.menu__submenu');
 const arrow = document.querySelector('.menu-arrow');
+const backButtonMenu = document.querySelector('.icon-menu');
+const backButton = document.querySelector('.menu__submenu-main-nav-back');
+
 let timeoutId;
 let menuOpen = false;
 
+// Toggle menu function
 const toggleMenu = () => {
   submenu.classList.toggle('submenu-open');
   arrow.classList.toggle('rotated');
   menuOpen = submenu.classList.contains('submenu-open');
 }
 
+// Click event listener for onsAanbodLink
 onsAanbodLink.addEventListener('click', toggleMenu);
 
-onsAanbodLink.addEventListener('mouseenter', () => {
-  clearTimeout(timeoutId);
-  if (!menuOpen) {
-    toggleMenu();
-  }
+// Click event listener for backButtonMenu
+backButtonMenu.addEventListener('click', () => {
+  submenu.classList.remove('submenu-open');
+  arrow.classList.toggle('rotated');
 });
 
-const closeMenu = () => {
+// Click event listener for backButton
+backButton.addEventListener('click', () => {
   submenu.classList.remove('submenu-open');
-  arrow.classList.remove('rotated');
-  menuOpen = false;
+  arrow.classList.toggle('rotated');
+});
+
+
+if (window.innerWidth > 991.98) {
+
+  onsAanbodLink.addEventListener('mouseenter', () => {
+    clearTimeout(timeoutId);
+    if (!menuOpen) {
+      toggleMenu();
+    }
+  });
+
+  const closeMenu = () => {
+    submenu.classList.remove('submenu-open');
+    arrow.classList.remove('rotated');
+    menuOpen = false;
+  }
+
+  onsAanbodLink.addEventListener('mouseleave', () => {
+    timeoutId = setTimeout(closeMenu, 1000);
+  });
+
+  submenu.addEventListener('mouseleave', () => {
+    timeoutId = setTimeout(closeMenu, 500);
+  });
+
+  submenu.addEventListener('mouseenter', () => {
+    clearTimeout(timeoutId);
+  });
 }
 
-onsAanbodLink.addEventListener('mouseleave', () => {
-  timeoutId = setTimeout(closeMenu, 1000);
-});
+if (window.innerWidth < 991.98) {
+  const spoilerLinks = document.querySelectorAll('.menu__submenu-main-nav-item-wrap');
+  const firstSubmenu = document.querySelector('.menu__submenu-sub-nav');
 
-submenu.addEventListener('mouseleave', () => {
-  timeoutId = setTimeout(closeMenu, 500);
-});
+  firstSubmenu.style.display = 'flex';
 
-submenu.addEventListener('mouseenter', () => {
-  clearTimeout(timeoutId);
-});
+  spoilerLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
 
+      const submenu = link.nextElementSibling;
+      const arrow = link.querySelector('._icon-arrow-right');
+
+      if (submenu.style.display === 'flex') {
+        // Submenu is already open, close it
+        submenu.style.display = 'none';
+        arrow.classList.remove('open');
+      } else {
+        // Close any other open submenus
+        const openSubmenus = document.querySelectorAll('.menu__submenu-sub-nav[style="display: flex;"]');
+        openSubmenus.forEach(openSubmenu => {
+          openSubmenu.style.display = 'none';
+          const openArrow = openSubmenu.previousElementSibling.querySelector('._icon-arrow-right');
+          openArrow.classList.remove('open');
+        });
+
+        // Open this submenu
+        submenu.style.display = 'flex';
+        arrow.classList.add('open');
+      }
+    });
+  });
+
+}
 
 // Get the button element
 const button = document.querySelector('.header__top-first-button');
@@ -151,3 +206,6 @@ inzichtLink.addEventListener('click', () => {
 duurzaamLink.addEventListener('click', () => {
   showSubmenu(duurzaamSubmenu, duurzaamLink);
 });
+
+
+
