@@ -1,0 +1,193 @@
+//========================================================================================================================================================
+
+.klantverhalen-hero {
+  @include adaptiveValue("padding-top", 20, 95);
+  @include adaptiveValue("padding-bottom", 150, 125);
+  background-color: $blue-light;
+  // .klantverhalen-hero__container
+  &__container {
+    display: flex;
+    justify-content: center;
+    @include adaptiveValue("gap", 50, 10, 0, 1240, 768);
+    position: relative;
+  }
+  // .klantverhalen-hero__img-left
+  &__img-left {
+    img{
+      position: absolute;
+      @include adaptiveValue("width", 146, 71);
+      top: 0;
+      @include adaptiveValue("left", 125, 30, 0, 1240, 768);
+      @media (max-width:$mobile){
+        @include adaptiveValue("top", 100, 135, 0, 767.98, 375);
+     }
+    }
+  }
+    // .klantverhalen-hero__img-right
+    &__img-right {
+      img{
+      position: absolute;
+
+        @include adaptiveValue("width", 233, 80);
+        top: 0;
+        @include adaptiveValue("right", 65, 0, 0, 1240, 768);
+        @media (max-width:$mobile){
+           @include adaptiveValue("top", -70, -35, 0, 767.98, 375);
+        }
+      }
+        }
+  // .klantverhalen-hero__text
+  &__text {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    @media (max-width:$mobile){
+       align-items: flex-start; 
+    }
+  }
+  // .klantverhalen-hero__subtitle
+  &__subtitle {
+    @include adaptiveValue("font-size", 16, 12);
+    @include adaptiveValue("line-height", 18, 13);
+    @include adaptiveValue("margin-bottom", 13, 5);
+  }
+  // .klantverhalen-hero__title
+  &__title {
+    @include adaptiveValue("font-size", 34, 30);
+    @include adaptiveValue("line-height", 37, 33);
+    @include adaptiveValue("margin-bottom", 22, 12);
+    font-weight: 700;
+    max-width: rem(546);
+    @media (max-width:$mobile){
+      @include adaptiveValue("max-width", 500, 290, 0, 767.98, 375); 
+       text-align: left;
+    }
+
+  }
+  // .klantverhalen-hero__desc
+  &__desc {
+    @include adaptiveValue("font-size", 16, 14);
+    @include adaptiveValue("line-height", 22, 20);
+    max-width: rem(546);
+    @media (max-width:$mobile){
+      text-align: left;
+      align-self: flex-end;
+      max-width: unset;
+      @include adaptiveValue("margin-left", 140, 115, 0, 767.98, 375);
+   }
+  }
+  // .klantverhalen-hero__select-box
+  &__select-box {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: flex-start;
+    margin-top: rem(38);
+    @include adaptiveValue("gap", 40, 10, 0, 1240, 768);
+    @media (max-width:$mobile){
+       flex-direction: column; 
+       width: 100%;
+       @include adaptiveValue("margin-top", 130, 30, 0, 767.98, 375);
+    }
+  }
+  // .klantverhalen-hero__select-block
+  &__select-block {
+position: relative;
+@media (max-width:$mobile){
+   width: 100%; 
+}
+  }
+  // .klantverhalen-hero__select-button
+  &__select-button {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 11px 21px;
+    background-color: #fff;
+    box-shadow: 0px 20px 24px rgba(0, 0, 0, 0.07);
+border-radius: 100px;
+font-size: rem(14);
+font-weight: 700;
+line-height: math.div(15 , 14);
+@include adaptiveValue("gap", 20, 10, 0, 1240, 768);
+color: $blue-light;
+@media (max-width:$mobile){
+  width: 100%; 
+  justify-content: space-between;
+  padding: 11px 41px;
+}
+&::before{
+  transform: rotate(90deg);
+}
+@media (any-hover: hover){
+  &:hover{
+    background-color: #000;
+    color: #fff;
+    transition: all 0.3s ease 0s;
+
+  }
+}
+&.selected{
+  background-color: #000;
+  color: #fff;
+  &::before{
+    transform: rotate(270deg);
+  }
+}
+
+  }
+  // .klantverhalen-hero__select-list
+  &__select-list {
+    position: absolute;
+    top: 48px;
+    width: rem(230);
+    background-color: #fff;
+    box-shadow: 0px 14px 20px rgba(0, 0, 0, 0.07);
+border-radius: 12px;
+color: #000;
+padding: 20px 23px 0;
+@media (max-width:$mobile){
+   position: static;
+   margin-top: rem(11); 
+   width: 100%;
+}
+li{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+margin-bottom: rem(20);
+&:last-child{
+
+}
+  input{
+    color: $blue-light;
+    width: rem(16);
+    height: rem(16);
+    cursor: pointer;
+  }
+  label{
+    color: #020202;
+    font-size: rem(14);
+    line-height: math.div(15 , 14);
+    cursor: pointer;
+  }
+}
+  }
+  // .klantverhalen-hero__select-fiter
+  &__select-fiter {
+    border-top: 1px solid #C4C4C4;
+    padding: 19px 21px 20px;
+    width: 100%;
+    font-weight: 700;
+    color: $blue-light;
+    font-size: rem(14);
+    line-height: math.div(15 , 14);
+    @media (any-hover: hover){
+      &:hover{
+        color: #000;
+      }
+    }
+  }
+
+}

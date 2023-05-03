@@ -844,6 +844,28 @@ background-color: $blue-light;
   top: 75px;
 }
 }
+.header__search-icon{
+  background-color: $blue-dark;
+  color: #fff;
+  @media (max-width:$mobile){
+     background-color: #F2F2F2; 
+     color: #000;
+  }
+}
+.header__search-input {
+  background-color: $blue-dark;
+  color: #fff;
+  @media (max-width:$mobile){
+    background-color: #F2F2F2; 
+    color: #000;
+ }
+  &::placeholder{
+    color: #ffffff8c;
+    @media (max-width:$mobile){
+        color: #5B5B5B;
+    }
+  }
+}
 }
 .white-theme{
 background-color: #fff;

@@ -199,4 +199,55 @@ duurzaamLink.addEventListener('click', () => {
 });
 
 
+// Keep track of the currently open dropdown
+let openDropdown = null;
+
+// Get all the elements that match the "select-button" selector
+const selectButtons = document.querySelectorAll('.select-button');
+
+// Add the event listener to each element
+selectButtons.forEach(button => {
+  button.addEventListener('click', function () {
+    // Get the ID of the corresponding dropdown menu
+    const dropdownId = button.parentNode.querySelector('.klantverhalen-hero__select-list').id;
+    // Check if there is an open dropdown
+    if (openDropdown !== null) {
+      // If there is, close it
+      closeDropdown(openDropdown);
+      if (openDropdown === dropdownId) {
+        openDropdown = null;
+        return;
+      }
+    }
+
+    // Open the selected dropdown
+    openDropdown = dropdownId;
+    showDropdown(dropdownId);
+    button.classList.add('selected');
+  });
+});
+
+function showDropdown(dropdownId) {
+  var dropdown = document.getElementById(dropdownId);
+  if (dropdown.style.display === "none") {
+    dropdown.style.display = "block";
+  } else {
+    dropdown.style.display = "none";
+  }
+}
+
+function closeDropdown(dropdownId) {
+  var dropdown = document.getElementById(dropdownId);
+  dropdown.style.display = "none";
+  document.querySelector('.selected').classList.remove('selected');
+}
+
+// Add event listener to the document
+document.addEventListener('click', function (event) {
+  // Check if the target element of the click is outside of the open dropdown menu
+  if (openDropdown !== null && !event.target.closest('.klantverhalen-hero__select-block')) {
+    closeDropdown(openDropdown);
+    openDropdown = null;
+  }
+});
 

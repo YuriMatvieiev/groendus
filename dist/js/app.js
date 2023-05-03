@@ -5308,6 +5308,38 @@
     duurzaamLink.addEventListener("click", (() => {
         showSubmenu(duurzaamSubmenu, duurzaamLink);
     }));
+    let openDropdown = null;
+    const selectButtons = document.querySelectorAll(".select-button");
+    selectButtons.forEach((button => {
+        button.addEventListener("click", (function() {
+            const dropdownId = button.parentNode.querySelector(".klantverhalen-hero__select-list").id;
+            if (openDropdown !== null) {
+                closeDropdown(openDropdown);
+                if (openDropdown === dropdownId) {
+                    openDropdown = null;
+                    return;
+                }
+            }
+            openDropdown = dropdownId;
+            showDropdown(dropdownId);
+            button.classList.add("selected");
+        }));
+    }));
+    function showDropdown(dropdownId) {
+        var dropdown = document.getElementById(dropdownId);
+        if (dropdown.style.display === "none") dropdown.style.display = "block"; else dropdown.style.display = "none";
+    }
+    function closeDropdown(dropdownId) {
+        var dropdown = document.getElementById(dropdownId);
+        dropdown.style.display = "none";
+        document.querySelector(".selected").classList.remove("selected");
+    }
+    document.addEventListener("click", (function(event) {
+        if (openDropdown !== null && !event.target.closest(".klantverhalen-hero__select-block")) {
+            closeDropdown(openDropdown);
+            openDropdown = null;
+        }
+    }));
     window["FLS"] = true;
     isWebp();
     menuInit();

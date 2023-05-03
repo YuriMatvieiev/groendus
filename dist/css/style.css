@@ -877,6 +877,36 @@ h6 {
   color: #fff;
 }
 
+.blue-theme .header__search-icon {
+  background-color: #0252CF;
+  color: #fff;
+}
+
+.blue-theme .header__search-input {
+  background-color: #0252CF;
+  color: #fff;
+}
+
+.blue-theme .header__search-input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5490196078);
+}
+
+.blue-theme .header__search-input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5490196078);
+}
+
+.blue-theme .header__search-input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5490196078);
+}
+
+.blue-theme .header__search-input::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5490196078);
+}
+
+.blue-theme .header__search-input::placeholder {
+  color: rgba(255, 255, 255, 0.5490196078);
+}
+
 .white-theme {
   background-color: #fff;
 }
@@ -2505,6 +2535,158 @@ h6 {
           filter: drop-shadow(-10px 12px 25px rgba(0, 0, 0, 0.25));
 }
 
+.klantverhalen-hero {
+  background-color: #006EFF;
+}
+
+.klantverhalen-hero__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.klantverhalen-hero__img-left img {
+  position: absolute;
+  top: 0;
+}
+
+.klantverhalen-hero__img-right img {
+  position: absolute;
+  top: 0;
+}
+
+.klantverhalen-hero__text {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.klantverhalen-hero__title {
+  font-weight: 700;
+  max-width: 34.125rem;
+}
+
+.klantverhalen-hero__desc {
+  max-width: 34.125rem;
+}
+
+.klantverhalen-hero__select-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 40px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 2.375rem;
+}
+
+.klantverhalen-hero__select-block {
+  position: relative;
+}
+
+.klantverhalen-hero__select-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  padding: 11px 21px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 20px 24px rgba(0, 0, 0, 0.07);
+          box-shadow: 0px 20px 24px rgba(0, 0, 0, 0.07);
+  border-radius: 100px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.0714285714;
+  color: #006EFF;
+}
+
+.klantverhalen-hero__select-button::before {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.klantverhalen-hero__select-button.selected {
+  background-color: #000;
+  color: #fff;
+}
+
+.klantverhalen-hero__select-button.selected::before {
+  -webkit-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.klantverhalen-hero__select-list {
+  position: absolute;
+  top: 48px;
+  width: 14.375rem;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 14px 20px rgba(0, 0, 0, 0.07);
+          box-shadow: 0px 14px 20px rgba(0, 0, 0, 0.07);
+  border-radius: 12px;
+  color: #000;
+  padding: 20px 23px 0;
+}
+
+.klantverhalen-hero__select-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.klantverhalen-hero__select-list li input {
+  color: #006EFF;
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+
+.klantverhalen-hero__select-list li label {
+  color: #020202;
+  font-size: 0.875rem;
+  line-height: 1.0714285714;
+  cursor: pointer;
+}
+
+.klantverhalen-hero__select-fiter {
+  border-top: 1px solid #C4C4C4;
+  padding: 19px 21px 20px;
+  width: 100%;
+  font-weight: 700;
+  color: #006EFF;
+  font-size: 0.875rem;
+  line-height: 1.0714285714;
+}
+
 .tippy-box[data-animation=fade][data-state=hidden] {
   opacity: 0;
 }
@@ -3103,6 +3285,26 @@ h6 {
 
   .ons-platform__item-img-iMac {
     width: 38.125rem;
+  }
+
+  .klantverhalen-hero__container {
+    gap: 3.125rem;
+  }
+
+  .klantverhalen-hero__img-left img {
+    left: 7.8125rem;
+  }
+
+  .klantverhalen-hero__img-right img {
+    right: 4.0625rem;
+  }
+
+  .klantverhalen-hero__select-box {
+    gap: 2.5rem;
+  }
+
+  .klantverhalen-hero__select-button {
+    gap: 1.25rem;
   }
 }
 
@@ -3978,6 +4180,54 @@ h6 {
   .ons-platform__item-img-iPad {
     width: 51.5625rem;
   }
+
+  .klantverhalen-hero {
+    padding-top: 1.25rem;
+  }
+
+  .klantverhalen-hero {
+    padding-bottom: 9.375rem;
+  }
+
+  .klantverhalen-hero__img-left img {
+    width: 9.125rem;
+  }
+
+  .klantverhalen-hero__img-right img {
+    width: 14.5625rem;
+  }
+
+  .klantverhalen-hero__subtitle {
+    font-size: 1rem;
+  }
+
+  .klantverhalen-hero__subtitle {
+    line-height: 1.125rem;
+  }
+
+  .klantverhalen-hero__subtitle {
+    margin-bottom: 0.8125rem;
+  }
+
+  .klantverhalen-hero__title {
+    font-size: 2.125rem;
+  }
+
+  .klantverhalen-hero__title {
+    line-height: 2.3125rem;
+  }
+
+  .klantverhalen-hero__title {
+    margin-bottom: 1.375rem;
+  }
+
+  .klantverhalen-hero__desc {
+    font-size: 1rem;
+  }
+
+  .klantverhalen-hero__desc {
+    line-height: 1.375rem;
+  }
 }
 
 @media (min-width: 90em) {
@@ -4365,6 +4615,26 @@ h6 {
 
   .ons-platform__item-img-iMac {
     width: 20rem;
+  }
+
+  .klantverhalen-hero__container {
+    gap: 0.625rem;
+  }
+
+  .klantverhalen-hero__img-left img {
+    left: 1.875rem;
+  }
+
+  .klantverhalen-hero__img-right img {
+    right: 0.0000000625rem;
+  }
+
+  .klantverhalen-hero__select-box {
+    gap: 0.625rem;
+  }
+
+  .klantverhalen-hero__select-button {
+    gap: 0.625rem;
   }
 }
 
@@ -4896,6 +5166,36 @@ h6 {
 
   .menu__link {
     max-width: 21.875rem;
+  }
+
+  .blue-theme .header__search-icon {
+    background-color: #F2F2F2;
+    color: #000;
+  }
+
+  .blue-theme .header__search-input {
+    background-color: #F2F2F2;
+    color: #000;
+  }
+
+  .blue-theme .header__search-input::-webkit-input-placeholder {
+    color: #5B5B5B;
+  }
+
+  .blue-theme .header__search-input::-moz-placeholder {
+    color: #5B5B5B;
+  }
+
+  .blue-theme .header__search-input:-ms-input-placeholder {
+    color: #5B5B5B;
+  }
+
+  .blue-theme .header__search-input::-ms-input-placeholder {
+    color: #5B5B5B;
+  }
+
+  .blue-theme .header__search-input::placeholder {
+    color: #5B5B5B;
   }
 
   .footer__menu {
@@ -5722,6 +6022,49 @@ h6 {
     text-align: center;
     width: 100%;
   }
+
+  .klantverhalen-hero__text {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
+  .klantverhalen-hero__title {
+    text-align: left;
+  }
+
+  .klantverhalen-hero__desc {
+    text-align: left;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    max-width: unset;
+  }
+
+  .klantverhalen-hero__select-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+
+  .klantverhalen-hero__select-block {
+    width: 100%;
+  }
+
+  .klantverhalen-hero__select-button {
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 11px 41px;
+  }
+
+  .klantverhalen-hero__select-list {
+    position: static;
+    margin-top: 0.6875rem;
+    width: 100%;
+  }
 }
 
 @media (max-width: 47.99875em) and (max-width: 23.125em) {
@@ -5793,6 +6136,26 @@ h6 {
 
   .ons-platform__item-img-iMac {
     width: 15rem;
+  }
+
+  .klantverhalen-hero__img-left img {
+    top: 8.4375rem;
+  }
+
+  .klantverhalen-hero__img-right img {
+    top: -2.1875rem;
+  }
+
+  .klantverhalen-hero__title {
+    max-width: 18.125rem;
+  }
+
+  .klantverhalen-hero__desc {
+    margin-left: 7.1875rem;
+  }
+
+  .klantverhalen-hero__select-box {
+    margin-top: 1.875rem;
   }
 }
 
@@ -6717,6 +7080,54 @@ h6 {
 
   .ons-platform__item-img-iPad {
     width: 15rem;
+  }
+
+  .klantverhalen-hero {
+    padding-top: 5.9375rem;
+  }
+
+  .klantverhalen-hero {
+    padding-bottom: 7.8125rem;
+  }
+
+  .klantverhalen-hero__img-left img {
+    width: 4.4375rem;
+  }
+
+  .klantverhalen-hero__img-right img {
+    width: 5rem;
+  }
+
+  .klantverhalen-hero__subtitle {
+    font-size: 0.75rem;
+  }
+
+  .klantverhalen-hero__subtitle {
+    line-height: 0.8125rem;
+  }
+
+  .klantverhalen-hero__subtitle {
+    margin-bottom: 0.3125rem;
+  }
+
+  .klantverhalen-hero__title {
+    font-size: 1.875rem;
+  }
+
+  .klantverhalen-hero__title {
+    line-height: 2.0625rem;
+  }
+
+  .klantverhalen-hero__title {
+    margin-bottom: 0.75rem;
+  }
+
+  .klantverhalen-hero__desc {
+    font-size: 0.875rem;
+  }
+
+  .klantverhalen-hero__desc {
+    line-height: 1.25rem;
   }
 }
 
@@ -9336,6 +9747,150 @@ h6 {
       width: calc(15rem + 36.5625 * (100vw - 23.4375rem) / 57.1875);
     }
 }
+
+@supports (padding-top: clamp( 1.25rem , 7.8586065574rem  +  -8.1967213115vw , 5.9375rem )) {
+    .klantverhalen-hero {
+      padding-top: clamp( 1.25rem , 7.8586065574rem  +  -8.1967213115vw , 5.9375rem );
+    }
+}
+
+@supports not (padding-top: clamp( 1.25rem , 7.8586065574rem  +  -8.1967213115vw , 5.9375rem )) {
+    .klantverhalen-hero {
+      padding-top: calc(5.9375rem + -4.6875 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (padding-bottom: clamp( 7.8125rem , 7.1721311475rem  +  2.7322404372vw , 9.375rem )) {
+    .klantverhalen-hero {
+      padding-bottom: clamp( 7.8125rem , 7.1721311475rem  +  2.7322404372vw , 9.375rem );
+    }
+}
+
+@supports not (padding-bottom: clamp( 7.8125rem , 7.1721311475rem  +  2.7322404372vw , 9.375rem )) {
+    .klantverhalen-hero {
+      padding-bottom: calc(7.8125rem + 1.5625 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (width: clamp( 4.4375rem , 2.5163934426rem  +  8.1967213115vw , 9.125rem )) {
+    .klantverhalen-hero__img-left img {
+      width: clamp( 4.4375rem , 2.5163934426rem  +  8.1967213115vw , 9.125rem );
+    }
+}
+
+@supports not (width: clamp( 4.4375rem , 2.5163934426rem  +  8.1967213115vw , 9.125rem )) {
+    .klantverhalen-hero__img-left img {
+      width: calc(4.4375rem + 4.6875 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (width: clamp( 5rem , 1.080942623rem  +  16.7213114754vw , 14.5625rem )) {
+    .klantverhalen-hero__img-right img {
+      width: clamp( 5rem , 1.080942623rem  +  16.7213114754vw , 14.5625rem );
+    }
+}
+
+@supports not (width: clamp( 5rem , 1.080942623rem  +  16.7213114754vw , 14.5625rem )) {
+    .klantverhalen-hero__img-right img {
+      width: calc(5rem + 9.5625 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (font-size: clamp( 0.75rem , 0.6475409836rem  +  0.4371584699vw , 1rem )) {
+    .klantverhalen-hero__subtitle {
+      font-size: clamp( 0.75rem , 0.6475409836rem  +  0.4371584699vw , 1rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.75rem , 0.6475409836rem  +  0.4371584699vw , 1rem )) {
+    .klantverhalen-hero__subtitle {
+      font-size: calc(0.75rem + 0.25 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (line-height: clamp( 0.8125rem , 0.6844262295rem  +  0.5464480874vw , 1.125rem )) {
+    .klantverhalen-hero__subtitle {
+      line-height: clamp( 0.8125rem , 0.6844262295rem  +  0.5464480874vw , 1.125rem );
+    }
+}
+
+@supports not (line-height: clamp( 0.8125rem , 0.6844262295rem  +  0.5464480874vw , 1.125rem )) {
+    .klantverhalen-hero__subtitle {
+      line-height: calc(0.8125rem + 0.3125 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (margin-bottom: clamp( 0.3125rem , 0.1075819672rem  +  0.8743169399vw , 0.8125rem )) {
+    .klantverhalen-hero__subtitle {
+      margin-bottom: clamp( 0.3125rem , 0.1075819672rem  +  0.8743169399vw , 0.8125rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 0.3125rem , 0.1075819672rem  +  0.8743169399vw , 0.8125rem )) {
+    .klantverhalen-hero__subtitle {
+      margin-bottom: calc(0.3125rem + 0.5 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (font-size: clamp( 1.875rem , 1.7725409836rem  +  0.4371584699vw , 2.125rem )) {
+    .klantverhalen-hero__title {
+      font-size: clamp( 1.875rem , 1.7725409836rem  +  0.4371584699vw , 2.125rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.875rem , 1.7725409836rem  +  0.4371584699vw , 2.125rem )) {
+    .klantverhalen-hero__title {
+      font-size: calc(1.875rem + 0.25 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (line-height: clamp( 2.0625rem , 1.9600409836rem  +  0.4371584699vw , 2.3125rem )) {
+    .klantverhalen-hero__title {
+      line-height: clamp( 2.0625rem , 1.9600409836rem  +  0.4371584699vw , 2.3125rem );
+    }
+}
+
+@supports not (line-height: clamp( 2.0625rem , 1.9600409836rem  +  0.4371584699vw , 2.3125rem )) {
+    .klantverhalen-hero__title {
+      line-height: calc(2.0625rem + 0.25 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (margin-bottom: clamp( 0.75rem , 0.493852459rem  +  1.0928961749vw , 1.375rem )) {
+    .klantverhalen-hero__title {
+      margin-bottom: clamp( 0.75rem , 0.493852459rem  +  1.0928961749vw , 1.375rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 0.75rem , 0.493852459rem  +  1.0928961749vw , 1.375rem )) {
+    .klantverhalen-hero__title {
+      margin-bottom: calc(0.75rem + 0.625 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (font-size: clamp( 0.875rem , 0.8237704918rem  +  0.218579235vw , 1rem )) {
+    .klantverhalen-hero__desc {
+      font-size: clamp( 0.875rem , 0.8237704918rem  +  0.218579235vw , 1rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.875rem , 0.8237704918rem  +  0.218579235vw , 1rem )) {
+    .klantverhalen-hero__desc {
+      font-size: calc(0.875rem + 0.125 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (line-height: clamp( 1.25rem , 1.1987704918rem  +  0.218579235vw , 1.375rem )) {
+    .klantverhalen-hero__desc {
+      line-height: clamp( 1.25rem , 1.1987704918rem  +  0.218579235vw , 1.375rem );
+    }
+}
+
+@supports not (line-height: clamp( 1.25rem , 1.1987704918rem  +  0.218579235vw , 1.375rem )) {
+    .klantverhalen-hero__desc {
+      line-height: calc(1.25rem + 0.125 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
 }
 
 @media (min-width: 61.99875em) and (max-width: 77.5em) {
@@ -10649,6 +11204,66 @@ h6 {
       width: calc(20rem + 18.125 * (100vw - 48rem) / 29.5);
     }
 }
+
+@supports (gap: clamp( 0.625rem , -3.4427966102rem  +  8.4745762712vw , 3.125rem )) {
+    .klantverhalen-hero__container {
+      gap: clamp( 0.625rem , -3.4427966102rem  +  8.4745762712vw , 3.125rem );
+    }
+}
+
+@supports not (gap: clamp( 0.625rem , -3.4427966102rem  +  8.4745762712vw , 3.125rem )) {
+    .klantverhalen-hero__container {
+      gap: calc(0.625rem + 2.5 * (100vw - 48rem) / 29.5);
+    }
+}
+
+@supports (left: clamp( 1.875rem , -7.7860169492rem  +  20.1271186441vw , 7.8125rem )) {
+    .klantverhalen-hero__img-left img {
+      left: clamp( 1.875rem , -7.7860169492rem  +  20.1271186441vw , 7.8125rem );
+    }
+}
+
+@supports not (left: clamp( 1.875rem , -7.7860169492rem  +  20.1271186441vw , 7.8125rem )) {
+    .klantverhalen-hero__img-left img {
+      left: calc(1.875rem + 5.9375 * (100vw - 48rem) / 29.5);
+    }
+}
+
+@supports (right: clamp( 0.0000000625rem , -6.6101693273rem  +  13.7711862288vw , 4.0625rem )) {
+    .klantverhalen-hero__img-right img {
+      right: clamp( 0.0000000625rem , -6.6101693273rem  +  13.7711862288vw , 4.0625rem );
+    }
+}
+
+@supports not (right: clamp( 0.0000000625rem , -6.6101693273rem  +  13.7711862288vw , 4.0625rem )) {
+    .klantverhalen-hero__img-right img {
+      right: calc(0.0000000625rem + 4.0624999375 * (100vw - 48rem) / 29.5);
+    }
+}
+
+@supports (gap: clamp( 0.625rem , -2.4258474576rem  +  6.3559322034vw , 2.5rem )) {
+    .klantverhalen-hero__select-box {
+      gap: clamp( 0.625rem , -2.4258474576rem  +  6.3559322034vw , 2.5rem );
+    }
+}
+
+@supports not (gap: clamp( 0.625rem , -2.4258474576rem  +  6.3559322034vw , 2.5rem )) {
+    .klantverhalen-hero__select-box {
+      gap: calc(0.625rem + 1.875 * (100vw - 48rem) / 29.5);
+    }
+}
+
+@supports (gap: clamp( 0.625rem , -0.3919491525rem  +  2.1186440678vw , 1.25rem )) {
+    .klantverhalen-hero__select-button {
+      gap: clamp( 0.625rem , -0.3919491525rem  +  2.1186440678vw , 1.25rem );
+    }
+}
+
+@supports not (gap: clamp( 0.625rem , -0.3919491525rem  +  2.1186440678vw , 1.25rem )) {
+    .klantverhalen-hero__select-button {
+      gap: calc(0.625rem + 0.625 * (100vw - 48rem) / 29.5);
+    }
+}
 }
 
 @media (min-width: 29.99875em) and (max-width: 77.5em) {
@@ -10788,6 +11403,26 @@ h6 {
 
   .ons-platform__item-img-iMac {
     width: 20rem;
+  }
+
+  .klantverhalen-hero__img-left img {
+    top: 6.25rem;
+  }
+
+  .klantverhalen-hero__img-right img {
+    top: -4.375rem;
+  }
+
+  .klantverhalen-hero__title {
+    max-width: 31.25rem;
+  }
+
+  .klantverhalen-hero__desc {
+    margin-left: 8.75rem;
+  }
+
+  .klantverhalen-hero__select-box {
+    margin-top: 8.125rem;
   }
 }
 
@@ -10935,6 +11570,66 @@ h6 {
       width: calc(15rem + 5 * (100vw - 23.4375rem) / 24.56125);
     }
 }
+
+@supports (top: clamp( 6.25rem , 10.5249153901rem  +  -8.9063056644vw , 8.4375rem )) {
+    .klantverhalen-hero__img-left img {
+      top: clamp( 6.25rem , 10.5249153901rem  +  -8.9063056644vw , 8.4375rem );
+    }
+}
+
+@supports not (top: clamp( 6.25rem , 10.5249153901rem  +  -8.9063056644vw , 8.4375rem )) {
+    .klantverhalen-hero__img-left img {
+      top: calc(8.4375rem + -2.1875 * (100vw - 23.4375rem) / 24.56125);
+    }
+}
+
+@supports (top: clamp( -4.375rem , -0.1000846099rem  +  -8.9063056644vw , -2.1875rem )) {
+    .klantverhalen-hero__img-right img {
+      top: clamp( -4.375rem , -0.1000846099rem  +  -8.9063056644vw , -2.1875rem );
+    }
+}
+
+@supports not (top: clamp( -4.375rem , -0.1000846099rem  +  -8.9063056644vw , -2.1875rem )) {
+    .klantverhalen-hero__img-right img {
+      top: calc(-2.1875rem + -2.1875 * (100vw - 23.4375rem) / 24.56125);
+    }
+}
+
+@supports (max-width: clamp( 18.125rem , 5.6005076594rem  +  53.4378339865vw , 31.25rem )) {
+    .klantverhalen-hero__title {
+      max-width: clamp( 18.125rem , 5.6005076594rem  +  53.4378339865vw , 31.25rem );
+    }
+}
+
+@supports not (max-width: clamp( 18.125rem , 5.6005076594rem  +  53.4378339865vw , 31.25rem )) {
+    .klantverhalen-hero__title {
+      max-width: calc(18.125rem + 13.125 * (100vw - 23.4375rem) / 24.56125);
+    }
+}
+
+@supports (margin-left: clamp( 7.1875rem , 5.6964890071rem  +  6.3616469032vw , 8.75rem )) {
+    .klantverhalen-hero__desc {
+      margin-left: clamp( 7.1875rem , 5.6964890071rem  +  6.3616469032vw , 8.75rem );
+    }
+}
+
+@supports not (margin-left: clamp( 7.1875rem , 5.6964890071rem  +  6.3616469032vw , 8.75rem )) {
+    .klantverhalen-hero__desc {
+      margin-left: calc(7.1875rem + 1.5625 * (100vw - 23.4375rem) / 24.56125);
+    }
+}
+
+@supports (margin-top: clamp( 1.875rem , -4.0890439717rem  +  25.4465876126vw , 8.125rem )) {
+    .klantverhalen-hero__select-box {
+      margin-top: clamp( 1.875rem , -4.0890439717rem  +  25.4465876126vw , 8.125rem );
+    }
+}
+
+@supports not (margin-top: clamp( 1.875rem , -4.0890439717rem  +  25.4465876126vw , 8.125rem )) {
+    .klantverhalen-hero__select-box {
+      margin-top: calc(1.875rem + 6.25 * (100vw - 23.4375rem) / 24.56125);
+    }
+}
 }
 
 @media (max-width: 47.99875em) and (min-width: 23.125em) and (max-width: 47.99875em) {
@@ -11059,6 +11754,18 @@ h6 {
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
+  }
+
+  .klantverhalen-hero__select-button:hover {
+    background-color: #000;
+    color: #fff;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+
+  .klantverhalen-hero__select-fiter:hover {
+    color: #000;
   }
 }
 

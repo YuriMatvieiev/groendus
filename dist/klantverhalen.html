@@ -2,19 +2,19 @@
 <html lang="en">
 
 <head>
-	<title>HomePage</title>
+	<title>Klantverhalen</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230503154445">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230504024358">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
+<body class="klantverhalen">
 	<div class="wrapper">
-		<header class="header undefined">
+		<header class="header blue-theme">
 			<div class="header__top">
 				<div class="header__top-block">
 					<div class="header__top-first">
@@ -150,7 +150,7 @@
 							</li>
 							<li class="menu__item"><a href="ons-platform.html" class="menu__link">Ons platform</a>
 							</li>
-							<li class="menu__item"><a href="#" class="menu__link">Klantverhalen</a></li>
+							<li class="menu__item"><a href="klantverhalen.html" class="menu__link">Klantverhalen</a></li>
 							<li class="menu__item"><a href="#" class="menu__link">Energiekennis</a></li>
 						</ul>
 						<div class="header__mobile-bottom">
@@ -184,67 +184,85 @@
 			</div>
 		</header>
 		<main class="page">
-
-			<nav class="header__nav menu__body">
-				<ul class="menu__list">
-					<li class="menu__item">
-						<div class="menu__link"><a href="#" class="menu__link">Ons aanbod</a> <i class="_icon-arrow-right menu-arrow"></i></div>
-						<div class="menu__submenu">
-							<div class="menu__submenu-item">
-								<div class="menu__submenu-item-first">
-									<div class="menu__submenu-title">Onze integrale energie-oplossing:</div>
-									<div class="menu__submenu-main-nav-back _icon-arrow-right">Terug</div>
-									<ul class="menu__submenu-main-nav">
-										<li id="opwekken-list">
-											<div class="menu__submenu-main-nav-item-wrap active" id="opwekken-link"> <img src="img/plug.svg" alt="">
-												<div class="menu__submenu-main-nav-item"> <span>Opwekken, opslaan & opladen</span> <i class="_icon-arrow-right open"></i></div>
-											</div>
-											<ul data-da="#opwekken-list, 991.98" class="menu__submenu-sub-nav">
-												<li><a class="active" href="#">Zonnepanelen</a></li>
-												<li><a href="#">Energieopslag</a></li>
-												<li><a href="#">Slimme meters</a></li>
-												<li><a href="#">E-boilers<span class="menu__submenu-sub-nav-nieuw">Nieuw</span></a></li>
-												<li><a href="#">Laadoplossingen</a></li>
-											</ul>
-										</li>
-										<li id="inzicht-list">
-											<div class="menu__submenu-main-nav-item-wrap" id="inzicht-link"><img src="img/curve.svg" alt="">
-												<div class="menu__submenu-main-nav-item">Inzicht & sturing <i class="_icon-arrow-right"></i>
-												</div>
-											</div>
-											<ul data-da="#opwekken-list, 991.98" class="menu__submenu-sub-nav">
-												<li><a class="active" href="#">Zonnepanelen</a></li>
-												<li><a href="#">Energieopslag</a></li>
-											</ul>
-										</li>
-										<li id="duurzaam-list">
-											<div class="menu__submenu-main-nav-item-wrap" id="duurzaam-link"><img src="img/euro.svg" alt="">
-												<div class="menu__submenu-main-nav-item">Duurzaam inkopen <i class="_icon-arrow-right"></i>
-												</div>
-											</div>
-											<ul data-da="#opwekken-list, 991.98" class="menu__submenu-sub-nav">
-												<li><a class="active" href="#">Zonnepanelen</a></li>
-												<li><a href="#">Energieopslag</a></li>
-											</ul>
-										</li>
-									</ul>
-								</div>
+			<section class="klantverhalen-hero">
+				<div class="klantverhalen-hero__container">
+					<div class="klantverhalen-hero__img-left">
+						<img src="img/klantverhalen/wooman.svg" alt="woman">
+					</div>
+					<div class="klantverhalen-hero__text">
+						<div class="klantverhalen-hero__subtitle">Voor wie is Groendus?</div>
+						<div class="klantverhalen-hero__title">Groendus is van en voor heel zakelijk Nederland</div>
+						<div class="klantverhalen-hero__desc">Of het nou zon, wind of warmte is. En of je nou ondernemer bent, of
+							werkt bij de overheid of een instelling. Met de nieuwste technologie helpen wij jouw bedrijf energie
+							besparen, opwekken en verkopen. </div>
+						<div class="klantverhalen-hero__select-box">
+							<div class="klantverhalen-hero__select-block">
+								<button class="klantverhalen-hero__select-button select-button _icon-arrow-right">Groendus
+									diensten</button>
+								<ul class="klantverhalen-hero__select-list" id="dropdown1" style="display: none;">
+									<li>
+										<input type="radio" id="besparen-check" name="groendusDiensten">
+										<label for="besparen-check">Besparen</label>
+									</li>
+									<li>
+										<input type="radio" id="opwekken-check" name="groendusDiensten">
+										<label for="opwekken-check">Opwekken</label>
+									</li>
+									<li>
+										<input type="radio" id="energiemarktplaats-check" name="groendusDiensten">
+										<label for="energiemarktplaats-check">Energiemarktplaats</label>
+									</li>
+									<li>
+										<input type="radio" id="slimverbruiken-check" name="groendusDiensten">
+										<label for="slimverbruiken-check">Slim verbruiken</label>
+									</li>
+									<button class="klantverhalen-hero__select-fiter" id="filter-btn">Filteren</button>
+								</ul>
+							</div>
+							<div class="klantverhalen-hero__select-block">
+								<button class="klantverhalen-hero__select-button select-button _icon-arrow-right">Sectoren</button>
+								<ul class="klantverhalen-hero__select-list" id="dropdown2" style="display: none;">
+									<li>
+										<input type="radio" id="energiemarktplaats-check" name="sectoren">
+										<label for="energiemarktplaats-check">Energiemarktplaats</label>
+									</li>
+									<li>
+										<input type="radio" id="slimverbruiken-check" name="sectoren">
+										<label for="slimverbruiken-check">Slim verbruiken</label>
+									</li>
+									<li>
+										<input type="radio" id="besparen-check" name="sectoren">
+										<label for="besparen-check">Besparen</label>
+									</li>
+									<button class="klantverhalen-hero__select-fiter" id="filter-btn">Filteren</button>
+								</ul>
+							</div>
+							<div class="klantverhalen-hero__select-block">
+								<button class="klantverhalen-hero__select-button select-button _icon-arrow-right">Aantal
+									vestigingen</button>
+								<ul class="klantverhalen-hero__select-list" id="dropdown3" style="display: none;">
+									<li>
+										<input type="radio" id="slimverbruiken-check" name="aantalVestigingen">
+										<label for="slimverbruiken-check">Slim verbruiken</label>
+									</li>
+									<li>
+										<input type="radio" id="energiemarktplaats-check" name="aantalVestigingen">
+										<label for="energiemarktplaats-check">Energiemarktplaats</label>
+									</li>
+									<li>
+										<input type="radio" id="besparen-check" name="aantalVestigingen">
+										<label for="besparen-check">Besparen</label>
+									</li>
+									<button class="klantverhalen-hero__select-fiter" id="filter-btn">Filteren</button>
+								</ul>
 							</div>
 						</div>
-					</li>
-					<li class="menu__item"><a href="ons-platform.html" class="menu__link">Ons platform</a>
-					</li>
-					<li class="menu__item"><a href="#" class="menu__link">Klantverhalen</a></li>
-					<li class="menu__item"><a href="#" class="menu__link">Energiekennis</a></li>
-				</ul>
-				<div class="header__mobile-bottom">
-					<ul class="header__socials">
-						<li><a href="#"><i class="_icon-logo-linkedin"></i></a></li>
-						<li><a href="#"><i class="_icon-logo-twitter"></i></a></li>
-						<li><a href="#"><i class="_icon-logo-instagram"></i></a></li>
-					</ul>
+					</div>
+					<div class="klantverhalen-hero__img-right">
+						<img src="img/klantverhalen/man.svg" alt="man">
+					</div>
 				</div>
-			</nav>
+			</section>
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
@@ -265,7 +283,8 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20230503154445"></script>
+	<script src="js/app.min.js?_v=20230504024358"></script>
+
 </body>
 
 </html>
