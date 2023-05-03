@@ -6,7 +6,7 @@ import { flsModules } from "./modules.js";
 
 // Cache elements for better performance
 const onsAanbodLink = document.querySelector('.menu__link');
-const submenu = document.querySelector('.menu__submenu');
+const subMenu = document.querySelector('.menu__submenu');
 const arrow = document.querySelector('.menu-arrow');
 const backButtonMenu = document.querySelector('.icon-menu');
 const backButton = document.querySelector('.menu__submenu-main-nav-back');
@@ -16,9 +16,9 @@ let menuOpen = false;
 
 // Toggle menu function
 const toggleMenu = () => {
-  submenu.classList.toggle('submenu-open');
+  subMenu.classList.toggle('submenu-open');
   arrow.classList.toggle('rotated');
-  menuOpen = submenu.classList.contains('submenu-open');
+  menuOpen = subMenu.classList.contains('submenu-open');
 }
 
 // Click event listener for onsAanbodLink
@@ -26,15 +26,16 @@ onsAanbodLink.addEventListener('click', toggleMenu);
 
 // Click event listener for backButtonMenu
 backButtonMenu.addEventListener('click', () => {
-  submenu.classList.remove('submenu-open');
+  subMenu.classList.remove('submenu-open');
   arrow.classList.toggle('rotated');
 });
 
 // Click event listener for backButton
 backButton.addEventListener('click', () => {
-  submenu.classList.remove('submenu-open');
+  subMenu.classList.remove('submenu-open');
   arrow.classList.toggle('rotated');
 });
+
 
 
 if (window.innerWidth > 991.98) {
@@ -47,7 +48,7 @@ if (window.innerWidth > 991.98) {
   });
 
   const closeMenu = () => {
-    submenu.classList.remove('submenu-open');
+    subMenu.classList.remove('submenu-open');
     arrow.classList.remove('rotated');
     menuOpen = false;
   }
@@ -56,11 +57,11 @@ if (window.innerWidth > 991.98) {
     timeoutId = setTimeout(closeMenu, 1000);
   });
 
-  submenu.addEventListener('mouseleave', () => {
+  subMenu.addEventListener('mouseleave', () => {
     timeoutId = setTimeout(closeMenu, 500);
   });
 
-  submenu.addEventListener('mouseenter', () => {
+  subMenu.addEventListener('mouseenter', () => {
     clearTimeout(timeoutId);
   });
 }
@@ -100,17 +101,7 @@ if (window.innerWidth < 991.98) {
 
 }
 
-// Get the button element
-const button = document.querySelector('.header__top-first-button');
 
-// Get the menu element
-const menu = document.querySelector('.header__top-menu');
-
-// Add click event listener to the button
-button.addEventListener('click', () => {
-  // Toggle the menu's visibility by adding or removing the 'active' class
-  menu.classList.toggle('active');
-});
 
 
 

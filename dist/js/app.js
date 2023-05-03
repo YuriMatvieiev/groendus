@@ -57,9 +57,20 @@
             if (bodyLockStatus && e.target.closest(".icon-menu")) {
                 bodyLockToggle();
                 document.documentElement.classList.toggle("menu-open");
+                menu.classList.remove("active");
             }
         }));
     }
+    function functions_menuClose() {
+        bodyUnlock();
+        document.documentElement.classList.remove("menu-open");
+    }
+    const functions_button = document.querySelector(".header__top-first-button");
+    const menu = document.querySelector(".header__top-menu");
+    functions_button.addEventListener("click", (() => {
+        menu.classList.toggle("active");
+        functions_menuClose();
+    }));
     function getWindow_getWindow(node) {
         if (node == null) return window;
         if (node.toString() !== "[object Window]") {
@@ -2217,7 +2228,8 @@
     });
     const tippy_esm = tippy;
     modules_flsModules.tippy = tippy_esm("[data-tippy-content]", {
-        placement: "auto"
+        placement: "auto",
+        allowHTML: true
     });
     function ssr_window_esm_isObject(obj) {
         return obj !== null && typeof obj === "object" && "constructor" in obj && obj.constructor === Object;
@@ -5165,24 +5177,24 @@
     const da = new DynamicAdapt("max");
     da.init();
     const onsAanbodLink = document.querySelector(".menu__link");
-    const submenu = document.querySelector(".menu__submenu");
+    const subMenu = document.querySelector(".menu__submenu");
     const script_arrow = document.querySelector(".menu-arrow");
     const backButtonMenu = document.querySelector(".icon-menu");
     const backButton = document.querySelector(".menu__submenu-main-nav-back");
     let timeoutId;
     let script_menuOpen = false;
     const toggleMenu = () => {
-        submenu.classList.toggle("submenu-open");
+        subMenu.classList.toggle("submenu-open");
         script_arrow.classList.toggle("rotated");
-        script_menuOpen = submenu.classList.contains("submenu-open");
+        script_menuOpen = subMenu.classList.contains("submenu-open");
     };
     onsAanbodLink.addEventListener("click", toggleMenu);
     backButtonMenu.addEventListener("click", (() => {
-        submenu.classList.remove("submenu-open");
+        subMenu.classList.remove("submenu-open");
         script_arrow.classList.toggle("rotated");
     }));
     backButton.addEventListener("click", (() => {
-        submenu.classList.remove("submenu-open");
+        subMenu.classList.remove("submenu-open");
         script_arrow.classList.toggle("rotated");
     }));
     if (window.innerWidth > 991.98) {
@@ -5191,17 +5203,17 @@
             if (!script_menuOpen) toggleMenu();
         }));
         const closeMenu = () => {
-            submenu.classList.remove("submenu-open");
+            subMenu.classList.remove("submenu-open");
             script_arrow.classList.remove("rotated");
             script_menuOpen = false;
         };
         onsAanbodLink.addEventListener("mouseleave", (() => {
             timeoutId = setTimeout(closeMenu, 1e3);
         }));
-        submenu.addEventListener("mouseleave", (() => {
+        subMenu.addEventListener("mouseleave", (() => {
             timeoutId = setTimeout(closeMenu, 500);
         }));
-        submenu.addEventListener("mouseenter", (() => {
+        subMenu.addEventListener("mouseenter", (() => {
             clearTimeout(timeoutId);
         }));
     }
@@ -5230,11 +5242,6 @@
             }));
         }));
     }
-    const script_button = document.querySelector(".header__top-first-button");
-    const menu = document.querySelector(".header__top-menu");
-    script_button.addEventListener("click", (() => {
-        menu.classList.toggle("active");
-    }));
     const showMoreBtns = document.querySelectorAll(".services__item-show-more");
     showMoreBtns.forEach((btn => {
         btn.addEventListener("click", (() => {
