@@ -1,0 +1,307 @@
+//========================================================================================================================================================
+.werken{
+  .blue-hero {
+    @include adaptiveValue("padding-top", 5, 40, 0, 1240, 768);
+    @media (max-width:$mobile){
+       padding-bottom: 40px; 
+    }
+    &__breadcrumbs{
+      @include adaptiveValue("margin-bottom", 17, 20, 0, 1240, 768);
+      @media (max-width:$mobileSmall){
+         flex-direction: column;
+         gap: 8px; 
+      }
+      a{
+        &:last-child{
+          display: flex;
+        }
+      }
+    }
+    &__text-block{
+      @include adaptiveValue("width", 540, 440, 0, 1240, 768);
+      @media (max-width:$mobile){
+         width: 100%; 
+      }
+    }
+    &__desc{
+      @include adaptiveValue("margin-bottom", 40, 20, 0, 1240, 768);
+    }
+    &__button{
+      padding: 14px 21px;
+      @media (max-width:$mobile){
+         width: 100%; 
+      }
+    }
+    &__img-mobile{
+      display: none;
+      @media (max-width:$mobile){
+         display: flex;
+         justify-content: center;
+         margin-bottom: rem(50); 
+      }
+    }
+      // .blue-hero__img-box
+      &__img-box {
+        position: relative;
+        top: 0;
+        @include adaptiveValue("right", 50, 0, 0, 1240, 768);
+      }
+      // .blue-hero__img-border
+      &__img-border {
+position: relative;
+z-index: 2;
+@include adaptiveValue("width", 489, 250, 0, 1240, 768);
+@media (max-width:$mobile){
+   width: 327px; 
+}
+      }
+      // .blue-hero__img-people
+      &__img-people {
+        position: absolute;
+        top: 0;
+        @include adaptiveValue("right", 40, 25, 0, 1240, 768);
+        z-index: 1;
+        @include adaptiveValue("width", 409, 200, 0, 1240, 768);
+        @media (max-width:$mobile){
+           right: 35px; 
+           width: 255px;
+        }
+      }
+
+    }
+    .full-video {
+      
+      // .full-video__box
+      &__box {
+        @include adaptiveValue("margin-top", 130, 80);
+        @include adaptiveValue("padding-bottom", 80, 40);
+      }
+      // .full-video__text
+      &__text {
+      position: static;
+      max-width: rem(490);
+      margin: 0 auto;
+      text-align: center;
+      }
+      // .full-video__subtitle
+      &__subtitle {
+        color: $blue-light
+      }
+      // .full-video__title
+      &__title {
+        color: $mainColor;
+        margin-bottom: rem(8);
+      }
+      // .full-video__desc
+      &__desc {
+        margin-bottom: rem(30);
+        @include adaptiveValue("font-size", 18, 14);
+    @include adaptiveValue("line-height", 29, 20);
+    margin-bottom: rem(20);
+      }
+      // .full-video__video
+      &__video {
+      }
+      // .full-video__iframe
+      &__iframe {
+      }
+      // .full-video__img
+      &__img {
+      }
+      // .full-video__play-button
+      &__play-button {
+      }
+  }
+  
+}
+
+//========================================================================================================================================================
+
+.werken-main {
+  @include adaptiveValue("margin-top", 80, 40);
+  // .werken-main__container
+  &__container {
+  }
+  // .werken-main__three-col
+  &__three-col {
+    
+  }
+}
+.three-col {
+  background: #FFFFFF;
+box-shadow: 0px 24px 24px rgba(0, 0, 0, 0.04);
+padding: 70px 100px;
+display: flex;
+flex-direction: column;
+align-items: center;
+@include adaptiveValue("padding-left", 100, 20, 0, 1240, 768);
+@include adaptiveValue("padding-right", 100, 20, 0, 1240, 768);
+@media (max-width:$mobile){
+   padding: 50px 27px; 
+}
+  // .three-col__subtitle
+  &__subtitle {
+    color: $blue-light;
+    margin-bottom: rem(8);
+    @include adaptiveValue("font-size", 16, 14, 0, 1240, 768);
+    @include adaptiveValue("line-height", 18, 15);
+    @media (max-width:$mobile){
+      align-self: flex-start; 
+    }
+  }
+  // .three-col__title
+  &__title {
+    margin-bottom: rem(23);
+    @include adaptiveValue("font-size", 36, 22, 0, 1240, 768);
+    @include adaptiveValue("line-height", 40, 24);
+    font-weight: 700;
+    @media (max-width:$mobile){
+      align-self: flex-start; 
+    }
+  }
+  // .three-col__desc
+  &__desc {
+    @include adaptiveValue("font-size", 18, 14);
+    @include adaptiveValue("line-height", 29, 20);
+    display: flex;
+    @include adaptiveValue("gap", 50, 20, 0, 1240, 768);
+    @media (max-width:$mobile){
+       display: block; 
+    }
+
+  }
+}
+
+//========================================================================================================================================================
+
+.full-video {
+  // .full-video__box-two-col
+  &__box-two-col {
+    @include adaptiveValue("padding-top", 80, 40);
+        @include adaptiveValue("padding-bottom", 80, 40);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include adaptiveValue("gap", 230, 30, 0, 1240, 768);
+    @media (max-width:$mobile){
+       flex-direction: column-reverse; 
+       gap: 10px;
+    }
+  }
+  // .full-video__video
+  &__video-col {
+    @include adaptiveValue("width", 504, 360, 0, 1240, 768);
+    @media (max-width:$mobile){
+       @include adaptiveValue("width", 505, 325, 0, 767.98, 375);
+    }
+  }
+  // .full-video__iframe
+  &__iframe-col {
+  }
+  // .full-video__img
+  &__img {
+  }
+  // .full-video__play-button
+  &__play-button {
+  }
+  // .full-video__text-block
+  &__text-col {
+    @include adaptiveValue("width", 504, 310, 0, 1240, 768);
+    text-align: left;
+    @media (max-width:$mobile){
+       width: 100%; 
+    }
+  }
+  // .full-video__subtitle
+  &__subtitle {
+  }
+  // .full-video__title
+  &__title {
+  }
+  // .full-video__desc
+  &__desc {
+  }
+}
+
+//========================================================================================================================================================
+
+.blue-man {
+  @include adaptiveValue("padding-top", 80, 40);
+        @include adaptiveValue("padding-bottom", 100, 40);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 240px;
+        @include adaptiveValue("gap", 240, 90, 0, 1240, 768);
+  // .blue-man__text
+  &__text {
+  }
+  // .blue-man__subtitle
+  &__subtitle {
+    @include adaptiveValue("font-size", 16, 14);
+    @include adaptiveValue("line-height", 18, 15);
+    margin-bottom: rem(8);
+    color: $blue-light;
+    @media (max-width:$mobile){
+       text-align: center; 
+    }
+  }
+  // .blue-man__title
+  &__title {
+    margin-bottom: rem(15);
+    @include adaptiveValue("font-size", 36, 22);
+    @include adaptiveValue("line-height", 40, 24);
+    font-weight: 700;
+    @media (max-width:$mobile){
+      text-align: center; 
+   }
+  }
+  // .blue-man__desc
+  &__desc {
+    @include adaptiveValue("font-size", 18, 14);
+    @include adaptiveValue("line-height", 29, 20);
+    @include adaptiveValue("margin-bottom", 18, 25);
+    @media (max-width:$mobile){
+       margin-top: rem(80); 
+    }
+  }
+  // .blue-man__button
+  &__button {
+    padding: 14px 21px;
+    @media (max-width:$mobile){
+       width: 100%; 
+    }
+  }
+  &__mobile-img{
+    display: flex;
+    justify-content: center;
+  }
+  // .blue-man__img-block
+  &__img-block {
+    position: relative;
+  }
+  // .blue-man__img-people
+  &__img-people {
+    position: absolute;
+    top: 35px;
+    right: 56px;
+    z-index: 1;
+    @include adaptiveValue("right", 56, 25, 0, 1240, 768);
+    @include adaptiveValue("top", 35, 20, 0, 1240, 768);
+    @include adaptiveValue("width", 392, 200, 0, 1240, 768);
+    @media (max-width:$mobile){
+      right: 35px; 
+      width: 260px;
+   }
+  }
+  // .blue-man__img-border
+  &__img-border {
+    width: rem(500);
+    @include adaptiveValue("width", 500, 250, 0, 1240, 768);
+    position: relative;
+    z-index: 2;
+    @media (max-width:$mobile){
+      width: 327px;  
+    }
+  }
+}

@@ -15,6 +15,15 @@
 	}
 }
 
+._icon-clock:before {
+  content: "\e90a";
+}
+._icon-build:before {
+  content: "\e90b";
+}
+._icon-category:before {
+  content: "\e90c";
+}
 ._icon-play:before {
   content: "\e907";
 }
