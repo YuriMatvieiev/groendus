@@ -2647,6 +2647,7 @@ h6 {
   border-radius: 12px;
   color: #000;
   padding: 20px 23px 0;
+  z-index: 2;
 }
 
 .klantverhalen-hero__select-list li {
@@ -2685,6 +2686,107 @@ h6 {
   color: #006EFF;
   font-size: 0.875rem;
   line-height: 1.0714285714;
+}
+
+.klantverhalen-stories__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.klantverhalen-stories__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: -100px;
+  z-index: 1;
+  margin-bottom: 2.25rem;
+}
+
+.klantverhalen-stories__item {
+  margin-bottom: 2.25rem;
+  /* @include adaptiveValue("width", 610, 327); */
+  width: 48%;
+  padding: 33px 30px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 20px 24px rgba(0, 0, 0, 0.07);
+          box-shadow: 0px 20px 24px rgba(0, 0, 0, 0.07);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 36px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.klantverhalen-stories__title {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.klantverhalen-stories__desc {
+  font-size: 0.75rem;
+  line-height: 1.3333333333;
+}
+
+.klantverhalen-stories__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.klantverhalen-stories__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 28px;
+}
+
+.klantverhalen-stories__list li {
+  font-size: 0.75rem;
+  line-height: 1.4166666667;
+  font-weight: 700;
+  color: #006EFF;
+}
+
+.klantverhalen-stories__button {
+  font-size: 0.75rem;
+  line-height: 1.4166666667;
+  font-weight: 700;
+  display: none;
+  gap: 4px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.klantverhalen-stories__button::before {
+  font-size: 0.5rem;
+}
+
+.klantverhalen-stories__blue-button {
+  padding: 14px 21px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .tippy-box[data-animation=fade][data-state=hidden] {
@@ -3305,6 +3407,22 @@ h6 {
 
   .klantverhalen-hero__select-button {
     gap: 1.25rem;
+  }
+
+  .klantverhalen-stories__item {
+    gap: 2.25rem;
+  }
+
+  .klantverhalen-stories__item {
+    padding-left: 2.25rem;
+  }
+
+  .klantverhalen-stories__item {
+    padding-right: 2.25rem;
+  }
+
+  .klantverhalen-stories__list {
+    gap: 1.75rem;
   }
 }
 
@@ -4228,6 +4346,26 @@ h6 {
   .klantverhalen-hero__desc {
     line-height: 1.375rem;
   }
+
+  .klantverhalen-stories {
+    padding-bottom: 6rem;
+  }
+
+  .klantverhalen-stories__img {
+    width: 9.4375rem;
+  }
+
+  .klantverhalen-stories__title {
+    font-size: 1.1875rem;
+  }
+
+  .klantverhalen-stories__title {
+    line-height: 1.3125rem;
+  }
+
+  .klantverhalen-stories__desc {
+    margin-bottom: 1.875rem;
+  }
 }
 
 @media (min-width: 90em) {
@@ -4249,6 +4387,19 @@ h6 {
 
   .menu__submenu-item-second-text {
     width: 10.5625rem;
+  }
+}
+
+@media (max-width: 75em) {
+  .klantverhalen-stories__list {
+    gap: 0.5rem;
+  }
+
+  .klantverhalen-stories__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -4635,6 +4786,18 @@ h6 {
 
   .klantverhalen-hero__select-button {
     gap: 0.625rem;
+  }
+
+  .klantverhalen-stories__item {
+    gap: 1.25rem;
+  }
+
+  .klantverhalen-stories__item {
+    padding-left: 0.9375rem;
+  }
+
+  .klantverhalen-stories__item {
+    padding-right: 0.9375rem;
   }
 }
 
@@ -5139,6 +5302,17 @@ h6 {
 
   .productpagina-options__slide-right {
     width: 100%;
+  }
+
+  .klantverhalen-stories__list {
+    display: none;
+  }
+
+  .klantverhalen-stories__button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #006EFF;
   }
 }
 
@@ -6065,6 +6239,23 @@ h6 {
     margin-top: 0.6875rem;
     width: 100%;
   }
+
+  .klantverhalen-stories__block {
+    margin-top: -70px;
+    gap: 24px;
+    margin-bottom: 3.4375rem;
+  }
+
+  .klantverhalen-stories__item {
+    width: 100%;
+    padding: 32px 10px 26px 30px;
+    gap: 26px;
+    margin-bottom: 0;
+  }
+
+  .klantverhalen-stories__blue-button {
+    width: 100%;
+  }
 }
 
 @media (max-width: 47.99875em) and (max-width: 23.125em) {
@@ -6206,6 +6397,13 @@ h6 {
 
   .white-hero__desc {
     line-height: 1.25rem;
+  }
+
+  .klantverhalen-stories__desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 }
 
@@ -7128,6 +7326,26 @@ h6 {
 
   .klantverhalen-hero__desc {
     line-height: 1.25rem;
+  }
+
+  .klantverhalen-stories {
+    padding-bottom: 4.375rem;
+  }
+
+  .klantverhalen-stories__img {
+    width: 3.6875rem;
+  }
+
+  .klantverhalen-stories__title {
+    font-size: 0.875rem;
+  }
+
+  .klantverhalen-stories__title {
+    line-height: 0.9375rem;
+  }
+
+  .klantverhalen-stories__desc {
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -9891,6 +10109,66 @@ h6 {
       line-height: calc(1.25rem + 0.125 * (100vw - 23.4375rem) / 57.1875);
     }
 }
+
+@supports (padding-bottom: clamp( 4.375rem , 3.7090163934rem  +  2.8415300546vw , 6rem )) {
+    .klantverhalen-stories {
+      padding-bottom: clamp( 4.375rem , 3.7090163934rem  +  2.8415300546vw , 6rem );
+    }
+}
+
+@supports not (padding-bottom: clamp( 4.375rem , 3.7090163934rem  +  2.8415300546vw , 6rem )) {
+    .klantverhalen-stories {
+      padding-bottom: calc(4.375rem + 1.625 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (width: clamp( 3.6875rem , 1.330942623rem  +  10.0546448087vw , 9.4375rem )) {
+    .klantverhalen-stories__img {
+      width: clamp( 3.6875rem , 1.330942623rem  +  10.0546448087vw , 9.4375rem );
+    }
+}
+
+@supports not (width: clamp( 3.6875rem , 1.330942623rem  +  10.0546448087vw , 9.4375rem )) {
+    .klantverhalen-stories__img {
+      width: calc(3.6875rem + 5.75 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (font-size: clamp( 0.875rem , 0.7469262295rem  +  0.5464480874vw , 1.1875rem )) {
+    .klantverhalen-stories__title {
+      font-size: clamp( 0.875rem , 0.7469262295rem  +  0.5464480874vw , 1.1875rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.875rem , 0.7469262295rem  +  0.5464480874vw , 1.1875rem )) {
+    .klantverhalen-stories__title {
+      font-size: calc(0.875rem + 0.3125 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (line-height: clamp( 0.9375rem , 0.7838114754rem  +  0.6557377049vw , 1.3125rem )) {
+    .klantverhalen-stories__title {
+      line-height: clamp( 0.9375rem , 0.7838114754rem  +  0.6557377049vw , 1.3125rem );
+    }
+}
+
+@supports not (line-height: clamp( 0.9375rem , 0.7838114754rem  +  0.6557377049vw , 1.3125rem )) {
+    .klantverhalen-stories__title {
+      line-height: calc(0.9375rem + 0.375 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (margin-bottom: clamp( 0.5rem , -0.0635245902rem  +  2.4043715847vw , 1.875rem )) {
+    .klantverhalen-stories__desc {
+      margin-bottom: clamp( 0.5rem , -0.0635245902rem  +  2.4043715847vw , 1.875rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 0.5rem , -0.0635245902rem  +  2.4043715847vw , 1.875rem )) {
+    .klantverhalen-stories__desc {
+      margin-bottom: calc(0.5rem + 1.375 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
 }
 
 @media (min-width: 61.99875em) and (max-width: 77.5em) {
@@ -11264,6 +11542,42 @@ h6 {
       gap: calc(0.625rem + 0.625 * (100vw - 48rem) / 29.5);
     }
 }
+
+@supports (gap: clamp( 1.25rem , -0.3771186441rem  +  3.3898305085vw , 2.25rem )) {
+    .klantverhalen-stories__item {
+      gap: clamp( 1.25rem , -0.3771186441rem  +  3.3898305085vw , 2.25rem );
+    }
+}
+
+@supports not (gap: clamp( 1.25rem , -0.3771186441rem  +  3.3898305085vw , 2.25rem )) {
+    .klantverhalen-stories__item {
+      gap: calc(1.25rem + 1 * (100vw - 48rem) / 29.5);
+    }
+}
+
+@supports (padding-left: clamp( 0.9375rem , -1.1980932203rem  +  4.4491525424vw , 2.25rem )) {
+    .klantverhalen-stories__item {
+      padding-left: clamp( 0.9375rem , -1.1980932203rem  +  4.4491525424vw , 2.25rem );
+    }
+}
+
+@supports not (padding-left: clamp( 0.9375rem , -1.1980932203rem  +  4.4491525424vw , 2.25rem )) {
+    .klantverhalen-stories__item {
+      padding-left: calc(0.9375rem + 1.3125 * (100vw - 48rem) / 29.5);
+    }
+}
+
+@supports (padding-right: clamp( 0.9375rem , -1.1980932203rem  +  4.4491525424vw , 2.25rem )) {
+    .klantverhalen-stories__item {
+      padding-right: clamp( 0.9375rem , -1.1980932203rem  +  4.4491525424vw , 2.25rem );
+    }
+}
+
+@supports not (padding-right: clamp( 0.9375rem , -1.1980932203rem  +  4.4491525424vw , 2.25rem )) {
+    .klantverhalen-stories__item {
+      padding-right: calc(0.9375rem + 1.3125 * (100vw - 48rem) / 29.5);
+    }
+}
 }
 
 @media (min-width: 29.99875em) and (max-width: 77.5em) {
@@ -11682,6 +11996,20 @@ h6 {
 }
 }
 
+@media (min-width: 75em) and (max-width: 77.5em) {
+@supports (gap: clamp( 0.5rem , -37rem  +  50vw , 1.75rem )) {
+    .klantverhalen-stories__list {
+      gap: clamp( 0.5rem , -37rem  +  50vw , 1.75rem );
+    }
+}
+
+@supports not (gap: clamp( 0.5rem , -37rem  +  50vw , 1.75rem )) {
+    .klantverhalen-stories__list {
+      gap: calc(0.5rem + 1.25 * (100vw - 75rem) / 2.5);
+    }
+}
+}
+
 @media (any-hover: hover) {
   .blue-button:hover {
     background-color: #141414;
@@ -11766,6 +12094,12 @@ h6 {
 
   .klantverhalen-hero__select-fiter:hover {
     color: #000;
+  }
+
+  .klantverhalen-stories__item:hover .klantverhalen-stories__button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
