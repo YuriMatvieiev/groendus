@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230504233842">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230505195952">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -211,11 +211,21 @@
 							<div class="full-video__title">Zo plaatsten we laadpalen bij Picnic</div>
 						</div>
 						<div class="full-video__video">
-							<div class="full-video__iframe" style="padding:56.25% 0 0 0;position:relative;">
-								<iframe src="https://player.vimeo.com/video/523379696?h=cc12fa3e2e&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+							<picture><source srcset="img/productpagina/prevue.webp" type="image/webp"><img class="full-video__img" src="img/productpagina/prevue.png" alt="video thumbnail" id="thumbnail"></picture>
+							<button class="full-video__play-button" id="play-button"><img src="img/productpagina/play.svg" alt=""></button>
+							<div id="video-container" style="display:none">
+								<script src="https://fast.wistia.com/embed/medias/222bm49bvb.jsonp?_v=20230505195952" async></script>
+								<script src="https://fast.wistia.com/assets/external/E-v1.js?_v=20230505195952" async></script>
+								<div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+									<div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+										<div class="wistia_embed wistia_async_222bm49bvb autoPlay=true videoFoam=true" style="height:100%;position:relative;width:100%">
+											<div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
+												<picture><source srcset="https://fast.wistia.com/embed/medias/222bm49bvb/swatch" type="image/webp"><img src="https://fast.wistia.com/embed/medias/222bm49bvb/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" /></picture>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
-							<picture><source srcset="img/productpagina/prevue.webp" type="image/webp"><img class="full-video__img" src="img/productpagina/prevue.png" alt="video thumbnail"></picture>
-							<button class="full-video__play-button"><img src="img/productpagina/play.svg" alt=""></button>
 						</div>
 					</div>
 				</div>
@@ -551,7 +561,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20230504233842"></script>
+	<script src="js/app.min.js?_v=20230505195952"></script>
 
 </body>
 

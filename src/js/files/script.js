@@ -101,11 +101,6 @@ if (window.innerWidth < 991.98) {
 
 }
 
-
-
-
-
-
 const showMoreBtns = document.querySelectorAll('.services__item-show-more');
 
 showMoreBtns.forEach(btn => {
@@ -116,26 +111,24 @@ showMoreBtns.forEach(btn => {
   });
 });
 
-
-const playButton = document.querySelector('.full-video__play-button');
-const videoThumbnail = document.querySelector('.full-video__img');
+// get all the elements with the class name 'full-video__play-button'
+const playButtons = document.querySelectorAll(".full-video__play-button");
 const videoText = document.querySelector('.full-video__text');
-const isMobileTest = window.matchMedia("(max-width: 767.98px)").matches;
-const videoPlayerBlock = document.querySelector('.full-video__iframe');
-if (videoPlayerBlock) {
-  const videoPlayer = videoPlayerBlock.querySelector('iframe');
-  playButton.addEventListener('click', function () {
-    videoThumbnail.style.display = 'none';
-    videoPlayerBlock.style.display = 'block';
-    videoPlayer.src += '&autoplay=1';
-    playButton.style.display = 'none';
+// loop through each play button and add click event listener
+playButtons.forEach(function (button) {
+  button.addEventListener("click", function () {
+    const thumbnail = button.previousElementSibling; // get the thumbnail image
+    const videoContainer = button.nextElementSibling; // get the video container
 
+    thumbnail.style.display = "none"; // hide the thumbnail
+    videoContainer.style.display = "block"; // show the video container
     if (!isMobileTest) {
       videoText.style.display = 'none';
     }
   });
-}
+});
 
+const isMobileTest = window.matchMedia("(max-width: 767.98px)").matches;
 const vooropItem = document.querySelectorAll('.voorop__item');
 
 vooropItem.forEach(item => {
@@ -209,7 +202,7 @@ const selectButtons = document.querySelectorAll('.select-button');
 selectButtons.forEach(button => {
   button.addEventListener('click', function () {
     // Get the ID of the corresponding dropdown menu
-    const dropdownId = button.parentNode.querySelector('.klantverhalen-hero__select-list').id;
+    const dropdownId = button.parentNode.querySelector('.select-list').id;
     // Check if there is an open dropdown
     if (openDropdown !== null) {
       // If there is, close it
@@ -245,7 +238,7 @@ function closeDropdown(dropdownId) {
 // Add event listener to the document
 document.addEventListener('click', function (event) {
   // Check if the target element of the click is outside of the open dropdown menu
-  if (openDropdown !== null && !event.target.closest('.klantverhalen-hero__select-block')) {
+  if (openDropdown !== null && !event.target.closest('.select-block')) {
     closeDropdown(openDropdown);
     openDropdown = null;
   }

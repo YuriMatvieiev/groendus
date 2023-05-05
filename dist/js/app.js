@@ -5250,21 +5250,18 @@
             btn.classList.toggle("rotated-arrow");
         }));
     }));
-    const playButton = document.querySelector(".full-video__play-button");
-    const videoThumbnail = document.querySelector(".full-video__img");
+    const playButtons = document.querySelectorAll(".full-video__play-button");
     const videoText = document.querySelector(".full-video__text");
-    const isMobileTest = window.matchMedia("(max-width: 767.98px)").matches;
-    const videoPlayerBlock = document.querySelector(".full-video__iframe");
-    if (videoPlayerBlock) {
-        const videoPlayer = videoPlayerBlock.querySelector("iframe");
-        playButton.addEventListener("click", (function() {
-            videoThumbnail.style.display = "none";
-            videoPlayerBlock.style.display = "block";
-            videoPlayer.src += "&autoplay=1";
-            playButton.style.display = "none";
+    playButtons.forEach((function(button) {
+        button.addEventListener("click", (function() {
+            const thumbnail = button.previousElementSibling;
+            const videoContainer = button.nextElementSibling;
+            thumbnail.style.display = "none";
+            videoContainer.style.display = "block";
             if (!isMobileTest) videoText.style.display = "none";
         }));
-    }
+    }));
+    const isMobileTest = window.matchMedia("(max-width: 767.98px)").matches;
     const vooropItem = document.querySelectorAll(".voorop__item");
     vooropItem.forEach((item => {
         item.addEventListener("mouseover", (() => {
@@ -5312,7 +5309,7 @@
     const selectButtons = document.querySelectorAll(".select-button");
     selectButtons.forEach((button => {
         button.addEventListener("click", (function() {
-            const dropdownId = button.parentNode.querySelector(".klantverhalen-hero__select-list").id;
+            const dropdownId = button.parentNode.querySelector(".select-list").id;
             if (openDropdown !== null) {
                 closeDropdown(openDropdown);
                 if (openDropdown === dropdownId) {
@@ -5335,7 +5332,7 @@
         document.querySelector(".selected").classList.remove("selected");
     }
     document.addEventListener("click", (function(event) {
-        if (openDropdown !== null && !event.target.closest(".klantverhalen-hero__select-block")) {
+        if (openDropdown !== null && !event.target.closest(".select-block")) {
             closeDropdown(openDropdown);
             openDropdown = null;
         }

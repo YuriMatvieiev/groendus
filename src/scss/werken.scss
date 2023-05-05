@@ -112,7 +112,96 @@ z-index: 2;
       &__play-button {
       }
   }
-  
+  .klantverhalen-hero {
+    // .klantverhalen-hero__select-block
+    &__select-block {
+    }
+    // .klantverhalen-hero__select-button
+    &__select-button {
+      background-color: #000;
+      color: #FFFFFF;
+      border-radius: 0;
+      width: rem(254);
+      justify-content: space-between;
+      @media (max-width:$mobile){
+         width: 185px; 
+      }
+      @media (max-width:$mobileSmall){
+         width: 100%; 
+      }
+    }
+    // .klantverhalen-hero__select-list
+    &__select-list {
+      width: rem(254);
+      border-radius: 0;
+      @media (max-width:$mobile){
+        position: absolute;
+        margin-top: 0;
+        top: 40px;
+     }
+    }
+    // .klantverhalen-hero__select-fiter
+    &__select-fiter {
+    }
+  }
+  .ovner {
+    background-color: $blue-light;
+		// .ovner__container
+		&__container {
+		}
+		// .ovner__box
+		&__box {
+      background-color: $blue-light !important;
+		}
+		// .ovner__text-block
+		&__text-block {
+      @include adaptiveValue("max-width", 500, 390,  0, 1240, 768);
+color: #fff !important;
+@media (max-width:$mobile){
+  max-width: rem(545);
+}
+		}
+		// .ovner__subtitle
+		&__subtitle {
+      @include adaptiveValue("font-size", 16, 14);
+    @include adaptiveValue("line-height", 18, 15);
+    margin-bottom: rem(8);
+    @media (max-width:$mobile){
+       text-align: center; 
+    }
+		}
+		// .ovner__title
+		&__title {
+		}
+		// .ovner__desc
+		&__desc {
+      display: block !important;
+      @media (max-width:$mobile){
+         margin-bottom: rem(16); 
+         text-align: center;
+      }
+		}
+		// .ovner__img-mobile
+		&__img-mobile {
+      @media (max-width:$mobile){
+        margin-bottom: rem(16);
+     }
+		}
+		// .ovner__button
+		&__button {
+background-color: #000 !important;
+
+		}
+		// .ovner__img-block
+		&__img-block {
+		}
+		// .ovner__img-ovner
+		&__img-ovner {
+		}
+		// .ovner__img-border
+		&__img-border {
+		}
+}
 }
 
 //========================================================================================================================================================
@@ -187,6 +276,9 @@ align-items: center;
        flex-direction: column-reverse; 
        gap: 10px;
     }
+    .full-video__img {
+      height: 100%;
+    }
   }
   // .full-video__video
   &__video-col {
@@ -198,9 +290,7 @@ align-items: center;
   // .full-video__iframe
   &__iframe-col {
   }
-  // .full-video__img
-  &__img {
-  }
+  // 
   // .full-video__play-button
   &__play-button {
   }
@@ -231,7 +321,6 @@ align-items: center;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 240px;
         @include adaptiveValue("gap", 240, 90, 0, 1240, 768);
   // .blue-man__text
   &__text {
@@ -283,8 +372,6 @@ align-items: center;
   // .blue-man__img-people
   &__img-people {
     position: absolute;
-    top: 35px;
-    right: 56px;
     z-index: 1;
     @include adaptiveValue("right", 56, 25, 0, 1240, 768);
     @include adaptiveValue("top", 35, 20, 0, 1240, 768);
@@ -296,7 +383,6 @@ align-items: center;
   }
   // .blue-man__img-border
   &__img-border {
-    width: rem(500);
     @include adaptiveValue("width", 500, 250, 0, 1240, 768);
     position: relative;
     z-index: 2;
@@ -304,4 +390,204 @@ align-items: center;
       width: 327px;  
     }
   }
+}
+
+//========================================================================================================================================================
+
+.vacancies {
+  @include adaptiveValue("padding-top", 100, 40);
+  @include adaptiveValue("padding-bottom", 115, 80);
+  // .vacancies__subtitle
+  &__subtitle {
+    @include adaptiveValue("font-size", 16, 14);
+    @include adaptiveValue("line-height", 18, 15);
+    margin-bottom: rem(8);
+    color: $blue-light;
+    text-align: center;
+  }
+  // .vacancies__title
+  &__title {
+    margin-bottom: rem(20);
+    @include adaptiveValue("font-size", 36, 22);
+    @include adaptiveValue("line-height", 40, 24);
+    font-weight: 700;
+    text-align: center;
+    
+  }
+  // .vacancies__box
+  &__box {
+  }
+  // .vacancies__header
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: rem(30);
+    @media (max-width:$mobileSmall){
+       flex-direction: column-reverse; 
+       gap: 10px;
+       align-items: flex-start;
+    }
+  }
+  // .vacancies__spollers
+  &__spollers {
+    display: flex;
+    gap: 20px;
+    @media (max-width:$mobileSmall){
+       flex-direction: column; 
+       gap: 10px;
+       width: 100%;
+    }
+  }
+  // .vacancies__button-filter
+  &__button-filter {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 700;
+    font-size: rem(14);
+    line-height: math.div(15 , 14);
+    @media (max-width:$mobile){
+       font-size: 0; 
+       gap: 0;
+    }
+    @media (max-width:$mobileSmall){
+       font-size: rem(14); 
+       gap: 15px;
+    }
+    &::before{
+      font-size: rem(20);
+    }
+  }
+  // .vacancies__items
+  &__items {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  // .vacancies__item
+  &__item {
+    width: 31.5%;
+
+    padding: 50px;
+    background: #fff;
+    box-shadow: 0px 20px 24px rgba(0, 0, 0, 0.07);
+    @include adaptiveValue("padding-left", 50, 30, 0, 1240, 991.98);
+    @include adaptiveValue("padding-right", 50, 30, 0, 1240, 991.98);
+    @media (any-hover: hover){
+      &:hover{
+        box-shadow: 0px 20px 24px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease 0s;
+      }
+    }
+    @media (max-width:$tablet){
+      width: 48%;
+    }
+@media (max-width:$mobile){
+  width: 100%;
+  padding: 20px;
+}
+  }
+  // .vacancies__item-title
+  &__item-title {
+    @include adaptiveValue("font-size", 18, 14);
+    line-height: math.div(20 , 18);
+    font-weight: 700;
+    margin-bottom: rem(16);
+  }
+  // .vacancies__list
+  &__list {
+    margin-bottom: rem(25);
+    li{
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      @include adaptiveValue("font-size", 16, 14);
+    @include adaptiveValue("line-height", 26, 20);
+    &:not(:last-child) {
+      margin-bottom: rem(16);
+    }
+    &::before{
+      font-size: rem(20);
+    }
+    }
+  }
+  // .vacancies__item-button
+  &__item-button {
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    color: $blue-light;
+    text-decoration: underline;
+    display: block;
+    text-align: center;
+  }
+    // .vacancies__blue-banner
+    &__blue-banner {
+      margin: 20px 0;
+      background: #006EFF;
+box-shadow: 0px 24px 20px rgba(0, 0, 0, 0.04);
+padding: 25px 30px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 20px;
+@media (max-width:$mobile){
+   flex-direction: column; 
+   justify-content: center;
+   padding: 25px 15px;
+}
+    }
+    // .vacancies__blue-banner-left
+    &__blue-banner-left {
+      color: #fff;
+    }
+    // .vacancies__blue-banner-subtilte
+    &__blue-banner-subtilte {
+      @include adaptiveValue("font-size", 16, 14);
+    @include adaptiveValue("line-height", 18, 15);
+    margin-bottom: rem(8);
+    @media (max-width:$mobile){
+       text-align: center; 
+    }
+    }
+    // .vacancies__blue-banner-title
+    &__blue-banner-title {
+      @include adaptiveValue("font-size", 36, 22);
+    @include adaptiveValue("line-height", 40, 24);
+    font-weight: 700;
+    @media (max-width:$mobile){
+       text-align: center; 
+    }
+    }
+    // .vacancies__blue-banner-right
+    &__blue-banner-right {
+    }
+    // .vacancies__blue-banner-button
+    &__blue-banner-button {
+      padding: 14px 21px;
+      @media (max-width:$mobileSmall){
+         width: 100%; 
+      }
+    }
+    &__button-more{
+      padding: 14px 21px;
+      display: block;
+      margin: 32px auto 0;
+      @media (max-width:$mobile){
+         width: 100%; 
+      }
+    }
+}
+
+//========================================================================================================================================================
+
+.video-cols{
+  @include adaptiveValue("padding-top", 150, 80);
+  @include adaptiveValue("padding-bottom", 125, 80);
+.full-video__box-two-col{
+  padding: 0;
+  @media (max-width:$mobile){
+    flex-direction: column; 
+  }
+}
 }
