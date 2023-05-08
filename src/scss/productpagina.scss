@@ -347,7 +347,7 @@ position: relative;
     border: none;
 background-color: #fff;
 position: relative;
-z-index: 2;
+z-index: -3;
   }
   // .productpagina-steps__right-text
   &__right-text {
@@ -369,7 +369,7 @@ z-index: 2;
    &::before{
     content:'';
    border-right: 1px dashed rgba(0, 0, 0, 0.2);
-   z-index: 1;
+   z-index: -3;
     position: absolute;
     height: 100%;
     @media (max-width:$mobile){
@@ -382,7 +382,7 @@ z-index: 2;
 position: sticky;
 top: 10vh;
 @include adaptiveValue("left", 665, 287, 0, 1240, 768);
-transform: translate(-50%, 0);
+transform: translate(-50%,0);
 @include adaptiveValue("width", 84, 60, 0, 1240, 768);
 @include adaptiveValue("height", 84, 60, 0, 1240, 768);
 background-color: #fff;
@@ -391,7 +391,7 @@ box-shadow: 0px 20px 24px rgba(0, 0, 0, 0.07);
 display: flex;
 align-items: center;
 justify-content: center;
-z-index: 4;
+z-index: -1;
 @media (max-width:$mobile){
   display: none; 
 }
@@ -405,7 +405,7 @@ width: rem(22);
 height: rem(22);
 background-color: $blue-light;
 border-radius: 50%;
-z-index: 3;
+z-index: -2;
 @media (max-width:$mobile){
    display: none; 
 }

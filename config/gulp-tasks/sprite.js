@@ -1,5 +1,4 @@
 import svgSprite from "gulp-svg-sprite";
-import cheerio from 'gulp-cheerio';
 export const sprite = () => {
 	return app.gulp.src(`${app.path.src.svgicons}`, {})
 		.pipe(app.plugins.plumber(
@@ -18,17 +17,17 @@ export const sprite = () => {
 			shape: {
 				id: {
 					separator: '',
-					generator: ''
+					generator: 'svg-'
 				},
 				transform: [
 					{
-						/*svgo: {
+						svgo: {
 							plugins: [
 								{ removeXMLNS: true },
 								{ convertPathData: false },
 								{ removeViewBox: false },
 							]
-						}*/
+						}
 					}
 				]
 			},
@@ -40,15 +39,5 @@ export const sprite = () => {
 				xmlDeclaration: false
 			}
 		}))
-		.pipe(cheerio({
-			run: function ($) {
-				$('[fill]').removeAttr('fill');
-				$('[stroke]').removeAttr('stroke');
-				$('[style]').removeAttr('style');
-			},
-			parserOptions: { xmlMode: true }
-		}))
 		.pipe(app.gulp.dest(`${app.path.srcFolder}`));
-
-
 }
