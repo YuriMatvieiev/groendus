@@ -4,102 +4,6 @@ import { isMobile } from "./functions.js";
 import { flsModules } from "./modules.js";
 
 
-// Cache elements for better performance
-const onsAanbodLink = document.querySelector('.menu__link');
-const subMenu = document.querySelector('.menu__submenu');
-const arrow = document.querySelector('.menu-arrow');
-const backButtonMenu = document.querySelector('.icon-menu');
-const backButton = document.querySelector('.menu__submenu-main-nav-back');
-
-let timeoutId;
-let menuOpen = false;
-
-// Toggle menu function
-const toggleMenu = () => {
-  subMenu.classList.toggle('submenu-open');
-  arrow.classList.toggle('rotated');
-  menuOpen = subMenu.classList.contains('submenu-open');
-}
-
-// Click event listener for onsAanbodLink
-onsAanbodLink.addEventListener('click', toggleMenu);
-
-// Click event listener for backButtonMenu
-backButtonMenu.addEventListener('click', () => {
-  subMenu.classList.remove('submenu-open');
-  arrow.classList.toggle('rotated');
-});
-
-// Click event listener for backButton
-backButton.addEventListener('click', () => {
-  subMenu.classList.remove('submenu-open');
-  arrow.classList.toggle('rotated');
-});
-
-
-
-if (window.innerWidth > 991.98) {
-
-  onsAanbodLink.addEventListener('mouseenter', () => {
-    clearTimeout(timeoutId);
-    if (!menuOpen) {
-      toggleMenu();
-    }
-  });
-
-  const closeMenu = () => {
-    subMenu.classList.remove('submenu-open');
-    arrow.classList.remove('rotated');
-    menuOpen = false;
-  }
-
-  onsAanbodLink.addEventListener('mouseleave', () => {
-    timeoutId = setTimeout(closeMenu, 1000);
-  });
-
-  subMenu.addEventListener('mouseleave', () => {
-    timeoutId = setTimeout(closeMenu, 500);
-  });
-
-  subMenu.addEventListener('mouseenter', () => {
-    clearTimeout(timeoutId);
-  });
-}
-
-if (window.innerWidth < 991.98) {
-  const spoilerLinks = document.querySelectorAll('.menu__submenu-main-nav-item-wrap');
-  const firstSubmenu = document.querySelector('.menu__submenu-sub-nav');
-
-  firstSubmenu.style.display = 'flex';
-
-  spoilerLinks.forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-
-      const submenu = link.nextElementSibling;
-      const arrow = link.querySelector('._icon-arrow-right');
-
-      if (submenu.style.display === 'flex') {
-        // Submenu is already open, close it
-        submenu.style.display = 'none';
-        arrow.classList.remove('open');
-      } else {
-        // Close any other open submenus
-        const openSubmenus = document.querySelectorAll('.menu__submenu-sub-nav[style="display: flex;"]');
-        openSubmenus.forEach(openSubmenu => {
-          openSubmenu.style.display = 'none';
-          const openArrow = openSubmenu.previousElementSibling.querySelector('._icon-arrow-right');
-          openArrow.classList.remove('open');
-        });
-
-        // Open this submenu
-        submenu.style.display = 'flex';
-        arrow.classList.add('open');
-      }
-    });
-  });
-
-}
 
 const showMoreBtns = document.querySelectorAll('.services__item-show-more');
 
@@ -244,3 +148,289 @@ document.addEventListener('click', function (event) {
   }
 });
 
+/* const onsAanbodLink = document.querySelector('.menu__link');
+const subMenu = document.querySelector('.menu__submenu');
+const arrow = document.querySelector('.menu-arrow');
+const backButtonMenu = document.querySelector('.icon-menu');
+const backButton = document.querySelector('.menu__submenu-main-nav-back');
+
+let timeoutId;
+let menuOpen = false;
+
+// Function to create and remove an overlay to darken the background
+const toggleOverlay = (open) => {
+  const overlay = document.querySelector('.overlay');
+  if (open && !overlay && window.innerWidth > 991.98) {
+    // Create a new div element to darken the background
+    const overlay = document.createElement('div');
+    overlay.classList.add('overlay');
+    // Add the overlay to the body
+    document.body.appendChild(overlay);
+  } else if (!open && overlay) {
+    // Remove the overlay if the menu is closed or the width is greater than 991.98px
+    overlay.remove();
+  }
+}
+const klantverhalenLink = document.querySelector('.menu__item:nth-child(3) .menu__link');
+klantverhalenLink.addEventListener('mouseenter', () => {
+  clearTimeout(timeoutId);
+  if (!menuOpen) {
+    toggleSubMenu();
+  }
+});
+
+klantverhalenLink.addEventListener('mouseleave', () => {
+  timeoutId = setTimeout(closeSubMenu, 1000);
+});
+
+
+const toggleSubMenu = () => {
+  const klantverhalenSubMenu = document.querySelector('.menu__item:nth-child(3) .menu__submenu');
+
+  klantverhalenSubMenu.classList.toggle('submenu-open');
+  klantverhalenArrow.classList.toggle('rotated');
+  menuOpen = klantverhalenSubMenu.classList.contains('submenu-open');
+
+  // Call toggleOverlay function to add or remove overlay
+  toggleOverlay(menuOpen);
+};
+const closeSubMenu = () => {
+  const klantverhalenSubMenu = document.querySelector('.menu__item:nth-child(3) .menu__submenu');
+  const klantverhalenArrow = document.querySelector('.menu__item:nth-child(3) .menu-arrow');
+
+  klantverhalenSubMenu.classList.remove('submenu-open');
+  klantverhalenArrow.classList.remove('rotated');
+  menuOpen = false;
+
+  // Call toggleOverlay function to remove overlay
+  toggleOverlay(false);
+};
+const klantverhalenSubMenu = document.querySelector('.menu__item:nth-child(3) .menu__submenu');
+
+klantverhalenSubMenu.addEventListener('mouseleave', () => {
+  timeoutId = setTimeout(closeSubMenu, 500);
+});
+
+klantverhalenSubMenu.addEventListener('mouseenter', () => {
+  clearTimeout(timeoutId);
+});
+const klantverhalenArrow = document.querySelector('.menu__item:nth-child(3) .menu-arrow');
+
+klantverhalenArrow.addEventListener('click', toggleSubMenu);
+const toggleMenu = () => {
+  subMenu.classList.toggle('submenu-open');
+  arrow.classList.toggle('rotated');
+  menuOpen = subMenu.classList.contains('submenu-open');
+
+  // Call toggleOverlay function to add or remove overlay
+  toggleOverlay(menuOpen);
+};
+
+// Remove overlay when the submenu is closed
+const closeMenu = () => {
+  subMenu.classList.remove('submenu-open');
+  arrow.classList.remove('rotated');
+  menuOpen = false;
+
+  // Call toggleOverlay function to remove overlay
+  toggleOverlay(false);
+};
+
+// Click event listener for onsAanbodLink
+arrow.addEventListener('click', toggleMenu);
+
+// Click event listener for backButtonMenu
+backButtonMenu.addEventListener('click', closeMenu);
+
+// Click event listener for backButton
+backButton.addEventListener('click', closeMenu);
+
+if (window.innerWidth > 991.98) {
+  onsAanbodLink.addEventListener('mouseenter', () => {
+    clearTimeout(timeoutId);
+    if (!menuOpen) {
+      toggleMenu();
+    }
+  });
+
+  onsAanbodLink.addEventListener('mouseleave', () => {
+    timeoutId = setTimeout(closeMenu, 1000);
+  });
+
+  subMenu.addEventListener('mouseleave', () => {
+    timeoutId = setTimeout(closeMenu, 500);
+  });
+
+  subMenu.addEventListener('mouseenter', () => {
+    clearTimeout(timeoutId);
+  });
+}
+
+
+if (window.innerWidth < 991.98) {
+  const spoilerLinks = document.querySelectorAll('.menu__submenu-main-nav-item-wrap');
+  const firstSubmenu = document.querySelector('.menu__submenu-sub-nav');
+
+  firstSubmenu.style.display = 'flex';
+
+  spoilerLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+
+      const submenu = link.nextElementSibling;
+      const arrow = link.querySelector('._icon-arrow-right');
+
+      if (submenu && submenu.style.display === 'flex') {
+        // Submenu is already open, close it
+        submenu.style.display = 'none';
+        arrow.classList.remove('open');
+      } else {
+        // Close any other open submenus
+        const openSubmenus = document.querySelectorAll('.menu__submenu-sub-nav[style="display: flex;"]');
+        openSubmenus.forEach(openSubmenu => {
+          openSubmenu.style.display = 'none';
+          const openArrow = openSubmenu.previousElementSibling.querySelector('._icon-arrow-right');
+          openArrow.classList.remove('open');
+        });
+
+        // Open this submenu
+        if (submenu) {
+          submenu.style.display = 'flex';
+        }
+
+        arrow.classList.add('open');
+      }
+    });
+  });
+} */
+
+const menuLinks = document.querySelectorAll('.menu__link-test');
+const submenus = document.querySelectorAll('.menu__submenu');
+const arrows = document.querySelectorAll('.menu-arrow');
+
+function closeSubmenu() {
+  submenus.forEach(submenu => {
+    submenu.classList.remove('submenu-open');
+  });
+  arrows.forEach(arrow => {
+    arrow.classList.remove('rotated');
+  });
+  toggleOverlay(false); // remove overlay when menu is closed
+}
+
+menuLinks.forEach((link, index) => {
+  link.addEventListener('mouseover', () => {
+    if (window.innerWidth > 992.98) { // check if screen width is greater than 992.98px
+      closeSubmenu();
+      submenus[index].classList.add('submenu-open');
+      const arrow = link.nextElementSibling;
+      arrow.classList.add('rotated');
+      toggleOverlay(true); // add overlay when menu is open
+    }
+  });
+});
+
+
+arrows.forEach((arrow, index) => {
+  arrow.addEventListener('click', () => {
+    const submenu = arrow.closest('.menu__item').querySelector('.menu__submenu');
+    submenu.classList.toggle('submenu-open');
+    arrow.classList.toggle('rotated');
+    toggleOverlay(submenu.classList.contains('submenu-open'));
+  });
+});
+
+
+document.addEventListener('click', (event) => {
+  const isClickInsideMenu = event.target.closest('.header__bottom');
+  if (!isClickInsideMenu) {
+    closeSubmenu();
+  }
+});
+
+// Set timeout variable
+let timeoutId;
+
+// Function to close submenu with delay
+function closeSubmenuWithDelay() {
+  // Set timeout to close submenu after 1000 milliseconds
+  if (window.innerWidth > 992.98) { // check if screen width is greater than 992.98px
+    timeoutId = setTimeout(closeSubmenu, 1000);
+  }
+}
+
+// Event listener for when mouse leaves header__bottom
+document.querySelector('.header__bottom').addEventListener('mouseleave', closeSubmenuWithDelay);
+
+// Event listener for when mouse enters header__bottom
+document.querySelector('.header__bottom').addEventListener('mouseenter', () => {
+  // Clear the timeout to cancel submenu close
+  clearTimeout(timeoutId);
+});
+
+if (window.innerWidth < 991.98) {
+  const spoilerLinks = document.querySelectorAll('.menu__submenu-main-nav-item-wrap');
+  const firstSubmenu = document.querySelector('.menu__submenu-sub-nav');
+
+  firstSubmenu.style.display = 'flex';
+
+  spoilerLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+
+      const submenu = link.nextElementSibling;
+      const arrow = link.querySelector('._icon-arrow-right');
+
+      if (submenu && submenu.style.display === 'flex') {
+        // Submenu is already open, close it
+        submenu.style.display = 'none';
+        arrow.classList.remove('open');
+      } else {
+        // Close any other open submenus
+        const openSubmenus = document.querySelectorAll('.menu__submenu-sub-nav[style="display: flex;"]');
+        openSubmenus.forEach(openSubmenu => {
+          openSubmenu.style.display = 'none';
+          const openArrow = openSubmenu.previousElementSibling.querySelector('._icon-arrow-right');
+          openArrow.classList.remove('open');
+        });
+
+        // Open this submenu
+        if (submenu) {
+          submenu.style.display = 'flex';
+        }
+
+        arrow.classList.add('open');
+      }
+    });
+  });
+}
+
+const backButtonMenu = document.querySelector('.icon-menu');
+const backButtons = document.querySelectorAll('.menu__submenu-main-nav-back');
+
+// Click event listener for backButtonMenu
+backButtonMenu.addEventListener('click', closeSubmenu);
+
+// Loop through all back buttons and add click event listener
+backButtons.forEach(backButton => {
+  backButton.addEventListener('click', closeSubmenu);
+});
+
+const toggleOverlay = (open) => {
+  const overlay = document.querySelector('.overlay');
+  if (open && window.innerWidth > 991.98) {
+    if (!overlay) {
+      // Create a new div element to darken the background
+      const overlay = document.createElement('div');
+      overlay.classList.add('overlay');
+      // Add the overlay to the body
+      document.body.appendChild(overlay);
+    } else {
+      // Show the existing overlay
+      overlay.style.display = 'block';
+    }
+  } else if (!open && overlay) {
+    // Remove the overlay if the menu is closed or the width is greater than 991.98px
+    overlay.style.display = 'none';
+  }
+};

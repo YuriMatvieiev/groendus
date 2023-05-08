@@ -1,6 +1,7 @@
 //====================================================================================================
 
 .header {
+  z-index: 101;
   // .header__top-block
   &__top-block {
     display: flex;
@@ -380,6 +381,102 @@
       overflow: auto;
     }
   }
+  &__submenu-item-sub {
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    .menu__submenu-item-second {
+      gap: 20px;
+      width: rem(350);
+      img{
+        min-width: 125px;
+      }
+    }
+    .menu__submenu-item-second-text {
+      width: unset;
+    }
+    .menu__submenu-item-second-text-subtitle {
+      font-size: rem(10);
+      line-height: math.div(11 , 10);
+      background: #F96023;
+      padding: 5px 8px;
+      color: #fff;
+      display: inline-block;
+      margin-bottom: rem(8);
+    }
+    .menu__submenu-item-second-text-title {
+      font-size: rem(20);
+      line-height: math.div(22 , 20);
+    }
+    .menu__submenu-item-second-text-button {
+      font-weight: 700;
+      font-size: rem(12);
+      line-height: math.div(14 , 12);
+      color: $blue-light;
+    }
+  }
+  &__submenu-item-first {
+  }
+  &__submenu-title {
+  }
+  &__submenu-main-nav-back {
+  }
+  &__submenu-klantverhalen-nav {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 140px;
+    align-content: space-between;
+    gap: 20px;
+@include adaptiveValue("width", 800, 570, 0, 1240, 991.98);
+li{
+  @media (max-width:$tablet){
+    width: 47%;
+  }
+  @media (max-width:$mobile){
+     width: 100%; 
+  }
+}
+@media (max-width:$tablet){
+  max-height: unset;
+  flex-direction: row;
+  width: 100%;
+  gap: 35px;
+}
+@media (max-width:$mobile){
+   gap: 20px; 
+}
+  }
+  &__submenu-nav-item-wrap{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    img{
+width: rem(15);
+
+    }
+  }
+  &__submenu-nav-link {
+    font-weight: 700;
+    @include adaptiveValue("font-size", 14, 13, 0, 1240, 991.98);
+    line-height: math.div(15, 14);
+    border-bottom: 1px solid transparent;
+    &.active{
+      border-bottom: 1px solid #006eff;
+    }
+    @media (any-hover: hover){
+      &:hover{
+        border-bottom: 1px solid #006eff;
+      }
+    }
+    @media (max-width:$tablet){
+      font-size: rem(22);
+      line-height: math.div(26 , 22);
+    }
+  }
   // .menu__submenu-item
   &__submenu-item {
     padding: 40px 0;
@@ -606,28 +703,33 @@
     font-size: rem(12);
     line-height: math.div(14, 12);
   }
-  // .menu__link
-  &__link {
-    color: #020202;
+  &__link{
     font-weight: 700;
     @include adaptiveValue("font-size", 14, 13, 0, 1240, 991.98);
     line-height: math.div(15, 14);
+    @media (max-width: $tablet) {
+      font-size: rem(30);
+      line-height: math.div(48, 30);
+    }
+  }
+  // .menu__link
+  &__link-wrap {
+    color: #020202;
     display: flex;
     align-items: center;
     gap: 7px;
     cursor: pointer;
     @media (max-width: $tablet) {
-      font-size: rem(30);
-      line-height: math.div(48, 30);
       max-width: rem(290);
       justify-content: space-between;
     }
     @media (max-width: $mobile) {
       max-width: rem(350);
     }
-    i {
+    .menu-arrow {
       font-size: 10px;
       transform: rotate(90deg);
+      
       @media (max-width: $tablet) {
         font-weight: 700;
         transform: rotate(0deg) !important;
@@ -657,10 +759,23 @@
 
 .submenu-open {
   display: flex;
+  .page{
+    background: rgba(2, 2, 2, 0.2);
+mix-blend-mode: normal;
+  }
 }
 #inzicht,
 #duurzaam {
   display: none;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(2, 2, 2, 0.2); /* Change the opacity as needed */
+  z-index: 100;
 }
 //====================================================================================================
 
@@ -828,7 +943,7 @@
   .header__search-icon {
     background-color: $blue-dark;
     color: #fff;
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
       background-color: #f2f2f2;
       color: #000;
     }
@@ -836,16 +951,19 @@
   .header__search-input {
     background-color: $blue-dark;
     color: #fff;
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
       background-color: #f2f2f2;
       color: #000;
     }
     &::placeholder {
       color: #ffffff8c;
-      @media (max-width: $mobile) {
+      @media (max-width: $tablet) {
         color: #5b5b5b;
       }
     }
+  }
+  .menu-arrow{
+    color: #fff;
   }
 }
 .white-theme {
