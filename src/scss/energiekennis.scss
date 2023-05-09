@@ -1,0 +1,503 @@
+//========================================================================================================================================================
+.energiekennis-hero {
+    @include adaptiveValue("padding-top", 50, 95);
+  @include adaptiveValue("padding-bottom", 405, 300);
+  background-color: $blue-light;
+    // .energiekennis-hero__container
+    &__container {
+        display: flex;
+        justify-content: center;
+        color: #fff;
+        @include adaptiveValue("gap", 70, 40, 0, 1240, 768);
+        @media (max-width:$mobile){
+             flex-direction: column; 
+             gap: 20px;
+        }
+    }
+    // .energiekennis-hero__title
+    &__title {
+        font-weight: 700;
+      @include adaptiveValue("font-size", 46, 30);
+      @include adaptiveValue("line-height", 51, 33);
+    }
+    // .energiekennis-hero__desc
+    &__desc {
+        @include adaptiveValue("font-size", 20, 18);
+    @include adaptiveValue("line-height", 28, 24);
+    @include adaptiveValue("width", 610, 360, 0, 1240, 768);
+    @media (max-width:$mobile){
+         width: 100%; 
+    }
+    }
+
+}
+//========================================================================================================================================================
+
+  .main-blog {
+    @include adaptiveValue("margin-top", -290, -250);
+    @include adaptiveValue("padding-bottom", 70, 40);
+    // .main-blog__container
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+    // .main-blog__header
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #fff;
+        margin-bottom: rem(20);
+        @media (max-width:$mobileSmall){
+             flex-direction: column; 
+             align-items: flex-start;
+             gap: 10px;
+        }
+    }
+    // .main-blog__title
+    &__title {
+        @include adaptiveValue("font-size", 36, 22);
+        @include adaptiveValue("line-height", 40, 24);
+        font-weight: 700;
+    }
+    // .main-blog__filter
+    &__filter {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        position: relative;
+    }
+    // .main-blog__filter-text
+    &__filter-text {
+        @include adaptiveValue("font-size", 20, 18);
+    @include adaptiveValue("line-height", 28, 24);
+    @media (max-width:$mobile){
+         display: none; 
+    }
+    }
+    // .main-blog__filter-button
+    &__filter-button {
+        background-color: #4CAF50;
+    color: white;
+    font-size: rem(20);
+    line-height: math.div(22 , 20);
+    border: none;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 8px;
+    background: #020202;
+box-shadow: 0px 20px 24px rgba(0, 0, 0, 0.07);
+padding: 11px 12px 11px 20px;
+&::before{
+    transform: rotate(90deg);
+    transition: all 0.3s ease 0s;
+}
+    }
+    // .main-blog__filter-dropdown
+    &__filter-dropdown {
+        display: none;
+    position: absolute;
+    z-index: 1;
+    top: 50px;
+    right: 0;
+    background: #FFFFFF;
+box-shadow: 0px 14px 20px rgba(0, 0, 0, 0.07);
+border-radius: 12px;
+    padding: 20px;
+    width: rem(150);
+    li{
+        color: $mainColor;
+    padding: 10px 0;
+    display: block;
+    font-size: rem(15);
+    line-height: math.div(15 , 14);
+    cursor: pointer;
+    }
+    &.show {display:block;}
+    }
+    // .main-blog__items
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+        margin-bottom: rem(45);
+    }
+    // .main-blog__8col-item
+    &__8col-item {
+        width: 66%;
+        position: relative;
+        box-shadow: 0px 20px 48px rgba(0, 0, 0, 0.07);
+        @media (max-width:$mobile){
+             width: 100%; 
+        }
+        @media (any-hover: hover){
+            &:hover{
+                box-shadow: 0px 20px 48px rgba(0, 0, 0, 0.2);
+                transition: all 0.3s ease 0s;
+            }
+        }
+    }
+    // .main-blog__8col-img
+    &__8col-img {
+        width: 100%;
+    }
+    // .main-blog__8col-text
+    &__8col-text {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 0 0 34px 27px;
+        color: #fff;
+        max-width: rem(595);
+        @include adaptiveValue("max-width", 595, 450, 0, 1240, 768);
+        @media (max-width:$mobile){
+             max-width: 90%; 
+             padding: 0 0 25px 15px;
+        }
+        @media (max-width:$mobileSmall){
+             padding: 0 0 15px 15px;
+        }
+    }
+    // .main-blog__8col-date
+    &__8col-date {
+        margin-bottom: rem(4);
+        @include adaptiveValue("font-size", 16, 14);
+        @include adaptiveValue("line-height", 22, 20);
+    }
+    // .main-blog__8col-title
+    &__8col-title {
+        margin-bottom: rem(10);
+      font-weight: 700;
+      @include adaptiveValue("font-size", 46, 30);
+      @include adaptiveValue("line-height", 51, 33);
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;  
+      overflow: hidden;
+    }
+    // .main-blog__8col-desc
+    &__8col-desc {
+        @include adaptiveValue("font-size", 16, 14);
+        @include adaptiveValue("line-height", 22, 20);
+        white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+    }
+    // .main-blog__4col-item
+    &__4col-item {
+        width: 31%;
+        /* @include adaptiveValue("width", 400, 300,0, 1240, 991.98); */
+        box-shadow: 0px 20px 48px rgba(0, 0, 0, 0.07);
+        display: flex;
+        flex-direction: column;
+        @include adaptiveValue("gap", 25, 5, 0, 1240, 768);
+        background-color: #fff;
+        @media (max-width:$mobile){
+             width: 100%; 
+             flex-direction: row;
+             align-items: center;
+        }
+        @media (any-hover: hover){
+            &:hover{
+                box-shadow: 0px 20px 48px rgba(0, 0, 0, 0.2);
+                transition: all 0.3s ease 0s;
+            }
+        }
+    }
+    // .main-blog__4col-img
+    &__4col-img {
+        width: 100%;
+        @media (max-width:$mobile){
+             @include adaptiveValue("width", 400, 150, 0, 767.98, 375); 
+        }
+    }
+    // .main-blog__4col-text
+    &__4col-text {
+        padding: 0 30px;
+        @media (max-width:$mobile){
+             padding: 0 10px; 
+        }
+    }
+    // .main-blog__4col-date
+    &__4col-date {
+        margin-bottom: rem(8);
+        @include adaptiveValue("font-size", 16, 14);
+        @include adaptiveValue("line-height", 22, 20);
+        color: $blue-light;
+        @media (max-width:$tablet){
+            margin-bottom: 0;
+        }
+        @media (max-width:$mobile){
+            margin-bottom: rem(8); 
+       }
+       @media (max-width:520px){
+        margin-bottom: 0; 
+   }
+    }
+    // .main-blog__4col-title
+    &__4col-title {
+        @include adaptiveValue("font-size", 24, 14);
+    @include adaptiveValue("line-height", 26, 20);
+    font-weight: 700;
+    margin-bottom: rem(8);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    @media (max-width:$tablet){
+        margin-bottom: 0;
+    }
+    @media (max-width:$mobile){
+         margin-bottom: rem(8); 
+    }
+    @media (max-width:520px){
+         margin-bottom: 0; 
+    }
+    }
+    // .main-blog__4col-desc
+    &__4col-desc {
+        @include adaptiveValue("font-size", 16, 14);
+        @include adaptiveValue("line-height", 22, 20);
+        display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+  overflow: hidden; 
+  @media (max-width:$mobile){
+    -webkit-line-clamp: 4;
+  }
+  @media (max-width:520px){
+    -webkit-line-clamp: 2; 
+  }
+    }
+    // .main-blog__4col-small-item
+    &__4col-small-item {
+        width: 31%;
+        display: flex;
+        align-items: center;
+        box-shadow: 0px 20px 48px rgba(0, 0, 0, 0.07);
+    @include adaptiveValue("gap", 20, 8, 0, 1240, 991.98);
+@media (max-width:$tablet){
+    width: 48%;
+}
+@media (max-width:$mobile){
+     width: 100%; 
+     gap: 20px;
+}
+        @media (any-hover: hover){
+            &:hover{
+                box-shadow: 0px 20px 48px rgba(0, 0, 0, 0.2);
+                transition: all 0.3s ease 0s;
+            }
+        }
+    }
+    // .main-blog__4col-small-img
+    &__4col-small-img {
+        height: 100px;
+    }
+    // .main-blog__4col-small-text
+    &__4col-small-text {
+    }
+    // .main-blog__4col-small-date
+    &__4col-small-date {
+        @include adaptiveValue("font-size", 14, 13);
+        @include adaptiveValue("line-height", 20, 16);
+        color: $blue-light;
+        @media (max-width:$mobile){
+             margin-bottom: rem(8); 
+        }
+    }
+    // .main-blog__4col-small-title
+    &__4col-small-title {
+        font-weight: 700;
+        @include adaptiveValue("font-size", 18, 16);
+    @include adaptiveValue("line-height", 20, 18);
+    display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+  overflow: hidden; 
+    }
+    // .main-blog__button
+    &__button {
+        padding: 14px 21px;
+        align-self: center;
+        @media (max-width:$mobile){
+             width: 100%; 
+        }
+    }
+}
+//========================================================================================================================================================
+
+.energiekennis-slider {
+    @include adaptiveValue("padding-top", 70, 40);
+    @include adaptiveValue("padding-bottom", 70, 40);
+    background-color: #f4f4f4;
+    // .energiekennis-slider__container
+    &__container {
+    }
+    // .energiekennis-slider__title
+    &__title {
+        @include adaptiveValue("margin-bottom", 24, 8);
+        font-weight: 700;
+        @include adaptiveValue("font-size", 36, 22);
+        @include adaptiveValue("line-height", 40, 24);
+    }
+    // .energiekennis-slider__block
+    &__block {
+        margin-bottom: rem(20);
+    }
+    // .energiekennis-slider__slider
+    &__slider {
+        position: relative;
+        margin: 0 -50px 0 0;
+        padding: 0 50px 0 0;
+    }
+    // .energiekennis-slider__wrapper
+    &__wrapper {
+    }
+    // .energiekennis-slider__slide
+    &__slide {
+        position: relative;
+        
+    }
+    // .energiekennis-slider__slide-img
+    &__slide-img {
+        img{
+            width: rem(978);
+            @include adaptiveValue("width", 978, 718, 0, 1240, 768);
+            @media (max-width:$mobile){
+                 width: 100%; 
+            }
+        }
+    }
+    // .energiekennis-slider__slide-text
+    &__slide-text {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        background-color: #fff;
+        box-shadow: 0px 20px 24px rgba(0, 0, 0, 0.07);
+        padding: 40px;
+        width: rem(525);
+        @include adaptiveValue("width", 525, 380, 0, 1240, 768);
+        transform: translate(0, -50%);
+        @media (max-width:$mobile){
+             position: static; 
+             width: 100%;
+             transform: translate(0, 0);
+             padding: 20px;
+        }
+    }
+    // .energiekennis-slider__slide-subtitle
+    &__slide-subtitle {
+        color: $blue-light;
+        @include adaptiveValue("font-size", 16, 14);
+        @include adaptiveValue("line-height", 18, 16);
+        margin-bottom: rem(8);
+    }
+    // .energiekennis-slider__slide-title
+    &__slide-title {
+        margin-bottom: rem(8);
+        font-weight: 700;
+        @include adaptiveValue("font-size", 36, 22);
+        @include adaptiveValue("line-height", 40, 24);
+    }
+    // .energiekennis-slider__slide-desc
+    &__slide-desc {
+        @include adaptiveValue("font-size", 16, 14);
+        @include adaptiveValue("line-height", 22, 20);
+        @include adaptiveValue("margin-bottom", 30, 15);
+        display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+    }
+    // .energiekennis-slider__slide-button
+    &__slide-button {
+        padding: 14px 45px;
+    }
+    &__slide-nav-buttons{
+        position: absolute;
+        right: 190px;
+        bottom: 0;
+        
+        @media (max-width:1240px){
+            /* @include adaptiveValue("right", 190, 70, 0, 1240, 768); */
+            @include adaptiveValue("bottom", 104, 57, 0, 1240, 768);
+            bottom: 100px;
+            right: 80px;
+        }
+        @media (max-width:$mobile){
+             bottom: 20px; 
+        }
+        button{
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+        }
+    }
+    // .energiekennis-slider__swiper-button-prev
+    &__swiper-button-prev {
+    }
+    // .energiekennis-slider__swiper-button-next
+    &__swiper-button-next {
+        position: relative;
+    border: none;
+    background: transparent;
+    width: 40px;
+    height: 40px;
+    }
+    &__swiper-button-circle{
+        position: absolute;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+          }
+              // .energiekennis-slider__bottom-category
+    &__bottom-category {
+        display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    @media (max-width:$mobile){
+         justify-content: space-between; 
+         gap: 10px;
+    }
+    }
+    // .energiekennis-slider__bottom-title
+    &__bottom-title {
+        @include adaptiveValue("font-size", 20, 18);
+        @include adaptiveValue("line-height", 28, 24);
+        font-weight: 700;
+        @media (max-width:$tablet){
+            width: 100%;
+        }
+    }
+    // .energiekennis-slider__bottom-item
+    &__bottom-item {
+        
+        padding: 14px 21px;
+        background-color: #fff;
+        @include adaptiveValue("font-size", 15, 12);
+    @include adaptiveValue("line-height", 17, 13);
+    font-weight: 700;
+    @media (max-width:$mobile){
+         width: 48%; 
+         text-align: center; 
+        
+    }
+    @media (max-width:$mobileSmall){
+        padding: 14px 10px;
+   }
+    @media (any-hover: hover){
+        &:hover{
+            background-color: $mainColor;
+            color: #fff;
+            transition: all 0.3s ease 0s;
+        }
+    }
+    }
+}

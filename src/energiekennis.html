@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Energiekennis"
+})
+
+<body class="energiekennis">
+  <div class="wrapper">
+    @@include('html/_header.htm',{
+    "theme": "blue-theme"
+    })
+    <main class="page">
+      <section class="energiekennis-hero">
+        <div class="energiekennis-hero__container">
+          <div class="energiekennis-hero__title">Kenniscentrum</div>
+          <div class="energiekennis-hero__desc">Iedere succesvolle ondernemer en medewerker heeft één ding gemeen: een
+            voortdurende honger naar ontwikkeling, nieuwe kennis en ideeën. Welkom in ons kenniscentrum!</div>
+        </div>
+      </section>
+      <section class="main-blog">
+        <div class="main-blog__container">
+          <div class="main-blog__header">
+            <div class="main-blog__title">Kennisartikelen</div>
+            <div class="main-blog__filter">
+              <div class="main-blog__filter-text">Filter op</div>
+              <button class="main-blog__filter-button _icon-arrow-right" id="filter-btn">Besparen</button>
+              <ul id="filter-dropdown" class="main-blog__filter-dropdown">
+                <li id="beheren-filter">Beheren</li>
+                <li id="duurzaam-filter">Duurzaam</li>
+                <li id="opwekken-filter">Opwekken</li>
+                <li id="productpagina-filter">Productpagina</li>
+              </ul>
+            </div>
+          </div>
+          <div class="main-blog__items">
+            <a href="#" class="main-blog__8col-item">
+              <img class="main-blog__8col-img" src="@img/energiekennis/8col.png" alt="">
+              <div class="main-blog__8col-text">
+                <div class="main-blog__8col-date">14 juni 2021</div>
+                <div class="main-blog__8col-title">Groene-waterstof productie: ‘Hype train’</div>
+                <div class="main-blog__8col-desc">Waterstof is de laatste maanden een veelbesproken onderwerp. Sinds
+                  heis de laatste maanden een vee</div>
+              </div>
+            </a>
+            <a href="#" class="main-blog__4col-item">
+              <img class="main-blog__4col-img" src="@img/energiekennis/4col.png" alt="">
+              <div class="main-blog__4col-text">
+                <div class="main-blog__4col-date">14 juni 2021</div>
+                <div class="main-blog__4col-title">Groene-waterstof productie: ‘Hype train’</div>
+                <div class="main-blog__4col-desc">Waterstof is de laatste maanden een veelbesproken onderwerp. Sinds
+                  heis de laatste maanden een vee</div>
+              </div>
+            </a>
+            <a href="#" class="main-blog__4col-small-item">
+              <img class="main-blog__4col-small-img" src="@img/energiekennis/1colSmall.png" alt="">
+              <div class="main-blog__4col-small-text">
+                <div class="main-blog__4col-small-date">14 juni 2021</div>
+                <div class="main-blog__4col-small-title">Groene-waterstofproductie: ‘Hype train’ of juiste spoor?</div>
+
+              </div>
+            </a>
+            <a href="#" class="main-blog__4col-small-item">
+              <img class="main-blog__4col-small-img" src="@img/energiekennis/1colSmall2.png" alt="">
+              <div class="main-blog__4col-small-text">
+                <div class="main-blog__4col-small-date">14 juni 2021</div>
+                <div class="main-blog__4col-small-title">Groene-waterstofproductie: ‘Hype train’ of juiste spoor?</div>
+
+              </div>
+            </a>
+            <a href="#" class="main-blog__4col-small-item">
+              <img class="main-blog__4col-small-img" src="@img/energiekennis/1colSmall.png" alt="">
+              <div class="main-blog__4col-small-text">
+                <div class="main-blog__4col-small-date">14 juni 2021</div>
+                <div class="main-blog__4col-small-title">Groene-waterstofproductie: ‘Hype train’ of juiste spoor?</div>
+
+              </div>
+            </a>
+            <a href="#" class="main-blog__4col-small-item">
+              <img class="main-blog__4col-small-img" src="@img/energiekennis/1colSmall2.png" alt="">
+              <div class="main-blog__4col-small-text">
+                <div class="main-blog__4col-small-date">14 juni 2021</div>
+                <div class="main-blog__4col-small-title">Groene-waterstofproductie: ‘Hype train’ of juiste spoor?</div>
+
+              </div>
+            </a>
+            <a href="#" class="main-blog__4col-small-item">
+              <img class="main-blog__4col-small-img" src="@img/energiekennis/1colSmall.png" alt="">
+              <div class="main-blog__4col-small-text">
+                <div class="main-blog__4col-small-date">14 juni 2021</div>
+                <div class="main-blog__4col-small-title">Groene-waterstofproductie: ‘Hype train’ of juiste spoor?</div>
+
+              </div>
+            </a>
+            <a href="#" class="main-blog__4col-small-item">
+              <img class="main-blog__4col-small-img" src="@img/energiekennis/1colSmall2.png" alt="">
+              <div class="main-blog__4col-small-text">
+                <div class="main-blog__4col-small-date">14 juni 2021</div>
+                <div class="main-blog__4col-small-title">Groene-waterstofproductie: ‘Hype train’ of juiste spoor?</div>
+              </div>
+            </a>
+          </div>
+          <a href="#" class="main-blog__button blue-button">Laad meer actueel</a>
+        </div>
+      </section>
+      <section class="energiekennis-slider">
+        <div class="energiekennis-slider__container">
+          <div class="energiekennis-slider__title">Kennisdossiers</div>
+          <div class="energiekennis-slider__block">
+            <div class="energiekennis-slider__slider swiper">
+              <div class="energiekennis-slider__wrapper swiper-wrapper">
+                <div class="energiekennis-slider__slide swiper-slide">
+                  <div class="energiekennis-slider__slide-img">
+                    <img src="@img/energiekennis/sliderBanner.png" alt="">
+                  </div>
+                  <div class="energiekennis-slider__slide-text">
+                    <div class="energiekennis-slider__slide-subtitle">Kennisdossier</div>
+                    <div class="energiekennis-slider__slide-title">Energiemanagement & sturing</div>
+                    <div class="energiekennis-slider__slide-desc">Waterstof is de laatste maanden een veelbesproken
+                      onderwerp. Waterstof is de laatste maanden een veelbesproken onderwerp. Sinds i...</div>
+                    <a href="#" class="energiekennis-slider__slide-button blue-button">Lees dossier</a>
+                  </div>
+                </div>
+                <div class="energiekennis-slider__slide swiper-slide">
+                  <div class="energiekennis-slider__slide-img">
+                    <img src="@img/energiekennis/sliderBanner.png" alt="">
+                  </div>
+                  <div class="energiekennis-slider__slide-text">
+                    <div class="energiekennis-slider__slide-subtitle">Kennisdossier</div>
+                    <div class="energiekennis-slider__slide-title">Energiemanagement & sturing</div>
+                    <div class="energiekennis-slider__slide-desc">Waterstof is de laatste maanden een veelbesproken
+                      onderwerp. Waterstof is de laatste maanden een veelbesproken onderwerp. Sinds i...</div>
+                    <a href="#" class="energiekennis-slider__slide-button blue-button">Lees dossier</a>
+                  </div>
+                </div>
+              </div>
+              <div class="energiekennis-slider__slide-nav-buttons">
+                <!-- Если нужна навигация (влево/вправо) -->
+                <button type="button" class="energiekennis-slider__swiper-button-prev swiper-button-prev"><img
+                    src="@img/energiekennis/arrow-pre.svg" alt=""></button>
+                <button type="button" class="energiekennis-slider__swiper-button-next swiper-button-next"><img
+                    src="@img/energiekennis/arrow-next.svg" alt="">
+
+                  <canvas class="energiekennis-slider__swiper-button-circle" id="canvas" width="36"
+                    height="36"></canvas>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="energiekennis-slider__bottom-category">
+            <div class="energiekennis-slider__bottom-title">Onderwerpen:</div>
+            <a href="#" class="energiekennis-slider__bottom-item">Energietransitie</a>
+            <a href="#" class="energiekennis-slider__bottom-item">Windenergie</a>
+            <a href="#" class="energiekennis-slider__bottom-item">Energiemanagement & sturing</a>
+            <a href="#" class="energiekennis-slider__bottom-item">Besparen</a>
+            <a href="#" class="energiekennis-slider__bottom-item">Energiemanagement & sturing</a>
+            <a href="#" class="energiekennis-slider__bottom-item">Energietransitie</a>
+            <a href="#" class="energiekennis-slider__bottom-item">Windenergie</a>
+            <a href="#" class="energiekennis-slider__bottom-item">Energiemanagement & sturing</a>
+            <a href="#" class="energiekennis-slider__bottom-item">Besparen</a>
+            <a href="#" class="energiekennis-slider__bottom-item">Energiemanagement & sturing</a>
+          </div>
+      </section>
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_js.htm',{})
+</body>
+
+</html>

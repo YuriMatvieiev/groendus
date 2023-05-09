@@ -604,6 +604,7 @@ h6 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  max-width: 1360px;
   width: 100%;
 }
 
@@ -3267,6 +3268,368 @@ h6 {
   padding: 0;
 }
 
+.energiekennis-hero {
+  background-color: #006EFF;
+}
+
+.energiekennis-hero__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+}
+
+.energiekennis-hero__title {
+  font-weight: 700;
+}
+
+.main-blog__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-blog__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  margin-bottom: 1.25rem;
+}
+
+.main-blog__title {
+  font-weight: 700;
+}
+
+.main-blog__filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.main-blog__filter-button {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 1.25rem;
+  line-height: 1.1;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  background: #020202;
+  -webkit-box-shadow: 0px 20px 24px rgba(0, 0, 0, 0.07);
+          box-shadow: 0px 20px 24px rgba(0, 0, 0, 0.07);
+  padding: 11px 12px 11px 20px;
+}
+
+.main-blog__filter-button::before {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.main-blog__filter-dropdown {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 50px;
+  right: 0;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 14px 20px rgba(0, 0, 0, 0.07);
+          box-shadow: 0px 14px 20px rgba(0, 0, 0, 0.07);
+  border-radius: 12px;
+  padding: 20px;
+  width: 9.375rem;
+}
+
+.main-blog__filter-dropdown li {
+  color: #141414;
+  padding: 10px 0;
+  display: block;
+  font-size: 0.9375rem;
+  line-height: 1.0714285714;
+  cursor: pointer;
+}
+
+.main-blog__filter-dropdown.show {
+  display: block;
+}
+
+.main-blog__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 2.8125rem;
+}
+
+.main-blog__8col-item {
+  width: 66%;
+  position: relative;
+  -webkit-box-shadow: 0px 20px 48px rgba(0, 0, 0, 0.07);
+          box-shadow: 0px 20px 48px rgba(0, 0, 0, 0.07);
+}
+
+.main-blog__8col-img {
+  width: 100%;
+}
+
+.main-blog__8col-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0 0 34px 27px;
+  color: #fff;
+  max-width: 37.1875rem;
+}
+
+.main-blog__8col-date {
+  margin-bottom: 0.25rem;
+}
+
+.main-blog__8col-title {
+  margin-bottom: 0.625rem;
+  font-weight: 700;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.main-blog__8col-desc {
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+}
+
+.main-blog__4col-item {
+  width: 31%;
+  /* @include adaptiveValue("width", 400, 300,0, 1240, 991.98); */
+  -webkit-box-shadow: 0px 20px 48px rgba(0, 0, 0, 0.07);
+          box-shadow: 0px 20px 48px rgba(0, 0, 0, 0.07);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #fff;
+}
+
+.main-blog__4col-img {
+  width: 100%;
+}
+
+.main-blog__4col-text {
+  padding: 0 30px;
+}
+
+.main-blog__4col-date {
+  margin-bottom: 0.5rem;
+  color: #006EFF;
+}
+
+.main-blog__4col-title {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.main-blog__4col-desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.main-blog__4col-small-item {
+  width: 31%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0px 20px 48px rgba(0, 0, 0, 0.07);
+          box-shadow: 0px 20px 48px rgba(0, 0, 0, 0.07);
+}
+
+.main-blog__4col-small-img {
+  height: 100px;
+}
+
+.main-blog__4col-small-date {
+  color: #006EFF;
+}
+
+.main-blog__4col-small-title {
+  font-weight: 700;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.main-blog__button {
+  padding: 14px 21px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.energiekennis-slider {
+  background-color: #f4f4f4;
+}
+
+.energiekennis-slider__title {
+  font-weight: 700;
+}
+
+.energiekennis-slider__block {
+  margin-bottom: 1.25rem;
+}
+
+.energiekennis-slider__slider {
+  position: relative;
+  margin: 0 -50px 0 0;
+  padding: 0 50px 0 0;
+}
+
+.energiekennis-slider__slide {
+  position: relative;
+}
+
+.energiekennis-slider__slide-img img {
+  width: 61.125rem;
+}
+
+.energiekennis-slider__slide-text {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 20px 24px rgba(0, 0, 0, 0.07);
+          box-shadow: 0px 20px 24px rgba(0, 0, 0, 0.07);
+  padding: 40px;
+  width: 32.8125rem;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.energiekennis-slider__slide-subtitle {
+  color: #006EFF;
+  margin-bottom: 0.5rem;
+}
+
+.energiekennis-slider__slide-title {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.energiekennis-slider__slide-desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.energiekennis-slider__slide-button {
+  padding: 14px 45px;
+}
+
+.energiekennis-slider__slide-nav-buttons {
+  position: absolute;
+  right: 190px;
+  bottom: 0;
+}
+
+.energiekennis-slider__slide-nav-buttons button:not(:last-child) {
+  margin-right: 20px;
+}
+
+.energiekennis-slider__swiper-button-next {
+  position: relative;
+  border: none;
+  background: transparent;
+  width: 40px;
+  height: 40px;
+}
+
+.energiekennis-slider__swiper-button-circle {
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.energiekennis-slider__bottom-category {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.energiekennis-slider__bottom-title {
+  font-weight: 700;
+}
+
+.energiekennis-slider__bottom-item {
+  padding: 14px 21px;
+  background-color: #fff;
+  font-weight: 700;
+}
+
 .tippy-box[data-animation=fade][data-state=hidden] {
   opacity: 0;
 }
@@ -4009,6 +4372,34 @@ h6 {
 
   .vacancies__item {
     padding-right: 3.125rem;
+  }
+
+  .energiekennis-hero__container {
+    gap: 4.375rem;
+  }
+
+  .energiekennis-hero__desc {
+    width: 38.125rem;
+  }
+
+  .main-blog__8col-text {
+    max-width: 37.1875rem;
+  }
+
+  .main-blog__4col-item {
+    gap: 1.5625rem;
+  }
+
+  .main-blog__4col-small-item {
+    gap: 1.25rem;
+  }
+
+  .energiekennis-slider__slide-img img {
+    width: 61.125rem;
+  }
+
+  .energiekennis-slider__slide-text {
+    width: 32.8125rem;
   }
 }
 
@@ -5108,6 +5499,182 @@ h6 {
   .video-cols {
     padding-bottom: 7.8125rem;
   }
+
+  .energiekennis-hero {
+    padding-top: 3.125rem;
+  }
+
+  .energiekennis-hero {
+    padding-bottom: 25.3125rem;
+  }
+
+  .energiekennis-hero__title {
+    font-size: 2.875rem;
+  }
+
+  .energiekennis-hero__title {
+    line-height: 3.1875rem;
+  }
+
+  .energiekennis-hero__desc {
+    font-size: 1.25rem;
+  }
+
+  .energiekennis-hero__desc {
+    line-height: 1.75rem;
+  }
+
+  .main-blog {
+    margin-top: -18.125rem;
+  }
+
+  .main-blog {
+    padding-bottom: 4.375rem;
+  }
+
+  .main-blog__title {
+    font-size: 2.25rem;
+  }
+
+  .main-blog__title {
+    line-height: 2.5rem;
+  }
+
+  .main-blog__filter-text {
+    font-size: 1.25rem;
+  }
+
+  .main-blog__filter-text {
+    line-height: 1.75rem;
+  }
+
+  .main-blog__8col-date {
+    font-size: 1rem;
+  }
+
+  .main-blog__8col-date {
+    line-height: 1.375rem;
+  }
+
+  .main-blog__8col-title {
+    font-size: 2.875rem;
+  }
+
+  .main-blog__8col-title {
+    line-height: 3.1875rem;
+  }
+
+  .main-blog__8col-desc {
+    font-size: 1rem;
+  }
+
+  .main-blog__8col-desc {
+    line-height: 1.375rem;
+  }
+
+  .main-blog__4col-date {
+    font-size: 1rem;
+  }
+
+  .main-blog__4col-date {
+    line-height: 1.375rem;
+  }
+
+  .main-blog__4col-title {
+    font-size: 1.5rem;
+  }
+
+  .main-blog__4col-title {
+    line-height: 1.625rem;
+  }
+
+  .main-blog__4col-desc {
+    font-size: 1rem;
+  }
+
+  .main-blog__4col-desc {
+    line-height: 1.375rem;
+  }
+
+  .main-blog__4col-small-date {
+    font-size: 0.875rem;
+  }
+
+  .main-blog__4col-small-date {
+    line-height: 1.25rem;
+  }
+
+  .main-blog__4col-small-title {
+    font-size: 1.125rem;
+  }
+
+  .main-blog__4col-small-title {
+    line-height: 1.25rem;
+  }
+
+  .energiekennis-slider {
+    padding-top: 4.375rem;
+  }
+
+  .energiekennis-slider {
+    padding-bottom: 4.375rem;
+  }
+
+  .energiekennis-slider__title {
+    margin-bottom: 1.5rem;
+  }
+
+  .energiekennis-slider__title {
+    font-size: 2.25rem;
+  }
+
+  .energiekennis-slider__title {
+    line-height: 2.5rem;
+  }
+
+  .energiekennis-slider__slide-subtitle {
+    font-size: 1rem;
+  }
+
+  .energiekennis-slider__slide-subtitle {
+    line-height: 1.125rem;
+  }
+
+  .energiekennis-slider__slide-title {
+    font-size: 2.25rem;
+  }
+
+  .energiekennis-slider__slide-title {
+    line-height: 2.5rem;
+  }
+
+  .energiekennis-slider__slide-desc {
+    font-size: 1rem;
+  }
+
+  .energiekennis-slider__slide-desc {
+    line-height: 1.375rem;
+  }
+
+  .energiekennis-slider__slide-desc {
+    margin-bottom: 1.875rem;
+  }
+
+  .energiekennis-slider__bottom-title {
+    font-size: 1.25rem;
+  }
+
+  .energiekennis-slider__bottom-title {
+    line-height: 1.75rem;
+  }
+
+  .energiekennis-slider__bottom-item {
+    font-size: 0.9375rem;
+  }
+
+  .energiekennis-slider__bottom-item {
+    line-height: 1.0625rem;
+  }
 }
 
 @media (min-width: 90em) {
@@ -5129,6 +5696,20 @@ h6 {
 
   .menu__submenu-item-second-text {
     width: 10.5625rem;
+  }
+}
+
+@media (max-width: 1240px) {
+  .energiekennis-slider__slide-nav-buttons {
+    /* @include adaptiveValue("right", 190, 70, 0, 1240, 768); */
+    bottom: 100px;
+    right: 80px;
+  }
+}
+
+@media (max-width: 1240px) and (max-width: 48em) {
+  .energiekennis-slider__slide-nav-buttons {
+    bottom: 3.5625rem;
   }
 }
 
@@ -5633,11 +6214,47 @@ h6 {
   .blue-man__img-border {
     width: 15.625rem;
   }
+
+  .energiekennis-hero__container {
+    gap: 2.5rem;
+  }
+
+  .energiekennis-hero__desc {
+    width: 22.5rem;
+  }
+
+  .main-blog__8col-text {
+    max-width: 28.125rem;
+  }
+
+  .main-blog__4col-item {
+    gap: 0.3125rem;
+  }
+
+  .energiekennis-slider__slide-img img {
+    width: 44.875rem;
+  }
+
+  .energiekennis-slider__slide-text {
+    width: 23.75rem;
+  }
 }
 
 @media (max-width: 520px) {
   .mobile-text-button__text {
     width: 10.375rem;
+  }
+
+  .main-blog__4col-date {
+    margin-bottom: 0;
+  }
+
+  .main-blog__4col-title {
+    margin-bottom: 0;
+  }
+
+  .main-blog__4col-desc {
+    -webkit-line-clamp: 2;
   }
 }
 
@@ -6219,6 +6836,26 @@ h6 {
 
   .vacancies__item {
     width: 48%;
+  }
+
+  .main-blog__4col-date {
+    margin-bottom: 0;
+  }
+
+  .main-blog__4col-title {
+    margin-bottom: 0;
+  }
+
+  .main-blog__4col-small-item {
+    gap: 0.5rem;
+  }
+
+  .main-blog__4col-small-item {
+    width: 48%;
+  }
+
+  .energiekennis-slider__bottom-title {
+    width: 100%;
   }
 }
 
@@ -7297,6 +7934,100 @@ h6 {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+
+  .energiekennis-hero__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+  }
+
+  .energiekennis-hero__desc {
+    width: 100%;
+  }
+
+  .main-blog__filter-text {
+    display: none;
+  }
+
+  .main-blog__8col-item {
+    width: 100%;
+  }
+
+  .main-blog__8col-text {
+    max-width: 90%;
+    padding: 0 0 25px 15px;
+  }
+
+  .main-blog__4col-item {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .main-blog__4col-text {
+    padding: 0 10px;
+  }
+
+  .main-blog__4col-date {
+    margin-bottom: 0.5rem;
+  }
+
+  .main-blog__4col-title {
+    margin-bottom: 0.5rem;
+  }
+
+  .main-blog__4col-desc {
+    -webkit-line-clamp: 4;
+  }
+
+  .main-blog__4col-small-item {
+    width: 100%;
+    gap: 20px;
+  }
+
+  .main-blog__4col-small-date {
+    margin-bottom: 0.5rem;
+  }
+
+  .main-blog__button {
+    width: 100%;
+  }
+
+  .energiekennis-slider__slide-img img {
+    width: 100%;
+  }
+
+  .energiekennis-slider__slide-text {
+    position: static;
+    width: 100%;
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
+    padding: 20px;
+  }
+
+  .energiekennis-slider__slide-nav-buttons {
+    bottom: 20px;
+  }
+
+  .energiekennis-slider__bottom-category {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 10px;
+  }
+
+  .energiekennis-slider__bottom-item {
+    width: 48%;
+    text-align: center;
+  }
 }
 
 @media (max-width: 47.99875em) and (max-width: 23.125em) {
@@ -7392,6 +8123,10 @@ h6 {
 
   .full-video__video-col {
     width: 20.3125rem;
+  }
+
+  .main-blog__4col-img {
+    width: 9.375rem;
   }
 }
 
@@ -7490,6 +8225,25 @@ h6 {
 
   .vacancies__blue-banner-button {
     width: 100%;
+  }
+
+  .main-blog__header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 10px;
+  }
+
+  .main-blog__8col-text {
+    padding: 0 0 15px 15px;
+  }
+
+  .energiekennis-slider__bottom-item {
+    padding: 14px 10px;
   }
 }
 
@@ -8588,6 +9342,182 @@ h6 {
 
   .video-cols {
     padding-bottom: 5rem;
+  }
+
+  .energiekennis-hero {
+    padding-top: 5.9375rem;
+  }
+
+  .energiekennis-hero {
+    padding-bottom: 18.75rem;
+  }
+
+  .energiekennis-hero__title {
+    font-size: 1.875rem;
+  }
+
+  .energiekennis-hero__title {
+    line-height: 2.0625rem;
+  }
+
+  .energiekennis-hero__desc {
+    font-size: 1.125rem;
+  }
+
+  .energiekennis-hero__desc {
+    line-height: 1.5rem;
+  }
+
+  .main-blog {
+    margin-top: -15.625rem;
+  }
+
+  .main-blog {
+    padding-bottom: 2.5rem;
+  }
+
+  .main-blog__title {
+    font-size: 1.375rem;
+  }
+
+  .main-blog__title {
+    line-height: 1.5rem;
+  }
+
+  .main-blog__filter-text {
+    font-size: 1.125rem;
+  }
+
+  .main-blog__filter-text {
+    line-height: 1.5rem;
+  }
+
+  .main-blog__8col-date {
+    font-size: 0.875rem;
+  }
+
+  .main-blog__8col-date {
+    line-height: 1.25rem;
+  }
+
+  .main-blog__8col-title {
+    font-size: 1.875rem;
+  }
+
+  .main-blog__8col-title {
+    line-height: 2.0625rem;
+  }
+
+  .main-blog__8col-desc {
+    font-size: 0.875rem;
+  }
+
+  .main-blog__8col-desc {
+    line-height: 1.25rem;
+  }
+
+  .main-blog__4col-date {
+    font-size: 0.875rem;
+  }
+
+  .main-blog__4col-date {
+    line-height: 1.25rem;
+  }
+
+  .main-blog__4col-title {
+    font-size: 0.875rem;
+  }
+
+  .main-blog__4col-title {
+    line-height: 1.25rem;
+  }
+
+  .main-blog__4col-desc {
+    font-size: 0.875rem;
+  }
+
+  .main-blog__4col-desc {
+    line-height: 1.25rem;
+  }
+
+  .main-blog__4col-small-date {
+    font-size: 0.8125rem;
+  }
+
+  .main-blog__4col-small-date {
+    line-height: 1rem;
+  }
+
+  .main-blog__4col-small-title {
+    font-size: 1rem;
+  }
+
+  .main-blog__4col-small-title {
+    line-height: 1.125rem;
+  }
+
+  .energiekennis-slider {
+    padding-top: 2.5rem;
+  }
+
+  .energiekennis-slider {
+    padding-bottom: 2.5rem;
+  }
+
+  .energiekennis-slider__title {
+    margin-bottom: 0.5rem;
+  }
+
+  .energiekennis-slider__title {
+    font-size: 1.375rem;
+  }
+
+  .energiekennis-slider__title {
+    line-height: 1.5rem;
+  }
+
+  .energiekennis-slider__slide-subtitle {
+    font-size: 0.875rem;
+  }
+
+  .energiekennis-slider__slide-subtitle {
+    line-height: 1rem;
+  }
+
+  .energiekennis-slider__slide-title {
+    font-size: 1.375rem;
+  }
+
+  .energiekennis-slider__slide-title {
+    line-height: 1.5rem;
+  }
+
+  .energiekennis-slider__slide-desc {
+    font-size: 0.875rem;
+  }
+
+  .energiekennis-slider__slide-desc {
+    line-height: 1.25rem;
+  }
+
+  .energiekennis-slider__slide-desc {
+    margin-bottom: 0.9375rem;
+  }
+
+  .energiekennis-slider__bottom-title {
+    font-size: 1.125rem;
+  }
+
+  .energiekennis-slider__bottom-title {
+    line-height: 1.5rem;
+  }
+
+  .energiekennis-slider__bottom-item {
+    font-size: 0.75rem;
+  }
+
+  .energiekennis-slider__bottom-item {
+    line-height: 0.8125rem;
   }
 }
 
@@ -11879,6 +12809,534 @@ h6 {
       padding-bottom: calc(5rem + 2.8125 * (100vw - 23.4375rem) / 57.1875);
     }
 }
+
+@supports (padding-top: clamp( 3.125rem , 7.0901639344rem  +  -4.9180327869vw , 5.9375rem )) {
+    .energiekennis-hero {
+      padding-top: clamp( 3.125rem , 7.0901639344rem  +  -4.9180327869vw , 5.9375rem );
+    }
+}
+
+@supports not (padding-top: clamp( 3.125rem , 7.0901639344rem  +  -4.9180327869vw , 5.9375rem )) {
+    .energiekennis-hero {
+      padding-top: calc(5.9375rem + -2.8125 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (padding-bottom: clamp( 18.75rem , 16.0604508197rem  +  11.4754098361vw , 25.3125rem )) {
+    .energiekennis-hero {
+      padding-bottom: clamp( 18.75rem , 16.0604508197rem  +  11.4754098361vw , 25.3125rem );
+    }
+}
+
+@supports not (padding-bottom: clamp( 18.75rem , 16.0604508197rem  +  11.4754098361vw , 25.3125rem )) {
+    .energiekennis-hero {
+      padding-bottom: calc(18.75rem + 6.5625 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (font-size: clamp( 1.875rem , 1.4651639344rem  +  1.7486338798vw , 2.875rem )) {
+    .energiekennis-hero__title {
+      font-size: clamp( 1.875rem , 1.4651639344rem  +  1.7486338798vw , 2.875rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.875rem , 1.4651639344rem  +  1.7486338798vw , 2.875rem )) {
+    .energiekennis-hero__title {
+      font-size: calc(1.875rem + 1 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (line-height: clamp( 2.0625rem , 1.6014344262rem  +  1.9672131148vw , 3.1875rem )) {
+    .energiekennis-hero__title {
+      line-height: clamp( 2.0625rem , 1.6014344262rem  +  1.9672131148vw , 3.1875rem );
+    }
+}
+
+@supports not (line-height: clamp( 2.0625rem , 1.6014344262rem  +  1.9672131148vw , 3.1875rem )) {
+    .energiekennis-hero__title {
+      line-height: calc(2.0625rem + 1.125 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (font-size: clamp( 1.125rem , 1.0737704918rem  +  0.218579235vw , 1.25rem )) {
+    .energiekennis-hero__desc {
+      font-size: clamp( 1.125rem , 1.0737704918rem  +  0.218579235vw , 1.25rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.125rem , 1.0737704918rem  +  0.218579235vw , 1.25rem )) {
+    .energiekennis-hero__desc {
+      font-size: calc(1.125rem + 0.125 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (line-height: clamp( 1.5rem , 1.3975409836rem  +  0.4371584699vw , 1.75rem )) {
+    .energiekennis-hero__desc {
+      line-height: clamp( 1.5rem , 1.3975409836rem  +  0.4371584699vw , 1.75rem );
+    }
+}
+
+@supports not (line-height: clamp( 1.5rem , 1.3975409836rem  +  0.4371584699vw , 1.75rem )) {
+    .energiekennis-hero__desc {
+      line-height: calc(1.5rem + 0.25 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (margin-top: clamp( -18.125rem , -14.6004098361rem  +  -4.3715846995vw , -15.625rem )) {
+    .main-blog {
+      margin-top: clamp( -18.125rem , -14.6004098361rem  +  -4.3715846995vw , -15.625rem );
+    }
+}
+
+@supports not (margin-top: clamp( -18.125rem , -14.6004098361rem  +  -4.3715846995vw , -15.625rem )) {
+    .main-blog {
+      margin-top: calc(-15.625rem + -2.5 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (padding-bottom: clamp( 2.5rem , 1.731557377rem  +  3.2786885246vw , 4.375rem )) {
+    .main-blog {
+      padding-bottom: clamp( 2.5rem , 1.731557377rem  +  3.2786885246vw , 4.375rem );
+    }
+}
+
+@supports not (padding-bottom: clamp( 2.5rem , 1.731557377rem  +  3.2786885246vw , 4.375rem )) {
+    .main-blog {
+      padding-bottom: calc(2.5rem + 1.875 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (font-size: clamp( 1.375rem , 1.0163934426rem  +  1.5300546448vw , 2.25rem )) {
+    .main-blog__title {
+      font-size: clamp( 1.375rem , 1.0163934426rem  +  1.5300546448vw , 2.25rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.375rem , 1.0163934426rem  +  1.5300546448vw , 2.25rem )) {
+    .main-blog__title {
+      font-size: calc(1.375rem + 0.875 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (line-height: clamp( 1.5rem , 1.0901639344rem  +  1.7486338798vw , 2.5rem )) {
+    .main-blog__title {
+      line-height: clamp( 1.5rem , 1.0901639344rem  +  1.7486338798vw , 2.5rem );
+    }
+}
+
+@supports not (line-height: clamp( 1.5rem , 1.0901639344rem  +  1.7486338798vw , 2.5rem )) {
+    .main-blog__title {
+      line-height: calc(1.5rem + 1 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (font-size: clamp( 1.125rem , 1.0737704918rem  +  0.218579235vw , 1.25rem )) {
+    .main-blog__filter-text {
+      font-size: clamp( 1.125rem , 1.0737704918rem  +  0.218579235vw , 1.25rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.125rem , 1.0737704918rem  +  0.218579235vw , 1.25rem )) {
+    .main-blog__filter-text {
+      font-size: calc(1.125rem + 0.125 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (line-height: clamp( 1.5rem , 1.3975409836rem  +  0.4371584699vw , 1.75rem )) {
+    .main-blog__filter-text {
+      line-height: clamp( 1.5rem , 1.3975409836rem  +  0.4371584699vw , 1.75rem );
+    }
+}
+
+@supports not (line-height: clamp( 1.5rem , 1.3975409836rem  +  0.4371584699vw , 1.75rem )) {
+    .main-blog__filter-text {
+      line-height: calc(1.5rem + 0.25 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (font-size: clamp( 0.875rem , 0.8237704918rem  +  0.218579235vw , 1rem )) {
+    .main-blog__8col-date {
+      font-size: clamp( 0.875rem , 0.8237704918rem  +  0.218579235vw , 1rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.875rem , 0.8237704918rem  +  0.218579235vw , 1rem )) {
+    .main-blog__8col-date {
+      font-size: calc(0.875rem + 0.125 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (line-height: clamp( 1.25rem , 1.1987704918rem  +  0.218579235vw , 1.375rem )) {
+    .main-blog__8col-date {
+      line-height: clamp( 1.25rem , 1.1987704918rem  +  0.218579235vw , 1.375rem );
+    }
+}
+
+@supports not (line-height: clamp( 1.25rem , 1.1987704918rem  +  0.218579235vw , 1.375rem )) {
+    .main-blog__8col-date {
+      line-height: calc(1.25rem + 0.125 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (font-size: clamp( 1.875rem , 1.4651639344rem  +  1.7486338798vw , 2.875rem )) {
+    .main-blog__8col-title {
+      font-size: clamp( 1.875rem , 1.4651639344rem  +  1.7486338798vw , 2.875rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.875rem , 1.4651639344rem  +  1.7486338798vw , 2.875rem )) {
+    .main-blog__8col-title {
+      font-size: calc(1.875rem + 1 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (line-height: clamp( 2.0625rem , 1.6014344262rem  +  1.9672131148vw , 3.1875rem )) {
+    .main-blog__8col-title {
+      line-height: clamp( 2.0625rem , 1.6014344262rem  +  1.9672131148vw , 3.1875rem );
+    }
+}
+
+@supports not (line-height: clamp( 2.0625rem , 1.6014344262rem  +  1.9672131148vw , 3.1875rem )) {
+    .main-blog__8col-title {
+      line-height: calc(2.0625rem + 1.125 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (font-size: clamp( 0.875rem , 0.8237704918rem  +  0.218579235vw , 1rem )) {
+    .main-blog__8col-desc {
+      font-size: clamp( 0.875rem , 0.8237704918rem  +  0.218579235vw , 1rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.875rem , 0.8237704918rem  +  0.218579235vw , 1rem )) {
+    .main-blog__8col-desc {
+      font-size: calc(0.875rem + 0.125 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (line-height: clamp( 1.25rem , 1.1987704918rem  +  0.218579235vw , 1.375rem )) {
+    .main-blog__8col-desc {
+      line-height: clamp( 1.25rem , 1.1987704918rem  +  0.218579235vw , 1.375rem );
+    }
+}
+
+@supports not (line-height: clamp( 1.25rem , 1.1987704918rem  +  0.218579235vw , 1.375rem )) {
+    .main-blog__8col-desc {
+      line-height: calc(1.25rem + 0.125 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (font-size: clamp( 0.875rem , 0.8237704918rem  +  0.218579235vw , 1rem )) {
+    .main-blog__4col-date {
+      font-size: clamp( 0.875rem , 0.8237704918rem  +  0.218579235vw , 1rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.875rem , 0.8237704918rem  +  0.218579235vw , 1rem )) {
+    .main-blog__4col-date {
+      font-size: calc(0.875rem + 0.125 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (line-height: clamp( 1.25rem , 1.1987704918rem  +  0.218579235vw , 1.375rem )) {
+    .main-blog__4col-date {
+      line-height: clamp( 1.25rem , 1.1987704918rem  +  0.218579235vw , 1.375rem );
+    }
+}
+
+@supports not (line-height: clamp( 1.25rem , 1.1987704918rem  +  0.218579235vw , 1.375rem )) {
+    .main-blog__4col-date {
+      line-height: calc(1.25rem + 0.125 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (font-size: clamp( 0.875rem , 0.618852459rem  +  1.0928961749vw , 1.5rem )) {
+    .main-blog__4col-title {
+      font-size: clamp( 0.875rem , 0.618852459rem  +  1.0928961749vw , 1.5rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.875rem , 0.618852459rem  +  1.0928961749vw , 1.5rem )) {
+    .main-blog__4col-title {
+      font-size: calc(0.875rem + 0.625 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (line-height: clamp( 1.25rem , 1.0963114754rem  +  0.6557377049vw , 1.625rem )) {
+    .main-blog__4col-title {
+      line-height: clamp( 1.25rem , 1.0963114754rem  +  0.6557377049vw , 1.625rem );
+    }
+}
+
+@supports not (line-height: clamp( 1.25rem , 1.0963114754rem  +  0.6557377049vw , 1.625rem )) {
+    .main-blog__4col-title {
+      line-height: calc(1.25rem + 0.375 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (font-size: clamp( 0.875rem , 0.8237704918rem  +  0.218579235vw , 1rem )) {
+    .main-blog__4col-desc {
+      font-size: clamp( 0.875rem , 0.8237704918rem  +  0.218579235vw , 1rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.875rem , 0.8237704918rem  +  0.218579235vw , 1rem )) {
+    .main-blog__4col-desc {
+      font-size: calc(0.875rem + 0.125 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (line-height: clamp( 1.25rem , 1.1987704918rem  +  0.218579235vw , 1.375rem )) {
+    .main-blog__4col-desc {
+      line-height: clamp( 1.25rem , 1.1987704918rem  +  0.218579235vw , 1.375rem );
+    }
+}
+
+@supports not (line-height: clamp( 1.25rem , 1.1987704918rem  +  0.218579235vw , 1.375rem )) {
+    .main-blog__4col-desc {
+      line-height: calc(1.25rem + 0.125 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (font-size: clamp( 0.8125rem , 0.7868852459rem  +  0.1092896175vw , 0.875rem )) {
+    .main-blog__4col-small-date {
+      font-size: clamp( 0.8125rem , 0.7868852459rem  +  0.1092896175vw , 0.875rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.8125rem , 0.7868852459rem  +  0.1092896175vw , 0.875rem )) {
+    .main-blog__4col-small-date {
+      font-size: calc(0.8125rem + 0.0625 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (line-height: clamp( 1rem , 0.8975409836rem  +  0.4371584699vw , 1.25rem )) {
+    .main-blog__4col-small-date {
+      line-height: clamp( 1rem , 0.8975409836rem  +  0.4371584699vw , 1.25rem );
+    }
+}
+
+@supports not (line-height: clamp( 1rem , 0.8975409836rem  +  0.4371584699vw , 1.25rem )) {
+    .main-blog__4col-small-date {
+      line-height: calc(1rem + 0.25 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (font-size: clamp( 1rem , 0.9487704918rem  +  0.218579235vw , 1.125rem )) {
+    .main-blog__4col-small-title {
+      font-size: clamp( 1rem , 0.9487704918rem  +  0.218579235vw , 1.125rem );
+    }
+}
+
+@supports not (font-size: clamp( 1rem , 0.9487704918rem  +  0.218579235vw , 1.125rem )) {
+    .main-blog__4col-small-title {
+      font-size: calc(1rem + 0.125 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (line-height: clamp( 1.125rem , 1.0737704918rem  +  0.218579235vw , 1.25rem )) {
+    .main-blog__4col-small-title {
+      line-height: clamp( 1.125rem , 1.0737704918rem  +  0.218579235vw , 1.25rem );
+    }
+}
+
+@supports not (line-height: clamp( 1.125rem , 1.0737704918rem  +  0.218579235vw , 1.25rem )) {
+    .main-blog__4col-small-title {
+      line-height: calc(1.125rem + 0.125 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (padding-top: clamp( 2.5rem , 1.731557377rem  +  3.2786885246vw , 4.375rem )) {
+    .energiekennis-slider {
+      padding-top: clamp( 2.5rem , 1.731557377rem  +  3.2786885246vw , 4.375rem );
+    }
+}
+
+@supports not (padding-top: clamp( 2.5rem , 1.731557377rem  +  3.2786885246vw , 4.375rem )) {
+    .energiekennis-slider {
+      padding-top: calc(2.5rem + 1.875 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (padding-bottom: clamp( 2.5rem , 1.731557377rem  +  3.2786885246vw , 4.375rem )) {
+    .energiekennis-slider {
+      padding-bottom: clamp( 2.5rem , 1.731557377rem  +  3.2786885246vw , 4.375rem );
+    }
+}
+
+@supports not (padding-bottom: clamp( 2.5rem , 1.731557377rem  +  3.2786885246vw , 4.375rem )) {
+    .energiekennis-slider {
+      padding-bottom: calc(2.5rem + 1.875 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (margin-bottom: clamp( 0.5rem , 0.0901639344rem  +  1.7486338798vw , 1.5rem )) {
+    .energiekennis-slider__title {
+      margin-bottom: clamp( 0.5rem , 0.0901639344rem  +  1.7486338798vw , 1.5rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 0.5rem , 0.0901639344rem  +  1.7486338798vw , 1.5rem )) {
+    .energiekennis-slider__title {
+      margin-bottom: calc(0.5rem + 1 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (font-size: clamp( 1.375rem , 1.0163934426rem  +  1.5300546448vw , 2.25rem )) {
+    .energiekennis-slider__title {
+      font-size: clamp( 1.375rem , 1.0163934426rem  +  1.5300546448vw , 2.25rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.375rem , 1.0163934426rem  +  1.5300546448vw , 2.25rem )) {
+    .energiekennis-slider__title {
+      font-size: calc(1.375rem + 0.875 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (line-height: clamp( 1.5rem , 1.0901639344rem  +  1.7486338798vw , 2.5rem )) {
+    .energiekennis-slider__title {
+      line-height: clamp( 1.5rem , 1.0901639344rem  +  1.7486338798vw , 2.5rem );
+    }
+}
+
+@supports not (line-height: clamp( 1.5rem , 1.0901639344rem  +  1.7486338798vw , 2.5rem )) {
+    .energiekennis-slider__title {
+      line-height: calc(1.5rem + 1 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (font-size: clamp( 0.875rem , 0.8237704918rem  +  0.218579235vw , 1rem )) {
+    .energiekennis-slider__slide-subtitle {
+      font-size: clamp( 0.875rem , 0.8237704918rem  +  0.218579235vw , 1rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.875rem , 0.8237704918rem  +  0.218579235vw , 1rem )) {
+    .energiekennis-slider__slide-subtitle {
+      font-size: calc(0.875rem + 0.125 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (line-height: clamp( 1rem , 0.9487704918rem  +  0.218579235vw , 1.125rem )) {
+    .energiekennis-slider__slide-subtitle {
+      line-height: clamp( 1rem , 0.9487704918rem  +  0.218579235vw , 1.125rem );
+    }
+}
+
+@supports not (line-height: clamp( 1rem , 0.9487704918rem  +  0.218579235vw , 1.125rem )) {
+    .energiekennis-slider__slide-subtitle {
+      line-height: calc(1rem + 0.125 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (font-size: clamp( 1.375rem , 1.0163934426rem  +  1.5300546448vw , 2.25rem )) {
+    .energiekennis-slider__slide-title {
+      font-size: clamp( 1.375rem , 1.0163934426rem  +  1.5300546448vw , 2.25rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.375rem , 1.0163934426rem  +  1.5300546448vw , 2.25rem )) {
+    .energiekennis-slider__slide-title {
+      font-size: calc(1.375rem + 0.875 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (line-height: clamp( 1.5rem , 1.0901639344rem  +  1.7486338798vw , 2.5rem )) {
+    .energiekennis-slider__slide-title {
+      line-height: clamp( 1.5rem , 1.0901639344rem  +  1.7486338798vw , 2.5rem );
+    }
+}
+
+@supports not (line-height: clamp( 1.5rem , 1.0901639344rem  +  1.7486338798vw , 2.5rem )) {
+    .energiekennis-slider__slide-title {
+      line-height: calc(1.5rem + 1 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (font-size: clamp( 0.875rem , 0.8237704918rem  +  0.218579235vw , 1rem )) {
+    .energiekennis-slider__slide-desc {
+      font-size: clamp( 0.875rem , 0.8237704918rem  +  0.218579235vw , 1rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.875rem , 0.8237704918rem  +  0.218579235vw , 1rem )) {
+    .energiekennis-slider__slide-desc {
+      font-size: calc(0.875rem + 0.125 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (line-height: clamp( 1.25rem , 1.1987704918rem  +  0.218579235vw , 1.375rem )) {
+    .energiekennis-slider__slide-desc {
+      line-height: clamp( 1.25rem , 1.1987704918rem  +  0.218579235vw , 1.375rem );
+    }
+}
+
+@supports not (line-height: clamp( 1.25rem , 1.1987704918rem  +  0.218579235vw , 1.375rem )) {
+    .energiekennis-slider__slide-desc {
+      line-height: calc(1.25rem + 0.125 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (margin-bottom: clamp( 0.9375rem , 0.5532786885rem  +  1.6393442623vw , 1.875rem )) {
+    .energiekennis-slider__slide-desc {
+      margin-bottom: clamp( 0.9375rem , 0.5532786885rem  +  1.6393442623vw , 1.875rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 0.9375rem , 0.5532786885rem  +  1.6393442623vw , 1.875rem )) {
+    .energiekennis-slider__slide-desc {
+      margin-bottom: calc(0.9375rem + 0.9375 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (font-size: clamp( 1.125rem , 1.0737704918rem  +  0.218579235vw , 1.25rem )) {
+    .energiekennis-slider__bottom-title {
+      font-size: clamp( 1.125rem , 1.0737704918rem  +  0.218579235vw , 1.25rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.125rem , 1.0737704918rem  +  0.218579235vw , 1.25rem )) {
+    .energiekennis-slider__bottom-title {
+      font-size: calc(1.125rem + 0.125 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (line-height: clamp( 1.5rem , 1.3975409836rem  +  0.4371584699vw , 1.75rem )) {
+    .energiekennis-slider__bottom-title {
+      line-height: clamp( 1.5rem , 1.3975409836rem  +  0.4371584699vw , 1.75rem );
+    }
+}
+
+@supports not (line-height: clamp( 1.5rem , 1.3975409836rem  +  0.4371584699vw , 1.75rem )) {
+    .energiekennis-slider__bottom-title {
+      line-height: calc(1.5rem + 0.25 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (font-size: clamp( 0.75rem , 0.6731557377rem  +  0.3278688525vw , 0.9375rem )) {
+    .energiekennis-slider__bottom-item {
+      font-size: clamp( 0.75rem , 0.6731557377rem  +  0.3278688525vw , 0.9375rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.75rem , 0.6731557377rem  +  0.3278688525vw , 0.9375rem )) {
+    .energiekennis-slider__bottom-item {
+      font-size: calc(0.75rem + 0.1875 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (line-height: clamp( 0.8125rem , 0.7100409836rem  +  0.4371584699vw , 1.0625rem )) {
+    .energiekennis-slider__bottom-item {
+      line-height: clamp( 0.8125rem , 0.7100409836rem  +  0.4371584699vw , 1.0625rem );
+    }
+}
+
+@supports not (line-height: clamp( 0.8125rem , 0.7100409836rem  +  0.4371584699vw , 1.0625rem )) {
+    .energiekennis-slider__bottom-item {
+      line-height: calc(0.8125rem + 0.25 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
 }
 
 @media (min-width: 61.99875em) and (max-width: 77.5em) {
@@ -12059,6 +13517,18 @@ h6 {
 @supports not (padding-right: clamp( 1.875rem , -3.1244960084rem  +  8.0638658173vw , 3.125rem )) {
     .vacancies__item {
       padding-right: calc(1.875rem + 1.25 * (100vw - 61.99875rem) / 15.50125);
+    }
+}
+
+@supports (gap: clamp( 0.5rem , -2.499697605rem  +  4.8383194904vw , 1.25rem )) {
+    .main-blog__4col-small-item {
+      gap: clamp( 0.5rem , -2.499697605rem  +  4.8383194904vw , 1.25rem );
+    }
+}
+
+@supports not (gap: clamp( 0.5rem , -2.499697605rem  +  4.8383194904vw , 1.25rem )) {
+    .main-blog__4col-small-item {
+      gap: calc(0.5rem + 0.75 * (100vw - 61.99875rem) / 15.50125);
     }
 }
 }
@@ -13612,6 +15082,78 @@ h6 {
       width: calc(15.625rem + 15.625 * (100vw - 48rem) / 29.5);
     }
 }
+
+@supports (gap: clamp( 2.5rem , -0.5508474576rem  +  6.3559322034vw , 4.375rem )) {
+    .energiekennis-hero__container {
+      gap: clamp( 2.5rem , -0.5508474576rem  +  6.3559322034vw , 4.375rem );
+    }
+}
+
+@supports not (gap: clamp( 2.5rem , -0.5508474576rem  +  6.3559322034vw , 4.375rem )) {
+    .energiekennis-hero__container {
+      gap: calc(2.5rem + 1.875 * (100vw - 48rem) / 29.5);
+    }
+}
+
+@supports (width: clamp( 22.5rem , -2.9237288136rem  +  52.9661016949vw , 38.125rem )) {
+    .energiekennis-hero__desc {
+      width: clamp( 22.5rem , -2.9237288136rem  +  52.9661016949vw , 38.125rem );
+    }
+}
+
+@supports not (width: clamp( 22.5rem , -2.9237288136rem  +  52.9661016949vw , 38.125rem )) {
+    .energiekennis-hero__desc {
+      width: calc(22.5rem + 15.625 * (100vw - 48rem) / 29.5);
+    }
+}
+
+@supports (max-width: clamp( 28.125rem , 13.3792372881rem  +  30.7203389831vw , 37.1875rem )) {
+    .main-blog__8col-text {
+      max-width: clamp( 28.125rem , 13.3792372881rem  +  30.7203389831vw , 37.1875rem );
+    }
+}
+
+@supports not (max-width: clamp( 28.125rem , 13.3792372881rem  +  30.7203389831vw , 37.1875rem )) {
+    .main-blog__8col-text {
+      max-width: calc(28.125rem + 9.0625 * (100vw - 48rem) / 29.5);
+    }
+}
+
+@supports (gap: clamp( 0.3125rem , -1.7213983051rem  +  4.2372881356vw , 1.5625rem )) {
+    .main-blog__4col-item {
+      gap: clamp( 0.3125rem , -1.7213983051rem  +  4.2372881356vw , 1.5625rem );
+    }
+}
+
+@supports not (gap: clamp( 0.3125rem , -1.7213983051rem  +  4.2372881356vw , 1.5625rem )) {
+    .main-blog__4col-item {
+      gap: calc(0.3125rem + 1.25 * (100vw - 48rem) / 29.5);
+    }
+}
+
+@supports (width: clamp( 44.875rem , 18.4343220339rem  +  55.0847457627vw , 61.125rem )) {
+    .energiekennis-slider__slide-img img {
+      width: clamp( 44.875rem , 18.4343220339rem  +  55.0847457627vw , 61.125rem );
+    }
+}
+
+@supports not (width: clamp( 44.875rem , 18.4343220339rem  +  55.0847457627vw , 61.125rem )) {
+    .energiekennis-slider__slide-img img {
+      width: calc(44.875rem + 16.25 * (100vw - 48rem) / 29.5);
+    }
+}
+
+@supports (width: clamp( 23.75rem , 9.0042372881rem  +  30.7203389831vw , 32.8125rem )) {
+    .energiekennis-slider__slide-text {
+      width: clamp( 23.75rem , 9.0042372881rem  +  30.7203389831vw , 32.8125rem );
+    }
+}
+
+@supports not (width: clamp( 23.75rem , 9.0042372881rem  +  30.7203389831vw , 32.8125rem )) {
+    .energiekennis-slider__slide-text {
+      width: calc(23.75rem + 9.0625 * (100vw - 48rem) / 29.5);
+    }
+}
 }
 
 @media (min-width: 29.99875em) and (max-width: 77.5em) {
@@ -13775,6 +15317,10 @@ h6 {
 
   .full-video__video-col {
     width: 31.5625rem;
+  }
+
+  .main-blog__4col-img {
+    width: 25rem;
   }
 }
 
@@ -13994,6 +15540,18 @@ h6 {
       width: calc(20.3125rem + 11.25 * (100vw - 23.4375rem) / 24.56125);
     }
 }
+
+@supports (width: clamp( 9.375rem , -5.5351099293rem  +  63.6164690315vw , 25rem )) {
+    .main-blog__4col-img {
+      width: clamp( 9.375rem , -5.5351099293rem  +  63.6164690315vw , 25rem );
+    }
+}
+
+@supports not (width: clamp( 9.375rem , -5.5351099293rem  +  63.6164690315vw , 25rem )) {
+    .main-blog__4col-img {
+      width: calc(9.375rem + 15.625 * (100vw - 23.4375rem) / 24.56125);
+    }
+}
 }
 
 @media (max-width: 47.99875em) and (min-width: 23.125em) and (max-width: 47.99875em) {
@@ -14056,6 +15614,26 @@ h6 {
 @supports not (gap: clamp( 0.5rem , -37rem  +  50vw , 1.75rem )) {
     .klantverhalen-stories__list {
       gap: calc(0.5rem + 1.25 * (100vw - 75rem) / 2.5);
+    }
+}
+}
+
+@media (max-width: 1240px) and (min-width: 77.5em) {
+  .energiekennis-slider__slide-nav-buttons {
+    bottom: 6.5rem;
+  }
+}
+
+@media (max-width: 1240px) and (min-width: 48em) and (max-width: 77.5em) {
+@supports (bottom: clamp( 3.5625rem , -1.2171610169rem  +  9.9576271186vw , 6.5rem )) {
+    .energiekennis-slider__slide-nav-buttons {
+      bottom: clamp( 3.5625rem , -1.2171610169rem  +  9.9576271186vw , 6.5rem );
+    }
+}
+
+@supports not (bottom: clamp( 3.5625rem , -1.2171610169rem  +  9.9576271186vw , 6.5rem )) {
+    .energiekennis-slider__slide-nav-buttons {
+      bottom: calc(3.5625rem + 2.9375 * (100vw - 48rem) / 29.5);
     }
 }
 }
@@ -14159,6 +15737,38 @@ h6 {
   .vacancies__item:hover {
     -webkit-box-shadow: 0px 20px 24px rgba(0, 0, 0, 0.2);
             box-shadow: 0px 20px 24px rgba(0, 0, 0, 0.2);
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+
+  .main-blog__8col-item:hover {
+    -webkit-box-shadow: 0px 20px 48px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 20px 48px rgba(0, 0, 0, 0.2);
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+
+  .main-blog__4col-item:hover {
+    -webkit-box-shadow: 0px 20px 48px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 20px 48px rgba(0, 0, 0, 0.2);
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+
+  .main-blog__4col-small-item:hover {
+    -webkit-box-shadow: 0px 20px 48px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 20px 48px rgba(0, 0, 0, 0.2);
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+
+  .energiekennis-slider__bottom-item:hover {
+    background-color: #141414;
+    color: #fff;
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;

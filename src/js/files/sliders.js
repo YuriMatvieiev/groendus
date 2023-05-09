@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation } from 'swiper';
+import Swiper, { Navigation, Autoplay } from 'swiper';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -22,7 +22,6 @@ import "../../scss/base/swiper.scss";
 // import "../../scss/libs/swiper.scss";
 // Полный набор стилей из node_modules
 // import 'swiper/css';
-
 // Инициализация слайдеров
 function initSliders() {
   // Перечень слайдеров
@@ -187,6 +186,99 @@ function initSliders() {
       // Events
       on: {
         // ...
+      }
+    });
+  }
+  if (document.querySelector('.energiekennis-slider__slider')) { // Указываем скласс нужного слайдера
+    // Создаем слайдер
+    const canvas = document.getElementById('canvas');
+
+
+    const context = canvas.getContext('2d');
+
+    const centerX = canvas.width / 2;
+    const centerY = canvas.height / 2;
+    const radius = 16;
+
+    context.lineWidth = 2;
+    context.strokeStyle = '#006EFF';
+    context.fillStyle = '#ffffff';
+
+    let progress = 0;
+    const endAngle = 2 * Math.PI;
+
+    function draw() {
+      context.clearRect(0, 0, canvas.width, canvas.height);
+
+      context.beginPath();
+      context.arc(centerX, centerY, radius, -Math.PI / 2, progress * endAngle - Math.PI / 2);
+      context.stroke();
+
+      if (progress >= 1) {
+        clearInterval(intervalId);
+      } else {
+        progress += 0.01;
+      }
+    }
+
+    let intervalId = setInterval(draw, 10);
+    new Swiper('.energiekennis-slider__slider', { // Указываем скласс нужного слайдера
+      // Подключаем модули слайдера
+      // для конкретного случая
+      modules: [Navigation, Autoplay],
+      observer: true,
+      observeParents: true,
+      slidesPerView: '1',
+      spaceBetween: 40,
+      autoHeight: false,
+      speed: 800,
+      loop: true,
+      //touchRatio: 0,
+      //simulateTouch: false,
+      //loop: true,
+      //preloadImages: false,
+      //lazy: true,
+
+      // Эффекты
+      effect: 'fade',
+      autoplay: {
+        delay: 6000,
+        disableOnInteraction: false,
+      },
+
+      // Кнопки "влево/вправо"
+      navigation: {
+        prevEl: '.energiekennis-slider__swiper-button-prev',
+        nextEl: '.energiekennis-slider__swiper-button-next',
+      },
+
+      // Брейкпоинты
+      breakpoints: {
+        375: {
+          spaceBetween: 50,
+        },
+        768: {
+          spaceBetween: 50,
+        },
+        1440: {
+          slidesPerView: '1',
+          spaceBetween: 50,
+        },
+      },
+      // События
+      on: {
+        init: function () {
+          // Reset the progress variable and start a new interval to redraw the circle
+          progress = 0;
+          clearInterval(intervalId);
+          intervalId = setInterval(draw, 55);
+        },
+        slideChange: function () {
+          // Reset the progress variable and start a new interval to redraw the circle
+          progress = 0;
+          clearInterval(intervalId);
+          intervalId = setInterval(draw, 55);
+        },
       }
     });
   }
