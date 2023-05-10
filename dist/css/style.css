@@ -1315,7 +1315,7 @@ h6 {
 }
 
 .steps__list li {
-  width: 47%;
+  width: calc(50% - 8px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1999,11 +1999,11 @@ h6 {
 }
 
 .duurzaam .ovner .ovner__text-block {
-  color: #fff;
+  color: #fff !important;
 }
 
 .duurzaam .ovner .ovner__button {
-  background-color: #141414;
+  background-color: #141414 !important;
 }
 
 .duurzaam-steps__title {
@@ -6731,18 +6731,18 @@ h6 {
   }
 }
 
+@media (max-width: 430px) {
+  .steps__list li {
+    width: 100%;
+  }
+}
+
 @media (max-width: 420px) {
   .steps__list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-
-  .steps__list li {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
   }
 }
 
@@ -7516,7 +7516,6 @@ h6 {
         -ms-flex-direction: row;
             flex-direction: row;
     gap: 12px;
-    width: 48%;
   }
 
   .steps__img-block {
@@ -7982,8 +7981,8 @@ h6 {
 
   .productpagina-steps__right {
     border: none;
-    width: 100%;
-    padding: 0;
+    width: 100% !important;
+    padding: 0 !important;
   }
 
   .productpagina-steps__right-text {
