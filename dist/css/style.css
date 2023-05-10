@@ -2390,11 +2390,11 @@ h6 {
 }
 
 .productpagina .ovner .ovner__text-block {
-  color: #fff;
+  color: #fff !important;
 }
 
 .productpagina .ovner .ovner__button {
-  background-color: #141414;
+  background-color: #141414 !important;
 }
 
 .productpagina .opwekken-slider {
