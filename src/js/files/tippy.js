@@ -16,3 +16,4 @@ flsModules.tippy = tippy('[data-tippy-content]', {
   placement: 'auto',
   allowHTML: true
 });
+

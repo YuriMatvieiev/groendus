@@ -5336,13 +5336,22 @@
                 if (progress >= 1) clearInterval(intervalId); else progress += .01;
             }
             let intervalId = setInterval(draw, 10);
+            const slides = document.querySelectorAll(".energiekennis-slider__slide");
+            const bottomItems = document.querySelectorAll(".energiekennis-slider__bottom-item");
+            function setActiveSlide(index) {
+                const activeSlideTitle = slides[index].querySelector(".energiekennis-slider__slide-title").textContent;
+                bottomItems.forEach((item => {
+                    if (item.textContent === activeSlideTitle) item.classList.add("active"); else item.classList.remove("active");
+                }));
+            }
+            setActiveSlide(0);
             new core(".energiekennis-slider__slider", {
                 modules: [ Navigation, Autoplay ],
                 observer: true,
                 observeParents: true,
                 slidesPerView: "1",
                 spaceBetween: 40,
-                autoHeight: false,
+                autoHeight: true,
                 speed: 800,
                 loop: true,
                 effect: "fade",
@@ -5376,6 +5385,7 @@
                         progress = 0;
                         clearInterval(intervalId);
                         intervalId = setInterval(draw, 55);
+                        setActiveSlide(this.realIndex);
                     }
                 }
             });
@@ -5666,6 +5676,55 @@
         filterDropdown.classList.toggle("show");
         filterButton.classList.toggle("rotated-arrow");
     };
+    if (document.querySelectorAll(".energiekennis-term__terms-text")) ;
+    const terms = document.querySelectorAll(".energiekennis-term__terms-text li");
+    const filterLetters = document.querySelectorAll(".energiekennis-term__filter li");
+    function filterTerms(letter) {
+        terms.forEach((term => {
+            term.style.display = term.querySelector("a").innerText.startsWith(letter) ? "flex" : "none";
+        }));
+    }
+    function showAllTerms() {
+        filterLetters.forEach((letter => {
+            letter.classList.remove("active");
+        }));
+        terms.forEach((term => {
+            term.style.display = "inline-block";
+        }));
+    }
+    function updateActiveFilter(index) {
+        if (index >= 0 && index < filterLetters.length) {
+            filterLetters[index].classList.add("active");
+            filterTerms(filterLetters[index].innerText);
+        }
+    }
+    filterLetters.forEach(((letter, index) => {
+        letter.addEventListener("click", (event => {
+            const selectedLetter = event.target.innerText;
+            filterLetters.forEach((letter => {
+                letter.classList.remove("active");
+            }));
+            letter.classList.add("active");
+            filterTerms(selectedLetter);
+            activeIndex = index;
+        }));
+    }));
+    const showMoreButton = document.querySelector(".energiekennis-term__show-more-button");
+    if (showMoreButton) showMoreButton.addEventListener("click", (() => {
+        showAllTerms();
+    }));
+    const filterRightArrow = document.querySelector(".energiekennis-term__filter-right");
+    if (filterRightArrow) filterRightArrow.addEventListener("click", (() => {
+        activeIndex = (activeIndex + 1) % filterLetters.length;
+        filterLetters[activeIndex].click();
+    }));
+    const filterLeftArrow = document.querySelector(".energiekennis-term__filter-left");
+    if (filterLeftArrow) filterLeftArrow.addEventListener("click", (() => {
+        activeIndex = (activeIndex - 1 + filterLetters.length) % filterLetters.length;
+        filterLetters[activeIndex].click();
+    }));
+    let activeIndex = 0;
+    updateActiveFilter(activeIndex);
     window["FLS"] = true;
     isWebp();
     menuInit();

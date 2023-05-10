@@ -190,10 +190,7 @@ function initSliders() {
     });
   }
   if (document.querySelector('.energiekennis-slider__slider')) { // Указываем скласс нужного слайдера
-    // Создаем слайдер
     const canvas = document.getElementById('canvas');
-
-
     const context = canvas.getContext('2d');
 
     const centerX = canvas.width / 2;
@@ -222,6 +219,24 @@ function initSliders() {
     }
 
     let intervalId = setInterval(draw, 10);
+
+    const slides = document.querySelectorAll('.energiekennis-slider__slide');
+    const bottomItems = document.querySelectorAll('.energiekennis-slider__bottom-item');
+
+    function setActiveSlide(index) {
+      const activeSlideTitle = slides[index].querySelector('.energiekennis-slider__slide-title').textContent;
+
+      bottomItems.forEach(item => {
+        if (item.textContent === activeSlideTitle) {
+          item.classList.add('active');
+        } else {
+          item.classList.remove('active');
+        }
+      });
+    }
+
+    setActiveSlide(0);
+
     new Swiper('.energiekennis-slider__slider', { // Указываем скласс нужного слайдера
       // Подключаем модули слайдера
       // для конкретного случая
@@ -230,7 +245,7 @@ function initSliders() {
       observeParents: true,
       slidesPerView: '1',
       spaceBetween: 40,
-      autoHeight: false,
+      autoHeight: true,
       speed: 800,
       loop: true,
       //touchRatio: 0,
@@ -268,16 +283,15 @@ function initSliders() {
       // События
       on: {
         init: function () {
-          // Reset the progress variable and start a new interval to redraw the circle
           progress = 0;
           clearInterval(intervalId);
           intervalId = setInterval(draw, 55);
         },
         slideChange: function () {
-          // Reset the progress variable and start a new interval to redraw the circle
           progress = 0;
           clearInterval(intervalId);
           intervalId = setInterval(draw, 55);
+          setActiveSlide(this.realIndex);
         },
       }
     });

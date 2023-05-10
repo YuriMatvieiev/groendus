@@ -65,6 +65,9 @@ testItem.forEach(item => {
   });
 });
 
+//=====================================================HEADER===================================================================================================
+
+
 const opwekkenLink = document.getElementById('opwekken-link');
 const inzichtLink = document.getElementById('inzicht-link');
 const duurzaamLink = document.getElementById('duurzaam-link');
@@ -278,6 +281,10 @@ const toggleOverlay = (open) => {
     overlay.style.display = 'none';
   }
 };
+//===========================================================HEADER=============================================================================================
+
+
+//========================================================================================================================================================
 
 // Add this JavaScript code to handle button and dropdown menu interactions
 const filterDropdown = document.getElementById("filter-dropdown");
@@ -299,4 +306,100 @@ if (filterDropdown) {
     filterButton.classList.toggle("rotated-arrow");
   }
 }
+if (document.querySelectorAll('.energiekennis-term__terms-text')) {
+
+}
+
+
+// The error "Uncaught TypeError: Cannot read properties of null (reading 'addEventListener')" occurs because the element with the class '.energiekennis-term__filter-right' is not found on the page. To prevent the error, you can check if the element exists before adding the event listener.
+
+// Get the list of terms
+const terms = document.querySelectorAll('.energiekennis-term__terms-text li');
+const filterLetters = document.querySelectorAll('.energiekennis-term__filter li');
+
+// Function to filter terms based on selected letter
+function filterTerms(letter) {
+  // Hide all terms except those that start with the selected letter
+  terms.forEach((term) => {
+    term.style.display = term.querySelector('a').innerText.startsWith(letter) ? 'flex' : 'none';
+  });
+}
+
+// Function to show all terms
+function showAllTerms() {
+  // Remove active class from all filter letters
+  filterLetters.forEach((letter) => {
+    letter.classList.remove('active');
+  });
+
+  // Show all terms
+  terms.forEach((term) => {
+    term.style.display = 'inline-block';
+  });
+}
+
+// Function to update the active filter letter
+function updateActiveFilter(index) {
+  // Check if the index is within the range of the filterLetters array
+  if (index >= 0 && index < filterLetters.length) {
+    // Add active class to the selected filter letter
+    filterLetters[index].classList.add('active');
+
+    // Filter the terms based on the selected letter
+    filterTerms(filterLetters[index].innerText);
+  }
+}
+
+// Add event listener to the filter
+filterLetters.forEach((letter, index) => {
+  letter.addEventListener('click', (event) => {
+    const selectedLetter = event.target.innerText;
+
+    // Remove active class from all letters
+    filterLetters.forEach((letter) => {
+      letter.classList.remove('active');
+    });
+
+    // Add active class to the selected letter
+    letter.classList.add('active');
+
+    // Filter the terms based on the selected letter
+    filterTerms(selectedLetter);
+
+    // Update the active index based on the selected letter
+    activeIndex = index;
+  });
+});
+
+// Get the "energiekennis-term__show-more-button" button element
+const showMoreButton = document.querySelector('.energiekennis-term__show-more-button');
+
+if (showMoreButton) {
+  showMoreButton.addEventListener('click', () => {
+    // Call the function to show all terms
+    showAllTerms();
+  });
+}
+
+// Check if the forward arrow element exists before adding the event listener
+const filterRightArrow = document.querySelector('.energiekennis-term__filter-right');
+if (filterRightArrow) {
+  filterRightArrow.addEventListener('click', () => {
+    activeIndex = (activeIndex + 1) % filterLetters.length;
+    filterLetters[activeIndex].click();
+  });
+}
+
+// Check if the backward arrow element exists before adding the event listener
+const filterLeftArrow = document.querySelector('.energiekennis-term__filter-left');
+if (filterLeftArrow) {
+  filterLeftArrow.addEventListener('click', () => {
+    activeIndex = (activeIndex - 1 + filterLetters.length) % filterLetters.length;
+    filterLetters[activeIndex].click();
+  });
+}
+
+// Initialize the active index variable
+let activeIndex = 0;
+updateActiveFilter(activeIndex);
 
