@@ -273,7 +273,7 @@ align-items: center;
     align-items: center;
     @include adaptiveValue("gap", 230, 30, 0, 1240, 768);
     @media (max-width:$mobile){
-       flex-direction: column-reverse; 
+       flex-direction: column-reverse !important; 
        gap: 10px;
     }
     .full-video__img {
@@ -613,7 +613,7 @@ gap: 20px;
 .full-video__box-two-col{
   padding: 0;
   @media (max-width:$mobile){
-    flex-direction: column; 
+    flex-direction: column !important; 
   }
 }
 }

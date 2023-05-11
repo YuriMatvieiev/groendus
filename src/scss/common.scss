@@ -73,3 +73,11 @@
    display: none !important; 
 }
 }
+
+.text-right{
+  flex-direction: row-reverse !important;
+}
+
+.text-left{
+flex-direction: row !important;
+}
