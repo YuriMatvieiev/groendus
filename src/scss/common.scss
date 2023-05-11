@@ -61,3 +61,15 @@
     transform: rotate(270deg) !important;
   }
 }
+
+//Disables block display
+.dnone{
+  display: none !important;
+}
+
+//Disables block display at resolution less than 767.98px
+.dnone-mobile{
+@media (max-width:$mobile){
+   display: none !important; 
+}
+}
