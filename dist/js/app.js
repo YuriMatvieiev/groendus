@@ -5725,7 +5725,7 @@
     }));
     let activeIndex = 0;
     updateActiveFilter(activeIndex);
-    window["FLS"] = true;
+    window["FLS"] = false;
     isWebp();
     menuInit();
 })();

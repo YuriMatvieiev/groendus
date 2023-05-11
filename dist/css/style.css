@@ -3153,6 +3153,18 @@ h6 {
   gap: 20px;
 }
 
+.vacancies__spollers .klantverhalen-hero__select-button {
+  padding: 11px 14px;
+  gap: 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.vacancies__spollers .klantverhalen-hero__select-button.selected {
+  background-color: #006EFF;
+}
+
 .vacancies__button-filter {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3524,6 +3536,18 @@ h6 {
   background-repeat: repeat-x;
 }
 
+.energiekennis-slider__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .energiekennis-slider__title {
   font-weight: 700;
 }
@@ -3578,8 +3602,16 @@ h6 {
 
 .energiekennis-slider__slide-nav-buttons {
   position: absolute;
-  right: 190px;
+  right: 160px;
   bottom: 0;
+  /*         @media (max-width:1240px){
+              @include adaptiveValue("bottom", 104, 57, 0, 1240, 768);
+              bottom: 100px;
+              right: 80px;
+          }
+          @media (max-width:$mobile){
+               bottom: 20px; 
+          } */
 }
 
 .energiekennis-slider__slide-nav-buttons button:not(:last-child) {
@@ -3812,6 +3844,9 @@ h6 {
 
 .blog-articles__box-item {
   width: calc(25% - 20px);
+  /* @media (max-width:590px){
+      width: calc(50% - 10px);
+  } */
 }
 
 .blog-articles__box-item-img img {
@@ -5923,7 +5958,7 @@ h6 {
     padding-bottom: 4.375rem;
   }
 
-  .energiekennis-slider__title {
+  .energiekennis-slider__header {
     margin-bottom: 1.5rem;
   }
 
@@ -6140,15 +6175,7 @@ h6 {
 
 @media (max-width: 1240px) {
   .energiekennis-slider__slide-nav-buttons {
-    /* @include adaptiveValue("right", 190, 70, 0, 1240, 768); */
-    bottom: 100px;
-    right: 80px;
-  }
-}
-
-@media (max-width: 1240px) and (max-width: 48em) {
-  .energiekennis-slider__slide-nav-buttons {
-    bottom: 3.5625rem;
+    position: static;
   }
 }
 
@@ -6707,12 +6734,6 @@ h6 {
   }
 }
 
-@media (max-width: 590px) {
-  .blog-articles__box-item {
-    width: calc(50% - 10px);
-  }
-}
-
 @media (max-width: 520px) {
   .mobile-text-button__text {
     width: 10.375rem;
@@ -6724,10 +6745,6 @@ h6 {
 
   .main-blog__4col-title {
     margin-bottom: 0;
-  }
-
-  .main-blog__4col-desc {
-    -webkit-line-clamp: 2;
   }
 }
 
@@ -8427,6 +8444,16 @@ h6 {
     width: 100%;
   }
 
+  .main-blog__8col-img {
+    width: 100%;
+    /* @include adaptiveValue("height", 237, 327, 0, 767.98, 375); */
+    height: 327px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 50% 50%;
+       object-position: 50% 50%;
+  }
+
   .main-blog__8col-text {
     max-width: 90%;
     padding: 0 0 25px 15px;
@@ -8441,10 +8468,21 @@ h6 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    gap: 20px;
+  }
+
+  .main-blog__4col-img {
+    /* @include adaptiveValue("width", 400, 150, 0, 767.98, 375);  */
+    width: 7.0625rem;
+    height: 7.0625rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 50% 50%;
+       object-position: 50% 50%;
   }
 
   .main-blog__4col-text {
-    padding: 0 10px;
+    padding: 0;
   }
 
   .main-blog__4col-date {
@@ -8455,13 +8493,14 @@ h6 {
     margin-bottom: 0.5rem;
   }
 
-  .main-blog__4col-desc {
-    -webkit-line-clamp: 4;
-  }
-
   .main-blog__4col-small-item {
     width: 100%;
     gap: 20px;
+  }
+
+  .main-blog__4col-small-img {
+    width: 7.0625rem;
+    height: 7.0625rem;
   }
 
   .main-blog__4col-small-date {
@@ -8483,10 +8522,6 @@ h6 {
         -ms-transform: translate(0, 0);
             transform: translate(0, 0);
     padding: 20px;
-  }
-
-  .energiekennis-slider__slide-nav-buttons {
-    bottom: 20px;
   }
 
   .energiekennis-slider__bottom-category {
@@ -8537,7 +8572,7 @@ h6 {
   }
 
   .blog-articles__box-item {
-    width: calc(33.333% - 14px);
+    width: calc(50% - 10px);
   }
 
   .energiekennis-subscribe__form {
@@ -8651,10 +8686,6 @@ h6 {
   .full-video__video-col {
     width: 20.3125rem;
   }
-
-  .main-blog__4col-img {
-    width: 9.375rem;
-  }
 }
 
 @media (max-width: 47.99875em) and (max-width: 47.99875em) {
@@ -8737,12 +8768,16 @@ h6 {
   }
 
   .vacancies__spollers {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: 10px;
+    gap: 16px;
     width: 100%;
+  }
+
+  .vacancies__spollers .klantverhalen-hero__select-block:last-child .klantverhalen-hero__select-list {
+    right: 0;
+  }
+
+  .vacancies__spollers .klantverhalen-hero__select-block {
+    width: calc(50% - 8px);
   }
 
   .vacancies__button-filter {
@@ -8767,6 +8802,10 @@ h6 {
 
   .main-blog__8col-text {
     padding: 0 0 15px 15px;
+  }
+
+  .main-blog__4col-desc {
+    display: none;
   }
 
   .energiekennis-slider__bottom-item {
@@ -9991,7 +10030,7 @@ h6 {
     padding-bottom: 2.5rem;
   }
 
-  .energiekennis-slider__title {
+  .energiekennis-slider__header {
     margin-bottom: 0.5rem;
   }
 
@@ -13798,13 +13837,13 @@ h6 {
 }
 
 @supports (margin-bottom: clamp( 0.5rem , 0.0901639344rem  +  1.7486338798vw , 1.5rem )) {
-    .energiekennis-slider__title {
+    .energiekennis-slider__header {
       margin-bottom: clamp( 0.5rem , 0.0901639344rem  +  1.7486338798vw , 1.5rem );
     }
 }
 
 @supports not (margin-bottom: clamp( 0.5rem , 0.0901639344rem  +  1.7486338798vw , 1.5rem )) {
-    .energiekennis-slider__title {
+    .energiekennis-slider__header {
       margin-bottom: calc(0.5rem + 1 * (100vw - 23.4375rem) / 57.1875);
     }
 }
@@ -16437,10 +16476,6 @@ h6 {
   .full-video__video-col {
     width: 31.5625rem;
   }
-
-  .main-blog__4col-img {
-    width: 25rem;
-  }
 }
 
 @media (max-width: 47.99875em) and (min-width: 23.4375em) and (max-width: 47.99875em) {
@@ -16659,18 +16694,6 @@ h6 {
       width: calc(20.3125rem + 11.25 * (100vw - 23.4375rem) / 24.56125);
     }
 }
-
-@supports (width: clamp( 9.375rem , -5.5351099293rem  +  63.6164690315vw , 25rem )) {
-    .main-blog__4col-img {
-      width: clamp( 9.375rem , -5.5351099293rem  +  63.6164690315vw , 25rem );
-    }
-}
-
-@supports not (width: clamp( 9.375rem , -5.5351099293rem  +  63.6164690315vw , 25rem )) {
-    .main-blog__4col-img {
-      width: calc(9.375rem + 15.625 * (100vw - 23.4375rem) / 24.56125);
-    }
-}
 }
 
 @media (max-width: 47.99875em) and (min-width: 23.125em) and (max-width: 47.99875em) {
@@ -16733,26 +16756,6 @@ h6 {
 @supports not (gap: clamp( 0.5rem , -37rem  +  50vw , 1.75rem )) {
     .klantverhalen-stories__list {
       gap: calc(0.5rem + 1.25 * (100vw - 75rem) / 2.5);
-    }
-}
-}
-
-@media (max-width: 1240px) and (min-width: 77.5em) {
-  .energiekennis-slider__slide-nav-buttons {
-    bottom: 6.5rem;
-  }
-}
-
-@media (max-width: 1240px) and (min-width: 48em) and (max-width: 77.5em) {
-@supports (bottom: clamp( 3.5625rem , -1.2171610169rem  +  9.9576271186vw , 6.5rem )) {
-    .energiekennis-slider__slide-nav-buttons {
-      bottom: clamp( 3.5625rem , -1.2171610169rem  +  9.9576271186vw , 6.5rem );
-    }
-}
-
-@supports not (bottom: clamp( 3.5625rem , -1.2171610169rem  +  9.9576271186vw , 6.5rem )) {
-    .energiekennis-slider__slide-nav-buttons {
-      bottom: calc(3.5625rem + 2.9375 * (100vw - 48rem) / 29.5);
     }
 }
 }
@@ -16851,6 +16854,10 @@ h6 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+
+  .vacancies__spollers .klantverhalen-hero__select-button:hover {
+    background-color: #006EFF;
   }
 
   .vacancies__item:hover {

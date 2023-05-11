@@ -434,9 +434,34 @@ align-items: center;
     display: flex;
     gap: 20px;
     @media (max-width:$mobileSmall){
-       flex-direction: column; 
-       gap: 10px;
+       gap: 16px;
        width: 100%;
+    }
+    .klantverhalen-hero__select-block{
+      &:last-child{
+        .klantverhalen-hero__select-list{
+          @media (max-width:$mobileSmall){
+            right: 0;
+          }
+        } 
+      }
+      
+      @media (max-width:$mobileSmall){
+        width: calc(50% - 8px); 
+     }
+    }
+    .klantverhalen-hero__select-button{
+      padding: 11px 14px;
+      gap: 8px;
+      align-items: center;
+      &.selected{
+        background-color: $blue-light;
+      }
+      @media (any-hover: hover){
+        &:hover{
+          background-color: $blue-light;
+        }
+      }
     }
   }
   // .vacancies__button-filter
@@ -458,6 +483,7 @@ align-items: center;
     &::before{
       font-size: rem(20);
     }
+    
   }
   // .vacancies__items
   &__items {
