@@ -1,0 +1,82 @@
+//--------------------------------------------------------------------------------------------------------------
+
+.campagne {
+    padding-top: 20px;
+    // .campagne__container
+    &__container {
+    }
+    // .campagne__text
+    &__text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        max-width: rem(824);
+        margin: 0 auto 24px;
+    }
+    // .campagne__title
+    &__title {
+        font-weight: 700;
+        margin-bottom: rem(20);
+        @include adaptiveValue("font-size", 46, 30);
+        @include adaptiveValue("line-height", 51, 33);
+        text-align: center;
+    }
+    // .campagne__button
+    &__button {
+        padding: 14px 21px;
+        font-weight: 700;
+        @include adaptiveValue("font-size", 15, 12);
+        @include adaptiveValue("line-height", 17, 13);
+    }
+    // .campagne__main
+    &__main {
+        position: relative;
+    }
+    // .campagne__img
+    &__img {
+    }
+    // .campagne__svg
+    &__svg {
+        position: absolute;
+        right: 85px;
+        top: 50%;
+        transform: translate(0, -50%);
+        svg{
+            path{
+                cursor: pointer;
+                @media (any-hover: hover){
+                    &:hover{
+                        fill-opacity: 1;
+                        transition: all 0.3s ease 0s;
+                    }
+                }
+            }
+        }
+    }
+}
+.campagne__svg-nl-dr{
+}
+.campagne__svg-nl-fl{
+}
+.campagne__svg-nl-fr{
+}
+.campagne__svg-nl-ge{
+    
+}
+.campagne__svg-nl-gr{
+}
+.campagne__svg-nl-li{
+}
+.campagne__svg-nl-nb{
+}
+.campagne__svg-nl-nh{
+}
+.campagne__svg-nl-ov{
+}
+.campagne__svg-nl-ut{
+}
+.campagne__svg-nl-ze{
+}
+.campagne__svg-nl-zh{
+}
