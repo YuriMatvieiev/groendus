@@ -1,0 +1,108 @@
+//------------------------------------------------------------------------------------------------
+.home-hero {
+    @include adaptiveValue("padding-bottom", 115, 50);
+    height: 100%;
+    // .home-hero__container
+    &__container {
+    }
+    // .home-hero__slider
+    &__slider {
+max-width: rem(1440);
+margin: 0 auto;
+    }
+    // .home-hero__wrapper
+    &__wrapper {
+
+    }
+    // .home-hero__slide
+    &__slide {
+    position: relative;
+
+    }
+    // .home-hero__slide-img
+    &__slide-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1130px;
+        /* height: rem(600); */
+        height: 600px;
+        z-index: 1;
+
+    }
+    &__slide-circle{
+        position: absolute;
+        top: 50%;
+        left: -190px;
+        background-color: #fff;
+        z-index: 2;
+        width: rem(782);
+        height: rem(782);
+        border-radius: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: center;
+flex-direction: column;
+    }
+    // .home-hero__slide-text
+    &__slide-text {
+        position: relative;
+        z-index: 3;
+        
+padding: 0 75px 0 290px;
+    }
+    // .home-hero__slide-title
+    &__slide-title {
+        font-weight: 700;
+        @include adaptiveValue("font-size", 46, 30);
+      @include adaptiveValue("line-height", 51, 33);
+      @include adaptiveValue("margin-bottom", 20, 6);
+    }
+    // .home-hero__slide-subtitle
+    &__slide-subtitle {
+        @include adaptiveValue("font-size", 20, 14);
+    @include adaptiveValue("line-height", 28, 20);
+    @include adaptiveValue("margin-bottom", 36, 18);
+    }
+    // .home-hero__slide-button
+    &__slide-button {
+padding: 14px 21px;
+    }
+    // .home-hero__slide-bottom
+    &__slide-bottom {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 2;
+        background-color: #fff;
+        box-shadow: 0px 20px 24px rgba(0, 0, 0, 0.04);
+padding: 30px 70px;
+transform: translateY(50%);
+    }
+    // .home-hero__slide-bottom-title
+    &__slide-bottom-title {
+    }
+    // .home-hero__slide-bottom-items
+    &__slide-bottom-items {
+    }
+    // .home-hero__slide-bottom-number
+    &__slide-bottom-number {
+    }
+    // .home-hero__slide-bottom-desc
+    &__slide-bottom-desc {
+    }
+}
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.blue-button {
+}
+.blue-text {
+}
+.swiper-button-prev {
+}
+.swiper-button-next {
+}

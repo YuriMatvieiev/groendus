@@ -252,10 +252,10 @@ align-items: center;
   &__desc {
     @include adaptiveValue("font-size", 18, 14);
     @include adaptiveValue("line-height", 29, 20);
-    display: flex;
-    @include adaptiveValue("gap", 50, 20, 0, 1240, 768);
+    column-count: 3;
+      column-gap: 40px;
     @media (max-width:$mobile){
-       display: block; 
+      column-count: 1;
     }
 
   }

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Home"
+})
+
+<body class="home">
+  <div class="wrapper">
+    @@include('html/_header.htm',{
+    "theme": "white-theme"
+    })
+    <main class="page">
+      <section class="home-hero">
+        <div class="home-hero__slider swiper">
+          <div class="home-hero__wrapper swiper-wrapper">
+            <div class="home-hero__slide swiper-slide">
+              <img class="home-hero__slide-img" src="@img/home/main-slide.png" alt="">
+
+              <div class="home-hero__container">
+                <div class="home-hero__slide-circle">
+                  <div class="home-hero__slide-text">
+                    <h1 class="home-hero__slide-title">Wij zien kansen
+                      in 100% schone zakelijke energie. </h1>
+                    <div class="home-hero__slide-subtitle">Samen met onze klanten investeren we in duurzame
+                      oplossingen.
+                      Doe je mee?</div>
+                    <a href="#" class="home-hero__slide-button blue-button">Spreek een adviseur</a>
+                  </div>
+                </div>
+                <div class="home-hero__slide-bottom">
+                  <div class="home-hero__slide-bottom-title">Dit hebben we <span class="blue-text">samen met onze
+                      klanten</span> bereikt.</div>
+                  <ul class="home-hero__slide-bottom-items">
+                    <li>
+                      <div class="home-hero__slide-bottom-number">48 <span>%</span></div>
+                      <div class="home-hero__slide-bottom-desc">CO2 reductie</div>
+                    </li>
+                    <li>
+                      <div class="home-hero__slide-bottom-number">15 <span>%</span></div>
+                      <div class="home-hero__slide-bottom-desc">gerealiseerd besparing</div>
+                    </li>
+                    <li>
+                      <div class="home-hero__slide-bottom-number">36 <span>k</span></div>
+                      <div class="home-hero__slide-bottom-desc">besparing </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="home-hero__slide swiper-slide">
+              <img class="home-hero__slide-img" src="@img/home/main-slide.png" alt="">
+              <div class="home-hero__container">
+                <div class="home-hero__slide-circle">
+                  <div class="home-hero__slide-text">
+                    <h1 class="home-hero__slide-title">Wij zien kansen
+                      in 100% schone zakelijke energie. </h1>
+                    <div class="home-hero__slide-subtitle">Samen met onze klanten investeren we in duurzame
+                      oplossingen.
+                      Doe je mee?</div>
+                    <a href="#" class="home-hero__slide-button blue-button">Spreek een adviseur</a>
+                  </div>
+                </div>
+                <div class="home-hero__slide-bottom">
+                  <div class="home-hero__slide-bottom-title">Dit hebben we <span class="blue-text">samen met onze
+                      klanten</span> bereikt.</div>
+                  <ul class="home-hero__slide-bottom-items">
+                    <li>
+                      <div class="home-hero__slide-bottom-number">48 <span>%</span></div>
+                      <div class="home-hero__slide-bottom-desc">CO2 reductie</div>
+                    </li>
+                    <li>
+                      <div class="home-hero__slide-bottom-number">15 <span>%</span></div>
+                      <div class="home-hero__slide-bottom-desc">gerealiseerd besparing</div>
+                    </li>
+                    <li>
+                      <div class="home-hero__slide-bottom-number">36 <span>k</span></div>
+                      <div class="home-hero__slide-bottom-desc">besparing </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Если нужна навигация (влево/вправо) -->
+          <button type="button" class="swiper-button-prev"></button>
+          <button type="button" class="swiper-button-next"></button>
+
+        </div>
+      </section>
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_js.htm',{})
+</body>
+
+</html>

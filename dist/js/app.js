@@ -5771,6 +5771,27 @@
             },
             on: {}
         });
+        if (document.querySelector(".home-hero__slider")) new core(".home-hero__slider", {
+            modules: [ Autoplay, Navigation ],
+            observer: true,
+            observeParents: true,
+            slidesPerView: "1",
+            spaceBetween: 190,
+            autoHeight: true,
+            speed: 800,
+            loop: true,
+            effect: "fade",
+            autoplay: {
+                delay: 9e3,
+                disableOnInteraction: true
+            },
+            navigation: {
+                prevEl: ".swiper-button-prev",
+                nextEl: ".swiper-button-next"
+            },
+            breakpoints: {},
+            on: {}
+        });
     }
     window.addEventListener("load", (function(e) {
         initSliders();
