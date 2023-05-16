@@ -425,7 +425,7 @@ z-index: -2;
       z-index: 5;
       position: relative;
       @media (max-width:$mobile){
-         flex-direction: column-reverse;
+         flex-direction: column-reverse !important;
          
       }
       &-first{

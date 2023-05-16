@@ -296,6 +296,59 @@ function initSliders() {
       }
     });
   }
+  if (document.querySelector('.campagne__slider')) { // Указываем скласс нужного слайдера
+
+
+    new Swiper('.campagne__slider', { // Указываем скласс нужного слайдера
+      // Подключаем модули слайдера
+      // для конкретного случая
+      modules: [Autoplay],
+      observer: true,
+      observeParents: true,
+      slidesPerView: '1',
+      spaceBetween: 40,
+      autoHeight: true,
+      speed: 800,
+      loop: true,
+      //touchRatio: 0,
+      //simulateTouch: false,
+      //loop: true,
+      //preloadImages: false,
+      //lazy: true,
+
+      // Эффекты
+      effect: 'fade',
+
+      autoplay: {
+        delay: 9000,
+        disableOnInteraction: true,
+      },
+
+      // Кнопки "влево/вправо"
+      /* navigation: {
+        prevEl: '.energiekennis-slider__swiper-button-prev',
+        nextEl: '.energiekennis-slider__swiper-button-next',
+      }, */
+
+      // Брейкпоинты
+      breakpoints: {
+        375: {
+          spaceBetween: 50,
+        },
+        768: {
+          spaceBetween: 50,
+        },
+        1440: {
+          slidesPerView: '1',
+          spaceBetween: 50,
+        },
+      },
+      // События
+      on: {
+
+      }
+    });
+  }
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
 function initSlidersScroll() {
