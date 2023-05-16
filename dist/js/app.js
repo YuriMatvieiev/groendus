@@ -5671,24 +5671,6 @@
             on: {}
         });
         if (document.querySelector(".energiekennis-slider__slider")) {
-            const canvas = document.getElementById("canvas");
-            const context = canvas.getContext("2d");
-            const centerX = canvas.width / 2;
-            const centerY = canvas.height / 2;
-            const radius = 16;
-            context.lineWidth = 2;
-            context.strokeStyle = "#006EFF";
-            context.fillStyle = "#ffffff";
-            let progress = 0;
-            const endAngle = 2 * Math.PI;
-            function draw() {
-                context.clearRect(0, 0, canvas.width, canvas.height);
-                context.beginPath();
-                context.arc(centerX, centerY, radius, -Math.PI / 2, progress * endAngle - Math.PI / 2);
-                context.stroke();
-                if (progress >= 1) clearInterval(intervalId); else progress += .01;
-            }
-            let intervalId = setInterval(draw, 10);
             const slides = document.querySelectorAll(".energiekennis-slider__slide");
             const bottomItems = document.querySelectorAll(".energiekennis-slider__bottom-item");
             function setActiveSlide(index) {
@@ -5698,6 +5680,12 @@
                 }));
             }
             setActiveSlide(0);
+            const progressCircles = document.querySelectorAll(".test-svg");
+            function updateProgressCircles(s, time, progress) {
+                progressCircles.forEach((circle => {
+                    circle.style.setProperty("--progress", 1 - progress);
+                }));
+            }
             new core(".energiekennis-slider__slider", {
                 modules: [ Navigation, Autoplay ],
                 observer: true,
@@ -5729,17 +5717,10 @@
                     }
                 },
                 on: {
-                    init: function() {
-                        progress = 0;
-                        clearInterval(intervalId);
-                        intervalId = setInterval(draw, 55);
-                    },
                     slideChange: function() {
-                        progress = 0;
-                        clearInterval(intervalId);
-                        intervalId = setInterval(draw, 55);
                         setActiveSlide(this.realIndex);
-                    }
+                    },
+                    autoplayTimeLeft: updateProgressCircles
                 }
             });
         }
@@ -5771,27 +5752,37 @@
             },
             on: {}
         });
-        if (document.querySelector(".home-hero__slider")) new core(".home-hero__slider", {
-            modules: [ Autoplay, Navigation ],
-            observer: true,
-            observeParents: true,
-            slidesPerView: "1",
-            spaceBetween: 190,
-            autoHeight: true,
-            speed: 800,
-            loop: true,
-            effect: "fade",
-            autoplay: {
-                delay: 9e3,
-                disableOnInteraction: true
-            },
-            navigation: {
-                prevEl: ".swiper-button-prev",
-                nextEl: ".swiper-button-next"
-            },
-            breakpoints: {},
-            on: {}
-        });
+        if (document.querySelector(".home-hero__slider")) {
+            const progressCircles = document.querySelectorAll(".test-svg");
+            function updateProgressCircles(s, time, progress) {
+                progressCircles.forEach((circle => {
+                    circle.style.setProperty("--progress", 1 - progress);
+                }));
+            }
+            new core(".home-hero__slider", {
+                modules: [ Autoplay, Navigation ],
+                observer: true,
+                observeParents: true,
+                slidesPerView: "1",
+                spaceBetween: 300,
+                autoHeight: false,
+                speed: 800,
+                loop: true,
+                effect: "fade",
+                autoplay: {
+                    delay: 6e3,
+                    disableOnInteraction: false
+                },
+                navigation: {
+                    prevEl: ".energiekennis-slider__swiper-button-prev",
+                    nextEl: ".energiekennis-slider__swiper-button-next"
+                },
+                breakpoints: {},
+                on: {
+                    autoplayTimeLeft: updateProgressCircles
+                }
+            });
+        }
     }
     window.addEventListener("load", (function(e) {
         initSliders();

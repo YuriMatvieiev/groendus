@@ -190,36 +190,6 @@ function initSliders() {
     });
   }
   if (document.querySelector('.energiekennis-slider__slider')) { // Указываем скласс нужного слайдера
-    const canvas = document.getElementById('canvas');
-    const context = canvas.getContext('2d');
-
-    const centerX = canvas.width / 2;
-    const centerY = canvas.height / 2;
-    const radius = 16;
-
-    context.lineWidth = 2;
-    context.strokeStyle = '#006EFF';
-    context.fillStyle = '#ffffff';
-
-    let progress = 0;
-    const endAngle = 2 * Math.PI;
-
-    function draw() {
-      context.clearRect(0, 0, canvas.width, canvas.height);
-
-      context.beginPath();
-      context.arc(centerX, centerY, radius, -Math.PI / 2, progress * endAngle - Math.PI / 2);
-      context.stroke();
-
-      if (progress >= 1) {
-        clearInterval(intervalId);
-      } else {
-        progress += 0.01;
-      }
-    }
-
-    let intervalId = setInterval(draw, 10);
-
     const slides = document.querySelectorAll('.energiekennis-slider__slide');
     const bottomItems = document.querySelectorAll('.energiekennis-slider__bottom-item');
 
@@ -236,7 +206,12 @@ function initSliders() {
     }
 
     setActiveSlide(0);
-
+    const progressCircles = document.querySelectorAll(".test-svg");
+    function updateProgressCircles(s, time, progress) {
+      progressCircles.forEach(circle => {
+        circle.style.setProperty("--progress", 1 - progress);
+      });
+    }
     new Swiper('.energiekennis-slider__slider', { // Указываем скласс нужного слайдера
       // Подключаем модули слайдера
       // для конкретного случая
@@ -282,17 +257,10 @@ function initSliders() {
       },
       // События
       on: {
-        init: function () {
-          progress = 0;
-          clearInterval(intervalId);
-          intervalId = setInterval(draw, 55);
-        },
         slideChange: function () {
-          progress = 0;
-          clearInterval(intervalId);
-          intervalId = setInterval(draw, 55);
           setActiveSlide(this.realIndex);
         },
+        autoplayTimeLeft: updateProgressCircles,
       }
     });
   }
@@ -350,46 +318,33 @@ function initSliders() {
     });
   }
   if (document.querySelector('.home-hero__slider')) { // Указываем скласс нужного слайдера
-
-
-    new Swiper('.home-hero__slider', { // Указываем скласс нужного слайдера
-      // Подключаем модули слайдера
-      // для конкретного случая
-      modules: [Autoplay, Navigation,],
+    const progressCircles = document.querySelectorAll(".test-svg");
+    function updateProgressCircles(s, time, progress) {
+      progressCircles.forEach(circle => {
+        circle.style.setProperty("--progress", 1 - progress);
+      });
+    }
+    new Swiper('.home-hero__slider', {
+      modules: [Autoplay, Navigation],
       observer: true,
       observeParents: true,
       slidesPerView: '1',
-      spaceBetween: 190,
-      autoHeight: true,
+      spaceBetween: 300,
+      autoHeight: false,
       speed: 800,
       loop: true,
-      //touchRatio: 0,
-      //simulateTouch: false,
-      //loop: true,
-      //preloadImages: false,
-      //lazy: true,
-
-      // Эффекты
       effect: 'fade',
-
       autoplay: {
-        delay: 9000,
-        disableOnInteraction: true,
+        delay: 6000,
+        disableOnInteraction: false,
       },
-
-      // Кнопки "влево/вправо"
       navigation: {
-        prevEl: '.swiper-button-prev',
-        nextEl: '.swiper-button-next',
+        prevEl: '.energiekennis-slider__swiper-button-prev',
+        nextEl: '.energiekennis-slider__swiper-button-next',
       },
-
-      // Брейкпоинты
-      breakpoints: {
-
-      },
-      // События
+      breakpoints: {},
       on: {
-
+        autoplayTimeLeft: updateProgressCircles,
       }
     });
   }
