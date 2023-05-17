@@ -318,6 +318,21 @@ function initSliders() {
     });
   }
   if (document.querySelector('.home-hero__slider')) { // Указываем скласс нужного слайдера
+
+    const slidePlay = document.querySelector('.home-hero__slide-play');
+
+    let hoverTimeout;
+
+    slidePlay.addEventListener('mouseenter', () => {
+      clearTimeout(hoverTimeout);
+      slidePlay.classList.add('hovered');
+    });
+
+    slidePlay.addEventListener('mouseleave', () => {
+      hoverTimeout = setTimeout(() => {
+        slidePlay.classList.remove('hovered');
+      }, 2000); // Adjust the time (in milliseconds) as needed
+    });
     const progressCircles = document.querySelectorAll(".test-svg");
     function updateProgressCircles(s, time, progress) {
       progressCircles.forEach(circle => {
