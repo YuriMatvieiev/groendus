@@ -760,11 +760,13 @@ text-align: center;
             width: 85%;
          } 
     }
-    @media (max-width:600px){
-        grid-template-columns: repeat(4, 80px);
-    grid-template-rows: repeat(9, 50px);
-
+    
     }
+    @media (max-width:600px){
+        .home-logos__box{
+            grid-template-columns: repeat(4, 80px) ;
+            grid-template-rows: repeat(9, 50px) ;
+        }
     }
     // .home-logos__button
     &__button {

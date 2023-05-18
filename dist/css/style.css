@@ -7737,7 +7737,7 @@ h6 {
 }
 
 @media (max-width: 600px) {
-  .home-logos__box {
+  .home-logos .home-logos__box {
     -ms-grid-columns: (80px)[4];
     grid-template-columns: repeat(4, 80px);
     -ms-grid-rows: (50px)[9];
