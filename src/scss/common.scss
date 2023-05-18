@@ -81,3 +81,9 @@
 .text-left{
 flex-direction: row !important;
 }
+.blue-number{
+  color: #FFFFFF;
+  background-color: $blue-light;
+  width: 42px;
+    display: inline-block;
+}

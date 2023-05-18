@@ -241,6 +241,11 @@
         menu.classList.toggle("active");
         functions_menuClose();
     }));
+    function functions_FLS(message) {
+        setTimeout((() => {
+            if (window.FLS) console.log(message);
+        }), 0);
+    }
     function uniqArray(array) {
         return array.filter((function(item, index, self) {
             return self.indexOf(item) === index;
@@ -2813,6 +2818,9 @@
         };
         animate();
     }
+    function utils_getSlideTransformEl(slideEl) {
+        return slideEl.querySelector(".swiper-slide-transform") || slideEl.shadowEl && slideEl.shadowEl.querySelector(".swiper-slide-transform") || slideEl;
+    }
     function utils_elementChildren(element, selector = "") {
         return [ ...element.children ].filter((el => el.matches(selector)));
     }
@@ -2867,6 +2875,14 @@
             parent = parent.parentElement;
         }
         return parents;
+    }
+    function utils_elementTransitionEnd(el, callback) {
+        function fireCallBack(e) {
+            if (e.target !== el) return;
+            callback.call(el, e);
+            el.removeEventListener("transitionend", fireCallBack);
+        }
+        if (callback) el.addEventListener("transitionend", fireCallBack);
     }
     function utils_elementOuterSize(el, size, includeMargins) {
         const window = ssr_window_esm_getWindow();
@@ -5605,6 +5621,137 @@
             resume
         });
     }
+    function effect_init_effectInit(params) {
+        const {effect, swiper, on, setTranslate, setTransition, overwriteParams, perspective, recreateShadows, getEffectParams} = params;
+        on("beforeInit", (() => {
+            if (swiper.params.effect !== effect) return;
+            swiper.classNames.push(`${swiper.params.containerModifierClass}${effect}`);
+            if (perspective && perspective()) swiper.classNames.push(`${swiper.params.containerModifierClass}3d`);
+            const overwriteParamsResult = overwriteParams ? overwriteParams() : {};
+            Object.assign(swiper.params, overwriteParamsResult);
+            Object.assign(swiper.originalParams, overwriteParamsResult);
+        }));
+        on("setTranslate", (() => {
+            if (swiper.params.effect !== effect) return;
+            setTranslate();
+        }));
+        on("setTransition", ((_s, duration) => {
+            if (swiper.params.effect !== effect) return;
+            setTransition(duration);
+        }));
+        on("transitionEnd", (() => {
+            if (swiper.params.effect !== effect) return;
+            if (recreateShadows) {
+                if (!getEffectParams || !getEffectParams().slideShadows) return;
+                swiper.slides.forEach((slideEl => {
+                    slideEl.querySelectorAll(".swiper-slide-shadow-top, .swiper-slide-shadow-right, .swiper-slide-shadow-bottom, .swiper-slide-shadow-left").forEach((shadowEl => shadowEl.remove()));
+                }));
+                recreateShadows();
+            }
+        }));
+        let requireUpdateOnVirtual;
+        on("virtualUpdate", (() => {
+            if (swiper.params.effect !== effect) return;
+            if (!swiper.slides.length) requireUpdateOnVirtual = true;
+            requestAnimationFrame((() => {
+                if (requireUpdateOnVirtual && swiper.slides && swiper.slides.length) {
+                    setTranslate();
+                    requireUpdateOnVirtual = false;
+                }
+            }));
+        }));
+    }
+    function effect_target_effectTarget(effectParams, slideEl) {
+        const transformEl = utils_getSlideTransformEl(slideEl);
+        if (transformEl !== slideEl) {
+            transformEl.style.backfaceVisibility = "hidden";
+            transformEl.style["-webkit-backface-visibility"] = "hidden";
+        }
+        return transformEl;
+    }
+    function effect_virtual_transition_end_effectVirtualTransitionEnd({swiper, duration, transformElements, allSlides}) {
+        const {activeIndex} = swiper;
+        const getSlide = el => {
+            if (!el.parentElement) {
+                const slide = swiper.slides.filter((slideEl => slideEl.shadowEl && slideEl.shadowEl === el.parentNode))[0];
+                return slide;
+            }
+            return el.parentElement;
+        };
+        if (swiper.params.virtualTranslate && duration !== 0) {
+            let eventTriggered = false;
+            let transitionEndTarget;
+            if (allSlides) transitionEndTarget = transformElements; else transitionEndTarget = transformElements.filter((transformEl => {
+                const el = transformEl.classList.contains("swiper-slide-transform") ? getSlide(transformEl) : transformEl;
+                return swiper.getSlideIndex(el) === activeIndex;
+            }));
+            transitionEndTarget.forEach((el => {
+                utils_elementTransitionEnd(el, (() => {
+                    if (eventTriggered) return;
+                    if (!swiper || swiper.destroyed) return;
+                    eventTriggered = true;
+                    swiper.animating = false;
+                    const evt = new window.CustomEvent("transitionend", {
+                        bubbles: true,
+                        cancelable: true
+                    });
+                    swiper.wrapperEl.dispatchEvent(evt);
+                }));
+            }));
+        }
+    }
+    function EffectFade({swiper, extendParams, on}) {
+        extendParams({
+            fadeEffect: {
+                crossFade: false
+            }
+        });
+        const setTranslate = () => {
+            const {slides} = swiper;
+            const params = swiper.params.fadeEffect;
+            for (let i = 0; i < slides.length; i += 1) {
+                const slideEl = swiper.slides[i];
+                const offset = slideEl.swiperSlideOffset;
+                let tx = -offset;
+                if (!swiper.params.virtualTranslate) tx -= swiper.translate;
+                let ty = 0;
+                if (!swiper.isHorizontal()) {
+                    ty = tx;
+                    tx = 0;
+                }
+                const slideOpacity = swiper.params.fadeEffect.crossFade ? Math.max(1 - Math.abs(slideEl.progress), 0) : 1 + Math.min(Math.max(slideEl.progress, -1), 0);
+                const targetEl = effect_target_effectTarget(params, slideEl);
+                targetEl.style.opacity = slideOpacity;
+                targetEl.style.transform = `translate3d(${tx}px, ${ty}px, 0px)`;
+            }
+        };
+        const setTransition = duration => {
+            const transformElements = swiper.slides.map((slideEl => utils_getSlideTransformEl(slideEl)));
+            transformElements.forEach((el => {
+                el.style.transitionDuration = `${duration}ms`;
+            }));
+            effect_virtual_transition_end_effectVirtualTransitionEnd({
+                swiper,
+                duration,
+                transformElements,
+                allSlides: true
+            });
+        };
+        effect_init_effectInit({
+            effect: "fade",
+            swiper,
+            on,
+            setTranslate,
+            setTransition,
+            overwriteParams: () => ({
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+                watchSlidesProgress: true,
+                spaceBetween: 0,
+                virtualTranslate: !swiper.params.cssMode
+            })
+        });
+    }
     function initSliders() {
         if (document.querySelector(".beheren-slider__slider")) new core(".beheren-slider__slider", {
             modules: [ Navigation ],
@@ -5779,7 +5926,6 @@
                 autoHeight: false,
                 speed: 800,
                 loop: true,
-                effect: "fade",
                 autoplay: {
                     delay: 6e3,
                     disableOnInteraction: false
@@ -5818,11 +5964,168 @@
             },
             on: {}
         });
+        if (document.querySelector(".home-steps__slider")) {
+            const progressCircles = document.querySelectorAll(".home-steps__button-svg");
+            function updateProgressCircles(s, time, progress) {
+                progressCircles.forEach((circle => {
+                    circle.style.setProperty("--progress", 1 - progress);
+                }));
+            }
+            new core(".home-steps__slider", {
+                modules: [ Navigation, Autoplay, EffectFade ],
+                effect: "fade",
+                fadeEffect: {
+                    crossFade: true
+                },
+                allowTouchMove: false,
+                slidesPerView: "1",
+                spaceBetween: 0,
+                speed: 800,
+                loop: true,
+                autoplay: {
+                    delay: 3e4,
+                    disableOnInteraction: false
+                },
+                navigation: {
+                    prevEl: ".steps-prev",
+                    nextEl: ".steps-next"
+                },
+                breakpoints: {},
+                on: {
+                    autoplayTimeLeft: updateProgressCircles
+                }
+            });
+        }
     }
     window.addEventListener("load", (function(e) {
         initSliders();
     }));
+    class ScrollWatcher {
+        constructor(props) {
+            let defaultConfig = {
+                logging: true
+            };
+            this.config = Object.assign(defaultConfig, props);
+            this.observer;
+            !document.documentElement.classList.contains("watcher") ? this.scrollWatcherRun() : null;
+        }
+        scrollWatcherUpdate() {
+            this.scrollWatcherRun();
+        }
+        scrollWatcherRun() {
+            document.documentElement.classList.add("watcher");
+            this.scrollWatcherConstructor(document.querySelectorAll("[data-watch]"));
+        }
+        scrollWatcherConstructor(items) {
+            if (items.length) {
+                this.scrollWatcherLogging(`Прокинувся, стежу за об'єктами (${items.length})...`);
+                let uniqParams = uniqArray(Array.from(items).map((function(item) {
+                    return `${item.dataset.watchRoot ? item.dataset.watchRoot : null}|${item.dataset.watchMargin ? item.dataset.watchMargin : "0px"}|${item.dataset.watchThreshold ? item.dataset.watchThreshold : 0}`;
+                })));
+                uniqParams.forEach((uniqParam => {
+                    let uniqParamArray = uniqParam.split("|");
+                    let paramsWatch = {
+                        root: uniqParamArray[0],
+                        margin: uniqParamArray[1],
+                        threshold: uniqParamArray[2]
+                    };
+                    let groupItems = Array.from(items).filter((function(item) {
+                        let watchRoot = item.dataset.watchRoot ? item.dataset.watchRoot : null;
+                        let watchMargin = item.dataset.watchMargin ? item.dataset.watchMargin : "0px";
+                        let watchThreshold = item.dataset.watchThreshold ? item.dataset.watchThreshold : 0;
+                        if (String(watchRoot) === paramsWatch.root && String(watchMargin) === paramsWatch.margin && String(watchThreshold) === paramsWatch.threshold) return item;
+                    }));
+                    let configWatcher = this.getScrollWatcherConfig(paramsWatch);
+                    this.scrollWatcherInit(groupItems, configWatcher);
+                }));
+            } else this.scrollWatcherLogging("Сплю, немає об'єктів для стеження. ZzzZZzz");
+        }
+        getScrollWatcherConfig(paramsWatch) {
+            let configWatcher = {};
+            if (document.querySelector(paramsWatch.root)) configWatcher.root = document.querySelector(paramsWatch.root); else if (paramsWatch.root !== "null") this.scrollWatcherLogging(`Эмм... батьківського об'єкта ${paramsWatch.root} немає на сторінці`);
+            configWatcher.rootMargin = paramsWatch.margin;
+            if (paramsWatch.margin.indexOf("px") < 0 && paramsWatch.margin.indexOf("%") < 0) {
+                this.scrollWatcherLogging(`йой, налаштування data-watch-margin потрібно задавати в PX або %`);
+                return;
+            }
+            if (paramsWatch.threshold === "prx") {
+                paramsWatch.threshold = [];
+                for (let i = 0; i <= 1; i += .005) paramsWatch.threshold.push(i);
+            } else paramsWatch.threshold = paramsWatch.threshold.split(",");
+            configWatcher.threshold = paramsWatch.threshold;
+            return configWatcher;
+        }
+        scrollWatcherCreate(configWatcher) {
+            this.observer = new IntersectionObserver(((entries, observer) => {
+                entries.forEach((entry => {
+                    this.scrollWatcherCallback(entry, observer);
+                }));
+            }), configWatcher);
+        }
+        scrollWatcherInit(items, configWatcher) {
+            this.scrollWatcherCreate(configWatcher);
+            items.forEach((item => this.observer.observe(item)));
+        }
+        scrollWatcherIntersecting(entry, targetElement) {
+            if (entry.isIntersecting) {
+                !targetElement.classList.contains("_watcher-view") ? targetElement.classList.add("_watcher-view") : null;
+                this.scrollWatcherLogging(`Я бачу ${targetElement.classList}, додав клас _watcher-view`);
+            } else {
+                targetElement.classList.contains("_watcher-view") ? targetElement.classList.remove("_watcher-view") : null;
+                this.scrollWatcherLogging(`Я не бачу ${targetElement.classList}, прибрав клас _watcher-view`);
+            }
+        }
+        scrollWatcherOff(targetElement, observer) {
+            observer.unobserve(targetElement);
+            this.scrollWatcherLogging(`Я перестав стежити за ${targetElement.classList}`);
+        }
+        scrollWatcherLogging(message) {
+            this.config.logging ? functions_FLS(`[Спостерігач]: ${message}`) : null;
+        }
+        scrollWatcherCallback(entry, observer) {
+            const targetElement = entry.target;
+            this.scrollWatcherIntersecting(entry, targetElement);
+            targetElement.hasAttribute("data-watch-once") && entry.isIntersecting ? this.scrollWatcherOff(targetElement, observer) : null;
+            document.dispatchEvent(new CustomEvent("watcherCallback", {
+                detail: {
+                    entry
+                }
+            }));
+        }
+    }
+    modules_flsModules.watcher = new ScrollWatcher({});
     let addWindowScrollEvent = false;
+    function digitsCounter() {
+        if (document.querySelectorAll("[data-digits-counter]").length) document.querySelectorAll("[data-digits-counter]").forEach((element => {
+            element.dataset.digitsCounter = element.innerHTML;
+            element.innerHTML = `0`;
+        }));
+        function digitsCountersInit(digitsCountersItems) {
+            let digitsCounters = digitsCountersItems ? digitsCountersItems : document.querySelectorAll("[data-digits-counter]");
+            if (digitsCounters.length) digitsCounters.forEach((digitsCounter => {
+                digitsCountersAnimate(digitsCounter);
+            }));
+        }
+        function digitsCountersAnimate(digitsCounter) {
+            let startTimestamp = null;
+            const duration = parseInt(digitsCounter.dataset.digitsCounterSpeed) ? parseInt(digitsCounter.dataset.digitsCounterSpeed) : 1e3;
+            const startValue = parseInt(digitsCounter.dataset.digitsCounter);
+            const startPosition = 0;
+            const step = timestamp => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                digitsCounter.innerHTML = Math.floor(progress * (startPosition + startValue));
+                if (progress < 1) window.requestAnimationFrame(step);
+            };
+            window.requestAnimationFrame(step);
+        }
+        function digitsCounterAction(e) {
+            const entry = e.detail.entry;
+            const targetElement = entry.target;
+            if (targetElement.querySelectorAll("[data-digits-counter]").length) digitsCountersInit(targetElement.querySelectorAll("[data-digits-counter]"));
+        }
+        document.addEventListener("watcherCallback", digitsCounterAction);
+    }
     setTimeout((() => {
         if (addWindowScrollEvent) {
             let windowScroll = new Event("windowScroll");
@@ -6157,4 +6460,5 @@
     isWebp();
     menuInit();
     spollers();
+    digitsCounter();
 })();

@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation, Autoplay } from 'swiper';
+import Swiper, { Navigation, Autoplay, EffectFade } from 'swiper';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -348,7 +348,7 @@ function initSliders() {
       autoHeight: false,
       speed: 800,
       loop: true,
-      effect: 'fade',
+
       autoplay: {
         delay: 6000,
         disableOnInteraction: false,
@@ -391,6 +391,41 @@ function initSliders() {
       },
       on: {
 
+      }
+    });
+  }
+  if (document.querySelector('.home-steps__slider')) { // Указываем скласс нужного слайдера
+    const progressCircles = document.querySelectorAll(".home-steps__button-svg");
+    function updateProgressCircles(s, time, progress) {
+      progressCircles.forEach(circle => {
+        circle.style.setProperty("--progress", 1 - progress);
+      });
+    }
+    new Swiper('.home-steps__slider', {
+      modules: [Navigation, Autoplay, EffectFade],
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
+      },
+      allowTouchMove: false,
+      slidesPerView: '1',
+      spaceBetween: 0,
+      speed: 800,
+      loop: true,
+
+      autoplay: {
+        delay: 30000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        prevEl: '.steps-prev',
+        nextEl: '.steps-next',
+      },
+      breakpoints: {
+
+      },
+      on: {
+        autoplayTimeLeft: updateProgressCircles,
       }
     });
   }
