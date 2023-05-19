@@ -151,8 +151,9 @@ body {
 // Подключение стилей отдельных блоков
 @import "header";
 @import "footer";
-@import "home";
 // Подключение стилей отдельных страниц
+@import "home";
+@import "ons-aanbod";
 @import "beheren";
 @import "opwekken";
 @import "duurzaam";
