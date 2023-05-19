@@ -429,6 +429,65 @@ function initSliders() {
       }
     });
   }
+  if (document.querySelector('.home-news__slider')) { // Указываем скласс нужного слайдера
+    // Создаем слайдер
+    new Swiper('.home-news__slider', { // Указываем скласс нужного слайдера
+      // Подключаем модули слайдера
+      // для конкретного случая
+      modules: [Navigation],
+
+      slidesPerView: 'auto',
+      spaceBetween: 20,
+      autoHeight: false,
+      speed: 800,
+      loop: true,
+      //touchRatio: 0,
+      //simulateTouch: false,
+      //loop: true,
+      //preloadImages: false,
+      //lazy: true,
+
+      /*
+      // Эффекты
+      effect: 'fade',
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      */
+
+      // Пагинация
+      /*
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      */
+
+      // Скроллбар
+      /*
+      scrollbar: {
+        el: '.swiper-scrollbar',
+        draggable: true,
+      },
+      */
+
+      // Кнопки "влево/вправо"
+      /* navigation: {
+        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next',
+      }, */
+
+      // Брейкпоинты
+      breakpoints: {
+
+      },
+      // События
+      on: {
+
+      }
+    });
+  }
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
 function initSlidersScroll() {

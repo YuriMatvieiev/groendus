@@ -5996,6 +5996,16 @@
                 }
             });
         }
+        if (document.querySelector(".home-news__slider")) new core(".home-news__slider", {
+            modules: [ Navigation ],
+            slidesPerView: "auto",
+            spaceBetween: 20,
+            autoHeight: false,
+            speed: 800,
+            loop: true,
+            breakpoints: {},
+            on: {}
+        });
     }
     window.addEventListener("load", (function(e) {
         initSliders();
@@ -6227,14 +6237,14 @@
         }));
     }));
     const playButtons = document.querySelectorAll(".full-video__play-button");
-    const videoText = document.querySelector(".full-video__text");
+    const videoText = document.querySelector("#full-video__text");
     playButtons.forEach((function(button) {
         button.addEventListener("click", (function() {
             const thumbnail = button.previousElementSibling;
             const videoContainer = button.nextElementSibling;
             thumbnail.style.display = "none";
             videoContainer.style.display = "block";
-            if (!isMobileTest) videoText.style.display = "none";
+            if (!isMobileTest && videoText) videoText.style.display = "none";
         }));
     }));
     const isMobileTest = window.matchMedia("(max-width: 767.98px)").matches;

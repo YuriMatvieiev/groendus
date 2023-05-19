@@ -17,7 +17,7 @@ showMoreBtns.forEach(btn => {
 
 // get all the elements with the class name 'full-video__play-button'
 const playButtons = document.querySelectorAll(".full-video__play-button");
-const videoText = document.querySelector('.full-video__text');
+const videoText = document.querySelector('#full-video__text');
 // loop through each play button and add click event listener
 playButtons.forEach(function (button) {
   button.addEventListener("click", function () {
@@ -26,7 +26,7 @@ playButtons.forEach(function (button) {
 
     thumbnail.style.display = "none"; // hide the thumbnail
     videoContainer.style.display = "block"; // show the video container
-    if (!isMobileTest) {
+    if ((!isMobileTest) && (videoText)) {
       videoText.style.display = 'none';
     }
   });
@@ -310,8 +310,6 @@ if (document.querySelectorAll('.energiekennis-term__terms-text')) {
 
 }
 
-
-// The error "Uncaught TypeError: Cannot read properties of null (reading 'addEventListener')" occurs because the element with the class '.energiekennis-term__filter-right' is not found on the page. To prevent the error, you can check if the element exists before adding the event listener.
 
 // Get the list of terms
 const terms = document.querySelectorAll('.energiekennis-term__terms-text li');
