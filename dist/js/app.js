@@ -5753,152 +5753,6 @@
         });
     }
     function initSliders() {
-        if (document.querySelector(".beheren-slider__slider")) new core(".beheren-slider__slider", {
-            modules: [ Navigation ],
-            observer: true,
-            observeParents: true,
-            slidesPerView: 3,
-            spaceBetween: 0,
-            autoHeight: false,
-            speed: 800,
-            loop: true,
-            breakpoints: {
-                320: {
-                    slidesPerView: "auto",
-                    spaceBetween: 16,
-                    autoHeight: true
-                },
-                375: {
-                    slidesPerView: "auto",
-                    spaceBetween: 20
-                },
-                768: {
-                    slidesPerView: "auto",
-                    spaceBetween: 30
-                },
-                1268: {
-                    slidesPerView: 3,
-                    spaceBetween: 40
-                }
-            },
-            on: {}
-        });
-        if (document.querySelector(".opwekken-slider__slider")) new core(".opwekken-slider__slider", {
-            modules: [ Navigation ],
-            observer: true,
-            observeParents: true,
-            slidesPerView: "auto",
-            spaceBetween: 40,
-            autoHeight: false,
-            speed: 800,
-            loop: true,
-            breakpoints: {
-                375: {
-                    spaceBetween: 15
-                },
-                768: {
-                    spaceBetween: 25
-                },
-                1440: {
-                    slidesPerView: "auto",
-                    spaceBetween: 40
-                }
-            },
-            on: {}
-        });
-        if (window.matchMedia("(max-width: 768px)").matches) new core(".productpagina-options__slider", {
-            modules: [ Navigation ],
-            observer: true,
-            observeParents: true,
-            slidesPerView: "auto",
-            spaceBetween: 15,
-            autoHeight: false,
-            speed: 800,
-            loop: true,
-            on: {}
-        });
-        if (document.querySelector(".energiekennis-slider__slider")) {
-            const slides = document.querySelectorAll(".energiekennis-slider__slide");
-            const bottomItems = document.querySelectorAll(".energiekennis-slider__bottom-item");
-            function setActiveSlide(index) {
-                const activeSlideTitle = slides[index].querySelector(".energiekennis-slider__slide-title").textContent;
-                bottomItems.forEach((item => {
-                    if (item.textContent === activeSlideTitle) item.classList.add("active"); else item.classList.remove("active");
-                }));
-            }
-            setActiveSlide(0);
-            const progressCircles = document.querySelectorAll(".test-svg");
-            function updateProgressCircles(s, time, progress) {
-                progressCircles.forEach((circle => {
-                    circle.style.setProperty("--progress", 1 - progress);
-                }));
-            }
-            new core(".energiekennis-slider__slider", {
-                modules: [ Navigation, Autoplay ],
-                observer: true,
-                observeParents: true,
-                slidesPerView: "1",
-                spaceBetween: 40,
-                autoHeight: true,
-                speed: 800,
-                loop: true,
-                effect: "fade",
-                autoplay: {
-                    delay: 6e3,
-                    disableOnInteraction: false
-                },
-                navigation: {
-                    prevEl: ".energiekennis-slider__swiper-button-prev",
-                    nextEl: ".energiekennis-slider__swiper-button-next"
-                },
-                breakpoints: {
-                    375: {
-                        spaceBetween: 50
-                    },
-                    768: {
-                        spaceBetween: 50
-                    },
-                    1440: {
-                        slidesPerView: "1",
-                        spaceBetween: 50
-                    }
-                },
-                on: {
-                    slideChange: function() {
-                        setActiveSlide(this.realIndex);
-                    },
-                    autoplayTimeLeft: updateProgressCircles
-                }
-            });
-        }
-        if (document.querySelector(".campagne__slider")) new core(".campagne__slider", {
-            modules: [ Autoplay ],
-            observer: true,
-            observeParents: true,
-            slidesPerView: "1",
-            spaceBetween: 40,
-            autoHeight: true,
-            speed: 800,
-            loop: true,
-            effect: "fade",
-            autoplay: {
-                delay: 9e3,
-                disableOnInteraction: true
-            },
-            breakpoints: {
-                375: {
-                    spaceBetween: 50
-                },
-                768: {
-                    spaceBetween: 50
-                },
-                1440: {
-                    slidesPerView: "1",
-                    spaceBetween: 50
-                }
-            },
-            on: {}
-        });
         if (document.querySelector(".home-hero__slider")) {
             const slidePlay = document.querySelector(".home-hero__slide-play");
             let hoverTimeout;
@@ -5919,8 +5773,6 @@
             }
             new core(".home-hero__slider", {
                 modules: [ Autoplay, Navigation ],
-                observer: true,
-                observeParents: true,
                 slidesPerView: "1",
                 spaceBetween: 300,
                 autoHeight: false,
@@ -5934,7 +5786,6 @@
                     prevEl: ".energiekennis-slider__swiper-button-prev",
                     nextEl: ".energiekennis-slider__swiper-button-next"
                 },
-                breakpoints: {},
                 on: {
                     autoplayTimeLeft: updateProgressCircles
                 }
@@ -5942,8 +5793,6 @@
         }
         if (document.querySelector(".home-solutions__slider")) new core(".home-solutions__slider", {
             modules: [ Navigation ],
-            observer: false,
-            observeParents: false,
             slidesPerView: "auto",
             spaceBetween: 20,
             speed: 800,
@@ -5990,7 +5839,6 @@
                     prevEl: ".steps-prev",
                     nextEl: ".steps-next"
                 },
-                breakpoints: {},
                 on: {
                     autoplayTimeLeft: updateProgressCircles
                 }
@@ -6002,8 +5850,139 @@
             spaceBetween: 20,
             autoHeight: false,
             speed: 800,
+            loop: true
+        });
+        if (document.querySelector(".beheren-slider__slider")) new core(".beheren-slider__slider", {
+            modules: [ Navigation ],
+            slidesPerView: 3,
+            spaceBetween: 0,
+            autoHeight: false,
+            speed: 800,
             loop: true,
-            breakpoints: {},
+            breakpoints: {
+                320: {
+                    slidesPerView: "auto",
+                    spaceBetween: 16,
+                    autoHeight: true
+                },
+                375: {
+                    slidesPerView: "auto",
+                    spaceBetween: 20
+                },
+                768: {
+                    slidesPerView: "auto",
+                    spaceBetween: 30
+                },
+                1268: {
+                    slidesPerView: 3,
+                    spaceBetween: 40
+                }
+            }
+        });
+        if (document.querySelector(".opwekken-slider__slider")) new core(".opwekken-slider__slider", {
+            modules: [ Navigation ],
+            slidesPerView: "auto",
+            spaceBetween: 40,
+            autoHeight: false,
+            speed: 800,
+            loop: true,
+            breakpoints: {
+                375: {
+                    spaceBetween: 15
+                },
+                768: {
+                    spaceBetween: 25
+                },
+                1440: {
+                    slidesPerView: "auto",
+                    spaceBetween: 40
+                }
+            }
+        });
+        if (window.matchMedia("(max-width: 768px)").matches) new core(".productpagina-options__slider", {
+            modules: [ Navigation ],
+            slidesPerView: "auto",
+            spaceBetween: 15,
+            autoHeight: false,
+            speed: 800,
+            loop: true
+        });
+        if (document.querySelector(".energiekennis-slider__slider")) {
+            const slides = document.querySelectorAll(".energiekennis-slider__slide");
+            const bottomItems = document.querySelectorAll(".energiekennis-slider__bottom-item");
+            function setActiveSlide(index) {
+                const activeSlideTitle = slides[index].querySelector(".energiekennis-slider__slide-title").textContent;
+                bottomItems.forEach((item => {
+                    if (item.textContent === activeSlideTitle) item.classList.add("active"); else item.classList.remove("active");
+                }));
+            }
+            setActiveSlide(0);
+            const progressCircles = document.querySelectorAll(".test-svg");
+            function updateProgressCircles(s, time, progress) {
+                progressCircles.forEach((circle => {
+                    circle.style.setProperty("--progress", 1 - progress);
+                }));
+            }
+            new core(".energiekennis-slider__slider", {
+                modules: [ Navigation, Autoplay ],
+                slidesPerView: "1",
+                spaceBetween: 40,
+                autoHeight: true,
+                speed: 800,
+                loop: true,
+                autoplay: {
+                    delay: 6e3,
+                    disableOnInteraction: false
+                },
+                navigation: {
+                    prevEl: ".energiekennis-slider__swiper-button-prev",
+                    nextEl: ".energiekennis-slider__swiper-button-next"
+                },
+                breakpoints: {
+                    375: {
+                        spaceBetween: 50
+                    },
+                    768: {
+                        spaceBetween: 50
+                    },
+                    1440: {
+                        slidesPerView: "1",
+                        spaceBetween: 50
+                    }
+                },
+                on: {
+                    slideChange: function() {
+                        setActiveSlide(this.realIndex);
+                    },
+                    autoplayTimeLeft: updateProgressCircles
+                }
+            });
+        }
+        if (document.querySelector(".campagne__slider")) new core(".campagne__slider", {
+            modules: [ Autoplay ],
+            observer: true,
+            observeParents: true,
+            slidesPerView: "1",
+            spaceBetween: 40,
+            autoHeight: true,
+            speed: 800,
+            loop: true,
+            autoplay: {
+                delay: 9e3,
+                disableOnInteraction: true
+            },
+            breakpoints: {
+                375: {
+                    spaceBetween: 50
+                },
+                768: {
+                    spaceBetween: 50
+                },
+                1440: {
+                    slidesPerView: "1",
+                    spaceBetween: 50
+                }
+            },
             on: {}
         });
     }

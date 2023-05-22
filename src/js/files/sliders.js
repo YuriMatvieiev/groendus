@@ -26,297 +26,6 @@ import "../../scss/base/swiper.scss";
 function initSliders() {
   // Перечень слайдеров
   // Проверяем, есть ли слайдер на стронице
-  if (document.querySelector('.beheren-slider__slider')) { // Указываем скласс нужного слайдера
-    // Создаем слайдер
-    new Swiper('.beheren-slider__slider', { // Указываем скласс нужного слайдера
-      // Подключаем модули слайдера
-      // для конкретного случая
-      modules: [Navigation],
-      observer: true,
-      observeParents: true,
-      slidesPerView: 3,
-      spaceBetween: 0,
-      autoHeight: false,
-      speed: 800,
-
-      //touchRatio: 0,
-      //simulateTouch: false,
-      loop: true,
-      //preloadImages: false,
-      //lazy: true,
-
-      /*
-      // Эффекты
-      effect: 'fade',
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      */
-
-      // Пагинация
-      /*
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      */
-
-      // Скроллбар
-      /*
-      scrollbar: {
-        el: '.swiper-scrollbar',
-        draggable: true,
-      },
-      */
-
-      // Кнопки "влево/вправо"
-      /* navigation: {
-        prevEl: '.swiper-button-prev',
-        nextEl: '.swiper-button-next',
-      }, */
-
-      // Брейкпоинты
-      breakpoints: {
-        320: {
-          slidesPerView: 'auto',
-          spaceBetween: 16,
-          autoHeight: true,
-        },
-        375: {
-          slidesPerView: 'auto',
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 'auto',
-          spaceBetween: 30,
-        },
-        1268: {
-          slidesPerView: 3,
-          spaceBetween: 40,
-        },
-      },
-      // События
-      on: {
-
-      }
-    });
-  }
-  if (document.querySelector('.opwekken-slider__slider')) { // Указываем скласс нужного слайдера
-    // Создаем слайдер
-    new Swiper('.opwekken-slider__slider', { // Указываем скласс нужного слайдера
-      // Подключаем модули слайдера
-      // для конкретного случая
-      modules: [Navigation],
-      observer: true,
-      observeParents: true,
-      slidesPerView: 'auto',
-      spaceBetween: 40,
-      autoHeight: false,
-      speed: 800,
-      loop: true,
-      //touchRatio: 0,
-      //simulateTouch: false,
-      //loop: true,
-      //preloadImages: false,
-      //lazy: true,
-
-      /*
-      // Эффекты
-      effect: 'fade',
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      */
-
-      // Пагинация
-      /*
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      */
-
-      // Скроллбар
-      /*
-      scrollbar: {
-        el: '.swiper-scrollbar',
-        draggable: true,
-      },
-      */
-
-      // Кнопки "влево/вправо"
-      /* navigation: {
-        prevEl: '.swiper-button-prev',
-        nextEl: '.swiper-button-next',
-      }, */
-
-      // Брейкпоинты
-      breakpoints: {
-        375: {
-          spaceBetween: 15,
-        },
-        768: {
-          spaceBetween: 25,
-        },
-        1440: {
-          slidesPerView: 'auto',
-          spaceBetween: 40,
-        },
-      },
-      // События
-      on: {
-
-      }
-    });
-  }
-
-  if (window.matchMedia("(max-width: 768px)").matches) {
-    // Create the slider
-    new Swiper('.productpagina-options__slider', {
-      modules: [Navigation],
-      observer: true,
-      observeParents: true,
-      slidesPerView: 'auto',
-      spaceBetween: 15,
-      autoHeight: false,
-      speed: 800,
-      loop: true,
-      // Events
-      on: {
-        // ...
-      }
-    });
-  }
-  if (document.querySelector('.energiekennis-slider__slider')) { // Указываем скласс нужного слайдера
-    const slides = document.querySelectorAll('.energiekennis-slider__slide');
-    const bottomItems = document.querySelectorAll('.energiekennis-slider__bottom-item');
-
-    function setActiveSlide(index) {
-      const activeSlideTitle = slides[index].querySelector('.energiekennis-slider__slide-title').textContent;
-
-      bottomItems.forEach(item => {
-        if (item.textContent === activeSlideTitle) {
-          item.classList.add('active');
-        } else {
-          item.classList.remove('active');
-        }
-      });
-    }
-
-    setActiveSlide(0);
-    const progressCircles = document.querySelectorAll(".test-svg");
-    function updateProgressCircles(s, time, progress) {
-      progressCircles.forEach(circle => {
-        circle.style.setProperty("--progress", 1 - progress);
-      });
-    }
-    new Swiper('.energiekennis-slider__slider', { // Указываем скласс нужного слайдера
-      // Подключаем модули слайдера
-      // для конкретного случая
-      modules: [Navigation, Autoplay],
-      observer: true,
-      observeParents: true,
-      slidesPerView: '1',
-      spaceBetween: 40,
-      autoHeight: true,
-      speed: 800,
-      loop: true,
-      //touchRatio: 0,
-      //simulateTouch: false,
-      //loop: true,
-      //preloadImages: false,
-      //lazy: true,
-
-      // Эффекты
-      effect: 'fade',
-      autoplay: {
-        delay: 6000,
-        disableOnInteraction: false,
-      },
-
-      // Кнопки "влево/вправо"
-      navigation: {
-        prevEl: '.energiekennis-slider__swiper-button-prev',
-        nextEl: '.energiekennis-slider__swiper-button-next',
-      },
-
-      // Брейкпоинты
-      breakpoints: {
-        375: {
-          spaceBetween: 50,
-        },
-        768: {
-          spaceBetween: 50,
-        },
-        1440: {
-          slidesPerView: '1',
-          spaceBetween: 50,
-        },
-      },
-      // События
-      on: {
-        slideChange: function () {
-          setActiveSlide(this.realIndex);
-        },
-        autoplayTimeLeft: updateProgressCircles,
-      }
-    });
-  }
-  if (document.querySelector('.campagne__slider')) { // Указываем скласс нужного слайдера
-
-
-    new Swiper('.campagne__slider', { // Указываем скласс нужного слайдера
-      // Подключаем модули слайдера
-      // для конкретного случая
-      modules: [Autoplay],
-      observer: true,
-      observeParents: true,
-      slidesPerView: '1',
-      spaceBetween: 40,
-      autoHeight: true,
-      speed: 800,
-      loop: true,
-      //touchRatio: 0,
-      //simulateTouch: false,
-      //loop: true,
-      //preloadImages: false,
-      //lazy: true,
-
-      // Эффекты
-      effect: 'fade',
-
-      autoplay: {
-        delay: 9000,
-        disableOnInteraction: true,
-      },
-
-      // Кнопки "влево/вправо"
-      /* navigation: {
-        prevEl: '.energiekennis-slider__swiper-button-prev',
-        nextEl: '.energiekennis-slider__swiper-button-next',
-      }, */
-
-      // Брейкпоинты
-      breakpoints: {
-        375: {
-          spaceBetween: 50,
-        },
-        768: {
-          spaceBetween: 50,
-        },
-        1440: {
-          slidesPerView: '1',
-          spaceBetween: 50,
-        },
-      },
-      // События
-      on: {
-
-      }
-    });
-  }
   if (document.querySelector('.home-hero__slider')) { // Указываем скласс нужного слайдера
 
     const slidePlay = document.querySelector('.home-hero__slide-play');
@@ -341,8 +50,6 @@ function initSliders() {
     }
     new Swiper('.home-hero__slider', {
       modules: [Autoplay, Navigation],
-      observer: true,
-      observeParents: true,
       slidesPerView: '1',
       spaceBetween: 300,
       autoHeight: false,
@@ -357,7 +64,6 @@ function initSliders() {
         prevEl: '.energiekennis-slider__swiper-button-prev',
         nextEl: '.energiekennis-slider__swiper-button-next',
       },
-      breakpoints: {},
       on: {
         autoplayTimeLeft: updateProgressCircles,
       }
@@ -367,8 +73,7 @@ function initSliders() {
 
     new Swiper('.home-solutions__slider', {
       modules: [Navigation],
-      observer: false,
-      observeParents: false,
+
       slidesPerView: 'auto',
       spaceBetween: 20,
       speed: 800,
@@ -421,9 +126,7 @@ function initSliders() {
         prevEl: '.steps-prev',
         nextEl: '.steps-next',
       },
-      breakpoints: {
 
-      },
       on: {
         autoplayTimeLeft: updateProgressCircles,
       }
@@ -441,46 +144,192 @@ function initSliders() {
       autoHeight: false,
       speed: 800,
       loop: true,
-      //touchRatio: 0,
-      //simulateTouch: false,
-      //loop: true,
-      //preloadImages: false,
-      //lazy: true,
 
-      /*
-      // Эффекты
-      effect: 'fade',
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
+    });
+  }
+  if (document.querySelector('.beheren-slider__slider')) { // Указываем скласс нужного слайдера
+    // Создаем слайдер
+    new Swiper('.beheren-slider__slider', { // Указываем скласс нужного слайдера
+      // Подключаем модули слайдера
+      // для конкретного случая
+      modules: [Navigation],
+
+      slidesPerView: 3,
+      spaceBetween: 0,
+      autoHeight: false,
+      speed: 800,
+      loop: true,
+      // Брейкпоинты
+      breakpoints: {
+        320: {
+          slidesPerView: 'auto',
+          spaceBetween: 16,
+          autoHeight: true,
+        },
+        375: {
+          slidesPerView: 'auto',
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 'auto',
+          spaceBetween: 30,
+        },
+        1268: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },
       },
-      */
 
-      // Пагинация
-      /*
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      */
+    });
+  }
+  if (document.querySelector('.opwekken-slider__slider')) { // Указываем скласс нужного слайдера
+    // Создаем слайдер
+    new Swiper('.opwekken-slider__slider', { // Указываем скласс нужного слайдера
+      // Подключаем модули слайдера
+      // для конкретного случая
+      modules: [Navigation],
 
-      // Скроллбар
-      /*
-      scrollbar: {
-        el: '.swiper-scrollbar',
-        draggable: true,
-      },
-      */
+      slidesPerView: 'auto',
+      spaceBetween: 40,
+      autoHeight: false,
+      speed: 800,
+      loop: true,
 
-      // Кнопки "влево/вправо"
-      /* navigation: {
-        prevEl: '.swiper-button-prev',
-        nextEl: '.swiper-button-next',
-      }, */
 
       // Брейкпоинты
       breakpoints: {
+        375: {
+          spaceBetween: 15,
+        },
+        768: {
+          spaceBetween: 25,
+        },
+        1440: {
+          slidesPerView: 'auto',
+          spaceBetween: 40,
+        },
+      },
 
+    });
+  }
+
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    // Create the slider
+    new Swiper('.productpagina-options__slider', {
+      modules: [Navigation],
+
+      slidesPerView: 'auto',
+      spaceBetween: 15,
+      autoHeight: false,
+      speed: 800,
+      loop: true,
+      // Events
+
+    });
+  }
+  if (document.querySelector('.energiekennis-slider__slider')) { // Указываем скласс нужного слайдера
+    const slides = document.querySelectorAll('.energiekennis-slider__slide');
+    const bottomItems = document.querySelectorAll('.energiekennis-slider__bottom-item');
+
+    function setActiveSlide(index) {
+      const activeSlideTitle = slides[index].querySelector('.energiekennis-slider__slide-title').textContent;
+
+      bottomItems.forEach(item => {
+        if (item.textContent === activeSlideTitle) {
+          item.classList.add('active');
+        } else {
+          item.classList.remove('active');
+        }
+      });
+    }
+
+    setActiveSlide(0);
+    const progressCircles = document.querySelectorAll(".test-svg");
+    function updateProgressCircles(s, time, progress) {
+      progressCircles.forEach(circle => {
+        circle.style.setProperty("--progress", 1 - progress);
+      });
+    }
+    new Swiper('.energiekennis-slider__slider', { // Указываем скласс нужного слайдера
+      // Подключаем модули слайдера
+      // для конкретного случая
+      modules: [Navigation, Autoplay],
+
+      slidesPerView: '1',
+      spaceBetween: 40,
+      autoHeight: true,
+      speed: 800,
+      loop: true,
+
+
+      // Эффекты
+      autoplay: {
+        delay: 6000,
+        disableOnInteraction: false,
+      },
+
+      // Кнопки "влево/вправо"
+      navigation: {
+        prevEl: '.energiekennis-slider__swiper-button-prev',
+        nextEl: '.energiekennis-slider__swiper-button-next',
+      },
+
+      // Брейкпоинты
+      breakpoints: {
+        375: {
+          spaceBetween: 50,
+        },
+        768: {
+          spaceBetween: 50,
+        },
+        1440: {
+          slidesPerView: '1',
+          spaceBetween: 50,
+        },
+      },
+      // События
+      on: {
+        slideChange: function () {
+          setActiveSlide(this.realIndex);
+        },
+        autoplayTimeLeft: updateProgressCircles,
+      }
+    });
+  }
+  if (document.querySelector('.campagne__slider')) { // Указываем скласс нужного слайдера
+
+
+    new Swiper('.campagne__slider', { // Указываем скласс нужного слайдера
+      // Подключаем модули слайдера
+      // для конкретного случая
+      modules: [Autoplay],
+      observer: true,
+      observeParents: true,
+      slidesPerView: '1',
+      spaceBetween: 40,
+      autoHeight: true,
+      speed: 800,
+      loop: true,
+
+
+      autoplay: {
+        delay: 9000,
+        disableOnInteraction: true,
+      },
+
+
+      // Брейкпоинты
+      breakpoints: {
+        375: {
+          spaceBetween: 50,
+        },
+        768: {
+          spaceBetween: 50,
+        },
+        1440: {
+          slidesPerView: '1',
+          spaceBetween: 50,
+        },
       },
       // События
       on: {
