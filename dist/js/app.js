@@ -6228,44 +6228,6 @@
     }
     const da = new DynamicAdapt("max");
     da.init();
-    const showMoreBtns = document.querySelectorAll(".services__item-show-more");
-    showMoreBtns.forEach((btn => {
-        btn.addEventListener("click", (() => {
-            const itemBottom = btn.parentNode.querySelector(".services__item-list");
-            itemBottom.classList.toggle("show");
-            btn.classList.toggle("rotated-arrow");
-        }));
-    }));
-    const playButtons = document.querySelectorAll(".full-video__play-button");
-    const videoText = document.querySelector("#full-video__text");
-    playButtons.forEach((function(button) {
-        button.addEventListener("click", (function() {
-            const thumbnail = button.previousElementSibling;
-            const videoContainer = button.nextElementSibling;
-            thumbnail.style.display = "none";
-            videoContainer.style.display = "block";
-            if (!isMobileTest && videoText) videoText.style.display = "none";
-        }));
-    }));
-    const isMobileTest = window.matchMedia("(max-width: 767.98px)").matches;
-    const vooropItem = document.querySelectorAll(".voorop__item");
-    vooropItem.forEach((item => {
-        item.addEventListener("mouseover", (() => {
-            if (!isMobileTest) item.classList.add("voorop__item-active");
-        }));
-        item.addEventListener("mouseout", (() => {
-            if (!isMobileTest) item.classList.remove("voorop__item-active");
-        }));
-    }));
-    const testItem = document.querySelectorAll(" .productpagina-options__slide");
-    testItem.forEach((item => {
-        item.addEventListener("mouseover", (() => {
-            if (!isMobileTest) item.classList.add("productpagina-options__slide-active");
-        }));
-        item.addEventListener("mouseout", (() => {
-            if (!isMobileTest) item.classList.remove("productpagina-options__slide-active");
-        }));
-    }));
     const opwekkenLink = document.getElementById("opwekken-link");
     const inzichtLink = document.getElementById("inzicht-link");
     const duurzaamLink = document.getElementById("duurzaam-link");
@@ -6324,10 +6286,10 @@
         }
     }));
     const menuLinks = document.querySelectorAll(".menu__link-test");
-    const submenus = document.querySelectorAll(".menu__submenu");
+    const submenusWrap = document.querySelectorAll(".menu__submenu-wrap");
     const arrows = document.querySelectorAll(".menu-arrow");
     function closeSubmenu() {
-        submenus.forEach((submenu => {
+        submenusWrap.forEach((submenu => {
             submenu.classList.remove("submenu-open");
         }));
         arrows.forEach((arrow => {
@@ -6339,7 +6301,7 @@
         link.addEventListener("mouseover", (() => {
             if (window.innerWidth > 991.98) {
                 closeSubmenu();
-                submenus[index].classList.add("submenu-open");
+                submenusWrap[index].classList.add("submenu-open");
                 const arrow = link.nextElementSibling;
                 arrow.classList.add("rotated");
                 toggleOverlay(true);
@@ -6348,7 +6310,7 @@
     }));
     arrows.forEach(((arrow, index) => {
         arrow.addEventListener("click", (() => {
-            const submenu = arrow.closest(".menu__item").querySelector(".menu__submenu");
+            const submenu = arrow.closest(".menu__item").querySelector(".menu__submenu-wrap");
             submenu.classList.toggle("submenu-open");
             arrow.classList.toggle("rotated");
             toggleOverlay(submenu.classList.contains("submenu-open"));
@@ -6405,6 +6367,44 @@
             document.body.appendChild(overlay);
         } else overlay.style.display = "block"; else if (!open && overlay) overlay.style.display = "none";
     };
+    const showMoreBtns = document.querySelectorAll(".services__item-show-more");
+    showMoreBtns.forEach((btn => {
+        btn.addEventListener("click", (() => {
+            const itemBottom = btn.parentNode.querySelector(".services__item-list");
+            itemBottom.classList.toggle("show");
+            btn.classList.toggle("rotated-arrow");
+        }));
+    }));
+    const playButtons = document.querySelectorAll(".full-video__play-button");
+    const videoText = document.querySelector("#full-video__text");
+    playButtons.forEach((function(button) {
+        button.addEventListener("click", (function() {
+            const thumbnail = button.previousElementSibling;
+            const videoContainer = button.nextElementSibling;
+            thumbnail.style.display = "none";
+            videoContainer.style.display = "block";
+            if (!isMobileTest && videoText) videoText.style.display = "none";
+        }));
+    }));
+    const isMobileTest = window.matchMedia("(max-width: 767.98px)").matches;
+    const vooropItem = document.querySelectorAll(".voorop__item");
+    vooropItem.forEach((item => {
+        item.addEventListener("mouseover", (() => {
+            if (!isMobileTest) item.classList.add("voorop__item-active");
+        }));
+        item.addEventListener("mouseout", (() => {
+            if (!isMobileTest) item.classList.remove("voorop__item-active");
+        }));
+    }));
+    const testItem = document.querySelectorAll(" .productpagina-options__slide");
+    testItem.forEach((item => {
+        item.addEventListener("mouseover", (() => {
+            if (!isMobileTest) item.classList.add("productpagina-options__slide-active");
+        }));
+        item.addEventListener("mouseout", (() => {
+            if (!isMobileTest) item.classList.remove("productpagina-options__slide-active");
+        }));
+    }));
     const filterDropdown = document.getElementById("filter-dropdown");
     const filterButton = document.getElementById("filter-btn");
     if (filterButton) filterButton.onclick = function() {
@@ -6417,7 +6417,6 @@
         filterDropdown.classList.toggle("show");
         filterButton.classList.toggle("rotated-arrow");
     };
-    if (document.querySelectorAll(".energiekennis-term__terms-text")) ;
     const terms = document.querySelectorAll(".energiekennis-term__terms-text li");
     const filterLetters = document.querySelectorAll(".energiekennis-term__filter li");
     function filterTerms(letter) {

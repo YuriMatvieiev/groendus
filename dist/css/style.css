@@ -324,6 +324,8 @@ h6 {
 
 .header__top {
   padding: 10px 25px;
+  max-width: 90rem;
+  margin: 0 auto;
 }
 
 .header__top .active {
@@ -468,6 +470,10 @@ h6 {
   padding: 27px 25px;
   -webkit-box-shadow: 0px -20px 24px rgba(0, 0, 0, 0.04);
           box-shadow: 0px -20px 24px rgba(0, 0, 0, 0.04);
+  position: relative;
+}
+
+.header__bottom-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -477,7 +483,8 @@ h6 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  position: relative;
+  max-width: 90rem;
+  margin: 0 auto;
 }
 
 .header__item-first {
@@ -616,7 +623,7 @@ h6 {
           align-items: center;
 }
 
-.menu__submenu {
+.menu__submenu-wrap {
   z-index: 50;
   display: none;
   border-top: 1px solid rgba(20, 20, 20, 0.1);
@@ -624,8 +631,17 @@ h6 {
   top: 90px;
   left: 0;
   width: 100%;
-  padding: 0 25px;
   background: #fff;
+}
+
+.menu__submenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 25px;
+  width: 100%;
+  max-width: 90rem;
+  margin: 0 auto;
 }
 
 .menu__submenu-item-sub {
@@ -727,6 +743,12 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.menu__submenu-item:not(:first-child) {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .menu__submenu-item:first-child {
@@ -8390,19 +8412,22 @@ h6 {
     width: 100%;
   }
 
+  .menu__submenu-wrap {
+    height: calc(100% - 120px);
+    top: 120px;
+    position: fixed;
+    overflow: auto;
+  }
+
   .menu__submenu {
     gap: 1rem;
   }
 
   .menu__submenu {
-    height: calc(100% - 120px);
-    top: 120px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    position: fixed;
-    overflow: auto;
   }
 
   .menu__submenu-klantverhalen-nav {
@@ -8685,7 +8710,7 @@ h6 {
     height: calc(100% - 75px);
   }
 
-  .blue-theme .menu__submenu {
+  .blue-theme .menu__submenu-wrap {
     height: calc(100% - 75px);
     top: 75px;
   }

@@ -4,67 +4,6 @@ import { isMobile } from "./functions.js";
 import { flsModules } from "./modules.js";
 
 
-
-const showMoreBtns = document.querySelectorAll('.services__item-show-more');
-
-showMoreBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const itemBottom = btn.parentNode.querySelector('.services__item-list');
-    itemBottom.classList.toggle('show');
-    btn.classList.toggle('rotated-arrow');
-  });
-});
-
-// get all the elements with the class name 'full-video__play-button'
-const playButtons = document.querySelectorAll(".full-video__play-button");
-const videoText = document.querySelector('#full-video__text');
-// loop through each play button and add click event listener
-playButtons.forEach(function (button) {
-  button.addEventListener("click", function () {
-    const thumbnail = button.previousElementSibling; // get the thumbnail image
-    const videoContainer = button.nextElementSibling; // get the video container
-
-    thumbnail.style.display = "none"; // hide the thumbnail
-    videoContainer.style.display = "block"; // show the video container
-    if ((!isMobileTest) && (videoText)) {
-      videoText.style.display = 'none';
-    }
-  });
-});
-
-const isMobileTest = window.matchMedia("(max-width: 767.98px)").matches;
-const vooropItem = document.querySelectorAll('.voorop__item');
-
-vooropItem.forEach(item => {
-  item.addEventListener('mouseover', () => {
-    if (!isMobileTest) {
-      item.classList.add('voorop__item-active');
-    }
-  });
-
-  item.addEventListener('mouseout', () => {
-    if (!isMobileTest) {
-      item.classList.remove('voorop__item-active');
-    }
-  });
-});
-
-const testItem = document.querySelectorAll(' .productpagina-options__slide');
-
-testItem.forEach(item => {
-  item.addEventListener('mouseover', () => {
-    if (!isMobileTest) {
-      item.classList.add('productpagina-options__slide-active');
-    }
-  });
-
-  item.addEventListener('mouseout', () => {
-    if (!isMobileTest) {
-      item.classList.remove('productpagina-options__slide-active');
-    }
-  });
-});
-
 //=====================================================HEADER===================================================================================================
 
 
@@ -152,11 +91,11 @@ document.addEventListener('click', function (event) {
 });
 
 const menuLinks = document.querySelectorAll('.menu__link-test');
-const submenus = document.querySelectorAll('.menu__submenu');
+const submenusWrap = document.querySelectorAll('.menu__submenu-wrap');
 const arrows = document.querySelectorAll('.menu-arrow');
 
 function closeSubmenu() {
-  submenus.forEach(submenu => {
+  submenusWrap.forEach(submenu => {
     submenu.classList.remove('submenu-open');
   });
   arrows.forEach(arrow => {
@@ -169,7 +108,7 @@ menuLinks.forEach((link, index) => {
   link.addEventListener('mouseover', () => {
     if (window.innerWidth > 991.98) { // check if screen width is greater than 992.98px
       closeSubmenu();
-      submenus[index].classList.add('submenu-open');
+      submenusWrap[index].classList.add('submenu-open');
       const arrow = link.nextElementSibling;
       arrow.classList.add('rotated');
       toggleOverlay(true); // add overlay when menu is open
@@ -180,7 +119,7 @@ menuLinks.forEach((link, index) => {
 
 arrows.forEach((arrow, index) => {
   arrow.addEventListener('click', () => {
-    const submenu = arrow.closest('.menu__item').querySelector('.menu__submenu');
+    const submenu = arrow.closest('.menu__item').querySelector('.menu__submenu-wrap');
     submenu.classList.toggle('submenu-open');
     arrow.classList.toggle('rotated');
     toggleOverlay(submenu.classList.contains('submenu-open'));
@@ -283,8 +222,78 @@ const toggleOverlay = (open) => {
 };
 //===========================================================HEADER=============================================================================================
 
+//=====================================beheren page spoiller===================================================================================================================
+
+const showMoreBtns = document.querySelectorAll('.services__item-show-more');
+
+showMoreBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const itemBottom = btn.parentNode.querySelector('.services__item-list');
+    itemBottom.classList.toggle('show');
+    btn.classList.toggle('rotated-arrow');
+  });
+});
 
 //========================================================================================================================================================
+
+//=====================================video play button===================================================================================================================
+
+// get all the elements with the class name 'full-video__play-button'
+const playButtons = document.querySelectorAll(".full-video__play-button");
+const videoText = document.querySelector('#full-video__text');
+// loop through each play button and add click event listener
+playButtons.forEach(function (button) {
+  button.addEventListener("click", function () {
+    const thumbnail = button.previousElementSibling; // get the thumbnail image
+    const videoContainer = button.nextElementSibling; // get the video container
+
+    thumbnail.style.display = "none"; // hide the thumbnail
+    videoContainer.style.display = "block"; // show the video container
+    if ((!isMobileTest) && (videoText)) {
+      videoText.style.display = 'none';
+    }
+  });
+});
+
+//========================================================================================================================================================
+
+//====================================productpagina page====================================================================================================================
+
+const isMobileTest = window.matchMedia("(max-width: 767.98px)").matches;
+const vooropItem = document.querySelectorAll('.voorop__item');
+
+vooropItem.forEach(item => {
+  item.addEventListener('mouseover', () => {
+    if (!isMobileTest) {
+      item.classList.add('voorop__item-active');
+    }
+  });
+
+  item.addEventListener('mouseout', () => {
+    if (!isMobileTest) {
+      item.classList.remove('voorop__item-active');
+    }
+  });
+});
+
+const testItem = document.querySelectorAll(' .productpagina-options__slide');
+
+testItem.forEach(item => {
+  item.addEventListener('mouseover', () => {
+    if (!isMobileTest) {
+      item.classList.add('productpagina-options__slide-active');
+    }
+  });
+
+  item.addEventListener('mouseout', () => {
+    if (!isMobileTest) {
+      item.classList.remove('productpagina-options__slide-active');
+    }
+  });
+});
+//========================================================================================================================================================
+
+//===============================energiekennis filter button=========================================================================================================================
 
 // Add this JavaScript code to handle button and dropdown menu interactions
 const filterDropdown = document.getElementById("filter-dropdown");
@@ -306,10 +315,7 @@ if (filterDropdown) {
     filterButton.classList.toggle("rotated-arrow");
   }
 }
-if (document.querySelectorAll('.energiekennis-term__terms-text')) {
-
-}
-
+//===============================energiekennis terms=========================================================================================================================
 
 // Get the list of terms
 const terms = document.querySelectorAll('.energiekennis-term__terms-text li');
