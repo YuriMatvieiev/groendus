@@ -22,15 +22,13 @@
     }
     // .home-hero__slide-img
     &__slide-img {
-        width: auto;
-        /* height: 600px; */
+        max-width: 1130px;
         @include adaptiveValue("height", 600, 416);
-        
+        width: 100%;
         margin-left: auto;
         margin-right: 0;
+        object-fit: cover;
         @media (max-width:$mobile){
-             width: 100%;
-             object-fit: cover; 
              min-height: 416px;
         }
     }

@@ -1145,10 +1145,12 @@ h6 {
 }
 
 .home-hero__slide-img {
-  width: auto;
-  /* height: 600px; */
+  max-width: 1130px;
+  width: 100%;
   margin-left: auto;
   margin-right: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .home-hero__slide-circle {
@@ -8903,9 +8905,6 @@ h6 {
   }
 
   .home-hero__slide-img {
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
     min-height: 416px;
   }
 

@@ -5754,16 +5754,18 @@
     }
     function initSliders() {
         if (document.querySelector(".home-hero__slider")) {
-            const slidePlay = document.querySelector(".home-hero__slide-play");
+            const slidePlays = document.querySelectorAll(".home-hero__slide-play");
             let hoverTimeout;
-            slidePlay.addEventListener("mouseenter", (() => {
-                clearTimeout(hoverTimeout);
-                slidePlay.classList.add("hovered");
-            }));
-            slidePlay.addEventListener("mouseleave", (() => {
-                hoverTimeout = setTimeout((() => {
-                    slidePlay.classList.remove("hovered");
-                }), 2e3);
+            slidePlays.forEach((slidePlay => {
+                slidePlay.addEventListener("mouseenter", (() => {
+                    clearTimeout(hoverTimeout);
+                    slidePlay.classList.add("hovered");
+                }));
+                slidePlay.addEventListener("mouseleave", (() => {
+                    hoverTimeout = setTimeout((() => {
+                        slidePlay.classList.remove("hovered");
+                    }), 2e3);
+                }));
             }));
             const progressCircles = document.querySelectorAll(".test-svg");
             function updateProgressCircles(s, time, progress) {
