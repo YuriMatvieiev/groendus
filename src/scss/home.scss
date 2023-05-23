@@ -555,15 +555,11 @@ text-align: center;
             margin-bottom: rem(50);
        }
     }
-    // .home-steps__slide-circle-top-left
-    &__slide-circle-top-left {
+    &__slide-circle-parts{
         position: absolute;
-        top: 0;
-        left: 0;
+
         cursor: pointer;
-        img{
-            @include adaptiveValue("width", 380, 210, 0, 1240, 768);
-        }
+
         span{
             position: absolute;
             top: 50%;
@@ -582,43 +578,28 @@ text-align: center;
                 transition: all 0.3s ease 0s;
                 }
             }
+        }
+    }
+    // .home-steps__slide-circle-top-left
+    &__slide-circle-top-left {
+        top: 0;
+        left: 0;
+        img{
+            @include adaptiveValue("width", 380, 210, 0, 1240, 768);
         }
     }
     // .home-steps__slide-circle-bottom-left
     &__slide-circle-bottom-left {
-        position: absolute;
         bottom: 0;
         left: 0;
-        cursor: pointer;
         img{
             @include adaptiveValue("width", 412, 230, 0, 1240, 768);
-        }
-        span{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-weight: 700;
-            @include adaptiveValue("font-size", 20, 14);
-            @include adaptiveValue("line-height", 20, 14);
-            max-width: rem(150);
-            text-align: center;
-        }
-        @media (any-hover: hover){
-            &:hover{
-                span{
-                    color: $blue-light;
-                transition: all 0.3s ease 0s;
-                }
-            }
         }
     }
     // .home-steps__slide-circle-right-img
     &__slide-circle-right-img {
-        position: absolute;
-        right: 0;
-        top: 32px;
         @include adaptiveValue("top", 32, 22, 0, 1240, 768);
+        right: 0;
         img{
             @include adaptiveValue("width", 255, 140, 0, 1240, 768);
         }

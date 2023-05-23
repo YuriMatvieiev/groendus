@@ -41,7 +41,7 @@
     // .campagne__svg
     &__svg {
         position: absolute;
-        @include adaptiveValue("left", 85, 20, 0, 1240, 768);
+        @include adaptiveValue("right", 85, 20, 0, 1240, 768);
         top: 50%;
         transform: translate(0, -50%);
         @media (max-width:$mobile){
