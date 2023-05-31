@@ -6446,6 +6446,54 @@
     }));
     let activeIndex = 0;
     updateActiveFilter(activeIndex);
+    const cookieInstellingenButton = document.getElementById("cookieInstellingen");
+    const cookiesList = document.querySelector(".cookies__list");
+    cookieInstellingenButton.addEventListener("click", (() => {
+        cookiesList.classList.toggle("visible");
+    }));
+    var cookieConsent = getCookie("cookieConsent");
+    if (!cookieConsent) document.querySelector(".cookies").style.display = "block"; else {
+        document.querySelector(".cookies").style.display = "none";
+        loadScripts();
+    }
+    document.getElementById("accepteerCookies").addEventListener("click", (function() {
+        var functioneelCheckbox = document.getElementById("functioneel");
+        var analyticsCheckbox = document.getElementById("analytisch");
+        var marketingCheckbox = document.getElementById("marketing");
+        var cookieValue = "";
+        if (functioneelCheckbox.checked) cookieValue += "Functioneel ";
+        if (analyticsCheckbox.checked) cookieValue += "Analytisch ";
+        if (marketingCheckbox.checked) cookieValue += "Marketing";
+        setCookie("cookieConsent", cookieValue.trim(), 365);
+        document.querySelector(".cookies").style.display = "none";
+        loadScripts();
+    }));
+    function loadScripts() {
+        var cookieConsent = getCookie("cookieConsent");
+        document.getElementById("functioneel");
+        var analyticsCheckbox = document.getElementById("analytisch");
+        var marketingCheckbox = document.getElementById("marketing");
+        console.log("Functioneel script loaded");
+        if (analyticsCheckbox.checked && cookieConsent.includes("Analytisch")) console.log("Analytics script loaded");
+        if (marketingCheckbox.checked && cookieConsent.includes("Marketing")) console.log("Marketing script loaded");
+    }
+    function getCookie(name) {
+        var cookies = document.cookie.split("; ");
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i].split("=");
+            if (cookie[0] === name) return cookie[1];
+        }
+        return "";
+    }
+    function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+            var date = new Date;
+            date.setTime(date.getTime() + days * 24 * 60 * 60 * 1e3);
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + value + expires + "; path=/";
+    }
     window["FLS"] = false;
     isWebp();
     menuInit();

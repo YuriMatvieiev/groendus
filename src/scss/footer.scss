@@ -2,7 +2,7 @@
 .footer {
   color: $gray;
   font-size: rem(14);
-  line-height: math.div(15 , 14);
+  line-height: math.div(15, 14);
   padding-top: 56px;
   @include adaptiveValue("padding-bottom", 66, 18);
   border-top: 1px solid rgba(20, 20, 20, 0.1);
@@ -11,13 +11,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @media (max-width:$tablet){
+    @media (max-width: $tablet) {
       flex-direction: column;
     }
   }
   // .footer__copy
   &__copy {
-    @media (max-width:$tablet){
+    @media (max-width: $tablet) {
       order: 3;
     }
   }
@@ -26,21 +26,21 @@
     display: flex;
     align-items: center;
     @include adaptiveValue("gap", 47, 20, 0, 1240, 991.98);
-    a{
-      @media (any-hover: hover){
-        &:hover{
+    a {
+      @media (any-hover: hover) {
+        &:hover {
           color: $blue-light;
           transition: all 0.3s ease 0s;
         }
       }
     }
-    @media (max-width:$tablet){
+    @media (max-width: $tablet) {
       order: 1;
       margin-bottom: rem(27);
     }
-    @media (max-width:$mobile){
-       flex-wrap: wrap; 
-       justify-content: center;
+    @media (max-width: $mobile) {
+      flex-wrap: wrap;
+      justify-content: center;
     }
   }
   // .footer__socials
@@ -48,18 +48,94 @@
     display: flex;
     @include adaptiveValue("gap", 34, 22);
     @include adaptiveValue("font-size", 24, 16);
-    a{
-      @media (any-hover: hover){
-        &:hover{
+    a {
+      @media (any-hover: hover) {
+        &:hover {
           color: $blue-light;
           transition: all 0.3s ease 0s;
         }
       }
     }
-    @media (max-width:$tablet){
+    @media (max-width: $tablet) {
       order: 2;
       margin-bottom: rem(64);
     }
   }
 }
 //====================================================================================================
+.cookies {
+  position: fixed;
+  padding: 30px;
+  left: 24px;
+  bottom: 24px;
+  box-shadow: 0px 20px 48px rgba(0, 0, 0, 0.07);
+  color: $blue-light;
+  background-color: #fff;
+  max-width: rem(470);
+  z-index: 20;
+  font-size: rem(14);
+  line-height: math.div(20, 14);
+  @media (max-width: $mobileSmall) {
+    left: rem(16);
+    right: rem(16);
+  }
+  // .cookies__title
+  &__title {
+    margin-bottom: rem(8);
+    font-weight: 700;
+  }
+  &__text {
+    margin-bottom: rem(24);
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease-in-out 0s;
+    max-height: 0;
+    overflow: hidden;
+    &.visible {
+      margin-bottom: rem(24);
+      max-height: 100%;
+      transition: all 0.3s ease-in-out 0s;
+    }
+    @media (max-width: $mobileSmall) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      font-size: rem(18);
+      gap: 8px;
+      @media (max-width: $mobileSmall) {
+        font-size: rem(16);
+      }
+      input {
+        width: rem(16);
+        height: rem(16);
+      }
+      &:first-child {
+        label {
+          opacity: 0.2;
+        }
+      }
+    }
+  }
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  // .cookies__button
+  &__button {
+    padding: 14px 21px;
+    @media (max-width: $mobileSmall) {
+      padding: 10px 10px;
+    }
+  }
+}
+.blue-button {
+}
+.white-button {
+}

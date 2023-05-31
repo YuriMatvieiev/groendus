@@ -1132,6 +1132,90 @@ h6 {
   display: flex;
 }
 
+.cookies {
+  position: fixed;
+  padding: 30px;
+  left: 24px;
+  bottom: 24px;
+  -webkit-box-shadow: 0px 20px 48px rgba(0, 0, 0, 0.07);
+          box-shadow: 0px 20px 48px rgba(0, 0, 0, 0.07);
+  color: #006EFF;
+  background-color: #fff;
+  max-width: 29.375rem;
+  z-index: 20;
+  font-size: 0.875rem;
+  line-height: 1.4285714286;
+}
+
+.cookies__title {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.cookies__text {
+  margin-bottom: 1.5rem;
+}
+
+.cookies__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.cookies__list.visible {
+  margin-bottom: 1.5rem;
+  max-height: 100%;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.cookies__list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.125rem;
+  gap: 8px;
+}
+
+.cookies__list li input {
+  width: 1rem;
+  height: 1rem;
+}
+
+.cookies__list li:first-child label {
+  opacity: 0.2;
+}
+
+.cookies__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cookies__button {
+  padding: 14px 21px;
+}
+
 .home-hero__slider {
   max-width: 90rem;
   margin: 0 auto;
@@ -10449,6 +10533,29 @@ h6 {
 
   .header__contact-button {
     width: 100%;
+  }
+
+  .cookies {
+    left: 1rem;
+    right: 1rem;
+  }
+
+  .cookies__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
+  .cookies__list li {
+    font-size: 1rem;
+  }
+
+  .cookies__button {
+    padding: 10px 10px;
   }
 
   .home-hero__slide-bottom-items li:not(:last-child) {

@@ -1,493 +1,833 @@
 <!DOCTYPE html>
 <html lang="en">
-@@include('html/_head.htm',{
-"title":"Home"
-})
+  @@include('html/_head.htm',{ "title":"Home" })
 
-<body class="home">
-  <div class="wrapper">
-    @@include('html/_header.htm',{
-    "theme": "white-theme"
-    })
-    <main class="page">
-      <section class="home-hero">
-        <div class="home-hero__slider swiper">
-          <div class="home-hero__wrapper swiper-wrapper">
+  <body class="home">
+    <div class="wrapper">
+      @@include('html/_header.htm',{ "theme": "white-theme" })
+      <main class="page">
+        <section class="home-hero">
+          <div class="home-hero__slider swiper">
+            <div class="home-hero__wrapper swiper-wrapper">
+              <div class="home-hero__slide swiper-slide">
+                <div class="home-hero__slide-img">
+                  <img src="@img/home/shutterstock_16854091572x.png" alt="" />
+                </div>
 
-            <div class="home-hero__slide swiper-slide">
-              <div class="home-hero__slide-img">
-                <img src="@img/home/shutterstock_16854091572x.png" alt="">
+                <div class="home-hero__slide-circle"></div>
+                <div class="home-hero__container">
+                  <div class="home-hero__slide-text">
+                    <div class="home-hero__slide-text-title">
+                      Wij zien kansen in 100% schone zakelijke energie.
+                    </div>
+                    <div class="home-hero__slide-text-desc">
+                      Samen met onze klanten investeren we in duurzame
+                      oplossingen. Doe je mee?
+                    </div>
+                    <a href="#" class="home-hero__slide-text-button blue-button"
+                      >Spreek een adviseur</a
+                    >
+                  </div>
+                  <div class="home-hero__slide-bottom">
+                    <div class="home-hero__slide-bottom-title">
+                      Dit hebben we
+                      <span class="blue-text">samen met onze klanten</span>
+                      bereikt.
+                    </div>
+                    <ul class="home-hero__slide-bottom-items">
+                      <li>
+                        <div class="home-hero__slide-bottom-number">
+                          48 <span>%</span>
+                        </div>
+                        <div class="home-hero__slide-bottom-desc">
+                          CO2 reductie
+                        </div>
+                      </li>
+                      <li>
+                        <div class="home-hero__slide-bottom-number">
+                          15 <span>%</span>
+                        </div>
+                        <div class="home-hero__slide-bottom-desc">
+                          gerealiseerd besparing
+                        </div>
+                      </li>
+                      <li>
+                        <div class="home-hero__slide-bottom-number">
+                          36 <span>k</span>
+                        </div>
+                        <div class="home-hero__slide-bottom-desc">
+                          besparing
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="home-hero__slide-buttons">
+                    <button
+                      type="button"
+                      class="energiekennis-slider__swiper-button-prev"
+                    >
+                      <img src="@img/energiekennis/arrow-pre.svg" alt="" />
+                    </button>
+                    <button
+                      type="button"
+                      class="energiekennis-slider__swiper-button-next"
+                    >
+                      <img src="@img/energiekennis/arrow-next.svg" alt="" />
+
+                      <svg class="test-svg" viewBox="0 0 48 48">
+                        <circle cx="24" cy="24" r="20"></circle>
+                      </svg>
+                    </button>
+                  </div>
+                  <a href="#" class="home-hero__slide-play">
+                    <div class="home-hero__slide-play-icon">
+                      <img src="@img/ons-platform/play.svg" alt="" />
+                    </div>
+                    <div class="home-hero__slide-play-text">
+                      Bekijk onze
+                      <span class="blue-text">brandmovie</span>
+                    </div>
+                  </a>
+                </div>
               </div>
-
-              <div class="home-hero__slide-circle"></div>
-              <div class="home-hero__container">
-                <div class="home-hero__slide-text">
-                  <div class="home-hero__slide-text-title">Wij zien kansen
-                    in 100% schone zakelijke energie. </div>
-                  <div class="home-hero__slide-text-desc">Samen met onze klanten investeren we in duurzame oplossingen.
-                    Doe je
-                    mee?</div>
-                  <a href="#" class="home-hero__slide-text-button blue-button">Spreek een adviseur</a>
+              <div class="home-hero__slide swiper-slide">
+                <div class="home-hero__slide-img">
+                  <img src="@img/home/Groepsfoto-overname-Def2.jpg" alt="" />
                 </div>
-                <div class="home-hero__slide-bottom">
-                  <div class="home-hero__slide-bottom-title">Dit hebben we <span class="blue-text">samen met onze
-                      klanten</span> bereikt.</div>
-                  <ul class="home-hero__slide-bottom-items">
-                    <li>
-                      <div class="home-hero__slide-bottom-number">48 <span>%</span></div>
-                      <div class="home-hero__slide-bottom-desc">CO2 reductie</div>
-                    </li>
-                    <li>
-                      <div class="home-hero__slide-bottom-number">15 <span>%</span></div>
-                      <div class="home-hero__slide-bottom-desc">gerealiseerd besparing</div>
-                    </li>
-                    <li>
-                      <div class="home-hero__slide-bottom-number">36 <span>k</span></div>
-                      <div class="home-hero__slide-bottom-desc">besparing </div>
-                    </li>
-                  </ul>
-                </div>
-                <div class="home-hero__slide-buttons">
-                  <button type="button" class="energiekennis-slider__swiper-button-prev"><img
-                      src="@img/energiekennis/arrow-pre.svg" alt=""></button>
-                  <button type="button" class="energiekennis-slider__swiper-button-next"><img
-                      src="@img/energiekennis/arrow-next.svg" alt="">
+                <div class="home-hero__slide-circle"></div>
+                <div class="home-hero__container">
+                  <div class="home-hero__slide-text">
+                    <div class="home-hero__slide-text-title">
+                      Wij zien kansen in 100% schone zakelijke energie.
+                    </div>
+                    <div class="home-hero__slide-text-desc">
+                      Samen met onze klanten investeren we in duurzame
+                      oplossingen. Doe je mee?
+                    </div>
+                    <a href="#" class="home-hero__slide-text-button blue-button"
+                      >Spreek een adviseur</a
+                    >
+                  </div>
+                  <div class="home-hero__slide-bottom">
+                    <div class="home-hero__slide-bottom-title">
+                      Dit hebben we
+                      <span class="blue-text">samen met onze klanten</span>
+                      bereikt.
+                    </div>
+                    <ul class="home-hero__slide-bottom-items">
+                      <li>
+                        <div class="home-hero__slide-bottom-number">
+                          48 <span>%</span>
+                        </div>
+                        <div class="home-hero__slide-bottom-desc">
+                          CO2 reductie
+                        </div>
+                      </li>
+                      <li>
+                        <div class="home-hero__slide-bottom-number">
+                          15 <span>%</span>
+                        </div>
+                        <div class="home-hero__slide-bottom-desc">
+                          gerealiseerd besparing
+                        </div>
+                      </li>
+                      <li>
+                        <div class="home-hero__slide-bottom-number">
+                          36 <span>k</span>
+                        </div>
+                        <div class="home-hero__slide-bottom-desc">
+                          besparing
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="home-hero__slide-buttons">
+                    <button
+                      type="button"
+                      class="energiekennis-slider__swiper-button-prev"
+                    >
+                      <img src="@img/energiekennis/arrow-pre.svg" alt="" />
+                    </button>
+                    <button
+                      type="button"
+                      class="energiekennis-slider__swiper-button-next"
+                    >
+                      <img src="@img/energiekennis/arrow-next.svg" alt="" />
 
-                    <svg class="test-svg" viewBox="0 0 48 48">
+                      <svg class="test-svg" viewBox="0 0 48 48">
+                        <circle cx="24" cy="24" r="20"></circle>
+                      </svg>
+                    </button>
+                  </div>
+                  <a href="#" class="home-hero__slide-play">
+                    <div class="home-hero__slide-play-icon">
+                      <img src="@img/ons-platform/play.svg" alt="" />
+                    </div>
+                    <div class="home-hero__slide-play-text">
+                      Bekijk onze
+                      <span class="blue-text">brandmovie</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="home-solutions">
+          <div class="home-solutions__container">
+            <div class="home-solutions__title">
+              Álle benodigde diensten voor een slimme, duurzame en betaalbare
+              energiehuishouding.
+            </div>
+            <div class="home-solutions__text">
+              Wat je ook nodig hebt, we regelen het voor je. Als onafhankelijke
+              gids voor zakelijk Nederland helpen we ook jouw organisatie op weg
+              naar 100% schone energie.
+            </div>
+            <div class="home-solutions__slider-box">
+              <div class="home-solutions__slider swiper">
+                <div class="home-solutions__wrapper swiper-wrapper">
+                  <a href="#" class="home-solutions__slide swiper-slide">
+                    <img
+                      src="@img/home/articles.png"
+                      alt=""
+                      class="home-solutions__slide-img"
+                    />
+                    <div class="home-solutions__slide-text">
+                      <div class="home-solutions__slide-title">
+                        Zonnepanelen
+                      </div>
+                      <div class="home-solutions__slide-desc">
+                        Bouw je eigen zonnecentrale.
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="home-solutions__slide swiper-slide">
+                    <img
+                      src="@img/home/articles2.png"
+                      alt=""
+                      class="home-solutions__slide-img"
+                    />
+                    <div class="home-solutions__slide-text">
+                      <div class="home-solutions__slide-title">
+                        Batterijopslag
+                      </div>
+                      <div class="home-solutions__slide-desc">
+                        Opgewekte energie, volledig in eigen beheer.
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="home-solutions__slide swiper-slide">
+                    <img
+                      src="@img/home/articles3.png"
+                      alt=""
+                      class="home-solutions__slide-img"
+                    />
+                    <div class="home-solutions__slide-text">
+                      <div class="home-solutions__slide-title">
+                        Slimme meters
+                      </div>
+                      <div class="home-solutions__slide-desc">
+                        Zo weet je altijd waar je aan toe bent.
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="home-solutions__slide swiper-slide">
+                    <img
+                      src="@img/home/articles4.png"
+                      alt=""
+                      class="home-solutions__slide-img"
+                    />
+                    <div class="home-solutions__slide-text">
+                      <div class="home-solutions__slide-title">
+                        Mijn.Groendus
+                      </div>
+                      <div class="home-solutions__slide-desc">
+                        Bouw je eigen zonnecentrale.
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="home-solutions__slide swiper-slide">
+                    <img
+                      src="@img/home/articles.png"
+                      alt=""
+                      class="home-solutions__slide-img"
+                    />
+                    <div class="home-solutions__slide-text">
+                      <div class="home-solutions__slide-title">
+                        Zonnepanelen
+                      </div>
+                      <div class="home-solutions__slide-desc">
+                        Bouw je eigen zonnecentrale.
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="home-solutions__slide swiper-slide">
+                    <img
+                      src="@img/home/articles2.png"
+                      alt=""
+                      class="home-solutions__slide-img"
+                    />
+                    <div class="home-solutions__slide-text">
+                      <div class="home-solutions__slide-title">
+                        Batterijopslag
+                      </div>
+                      <div class="home-solutions__slide-desc">
+                        Opgewekte energie, volledig in eigen beheer.
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="home-solutions__slide swiper-slide">
+                    <img
+                      src="@img/home/articles3.png"
+                      alt=""
+                      class="home-solutions__slide-img"
+                    />
+                    <div class="home-solutions__slide-text">
+                      <div class="home-solutions__slide-title">
+                        Slimme meters
+                      </div>
+                      <div class="home-solutions__slide-desc">
+                        Zo weet je altijd waar je aan toe bent.
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="home-solutions__slide swiper-slide">
+                    <img
+                      src="@img/home/articles4.png"
+                      alt=""
+                      class="home-solutions__slide-img"
+                    />
+                    <div class="home-solutions__slide-text">
+                      <div class="home-solutions__slide-title">
+                        Mijn.Groendus
+                      </div>
+                      <div class="home-solutions__slide-desc">
+                        Bouw je eigen zonnecentrale.
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="home-solutions__slide swiper-slide">
+                    <img
+                      src="@img/home/articles.png"
+                      alt=""
+                      class="home-solutions__slide-img"
+                    />
+                    <div class="home-solutions__slide-text">
+                      <div class="home-solutions__slide-title">
+                        Zonnepanelen
+                      </div>
+                      <div class="home-solutions__slide-desc">
+                        Bouw je eigen zonnecentrale.
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="home-solutions__slide swiper-slide">
+                    <img
+                      src="@img/home/articles2.png"
+                      alt=""
+                      class="home-solutions__slide-img"
+                    />
+                    <div class="home-solutions__slide-text">
+                      <div class="home-solutions__slide-title">
+                        Batterijopslag
+                      </div>
+                      <div class="home-solutions__slide-desc">
+                        Opgewekte energie, volledig in eigen beheer.
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="home-solutions__slide swiper-slide">
+                    <img
+                      src="@img/home/articles3.png"
+                      alt=""
+                      class="home-solutions__slide-img"
+                    />
+                    <div class="home-solutions__slide-text">
+                      <div class="home-solutions__slide-title">
+                        Slimme meters
+                      </div>
+                      <div class="home-solutions__slide-desc">
+                        Zo weet je altijd waar je aan toe bent.
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="home-solutions__slide swiper-slide">
+                    <img
+                      src="@img/home/articles4.png"
+                      alt=""
+                      class="home-solutions__slide-img"
+                    />
+                    <div class="home-solutions__slide-text">
+                      <div class="home-solutions__slide-title">
+                        Mijn.Groendus
+                      </div>
+                      <div class="home-solutions__slide-desc">
+                        Bouw je eigen zonnecentrale.
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <button type="button" class="home-solutions__swiper-button-prev">
+                <img src="@img/home/arrow-white.svg" alt="" />
+              </button>
+              <button type="button" class="home-solutions__swiper-button-next">
+                <img src="@img/home/arrow-white.svg" alt="" />
+              </button>
+            </div>
+
+            <a href="#" class="home-solutions__button blue-button"
+              >Bekijk al onze oplossingen</a
+            >
+          </div>
+        </section>
+        <section class="home-number">
+          <div class="home-number__container">
+            <div class="home-number__top">
+              <img
+                src="@img/home/number.svg"
+                alt=""
+                class="home-number__top-svg"
+              />
+              <div class="home-number__top-text">
+                <div class="home-number__top-text-title">
+                  <div class="blue-text">Één</div>
+                  integrale oplossing
+                </div>
+                <div class="home-number__top-text-desc">
+                  Lekker simpel en groen dus. Daar houden we van.
+                </div>
+              </div>
+            </div>
+            <div class="home-number__bottom">
+              Bij Groendus bouwen we aan een duurzame energiehuishouding met
+              <span class="blue-text">drie onderdelen</span>. Deze onderdelen
+              maken optimaal gebruik van de elementen zodat je stroom 100% groen
+              is.
+            </div>
+          </div>
+        </section>
+        <section class="home-steps">
+          <div class="home-steps__container">
+            <div class="home-steps__slider swiper">
+              <div class="home-steps__wrapper swiper-wrapper">
+                <div class="home-steps__slide swiper-slide">
+                  <div
+                    data-da="#home-steps__slide-first, 768"
+                    class="home-steps__slide-circle"
+                  >
+                    <div
+                      class="home-steps__slide-circle-parts home-steps__slide-circle-top-left steps-next"
+                    >
+                      <img src="@img/home/top-left-circle.svg" alt="" />
+                      <span>Inzicht & sturing</span>
+                    </div>
+                    <div
+                      class="home-steps__slide-circle-parts home-steps__slide-circle-bottom-left steps-prev"
+                    >
+                      <img src="@img/home/bottom-left-circle.svg" alt="" />
+                      <span>Duurzaam inkopen</span>
+                    </div>
+                    <div
+                      class="home-steps__slide-circle-parts home-steps__slide-circle-right-img"
+                    >
+                      <img src="@img/home/right-center3.png" alt="" />
+                    </div>
+                  </div>
+                  <div
+                    id="home-steps__slide-first"
+                    class="home-steps__slide-text"
+                  >
+                    <div class="home-steps__slide-text-subtitle">
+                      Slim en groen dus
+                    </div>
+                    <div class="home-steps__slide-text-title">
+                      Jouw integrale
+                      <span class="blue-text">energieoplossing</span>.
+                    </div>
+
+                    <div class="home-steps__slide-text-desc">
+                      <b>Opwekken, opslaan en opladen</b> <br />
+                      Zorg dat jouw organisatie beschikt over de apparatuur voor
+                      het optimaal opwekken en benutten van duurzame energie.
+                    </div>
+                    <ul class="home-steps__slide-text-list">
+                      <li><a href="#">Zonnepanelen</a></li>
+                      <li><a href="#">Slimme meters </a></li>
+                      <li><a href="#">Laadoplossingen</a></li>
+                      <li><a href="#">Energieopslag</a></li>
+                      <li>
+                        <a href="#">E-boilers </a
+                        ><span class="nieuw">Nieuw</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="home-steps__slide swiper-slide">
+                  <div
+                    data-da="#home-steps__slide-three, 768"
+                    class="home-steps__slide-circle"
+                  >
+                    <div
+                      class="home-steps__slide-circle-parts home-steps__slide-circle-top-left"
+                    >
+                      <img src="@img/home/top-left-img.png" alt="" />
+                    </div>
+                    <div
+                      class="home-steps__slide-circle-parts home-steps__slide-circle-bottom-left steps-next"
+                    >
+                      <img src="@img/home/bottom-left-circle.svg" alt="" />
+                      <span>Duurzaam inkopen</span>
+                    </div>
+                    <div
+                      class="home-steps__slide-circle-parts home-steps__slide-circle-right-img steps-prev"
+                    >
+                      <img src="@img/home/right-center-svg.svg" alt="" />
+                      <span>Opwekken, opslaan en opladen</span>
+                    </div>
+                  </div>
+                  <div
+                    id="home-steps__slide-three"
+                    class="home-steps__slide-text"
+                  >
+                    <div class="home-steps__slide-text-subtitle">
+                      Slim en groen dus
+                    </div>
+                    <div class="home-steps__slide-text-title">
+                      Jouw integrale
+                      <span class="blue-text">energieoplossing</span>.
+                    </div>
+                    <div class="home-steps__slide-text-desc">
+                      <b>Duurzaam inkopen</b> <br />
+                      Zorg dat jouw organisatie beschikt over de apparatuur voor
+                      het optimaal opwekken en benutten van duurzame energie.
+                    </div>
+                    <ul class="home-steps__slide-text-list">
+                      <li><a href="#">Energiemarktplaats</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="home-steps__slide swiper-slide">
+                  <div
+                    data-da="#home-steps__slide-second, 768"
+                    class="home-steps__slide-circle"
+                  >
+                    <div
+                      class="home-steps__slide-circle-parts home-steps__slide-circle-top-left steps-prev"
+                    >
+                      <img src="@img/home/top-left-circle.svg" alt="" />
+                      <span>Inzicht & sturing</span>
+                    </div>
+                    <div
+                      class="home-steps__slide-circle-parts home-steps__slide-circle-bottom-left"
+                    >
+                      <img src="@img/home/bottom-left-img.png" alt="" />
+                    </div>
+                    <div
+                      class="home-steps__slide-circle-parts home-steps__slide-circle-right-img steps-next"
+                    >
+                      <img src="@img/home/right-center-svg.svg" alt="" />
+                      <span>Opwekken, opslaan en opladen</span>
+                    </div>
+                  </div>
+                  <div
+                    id="home-steps__slide-second"
+                    class="home-steps__slide-text"
+                  >
+                    <div class="home-steps__slide-text-subtitle">
+                      Slim en groen dus
+                    </div>
+                    <div class="home-steps__slide-text-title">
+                      Jouw integrale
+                      <span class="blue-text">energieoplossing</span>.
+                    </div>
+                    <div class="home-steps__slide-text-desc">
+                      <b>Inzicht & sturing</b> <br />
+                      Zorg dat jouw organisatie beschikt over de apparatuur voor
+                      het optimaal opwekken en benutten van duurzame energie.
+                    </div>
+                    <ul class="home-steps__slide-text-list">
+                      <li><a href="#">Opwekken, opslaan en opladen </a></li>
+                      <li><a href="#">Geavanceerde energiesturing </a></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="home-steps__buttons">
+                  <button
+                    type="button"
+                    class="energiekennis-slider__swiper-button-prev steps-next"
+                  >
+                    <img src="@img/energiekennis/arrow-pre.svg" alt="" />
+                  </button>
+                  <button
+                    type="button"
+                    class="energiekennis-slider__swiper-button-next steps-prev"
+                  >
+                    <img src="@img/energiekennis/arrow-next.svg" alt="" />
+
+                    <svg class="home-steps__button-svg" viewBox="0 0 48 48">
                       <circle cx="24" cy="24" r="20"></circle>
                     </svg>
                   </button>
                 </div>
-                <a href="#" class="home-hero__slide-play">
-                  <div class="home-hero__slide-play-icon">
-                    <img src="@img/ons-platform/play.svg" alt="">
-                  </div>
-                  <div class="home-hero__slide-play-text">Bekijk onze
-                    <span class="blue-text">brandmovie</span>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="home-hero__slide swiper-slide">
-              <div class="home-hero__slide-img">
-                <img src="@img/home/Groepsfoto-overname-Def2.jpg" alt="">
-              </div>
-              <div class="home-hero__slide-circle"></div>
-              <div class="home-hero__container">
-                <div class="home-hero__slide-text">
-                  <div class="home-hero__slide-text-title">Wij zien kansen
-                    in 100% schone zakelijke energie. </div>
-                  <div class="home-hero__slide-text-desc">Samen met onze klanten investeren we in duurzame oplossingen.
-                    Doe je
-                    mee?</div>
-                  <a href="#" class="home-hero__slide-text-button blue-button">Spreek een adviseur</a>
-                </div>
-                <div class="home-hero__slide-bottom">
-                  <div class="home-hero__slide-bottom-title">Dit hebben we <span class="blue-text">samen met onze
-                      klanten</span> bereikt.</div>
-                  <ul class="home-hero__slide-bottom-items">
-                    <li>
-                      <div class="home-hero__slide-bottom-number">48 <span>%</span></div>
-                      <div class="home-hero__slide-bottom-desc">CO2 reductie</div>
-                    </li>
-                    <li>
-                      <div class="home-hero__slide-bottom-number">15 <span>%</span></div>
-                      <div class="home-hero__slide-bottom-desc">gerealiseerd besparing</div>
-                    </li>
-                    <li>
-                      <div class="home-hero__slide-bottom-number">36 <span>k</span></div>
-                      <div class="home-hero__slide-bottom-desc">besparing </div>
-                    </li>
-                  </ul>
-                </div>
-                <div class="home-hero__slide-buttons">
-                  <button type="button" class="energiekennis-slider__swiper-button-prev"><img
-                      src="@img/energiekennis/arrow-pre.svg" alt=""></button>
-                  <button type="button" class="energiekennis-slider__swiper-button-next"><img
-                      src="@img/energiekennis/arrow-next.svg" alt="">
-
-                    <svg class="test-svg" viewBox="0 0 48 48">
-                      <circle cx="24" cy="24" r="20"></circle>
-                    </svg>
-                  </button>
-                </div>
-                <a href="#" class="home-hero__slide-play">
-                  <div class="home-hero__slide-play-icon">
-                    <img src="@img/ons-platform/play.svg" alt="">
-                  </div>
-                  <div class="home-hero__slide-play-text">Bekijk onze
-                    <span class="blue-text">brandmovie</span>
-                  </div>
-                </a>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="home-solutions">
-        <div class="home-solutions__container">
-          <div class="home-solutions__title">Álle benodigde diensten voor een slimme, duurzame en betaalbare
-            energiehuishouding.</div>
-          <div class="home-solutions__text">Wat je ook nodig hebt, we regelen het voor je. Als onafhankelijke gids voor
-            zakelijk Nederland helpen we ook jouw organisatie op weg naar 100% schone energie.</div>
-          <div class="home-solutions__slider-box">
-            <div class="home-solutions__slider swiper">
-              <div class="home-solutions__wrapper swiper-wrapper">
-                <a href="#" class="home-solutions__slide swiper-slide">
-                  <img src="@img/home/articles.png" alt="" class="home-solutions__slide-img">
-                  <div class="home-solutions__slide-text">
-                    <div class="home-solutions__slide-title">Zonnepanelen</div>
-                    <div class="home-solutions__slide-desc">Bouw je eigen zonnecentrale.</div>
-                  </div>
-                </a>
-                <a href="#" class="home-solutions__slide swiper-slide">
-                  <img src="@img/home/articles2.png" alt="" class="home-solutions__slide-img">
-                  <div class="home-solutions__slide-text">
-                    <div class="home-solutions__slide-title">Batterijopslag</div>
-                    <div class="home-solutions__slide-desc">Opgewekte energie, volledig in eigen beheer.</div>
-                  </div>
-                </a>
-                <a href="#" class="home-solutions__slide swiper-slide">
-                  <img src="@img/home/articles3.png" alt="" class="home-solutions__slide-img">
-                  <div class="home-solutions__slide-text">
-                    <div class="home-solutions__slide-title">Slimme meters</div>
-                    <div class="home-solutions__slide-desc">Zo weet je altijd waar je aan toe bent.</div>
-                  </div>
-                </a>
-                <a href="#" class="home-solutions__slide swiper-slide">
-                  <img src="@img/home/articles4.png" alt="" class="home-solutions__slide-img">
-                  <div class="home-solutions__slide-text">
-                    <div class="home-solutions__slide-title">Mijn.Groendus</div>
-                    <div class="home-solutions__slide-desc">Bouw je eigen zonnecentrale.</div>
-                  </div>
-                </a>
-                <a href="#" class="home-solutions__slide swiper-slide">
-                  <img src="@img/home/articles.png" alt="" class="home-solutions__slide-img">
-                  <div class="home-solutions__slide-text">
-                    <div class="home-solutions__slide-title">Zonnepanelen</div>
-                    <div class="home-solutions__slide-desc">Bouw je eigen zonnecentrale.</div>
-                  </div>
-                </a>
-                <a href="#" class="home-solutions__slide swiper-slide">
-                  <img src="@img/home/articles2.png" alt="" class="home-solutions__slide-img">
-                  <div class="home-solutions__slide-text">
-                    <div class="home-solutions__slide-title">Batterijopslag</div>
-                    <div class="home-solutions__slide-desc">Opgewekte energie, volledig in eigen beheer.</div>
-                  </div>
-                </a>
-                <a href="#" class="home-solutions__slide swiper-slide">
-                  <img src="@img/home/articles3.png" alt="" class="home-solutions__slide-img">
-                  <div class="home-solutions__slide-text">
-                    <div class="home-solutions__slide-title">Slimme meters</div>
-                    <div class="home-solutions__slide-desc">Zo weet je altijd waar je aan toe bent.</div>
-                  </div>
-                </a>
-                <a href="#" class="home-solutions__slide swiper-slide">
-                  <img src="@img/home/articles4.png" alt="" class="home-solutions__slide-img">
-                  <div class="home-solutions__slide-text">
-                    <div class="home-solutions__slide-title">Mijn.Groendus</div>
-                    <div class="home-solutions__slide-desc">Bouw je eigen zonnecentrale.</div>
-                  </div>
-                </a>
-                <a href="#" class="home-solutions__slide swiper-slide">
-                  <img src="@img/home/articles.png" alt="" class="home-solutions__slide-img">
-                  <div class="home-solutions__slide-text">
-                    <div class="home-solutions__slide-title">Zonnepanelen</div>
-                    <div class="home-solutions__slide-desc">Bouw je eigen zonnecentrale.</div>
-                  </div>
-                </a>
-                <a href="#" class="home-solutions__slide swiper-slide">
-                  <img src="@img/home/articles2.png" alt="" class="home-solutions__slide-img">
-                  <div class="home-solutions__slide-text">
-                    <div class="home-solutions__slide-title">Batterijopslag</div>
-                    <div class="home-solutions__slide-desc">Opgewekte energie, volledig in eigen beheer.</div>
-                  </div>
-                </a>
-                <a href="#" class="home-solutions__slide swiper-slide">
-                  <img src="@img/home/articles3.png" alt="" class="home-solutions__slide-img">
-                  <div class="home-solutions__slide-text">
-                    <div class="home-solutions__slide-title">Slimme meters</div>
-                    <div class="home-solutions__slide-desc">Zo weet je altijd waar je aan toe bent.</div>
-                  </div>
-                </a>
-                <a href="#" class="home-solutions__slide swiper-slide">
-                  <img src="@img/home/articles4.png" alt="" class="home-solutions__slide-img">
-                  <div class="home-solutions__slide-text">
-                    <div class="home-solutions__slide-title">Mijn.Groendus</div>
-                    <div class="home-solutions__slide-desc">Bouw je eigen zonnecentrale.</div>
-                  </div>
-                </a>
-              </div>
-
+        </section>
+        <section class="home-logos">
+          <div class="home-logos__container">
+            <div data-watch data-watch-once class="home-logos__title">
+              Voor <span class="blue-number">4</span> .
+              <span class="blue-number">2</span>
+              <span class="blue-number">1</span>
+              <span
+                data-digits-counter
+                data-digits-counter-speed="2000"
+                class="blue-number"
+                >4</span
+              >
+              organisaties is 100% schone energie geen uitdaging meer.
             </div>
-            <button type="button" class="home-solutions__swiper-button-prev"><img src="@img/home/arrow-white.svg"
-                alt=""></button>
-            <button type="button" class="home-solutions__swiper-button-next"><img src="@img/home/arrow-white.svg"
-                alt=""></button>
-          </div>
-
-          <a href="#" class="home-solutions__button blue-button">Bekijk al onze oplossingen</a>
-        </div>
-      </section>
-      <section class="home-number">
-        <div class="home-number__container">
-          <div class="home-number__top">
-            <img src="@img/home/number.svg" alt="" class="home-number__top-svg">
-            <div class="home-number__top-text">
-              <div class="home-number__top-text-title">
-                <div class="blue-text">Één</div>
-                integrale oplossing
-              </div>
-              <div class="home-number__top-text-desc">Lekker simpel en groen dus. Daar houden we van.</div>
+            <div class="home-logos__subtitle">
+              We vormen het nieuwe energienetwerk van en voor zakelijk Nederland
             </div>
-          </div>
-          <div class="home-number__bottom">
-            Bij Groendus bouwen we aan een duurzame energiehuishouding met <span class="blue-text">drie
-              onderdelen</span>.
-            Deze onderdelen maken optimaal gebruik van de elementen zodat je stroom 100% groen is.
-          </div>
-        </div>
-      </section>
-      <section class="home-steps">
-        <div class="home-steps__container">
-          <div class="home-steps__slider swiper">
-            <div class="home-steps__wrapper swiper-wrapper">
-              <div class="home-steps__slide swiper-slide">
-                <div data-da="#home-steps__slide-first, 768" class="home-steps__slide-circle">
-                  <div class="home-steps__slide-circle-parts home-steps__slide-circle-top-left steps-next">
-                    <img src="@img/home/top-left-circle.svg" alt="">
-                    <span>Inzicht & sturing</span>
-                  </div>
-                  <div class="home-steps__slide-circle-parts home-steps__slide-circle-bottom-left steps-prev">
-                    <img src="@img/home/bottom-left-circle.svg" alt="">
-                    <span>Duurzaam inkopen</span>
-                  </div>
-                  <div class="home-steps__slide-circle-parts home-steps__slide-circle-right-img ">
-                    <img src="@img/home/right-center3.png" alt="">
-                  </div>
-                </div>
-                <div id="home-steps__slide-first" class="home-steps__slide-text">
-                  <div class="home-steps__slide-text-subtitle">Slim en groen dus</div>
-                  <div class="home-steps__slide-text-title">Jouw integrale <span
-                      class="blue-text">energieoplossing</span>. </div>
-
-                  <div class="home-steps__slide-text-desc"><b>Opwekken, opslaan en opladen</b> <br>
-                    Zorg dat jouw organisatie beschikt over de apparatuur voor het optimaal opwekken en benutten van
-                    duurzame energie. </div>
-                  <ul class="home-steps__slide-text-list">
-                    <li><a href="#">Zonnepanelen</a></li>
-                    <li><a href="#">Slimme meters </a></li>
-                    <li><a href="#">Laadoplossingen</a></li>
-                    <li><a href="#">Energieopslag</a></li>
-                    <li><a href="#">E-boilers </a><span class="nieuw">Nieuw</span></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="home-steps__slide swiper-slide">
-                <div data-da="#home-steps__slide-three, 768" class="home-steps__slide-circle">
-                  <div class="home-steps__slide-circle-parts home-steps__slide-circle-top-left">
-                    <img src="@img/home/top-left-img.png" alt="">
-                  </div>
-                  <div class="home-steps__slide-circle-parts home-steps__slide-circle-bottom-left steps-next">
-                    <img src="@img/home/bottom-left-circle.svg" alt="">
-                    <span>Duurzaam inkopen</span>
-                  </div>
-                  <div class="home-steps__slide-circle-parts home-steps__slide-circle-right-img steps-prev ">
-                    <img src="@img/home/right-center-svg.svg" alt="">
-                    <span>Opwekken, opslaan en opladen</span>
-                  </div>
-                </div>
-                <div id="home-steps__slide-three" class="home-steps__slide-text">
-                  <div class="home-steps__slide-text-subtitle">Slim en groen dus</div>
-                  <div class="home-steps__slide-text-title">Jouw integrale <span
-                      class="blue-text">energieoplossing</span>. </div>
-                  <div class="home-steps__slide-text-desc"><b>Duurzaam inkopen</b> <br>
-                    Zorg dat jouw organisatie beschikt over de apparatuur voor het optimaal opwekken en benutten van
-                    duurzame energie. </div>
-                  <ul class="home-steps__slide-text-list">
-                    <li><a href="#">Energiemarktplaats</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="home-steps__slide swiper-slide">
-                <div data-da="#home-steps__slide-second, 768" class="home-steps__slide-circle">
-                  <div class="home-steps__slide-circle-parts home-steps__slide-circle-top-left steps-prev">
-                    <img src="@img/home/top-left-circle.svg" alt="">
-                    <span>Inzicht & sturing</span>
-                  </div>
-                  <div class="home-steps__slide-circle-parts home-steps__slide-circle-bottom-left">
-                    <img src="@img/home/bottom-left-img.png" alt="">
-
-                  </div>
-                  <div class="home-steps__slide-circle-parts home-steps__slide-circle-right-img steps-next">
-                    <img src="@img/home/right-center-svg.svg" alt="">
-                    <span>Opwekken, opslaan en opladen</span>
-                  </div>
-                </div>
-                <div id="home-steps__slide-second" class="home-steps__slide-text">
-                  <div class="home-steps__slide-text-subtitle">Slim en groen dus</div>
-                  <div class="home-steps__slide-text-title">Jouw integrale <span
-                      class="blue-text">energieoplossing</span>. </div>
-                  <div class="home-steps__slide-text-desc"><b>Inzicht & sturing</b> <br>
-                    Zorg dat jouw organisatie beschikt over de apparatuur voor het optimaal opwekken en benutten van
-                    duurzame energie. </div>
-                  <ul class="home-steps__slide-text-list">
-                    <li><a href="#">Opwekken, opslaan en opladen </a></li>
-                    <li><a href="#">Geavanceerde energiesturing </a></li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="home-steps__buttons">
-                <button type="button" class="energiekennis-slider__swiper-button-prev steps-next"><img
-                    src="@img/energiekennis/arrow-pre.svg" alt=""></button>
-                <button type="button" class="energiekennis-slider__swiper-button-next steps-prev"><img
-                    src="@img/energiekennis/arrow-next.svg" alt="">
-
-                  <svg class="home-steps__button-svg" viewBox="0 0 48 48">
-                    <circle cx="24" cy="24" r="20"></circle>
-                  </svg>
-                </button>
-              </div>
+            <div class="home-logos__box">
+              <a href="#"
+                ><img
+                  src="@img/home/logo/1200px-Compact_Logo_gemeente_Den_Haag.svg"
+                  alt=""
+              /></a>
+              <a href="#"
+                ><img src="@img/home/logo/2560px-Logo_DB_Schenker.svg" alt=""
+              /></a>
+              <a href="#"><img src="@img/home/logo/Amphia.svg" alt="" /></a>
+              <a href="#"
+                ><img src="@img/home/logo/Best-Western-Logo.svg" alt=""
+              /></a>
+              <a href="#"
+                ><img src="@img/home/logo/CBRE_Group-Logo.svg" alt=""
+              /></a>
+              <a href="#"
+                ><img src="@img/home/logo/De-Nederlandse-ggz.svg" alt=""
+              /></a>
+              <a href="#"><img src="@img/home/logo/EUR.svg" alt="" /></a>
+              <a href="#"><img src="@img/home/logo/Emil Frey.svg" alt="" /></a>
+              <a href="#"><img src="@img/home/logo/Frame.svg" alt="" /></a>
+              <a href="#"><img src="@img/home/logo/HVBM-logo.svg" alt="" /></a>
+              <a href="#"><img src="@img/home/logo/Intervest.svg" alt="" /></a>
+              <a href="#"><img src="@img/home/logo/Nouryon.svg" alt="" /></a>
+              <a href="#"
+                ><img src="@img/home/logo/Referentie_-_Fletcher.svg" alt=""
+              /></a>
+              <a href="#"><img src="@img/home/logo/Stern.svg" alt="" /></a>
+              <a href="#"
+                ><img
+                  src="@img/home/logo/Ziekenhuis Gekderse Vallei.svg"
+                  alt=""
+              /></a>
+              <a href="#"><img src="@img/home/logo/broekhuis.svg" alt="" /></a>
+              <a href="#"
+                ><img src="@img/home/logo/foot_logo_haarlem_2018.svg" alt=""
+              /></a>
+              <a href="#"
+                ><img
+                  src="@img/home/logo/heerema_logos-edited-spacing-for-website-HMC.svg"
+                  alt=""
+              /></a>
+              <a href="#"
+                ><img src="@img/home/logo/layout_set_logo.svg" alt=""
+              /></a>
+              <a href="#"><img src="@img/home/logo/logo 5.svg" alt="" /></a>
+              <a href="#"
+                ><img
+                  src="@img/home/logo/logo-Gemeente-Aalsmeer-voor-website.svg"
+                  alt=""
+              /></a>
+              <a href="#"><img src="@img/home/logo/logo-rood.svg" alt="" /></a>
+              <a href="#"
+                ><img src="@img/home/logo/logo-sheerenloo-200x200-1.svg" alt=""
+              /></a>
+              <a href="#"><img src="@img/home/logo/logo.svg" alt="" /></a>
+              <a href="#"><img src="@img/home/logo/logo2.svg" alt="" /></a>
+              <a href="#"><img src="@img/home/logo/logo3.svg" alt="" /></a>
+              <a href="#"><img src="@img/home/logo/logo4.svg" alt="" /></a>
+              <a href="#"><img src="@img/home/logo/logo7.svg" alt="" /></a>
+              <a href="#"><img src="@img/home/logo/logo6.svg" alt="" /></a>
+              <a href="#"><img src="@img/home/logo/logo8.svg" alt="" /></a>
+              <a href="#"><img src="@img/home/logo/logo9.svg" alt="" /></a>
+              <a href="#"
+                ><img src="@img/home/logo/nelson-logo.svg" alt=""
+              /></a>
+              <a href="#"
+                ><img
+                  src="@img/home/logo/scotchsoda_identity_verticallockup_black.svg"
+                  alt=""
+              /></a>
+              <a href="#"
+                ><img src="@img/home/logo/van-der-valk.svg" alt=""
+              /></a>
+              <a href="#"><img src="@img/home/logo/wereldhave.svg" alt="" /></a>
             </div>
-
+            <a href="#" class="home-logos__button blue-button">Klantverhalen</a>
           </div>
-        </div>
-      </section>
-      <section class="home-logos">
-        <div class="home-logos__container">
-          <div data-watch class="home-logos__title">Voor <span class="blue-number">4</span> . <span
-              class="blue-number">2</span>
-            <span class="blue-number">1</span> <span data-digits-counter data-digits-counter-speed="2000"
-              class="blue-number">4</span> organisaties is
-            100% schone
-            energie
-            geen uitdaging meer.
-          </div>
-          <div class="home-logos__subtitle">We vormen het nieuwe energienetwerk van en voor zakelijk Nederland</div>
-          <div class="home-logos__box">
-            <a href="#"><img src="@img/home/logo/1200px-Compact_Logo_gemeente_Den_Haag.svg" alt=""></a>
-            <a href="#"><img src="@img/home/logo/2560px-Logo_DB_Schenker.svg" alt=""></a>
-            <a href="#"><img src="@img/home/logo/Amphia.svg" alt=""></a>
-            <a href="#"><img src="@img/home/logo/Best-Western-Logo.svg" alt=""></a>
-            <a href="#"><img src="@img/home/logo/CBRE_Group-Logo.svg" alt=""></a>
-            <a href="#"><img src="@img/home/logo/De-Nederlandse-ggz.svg" alt=""></a>
-            <a href="#"><img src="@img/home/logo/EUR.svg" alt=""></a>
-            <a href="#"><img src="@img/home/logo/Emil Frey.svg" alt=""></a>
-            <a href="#"><img src="@img/home/logo/Frame.svg" alt=""></a>
-            <a href="#"><img src="@img/home/logo/HVBM-logo.svg" alt=""></a>
-            <a href="#"><img src="@img/home/logo/Intervest.svg" alt=""></a>
-            <a href="#"><img src="@img/home/logo/Nouryon.svg" alt=""></a>
-            <a href="#"><img src="@img/home/logo/Referentie_-_Fletcher.svg" alt=""></a>
-            <a href="#"><img src="@img/home/logo/Stern.svg" alt=""></a>
-            <a href="#"><img src="@img/home/logo/Ziekenhuis Gekderse Vallei.svg" alt=""></a>
-            <a href="#"><img src="@img/home/logo/broekhuis.svg" alt=""></a>
-            <a href="#"><img src="@img/home/logo/foot_logo_haarlem_2018.svg" alt=""></a>
-            <a href="#"><img src="@img/home/logo/heerema_logos-edited-spacing-for-website-HMC.svg" alt=""></a>
-            <a href="#"><img src="@img/home/logo/layout_set_logo.svg" alt=""></a>
-            <a href="#"><img src="@img/home/logo/logo 5.svg" alt=""></a>
-            <a href="#"><img src="@img/home/logo/logo-Gemeente-Aalsmeer-voor-website.svg" alt=""></a>
-            <a href="#"><img src="@img/home/logo/logo-rood.svg" alt=""></a>
-            <a href="#"><img src="@img/home/logo/logo-sheerenloo-200x200-1.svg" alt=""></a>
-            <a href="#"><img src="@img/home/logo/logo.svg" alt=""></a>
-            <a href="#"><img src="@img/home/logo/logo2.svg" alt=""></a>
-            <a href="#"><img src="@img/home/logo/logo3.svg" alt=""></a>
-            <a href="#"><img src="@img/home/logo/logo4.svg" alt=""></a>
-            <a href="#"><img src="@img/home/logo/logo7.svg" alt=""></a>
-            <a href="#"><img src="@img/home/logo/logo6.svg" alt=""></a>
-            <a href="#"><img src="@img/home/logo/logo8.svg" alt=""></a>
-            <a href="#"><img src="@img/home/logo/logo9.svg" alt=""></a>
-            <a href="#"><img src="@img/home/logo/nelson-logo.svg" alt=""></a>
-            <a href="#"><img src="@img/home/logo/scotchsoda_identity_verticallockup_black.svg" alt=""></a>
-            <a href="#"><img src="@img/home/logo/van-der-valk.svg" alt=""></a>
-            <a href="#"><img src="@img/home/logo/wereldhave.svg" alt=""></a>
-          </div>
-          <a href="#" class="home-logos__button blue-button">Klantverhalen</a>
-        </div>
-      </section>
-      <section class="home-video">
-        <div class="home-video__container">
-          <div class="home-video__title">Wij zijn Groendus.</div>
-          <div class="home-video__subtitle">Vanuit de ruimte gezien niets meer dan een kleine blauwe stip. Daar moeten
-            we samen goed op passen.</div>
-          <div class="full-video__video">
-            <img class="full-video__img" src="@img/productpagina/prevue.png" alt="video thumbnail" id="thumbnail">
-            <button class="full-video__play-button" id="play-button"><img src="@img/productpagina/play.svg"
-                alt=""></button>
-            <div id="video-container" style="display:none">
-              <script src="https://fast.wistia.com/embed/medias/222bm49bvb.jsonp" async></script>
-              <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
-              <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
-                <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
-                  <div class="wistia_embed wistia_async_222bm49bvb autoPlay=true videoFoam=true"
-                    style="height:100%;position:relative;width:100%">
-                    <div class="wistia_swatch"
-                      style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
-                      <img src="https://fast.wistia.com/embed/medias/222bm49bvb/swatch"
-                        style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true"
-                        onload="this.parentNode.style.opacity=1;" />
+        </section>
+        <section class="home-video">
+          <div class="home-video__container">
+            <div class="home-video__title">Wij zijn Groendus.</div>
+            <div class="home-video__subtitle">
+              Vanuit de ruimte gezien niets meer dan een kleine blauwe stip.
+              Daar moeten we samen goed op passen.
+            </div>
+            <div class="full-video__video">
+              <img
+                class="full-video__img"
+                src="@img/productpagina/prevue.png"
+                alt="video thumbnail"
+                id="thumbnail"
+              />
+              <button class="full-video__play-button" id="play-button">
+                <img src="@img/productpagina/play.svg" alt="" />
+              </button>
+              <div id="video-container" style="display: none">
+                <script
+                  src="https://fast.wistia.com/embed/medias/222bm49bvb.jsonp"
+                  async
+                ></script>
+                <script
+                  src="https://fast.wistia.com/assets/external/E-v1.js"
+                  async
+                ></script>
+                <div
+                  class="wistia_responsive_padding"
+                  style="padding: 56.25% 0 0 0; position: relative"
+                >
+                  <div
+                    class="wistia_responsive_wrapper"
+                    style="
+                      height: 100%;
+                      left: 0;
+                      position: absolute;
+                      top: 0;
+                      width: 100%;
+                    "
+                  >
+                    <div
+                      class="wistia_embed wistia_async_222bm49bvb autoPlay=true videoFoam=true"
+                      style="height: 100%; position: relative; width: 100%"
+                    >
+                      <div
+                        class="wistia_swatch"
+                        style="
+                          height: 100%;
+                          left: 0;
+                          opacity: 0;
+                          overflow: hidden;
+                          position: absolute;
+                          top: 0;
+                          transition: opacity 200ms;
+                          width: 100%;
+                        "
+                      >
+                        <img
+                          src="https://fast.wistia.com/embed/medias/222bm49bvb/swatch"
+                          style="
+                            filter: blur(5px);
+                            height: 100%;
+                            object-fit: contain;
+                            width: 100%;
+                          "
+                          alt=""
+                          aria-hidden="true"
+                          onload="this.parentNode.style.opacity=1;"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            <a href="#" class="home-video__black-button black-button"
+              >Ontdek meer over Groendus</a
+            >
+            <a href="#" class="home-video__link">Waarom Groendus?</a>
           </div>
-          <a href="#" class="home-video__black-button black-button">Ontdek meer over Groendus</a>
-          <a href="#" class="home-video__link">Waarom Groendus?</a>
-        </div>
-      </section>
-      <section class="home-news">
-        <div class="home-news__container">
-          <div class="home-news__title">Razendsnelle ontwikkelingen</div>
-          <div class="home-news__subtitle">Wij zorgen dat je bij blijft.</div>
-          <div class="home-news__slider swiper">
-            <div class="home-news__wrapper swiper-wrapper">
-              <a href="#" class="home-news__slide swiper-slide">
-                <div class="home-news__image">
-                  <img src="@img/home/news1.png" alt="">
-                </div>
-                <div class="home-news__name">Ondanks netcongestie 984 zonnepanelen op kalkzandsteenfabriek van Xella
-                </div>
-              </a>
-              <a href="#" class="home-news__slide swiper-slide">
-                <div class="home-news__image">
-                  <img src="@img/home/news2.png" alt="">
-                </div>
-                <div class="home-news__name">Groendus bouwt verder op complexe energiesturing met overname EnergyNXT
-                </div>
-              </a>
-              <a href="#" class="home-news__slide swiper-slide">
-                <div class="home-news__image">
-                  <img src="@img/home/news3.png" alt="">
-                </div>
-                <div class="home-news__name">Koppeling van opwek en verbruik voorkomt netcongestie</div>
-              </a>
-              <a href="#" class="home-news__slide swiper-slide">
-                <div class="home-news__image">
-                  <img src="@img/home/news4.png" alt="">
-                </div>
-                <div class="home-news__name">Marktplaats ontkoppelt goedkope groene van dure grijze stroom</div>
-              </a>
+        </section>
+        <section class="home-news">
+          <div class="home-news__container">
+            <div class="home-news__title">Razendsnelle ontwikkelingen</div>
+            <div class="home-news__subtitle">Wij zorgen dat je bij blijft.</div>
+            <div class="home-news__slider swiper">
+              <div class="home-news__wrapper swiper-wrapper">
+                <a href="#" class="home-news__slide swiper-slide">
+                  <div class="home-news__image">
+                    <img src="@img/home/news1.png" alt="" />
+                  </div>
+                  <div class="home-news__name">
+                    Ondanks netcongestie 984 zonnepanelen op
+                    kalkzandsteenfabriek van Xella
+                  </div>
+                </a>
+                <a href="#" class="home-news__slide swiper-slide">
+                  <div class="home-news__image">
+                    <img src="@img/home/news2.png" alt="" />
+                  </div>
+                  <div class="home-news__name">
+                    Groendus bouwt verder op complexe energiesturing met
+                    overname EnergyNXT
+                  </div>
+                </a>
+                <a href="#" class="home-news__slide swiper-slide">
+                  <div class="home-news__image">
+                    <img src="@img/home/news3.png" alt="" />
+                  </div>
+                  <div class="home-news__name">
+                    Koppeling van opwek en verbruik voorkomt netcongestie
+                  </div>
+                </a>
+                <a href="#" class="home-news__slide swiper-slide">
+                  <div class="home-news__image">
+                    <img src="@img/home/news4.png" alt="" />
+                  </div>
+                  <div class="home-news__name">
+                    Marktplaats ontkoppelt goedkope groene van dure grijze
+                    stroom
+                  </div>
+                </a>
+              </div>
             </div>
+            <a href="#" class="home-news__button blue-button"
+              >Bekijk meer nieuwberichten</a
+            >
           </div>
-          <a href="#" class="home-news__button blue-button">Bekijk meer nieuwberichten</a>
-        </div>
-      </section>
-      <section class="energiekennis-subscribe">
-        <div class="energiekennis-subscribe__container">
-          <div class="energiekennis-subscribe__subtitle">Nieuwsbrief</div>
-          <div class="energiekennis-subscribe__title">Altijd als eerste weten wat er speelt?</div>
-          <form class="energiekennis-subscribe__form" action="#">
-            <input class="energiekennis-subscribe__input" type="email" name="Email"
-              placeholder="E-mailadres voor aanmelden nieuwsbrief" id="">
-            <button class="energiekennis-subscribe__button blue-button" type="submit">Ik blijf graag bij</button>
-          </form>
-        </div>
-      </section>
-    </main>
-    @@include('html/_footer.htm',{})
-  </div>
-  @@include('html/_js.htm',{})
-</body>
-
+        </section>
+        <section class="energiekennis-subscribe">
+          <div class="energiekennis-subscribe__container">
+            <div class="energiekennis-subscribe__subtitle">Nieuwsbrief</div>
+            <div class="energiekennis-subscribe__title">
+              Altijd als eerste weten wat er speelt?
+            </div>
+            <form class="energiekennis-subscribe__form" action="#">
+              <input
+                class="energiekennis-subscribe__input"
+                type="email"
+                name="Email"
+                placeholder="E-mailadres voor aanmelden nieuwsbrief"
+                id=""
+              />
+              <button
+                class="energiekennis-subscribe__button blue-button"
+                type="submit"
+              >
+                Ik blijf graag bij
+              </button>
+            </form>
+          </div>
+        </section>
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+  </body>
 </html>
