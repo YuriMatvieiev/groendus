@@ -10538,6 +10538,7 @@ h6 {
   .cookies {
     left: 1rem;
     right: 1rem;
+    bottom: 1rem;
   }
 
   .cookies__list {
