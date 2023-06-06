@@ -520,3 +520,13 @@ function setCookie(name, value, days) {
   }
   document.cookie = name + "=" + value + expires + "; path=/";
 }
+
+const headerLogo = document.querySelector(".header__logo");
+const header = document.querySelector(".header");
+
+headerLogo.addEventListener("click", () => {
+  if (header.classList.contains("_header-scroll")) {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+});

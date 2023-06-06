@@ -234,7 +234,7 @@ h6 {
 .blue-button {
   color: #FFFFFF;
   font-weight: 700;
-  background-color: #006EFF;
+  background-color: #006eff;
   display: inline-block;
   text-align: center;
 }
@@ -248,7 +248,7 @@ h6 {
 }
 
 .white-button {
-  color: #006EFF;
+  color: #006eff;
   font-weight: 700;
   background-color: #FFFFFF;
   display: inline-block;
@@ -256,7 +256,7 @@ h6 {
 }
 
 .blue-text {
-  color: #006EFF;
+  color: #006eff;
 }
 
 .rotated {
@@ -291,7 +291,7 @@ h6 {
 
 .blue-number {
   color: #FFFFFF;
-  background-color: #006EFF;
+  background-color: #006eff;
   width: 42px;
   display: inline-block;
 }
@@ -363,7 +363,7 @@ h6 {
 }
 
 .header__top-text a {
-  color: #006EFF;
+  color: #006eff;
   font-weight: 700;
   font-size: 0.75rem;
   line-height: 1.4166666667;
@@ -409,7 +409,7 @@ h6 {
 .header__top-first-title {
   font-size: 0.75rem;
   line-height: 1.1666666667;
-  color: #5B5B5B;
+  color: #5b5b5b;
 }
 
 .header__top-first-button {
@@ -714,7 +714,7 @@ h6 {
   font-weight: 700;
   font-size: 0.75rem;
   line-height: 1.1666666667;
-  color: #006EFF;
+  color: #006eff;
 }
 
 .menu__submenu-klantverhalen-nav {
@@ -780,7 +780,7 @@ h6 {
 }
 
 .menu__submenu-title {
-  color: #006EFF;
+  color: #006eff;
   font-size: 0.75rem;
   line-height: 1.0833333333;
   margin-bottom: 0.625rem;
@@ -826,7 +826,7 @@ h6 {
 }
 
 .menu__submenu-main-nav-item-wrap::before {
-  color: #006EFF;
+  color: #006eff;
 }
 
 .menu__submenu-main-nav-item {
@@ -980,22 +980,72 @@ h6 {
   display: none;
 }
 
+.wrapper:has(.blue-theme._header-scroll)::after {
+  content: "";
+  background-color: #006eff;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 200px;
+  z-index: -1;
+}
+
 .blue-theme {
-  background-color: #006EFF;
+  background-color: #006eff;
 }
 
 .blue-theme._header-scroll {
   position: sticky;
   top: 0;
+  background-color: transparent;
+}
+
+.blue-theme._header-scroll .header__logo-white {
+  position: relative;
+}
+
+.blue-theme._header-scroll .header__logo-letter {
+  opacity: 0;
+  display: none;
+}
+
+.blue-theme._header-scroll .header__logo-img {
+  -webkit-transform: matrix(1, 0, 0, 1, -17, 0);
+      -ms-transform: matrix(1, 0, 0, 1, -17, 0);
+          transform: matrix(1, 0, 0, 1, -17, 0);
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.blue-theme._header-scroll .header__logo-white {
+  position: relative;
+}
+
+.blue-theme._header-scroll .header__logo-white svg {
+  max-width: 70px;
+}
+
+.blue-theme._header-scroll .header__logo-bg {
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 7px;
+  width: 3.4375rem;
+  height: 3.4375rem;
+  background-color: #006eff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.12) 0px 26px 27px;
+          box-shadow: rgba(0, 0, 0, 0.12) 0px 26px 27px;
+  border-radius: 50%;
+  z-index: -1;
 }
 
 .blue-theme .header__logo-black {
   display: none;
-  position: relative;
 }
 
-.blue-theme .header__logo-black svg {
-  max-width: 70px;
+.blue-theme .header__top-wrap {
+  background-color: #006eff;
 }
 
 .blue-theme .header__top-first {
@@ -1030,7 +1080,7 @@ h6 {
 
 .blue-theme .header__search {
   color: #fff;
-  background: #0252CF;
+  background: #0252cf;
 }
 
 .blue-theme .header__contact-button {
@@ -1039,7 +1089,7 @@ h6 {
 }
 
 .blue-theme .header__lang {
-  background: #0252CF;
+  background: #0252cf;
 }
 
 .blue-theme .header__lang span {
@@ -1075,7 +1125,7 @@ h6 {
 }
 
 .blue-theme .header__search-icon {
-  background-color: #0252CF;
+  background-color: #0252cf;
   color: #fff;
   opacity: 1;
   -webkit-transition: opacity 0.3s ease-in-out 0s;
@@ -1084,7 +1134,7 @@ h6 {
 }
 
 .blue-theme .header__search-input {
-  background-color: #0252CF;
+  background-color: #0252cf;
   color: #fff;
 }
 
@@ -1122,12 +1172,12 @@ h6 {
   background-color: transparent;
 }
 
-.white-theme._header-scroll .header__top {
+.white-theme._header-scroll .header__top-wrap {
   background-color: #fff;
 }
 
 .white-theme._header-scroll .header__lang {
-  background: #006EFF;
+  background: #006eff;
 }
 
 .white-theme._header-scroll .header__lang a {
@@ -1201,12 +1251,17 @@ h6 {
   background-color: #fff;
 }
 
+.menu-open .blue-theme {
+  background-color: #006eff;
+}
+
 .menu-open .header__logo-letter {
   opacity: 1 !important;
   display: block !important;
 }
 
-.menu-open .header__logo-black svg {
+.menu-open .header__logo-black svg,
+.menu-open .header__logo-white svg {
   max-width: 183px !important;
 }
 
@@ -1221,7 +1276,7 @@ h6 {
 }
 
 .footer {
-  color: #5B5B5B;
+  color: #5b5b5b;
   font-size: 0.875rem;
   line-height: 1.0714285714;
   padding-top: 56px;
@@ -1262,7 +1317,7 @@ h6 {
   bottom: 24px;
   -webkit-box-shadow: 0px 20px 48px rgba(0, 0, 0, 0.07);
           box-shadow: 0px 20px 48px rgba(0, 0, 0, 0.07);
-  color: #006EFF;
+  color: #006eff;
   background-color: #fff;
   max-width: 29.375rem;
   z-index: 20;
@@ -1465,7 +1520,7 @@ h6 {
   font-weight: 700;
   font-size: 2.5rem;
   line-height: 0.9090909091;
-  color: #006EFF;
+  color: #006eff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1518,7 +1573,7 @@ h6 {
   width: 100%;
   height: 100%;
   stroke-width: 3px;
-  stroke: #006EFF;
+  stroke: #006eff;
   fill: none;
   stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
   stroke-dasharray: 125.6;
@@ -1545,7 +1600,7 @@ h6 {
 }
 
 .home-hero__slide-play-icon {
-  background-color: #006EFF;
+  background-color: #006eff;
   height: 2.3125rem;
   width: 2.3125rem;
   display: -webkit-box;
@@ -1679,7 +1734,7 @@ h6 {
   -webkit-transform: rotate(180deg) translateY(50%);
       -ms-transform: rotate(180deg) translateY(50%);
           transform: rotate(180deg) translateY(50%);
-  background-color: #006EFF;
+  background-color: #006eff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1697,7 +1752,7 @@ h6 {
   position: absolute;
   right: -70px;
   top: 50%;
-  background-color: #006EFF;
+  background-color: #006eff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1798,7 +1853,7 @@ h6 {
 }
 
 .home-steps__slide-text-subtitle {
-  color: #006EFF;
+  color: #006eff;
   margin-bottom: 0.5rem;
 }
 
@@ -1887,7 +1942,7 @@ h6 {
 }
 
 .home-video {
-  background-color: #006EFF;
+  background-color: #006eff;
 }
 
 .home-video__container {
@@ -1988,7 +2043,7 @@ h6 {
 .offers-hero {
   padding-bottom: 7.8125rem;
   color: #fff;
-  background-color: #006EFF;
+  background-color: #006eff;
   text-align: center;
 }
 
@@ -2115,7 +2170,7 @@ h6 {
 .blue-hero {
   position: relative;
   padding-top: 40px;
-  background-color: #006EFF;
+  background-color: #006eff;
   color: #fff;
 }
 
@@ -2202,7 +2257,7 @@ h6 {
       -ms-flex-align: center;
           align-items: center;
   background-color: #fff;
-  color: #006EFF;
+  color: #006eff;
 }
 
 .fun-fact__item {
@@ -2259,7 +2314,7 @@ h6 {
 }
 
 .macbook__subtitle {
-  color: #006EFF;
+  color: #006eff;
   margin-bottom: 0.5rem;
 }
 
@@ -2269,7 +2324,7 @@ h6 {
 }
 
 .macbook__list {
-  color: #006EFF;
+  color: #006eff;
 }
 
 .macbook__list li {
@@ -2351,7 +2406,7 @@ h6 {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
-  color: #006EFF;
+  color: #006eff;
   font-weight: 700;
   font-size: 0.875rem;
   line-height: 1.0714285714;
@@ -2401,7 +2456,7 @@ h6 {
   position: absolute;
   width: 1.375rem;
   height: 1.375rem;
-  background: #006EFF;
+  background: #006eff;
   border-radius: 50%;
   top: 208px;
 }
@@ -2410,7 +2465,7 @@ h6 {
   position: absolute;
   width: 1.375rem;
   height: 1.375rem;
-  background: #006EFF;
+  background: #006eff;
   border-radius: 50%;
   top: 680px;
 }
@@ -2419,13 +2474,13 @@ h6 {
   position: absolute;
   width: 1.375rem;
   height: 1.375rem;
-  background: #006EFF;
+  background: #006eff;
   border-radius: 50%;
   bottom: 320px;
 }
 
 .services {
-  background-color: #006EFF;
+  background-color: #006eff;
 }
 
 .services__title {
@@ -2476,7 +2531,7 @@ h6 {
   font-weight: 700;
   font-size: 0.875rem;
   line-height: 1.0714285714;
-  color: #006EFF;
+  color: #006eff;
   margin: 0 -25px;
 }
 
@@ -2520,7 +2575,7 @@ h6 {
 }
 
 .services__item-subtitle {
-  color: #006EFF;
+  color: #006eff;
   margin-bottom: 0.5rem;
 }
 
@@ -2710,7 +2765,7 @@ h6 {
 }
 
 .beheren-slider__slide-title {
-  color: #006EFF;
+  color: #006eff;
   font-weight: 700;
   padding-bottom: 25px;
   border-bottom: 0.5px solid #A0A0A0;
@@ -2745,7 +2800,7 @@ h6 {
 
 .ovner.blue-border .ovner__subtitle {
   margin-bottom: 0.5rem;
-  color: #006EFF;
+  color: #006eff;
 }
 
 .ovner.blue-border .ovner__img-border {
@@ -2874,7 +2929,7 @@ h6 {
   -webkit-transform: translate(-50%);
       -ms-transform: translate(-50%);
           transform: translate(-50%);
-  background-color: #006EFF;
+  background-color: #006eff;
   border-radius: 50%;
 }
 
@@ -2901,7 +2956,7 @@ h6 {
 .opwekken-steps__item-title {
   font-weight: 700;
   margin-bottom: 0.5rem;
-  color: #006EFF;
+  color: #006eff;
 }
 
 .opwekken-steps__item-subtitle {
@@ -2939,7 +2994,7 @@ h6 {
 
 .mobile-text-button {
   display: none;
-  background-color: #006EFF;
+  background-color: #006eff;
   padding: 15px 0;
 }
 
@@ -2972,7 +3027,7 @@ h6 {
 }
 
 .ovner.ovner-blue .ovner__box {
-  background-color: #006EFF;
+  background-color: #006eff;
 }
 
 .ovner.ovner-blue .ovner__text-block {
@@ -2984,7 +3039,7 @@ h6 {
 }
 
 .opwekken-slider__subtitle {
-  color: #006EFF;
+  color: #006eff;
 }
 
 .opwekken-slider__title {
@@ -3020,7 +3075,7 @@ h6 {
 
 .opwekken-slider__slide-title {
   font-weight: 700;
-  color: #006EFF;
+  color: #006eff;
 }
 
 .duurzaam .ovner .ovner__text-block {
@@ -3064,7 +3119,7 @@ h6 {
 }
 
 .duurzaam-steps__item-subtitle {
-  color: #006EFF;
+  color: #006eff;
 }
 
 .duurzaam-steps__item-title {
@@ -3105,7 +3160,7 @@ h6 {
       -ms-flex-align: center;
           align-items: center;
   gap: 12px;
-  color: #006EFF;
+  color: #006eff;
 }
 
 .white-hero__breadcrumbs a {
@@ -3259,7 +3314,7 @@ h6 {
 
 .voorop__item-title {
   font-weight: 700;
-  color: #006EFF;
+  color: #006eff;
   margin-bottom: 1.25rem;
 }
 
@@ -3275,7 +3330,7 @@ h6 {
       -ms-flex-align: center;
           align-items: center;
   gap: 8px;
-  color: #006EFF;
+  color: #006eff;
   font-size: 1rem;
   line-height: 1.125;
   opacity: 0;
@@ -3313,7 +3368,7 @@ h6 {
 }
 
 .productpagina-steps__left-subtitle {
-  color: #006EFF;
+  color: #006eff;
   margin-bottom: 0.5rem;
   text-align: right;
 }
@@ -3381,7 +3436,7 @@ h6 {
           transform: translate(-50%, 0);
   width: 1.375rem;
   height: 1.375rem;
-  background-color: #006EFF;
+  background-color: #006eff;
   border-radius: 50%;
   z-index: -2;
 }
@@ -3401,7 +3456,7 @@ h6 {
 }
 
 .productpagina-steps__full-width-subtitle {
-  color: #006EFF;
+  color: #006eff;
   margin-bottom: 0.5rem;
 }
 
@@ -3500,7 +3555,7 @@ h6 {
 
 .productpagina-options__slide-title {
   font-weight: 700;
-  color: #006EFF;
+  color: #006eff;
 }
 
 .ons-platform .blue-hero__container {
@@ -3575,7 +3630,7 @@ h6 {
 .ons-platform .blue-hero__button::before {
   margin-right: 10px;
   color: #fff;
-  background-color: #006EFF;
+  background-color: #006eff;
   width: 2.3125rem;
   height: 2.3125rem;
   border-radius: 50%;
@@ -3721,7 +3776,7 @@ h6 {
 
 .ons-platform__item-subtitle {
   margin-bottom: 0.5rem;
-  color: #006EFF;
+  color: #006eff;
 }
 
 .ons-platform__item-title {
@@ -3755,7 +3810,7 @@ h6 {
 }
 
 .klantverhalen-hero {
-  background-color: #006EFF;
+  background-color: #006eff;
 }
 
 .klantverhalen-hero__container {
@@ -3836,7 +3891,7 @@ h6 {
   font-size: 0.875rem;
   font-weight: 700;
   line-height: 1.0714285714;
-  color: #006EFF;
+  color: #006eff;
 }
 
 .klantverhalen-hero__select-button::before {
@@ -3884,7 +3939,7 @@ h6 {
 }
 
 .klantverhalen-hero__select-list li input {
-  color: #006EFF;
+  color: #006eff;
   width: 1rem;
   height: 1rem;
   cursor: pointer;
@@ -3902,7 +3957,7 @@ h6 {
   padding: 19px 21px 20px;
   width: 100%;
   font-weight: 700;
-  color: #006EFF;
+  color: #006eff;
   font-size: 0.875rem;
   line-height: 1.0714285714;
 }
@@ -3979,7 +4034,7 @@ h6 {
   font-size: 0.75rem;
   line-height: 1.4166666667;
   font-weight: 700;
-  color: #006EFF;
+  color: #006eff;
 }
 
 .klantverhalen-stories__button {
@@ -4046,7 +4101,7 @@ h6 {
 }
 
 .werken .full-video__subtitle {
-  color: #006EFF;
+  color: #006eff;
 }
 
 .werken .full-video__title {
@@ -4075,11 +4130,11 @@ h6 {
 }
 
 .werken .ovner {
-  background-color: #006EFF;
+  background-color: #006eff;
 }
 
 .werken .ovner__box {
-  background-color: #006EFF !important;
+  background-color: #006eff !important;
 }
 
 .werken .ovner__text-block {
@@ -4116,7 +4171,7 @@ h6 {
 }
 
 .three-col__subtitle {
-  color: #006EFF;
+  color: #006eff;
   margin-bottom: 0.5rem;
 }
 
@@ -4168,7 +4223,7 @@ h6 {
 
 .blue-man__subtitle {
   margin-bottom: 0.5rem;
-  color: #006EFF;
+  color: #006eff;
 }
 
 .blue-man__title {
@@ -4205,7 +4260,7 @@ h6 {
 
 .vacancies__subtitle {
   margin-bottom: 0.5rem;
-  color: #006EFF;
+  color: #006eff;
   text-align: center;
 }
 
@@ -4244,7 +4299,7 @@ h6 {
 }
 
 .vacancies__spollers .klantverhalen-hero__select-button.selected {
-  background-color: #006EFF;
+  background-color: #006eff;
 }
 
 .vacancies__button-filter {
@@ -4313,7 +4368,7 @@ h6 {
 .vacancies__item-button {
   font-size: 1rem;
   line-height: 1.625;
-  color: #006EFF;
+  color: #006eff;
   text-decoration: underline;
   display: block;
   text-align: center;
@@ -4364,7 +4419,7 @@ h6 {
 }
 
 .energiekennis-hero {
-  background-color: #006EFF;
+  background-color: #006eff;
 }
 
 .energiekennis-hero__container {
@@ -4556,7 +4611,7 @@ h6 {
 
 .main-blog__4col-date {
   margin-bottom: 0.5rem;
-  color: #006EFF;
+  color: #006eff;
 }
 
 .main-blog__4col-title {
@@ -4592,7 +4647,7 @@ h6 {
 }
 
 .main-blog__4col-small-date {
-  color: #006EFF;
+  color: #006eff;
 }
 
 .main-blog__4col-small-title {
@@ -4662,7 +4717,7 @@ h6 {
 }
 
 .energiekennis-slider__slide-subtitle {
-  color: #006EFF;
+  color: #006eff;
   margin-bottom: 0.5rem;
 }
 
@@ -4709,7 +4764,7 @@ h6 {
   width: 100%;
   height: 100%;
   stroke-width: 3px;
-  stroke: #006EFF;
+  stroke: #006eff;
   fill: none;
   stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
   stroke-dasharray: 125.6;
@@ -4756,7 +4811,7 @@ h6 {
 }
 
 .energiekennis-term__wrap {
-  background-color: #006EFF;
+  background-color: #006eff;
   padding: 80px 0 50px;
 }
 
@@ -4812,7 +4867,7 @@ h6 {
 }
 
 .energiekennis-term__filter li.active {
-  color: #006EFF;
+  color: #006eff;
   font-weight: 700;
 }
 
@@ -4877,7 +4932,7 @@ h6 {
 
 .energiekennis-term__show-more-button::before {
   content: "+";
-  color: #006EFF;
+  color: #006eff;
   font-size: 1.25rem;
 }
 
@@ -4980,7 +5035,7 @@ h6 {
 
 .energiekennis-subscribe__subtitle {
   margin-bottom: 0.5rem;
-  color: #006EFF;
+  color: #006eff;
 }
 
 .energiekennis-subscribe__title {
@@ -5007,27 +5062,27 @@ h6 {
 }
 
 .energiekennis-subscribe__input::-webkit-input-placeholder {
-  color: #006EFF;
+  color: #006eff;
 }
 
 .energiekennis-subscribe__input::-moz-placeholder {
-  color: #006EFF;
+  color: #006eff;
 }
 
 .energiekennis-subscribe__input:-ms-input-placeholder {
-  color: #006EFF;
+  color: #006eff;
 }
 
 .energiekennis-subscribe__input::-ms-input-placeholder {
-  color: #006EFF;
+  color: #006eff;
 }
 
 .energiekennis-subscribe__input::placeholder {
-  color: #006EFF;
+  color: #006eff;
 }
 
 .energiekennis-subscribe__input:focus {
-  border: 1px solid #006EFF;
+  border: 1px solid #006eff;
 }
 
 .energiekennis-subscribe__button {
@@ -5271,6 +5326,17 @@ h6 {
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+  }
+
+  .blue-theme._header-scroll .menu__list {
+    opacity: 0;
+    display: none;
+  }
+
+  .blue-theme._header-scroll .header__search-icon,
+  .blue-theme._header-scroll .header__contact-button {
+    opacity: 0;
+    display: none;
   }
 
   .white-theme._header-scroll .menu__list {
@@ -8887,7 +8953,7 @@ h6 {
             transform: rotate(45deg);
   }
 
-  .blue-theme .header__top {
+  .blue-theme .header__top-wrap {
     display: none;
   }
 
@@ -8902,7 +8968,7 @@ h6 {
   }
 
   .blue-theme .header__lang {
-    background: none;
+    background: #006eff;
   }
 
   .blue-theme .menu__link {
@@ -9017,7 +9083,7 @@ h6 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    color: #006EFF;
+    color: #006eff;
   }
 
   .vacancies__item {
@@ -9325,11 +9391,11 @@ h6 {
   }
 
   .ons-aanbod .ovner {
-    background-color: #006EFF !important;
+    background-color: #006eff !important;
   }
 
   .ons-aanbod .ovner .ovner__box {
-    background-color: #006EFF !important;
+    background-color: #006eff !important;
     border-bottom: none;
   }
 
@@ -9763,7 +9829,7 @@ h6 {
   }
 
   .ovner.ovner-blue .ovner__button {
-    background-color: #006EFF;
+    background-color: #006eff;
   }
 
   .opwekken-slider__subtitle {
@@ -9779,11 +9845,11 @@ h6 {
   }
 
   .duurzaam .ovner {
-    background-color: #006EFF;
+    background-color: #006eff;
   }
 
   .duurzaam .ovner .ovner__box {
-    background-color: #006EFF;
+    background-color: #006eff;
     border-bottom: none;
   }
 
@@ -9854,7 +9920,7 @@ h6 {
 
   .full-video__subtitle {
     text-align: center;
-    color: #006EFF;
+    color: #006eff;
   }
 
   .full-video__title {
@@ -9894,7 +9960,7 @@ h6 {
     font-size: 0.75rem;
     line-height: 1.0833333333;
     color: #fff;
-    background-color: #006EFF;
+    background-color: #006eff;
     padding: 14px 21px;
     width: 100%;
     -webkit-box-pack: center;
@@ -9982,11 +10048,11 @@ h6 {
   }
 
   .productpagina .ovner {
-    background-color: #006EFF;
+    background-color: #006eff;
   }
 
   .productpagina .ovner .ovner__box {
-    background-color: #006EFF;
+    background-color: #006eff;
     border-bottom: none;
   }
 
@@ -10481,7 +10547,7 @@ h6 {
   }
 
   .energiekennis-term__container {
-    background-color: #006EFF;
+    background-color: #006eff;
   }
 
   .energiekennis-term__wrap {
@@ -20616,14 +20682,14 @@ h6 {
   }
 
   .footer__menu a:hover {
-    color: #006EFF;
+    color: #006eff;
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
   }
 
   .footer__socials a:hover {
-    color: #006EFF;
+    color: #006eff;
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
@@ -20646,7 +20712,7 @@ h6 {
   }
 
   .home-steps__slide-circle-parts:hover span {
-    color: #006EFF;
+    color: #006eff;
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
@@ -20656,7 +20722,7 @@ h6 {
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
-    color: #006EFF;
+    color: #006eff;
   }
 
   .home-video__black-button:hover {
@@ -20722,7 +20788,7 @@ h6 {
   }
 
   .vacancies__spollers .klantverhalen-hero__select-button:hover {
-    background-color: #006EFF;
+    background-color: #006eff;
   }
 
   .vacancies__item:hover {
@@ -20766,22 +20832,22 @@ h6 {
   }
 
   .energiekennis-term__filter-left:hover {
-    color: #006EFF;
+    color: #006eff;
   }
 
   .energiekennis-term__filter-right:hover {
-    color: #006EFF;
+    color: #006eff;
   }
 
   .energiekennis-term__filter li:hover {
-    color: #006EFF;
+    color: #006eff;
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
   }
 
   .blog-articles__box-item:hover .blog-articles__box-item-title {
-    color: #006EFF;
+    color: #006eff;
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
