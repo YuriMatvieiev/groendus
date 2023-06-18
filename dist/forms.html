@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Beheren</title>
+	<title>Forms</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -12,9 +12,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body class="beheren">
+<body>
 	<div class="wrapper">
-		<header class="header blue-theme">
+		<header class="header white-theme">
 			<div class="header__top-wrap">
 				<div class="header__top">
 					<div class="header__top-block">
@@ -394,282 +394,191 @@
 		</header>
 
 		<main class="page">
-			<section class="blue-hero">
-				<div class="blue-hero__container">
-					<div class="blue-hero__text-block">
-						<div class="blue-hero__breadcrumbs">
-							<a class="_icon-arrow-right" href="#">Groendus aanbod</a>
-							<a href="#">Opwekken</a>
-						</div>
-						<div class="blue-hero__title">Efficiënt beheren</div>
-						<div class="blue-hero__desc">Efficiënt en duurzaam energiebeheer vereist goed gereedschap. Met slimme
-							technologieën en snelle analyses geven we je inzicht in je energieverbruik en zie je direct hoe je kunt
-							besparen. Bovendien helpen we met strategisch inkopen, en kun je de energie-administratie aan ons
-							overlaten.</div>
-					</div>
-					<div class="blue-hero__img-block">
-						<picture><source srcset="img/beheren/main-img.webp" type="image/webp"><img src="img/beheren/main-img.png" alt="main-img"></picture>
-					</div>
+			<!-- form 1 -->
+			<section class="form blue-form">
+				<div class="form__container">
+					<div class="form__header">
+						<picture><source srcset="img/home/Boris-Steenhuis-form.webp" type="image/webp"><img class="form__img" src="img/home/Boris-Steenhuis-form.jpg" alt="" /></picture>
 
-				</div>
-				<div class="fun-fact">
-					<div class="fun-fact__container">
-						<div class="fun-fact__box">
-							<div class="fun-fact__item">
-								<div class="fun-fact__number">48<span>%</span></div>
-								<div class="fun-fact__text">gemiddelde CO2 reductie</div>
+						<div class="form__text">
+							<div class="form__title">
+								Aangenaam, ik ben Boris Steenhuis, portofolioanalist bij
+								Groendus.
 							</div>
-							<div class="fun-fact__item">
-								<div class="fun-fact__number">15<span>%</span></div>
-								<div class="fun-fact__text">gemiddelde gerealiseerd besparing</div>
+							<div class="form__subtitle">
+								Je kunt mij direct bereiken, of je gegevens achterlaten, dan
+								bel ik je terug.
 							</div>
-							<div class="fun-fact__item">
-								<div class="fun-fact__number">36<span>k</span></div>
-								<div class="fun-fact__text">besparing door factuurcontrole</div>
-							</div>
+							<a class="form__sub-button white-button" href="tel:085-1307342">085-1307342</a>
 						</div>
 					</div>
+					<form class="form__main" action="#">
+						<div class="form__item">
+							<label for="firstname">Voornaam*</label>
+							<input type="text" name="firstname" id="firstname" placeholder="Voornaam" required />
+						</div>
+						<div class="form__item">
+							<label for="tussenvoegsel">Tussenvoegsel</label>
+							<input type="text" name="tussenvoegsel" id="tussenvoegsel" placeholder="Tussenvoegsel" required />
+						</div>
+						<div class="form__item">
+							<label for="lastname">Achternaam*</label>
+							<input type="text" name="lastname" id="lastname" placeholder="Achternaam" required />
+						</div>
+						<div class="form__item">
+							<label for="email">Email* </label>
+							<input type="email" name="email" id="email" placeholder="naam@voorbeeld.nl" required />
+						</div>
+						<div class="form__item">
+							<label for="phone">Telefoon*</label>
+							<input type="number" name="phone" id="phone" placeholder="06 12345678" required />
+						</div>
+						<div class="form__item-checkbox">
+							<input type="checkbox" name="ik-geef" id="ik-geef" required />
+							<label for="ik-geef">Ik geef toestemming aan Groendus mijn gegevens op te slaan en
+								te verwerken en ga akkoord met de algemene
+								voorwaarden.*</label>
+						</div>
+						<button type="submit" class="form__main-button white-button">
+							Verstuur
+						</button>
+					</form>
 				</div>
 			</section>
-			<section class="macbook">
-				<div class="macbook__container text-right">
-					<div class="macbook__text-block">
-						<div class="macbook__subtitle">Efficiënt beheren</div>
-						<div class="macbook__title">Je complete energiebeheer vanuit één omgeving</div>
-						<div class="macbook__img-block-mobile"></div>
-						<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed
-							scelerisque quis ipsum et blandit. Mauris vehicula tincidunt ex a interdum. </p>
-						<p>Zo helpen we je vanuit één omgeving met drie diensten voor duurzaam energiebeheer:</p>
-						<ul class="macbook__list">
-							<li><a href="#">Inzicht</a></li>
-							<li><a href="#">Inkoopbeheer</a></li>
-							<li><a href="#">Financieel beheer</a></li>
-						</ul>
-					</div>
-					<div data-da=".macbook__img-block-mobile, 768" class="macbook__img-block">
-						<picture><source srcset="img/beheren/MacBook.webp" type="image/webp"><img src="img/beheren/MacBook.png" alt="MacBook Image"></picture>
-					</div>
-
-				</div>
-			</section>
-			<section class="steps">
-				<div class="steps__container">
-					<div class="steps__box">
-						<div class="steps__line"></div>
-						<div class="steps__top-circle"><img src="img/beheren/Group 698.svg" alt=""></div>
-						<div class="steps__step1-circle"></div>
-						<div class="steps__step2-circle"></div>
-						<div class="steps__step3-circle"></div>
-						<div class="steps__item">
-							<div class="steps__text-block">
-
-								<div id="step1" class="steps__mobile-block">
-									<div class="steps__mobile-text">
-										<div class="steps__title">1. Inzicht</div>
-										<div class="steps__sub-title">Data als uitgangspunt</div>
-										<div class="steps__desc">Inzicht begint met meetdata die klopt. We interpreteren de meetdata en
-											maken
-											deze begrijpelijk. </div>
+			<!-- form 2 -->
+			<section class="form white-form">
+				<div class="form__container">
+					<div class="form__wrap">
+						<div class="form__left">
+							<div class="form__left-title">Blijf bij</div>
+							<div class="form__left-text">
+								Altijd up-to-date energiekennis? Schrijf je in voor de
+								Groendus Nieuwsbrief. We delen het laatste energienieuws én
+								geven je inzicht in recente trends en ontwikkelingen op de
+								energiemarkt. Zo weet je altijd wat er speelt en loop je geen
+								kansen mis.
+							</div>
+							<ul class="form__left-list">
+								<li>Energiemarkt updates</li>
+								<li>Actualiteit</li>
+								<li>Interviews</li>
+								<li>Webinars</li>
+								<li>Innovaties</li>
+								<li>En meer</li>
+							</ul>
+							<a href="" class="form__left-link">« Terug naar het kenniscentrum</a>
+						</div>
+						<div class="form__right">
+							<div class="form__header">
+								<div class="form__text">
+									<div class="form__title">Ja, ik wil Groendus updates</div>
+									<div class="form__subtitle">
+										Vul je gegevens in en je volgt de energietransitie op de
+										voet. We mailen je niet vaker dan één keer per maand, en
+										zorgen voor jouw privacy.
 									</div>
 								</div>
-								<a href="#" class="steps__button blue-button">Bereken wat je kan besparen</a>
-								<ul class="steps__list">
-									<li data-tippy-content="<b>Duis in enim iaculis</b>, <br> vulputate purus ut, vulputate justo. Vestibulum vehicula metus nec arcu viverra laoreet. Vestibulum lectus risus, lobortis sit amet eleifend non, imperdiet vel lorem. Nunc pharetra magna a sodales pretium. " class="_icon-info">Energiemeters</li>
-									<li data-tippy-content="Duis in enim iaculis, vulputate purus ut, vulputate justo. Vestibulum vehicula metus nec arcu viverra laoreet. Vestibulum lectus risus, lobortis sit amet eleifend non, imperdiet vel lorem. Nunc pharetra magna a sodales pretium. " class="_icon-info">Energiemeters</li>
-									<li data-tippy-content=" Vestibulum lectus risus, lobortis sit amet eleifend non, imperdiet vel lorem. " class="_icon-info">Energiemeetdiensten</li>
-									<li data-tippy-content=" Vestibulum vehicula metus nec arcu viverra laoreet. Vestibulum lectus risus, lobortis sit amet eleifend non, imperdiet vel lorem. " class="_icon-info">Energiemeetdiensten</li>
-									<li data-tippy-content="Duis in enim iaculis, vulputate purus ut, vulputate justo. Vestibulum vehicula metus nec arcu viverra laoreet. Vestibulum lectus risus, lobortis sit amet eleifend non, imperdiet vel lorem. Nunc pharetra magna a sodales pretium. " class="_icon-info">Tussenmeters</li>
-								</ul>
 							</div>
-							<div data-da="#step1, 768" class="steps__img-block">
-								<picture><source srcset="img/beheren/step1.webp" type="image/webp"><img src="img/beheren/step1.png" alt="Inzicht"></picture>
-							</div>
-						</div>
-						<div class="steps__item">
-							<div class="steps__text-block">
-								<div id="step2" class="steps__mobile-block">
-									<div class="steps__mobile-text">
-										<div class="steps__title">2. Inkoopbeheer</div>
-										<div class="steps__sub-title">Bespaar op energiekosten</div>
-										<div class="steps__desc">Inzicht begint met meetdata die klopt. We interpreteren de meetdata en
-											maken
-											deze begrijpelijk. </div>
+							<form class="form__main" action="#">
+								<div class="form__item">
+									<label for="firstname">Voornaam </label>
+									<input type="text" name="firstname" id="firstname" placeholder="Typ je voornaam in" required />
+								</div>
+								<div class="form__item">
+									<label for="lastname">Achternaam </label>
+									<input type="text" name="lastname" id="lastname" placeholder="Typ je achternaam in" required />
+								</div>
+								<div class="form__item">
+									<label for="email">E-mailadres* </label>
+									<input type="email" name="email" id="email" placeholder="Type your email" required />
+								</div>
+								<div class="form__item-checkbox">
+									<div class="form__item-checkbox-title">
+										Ik geef toestemming aan Groendus mijn gegevens op te slaan
+										en te verwerken en ga akkoord met de algemene
+										voorwaarden.*
 									</div>
+									<input type="checkbox" name="ik-geef" id="ik-geef" required />
+									<label for="ik-geef">Ik ga akkoord</label>
 								</div>
-								<a href="#" class="steps__button blue-button">Bekijk hoe je kan opwekken</a>
-								<ul class="steps__list">
-
-									<li data-tippy-content="Duis in enim iaculis, vulputate purus ut, vulputate justo. Vestibulum vehicula metus nec arcu viverra laoreet. Vestibulum lectus risus, lobortis sit amet eleifend non, imperdiet vel lorem. Nunc pharetra magna a sodales pretium. " class="_icon-info">Contractbeheer</li>
-									<li data-tippy-content=" Vestibulum vehicula metus nec arcu viverra laoreet. Vestibulum lectus risus, lobortis sit amet eleifend non, imperdiet vel lorem. " class="_icon-info">Openstaande volume</li>
-									<li data-tippy-content=" Vestibulum vehicula metus nec arcu viverra laoreet. Nunc pharetra magna a sodales pretium. " class="_icon-info">Inkoopstrategie</li>
-									<li data-tippy-content="Duis in enim iaculis, vulputate purus ut, vulputate justo. Vestibulum vehicula metus nec arcu viverra laoreet. Vestibulum lectus risus, lobortis sit amet eleifend non, imperdiet vel lorem. Nunc pharetra magna a sodales pretium. " class="_icon-info">Fixatie-advies</li>
-									<li data-tippy-content=" Vestibulum lectus risus, lobortis sit amet eleifend non, imperdiet vel lorem. " class="_icon-info">Scenario-analyses</li>
-								</ul>
-							</div>
-							<div data-da="#step2, 768" class="steps__img-block">
-								<picture><source srcset="img/beheren/step2.webp" type="image/webp"><img src="img/beheren/step2.png" alt="Inzicht"></picture>
-							</div>
-						</div>
-						<div class="steps__item">
-							<div class="steps__text-block">
-								<div id="step3" class="steps__mobile-block">
-									<div class="steps__mobile-text">
-										<div class="steps__title">3. Financieel beheer</div>
-										<div class="steps__sub-title">Ga voor gemak</div>
-										<div class="steps__desc">We controleren de facturen en losse problemen met leveranciers snel op. Dat
-											scheelt tijd, geld én energie. </div>
-									</div>
-								</div>
-								<a href="#" class="steps__button blue-button">Lees hoe je kan in- en verkopen</a>
-								<ul class="steps__list">
-									<li data-tippy-content="Duis in enim iaculis, vulputate purus ut, vulputate justo. Vestibulum vehicula metus nec arcu viverra laoreet. Vestibulum lectus risus, lobortis sit amet eleifend non, imperdiet vel lorem. Nunc pharetra magna a sodales pretium. " class="_icon-info">Energiemeters</li>
-									<li data-tippy-content=" Vestibulum vehicula metus nec arcu viverra laoreet. Vestibulum lectus risus, lobortis sit amet eleifend non, imperdiet vel lorem. " class="_icon-info">Energiemeters</li>
-									<li data-tippy-content=" Vestibulum lectus risus, lobortis sit amet eleifend non, imperdiet vel lorem. " class="_icon-info">Energiemeetdiensten</li>
-									<li data-tippy-content=" Vestibulum lectus risus, lobortis sit amet eleifend non, imperdiet vel lorem. " class="_icon-info">Energiemeetdiensten</li>
-									<li data-tippy-content=" Vestibulum lectus risus, lobortis sit amet eleifend non, imperdiet vel lorem. " class="_icon-info">Tussenmeters</li>
-									<li data-tippy-content=" Vestibulum lectus risus, lobortis sit amet eleifend non, imperdiet vel lorem. " class="_icon-info">Tussenmeters</li>
-								</ul>
-							</div>
-							<div data-da="#step3, 768" class="steps__img-block">
-								<picture><source srcset="img/beheren/step3.webp" type="image/webp"><img src="img/beheren/step3.png" alt="Inzicht"></picture>
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</section>
-			<section class="services">
-				<div class="services__container">
-					<div class="services__title">Alles op een rijtje</div>
-					<div class="services__subtitle">Alles om jouw energiehuishouden te verduurzamen.</div>
-					<div class="services__box">
-						<picture><source srcset="img/beheren/leaf.webp" type="image/webp"><img class="services__img-leaf" src="img/beheren/leaf.png" alt=""></picture>
-						<div class="services__item">
-							<div id="service1" class="services__item-top">
-								<div class="services__item-subtitle">Efficiënt beheren</div>
-								<div class="services__item-title">1. Inzicht</div>
-							</div>
-							<div class="services__item-bottom">
-								<ul class="services__item-list">
-									<li class="services__item-list-title">Wat zit erbij?</li>
-									<li>Energiemeetdiensten (optioneel)</li>
-									<li>Energiemonitoring</li>
-									<li>Verspilalarm</li>
-									<li>Dashboards & rapporten</li>
-									<li>Locatie benchmarks</li>
-								</ul>
-								<div class="services__item-show-more _icon-arrow-right">Bekijk inhoud pakket </div>
-								<a data-da="#service1, 768" href="#" class="services__item-button black-button">Bereken investering</a>
-							</div>
-						</div>
-						<div class="services__item">
-							<div id="service2" class="services__item-top">
-								<div class="services__item-subtitle">Efficiënt inkopen door inzicht</div>
-								<div class="services__item-title">2. Inkoop</div>
-							</div>
-							<div class="services__item-bottom">
-								<ul class="services__item-list">
-									<li class="services__item-list-title">Alles uit <span class="blue-text">1. Inzicht</span> en:</li>
-									<li>Onafhankelijk contractbeheer</li>
-									<li>Inzicht in openstaand volumes</li>
-									<li>Inzicht in marktpositie</li>
-									<li>Doorlopende budgetprognose</li>
-									<li>Wekelijkse marktupdate</li>
-								</ul>
-								<div class="services__item-show-more _icon-arrow-right">Bekijk inhoud pakket </div>
-								<a data-da="#service2, 768" href="#" class="services__item-button black-button">Bereken
-									investering</a>
-							</div>
-						</div>
-						<div class="services__item">
-							<div id="service3" class="services__item-top">
-								<div class="services__item-subtitle">Maximaal duurzaam besparen </div>
-								<div class="services__item-title">3. Compleet beheer</div>
-							</div>
-							<div class="services__item-bottom">
-								<ul class="services__item-list">
-									<li class="services__item-list-title">Alles van <span class="blue-text">1. Inzicht</span></li>
-									<li class="services__item-list-title">Alles van <span class="blue-text">2. Inkoop</span></li>
-									<li>Doorlopende factuurcontrole en correctie</li>
-									<li>Automatische verwerking betalingen</li>
-									<li>Managementinformatie</li>
-									<li>Energiebegroting per locatie</li>
-									<li>Stelpost- en verbruiksrapportage</li>
-								</ul>
-								<div class="services__item-show-more _icon-arrow-right">Bekijk inhoud pakket </div>
-								<a data-da="#service3, 768" href="#" class="services__item-button blue-button">Bereken investering</a>
-							</div>
-							<div class="services__item-tip">Meest groen dus.</div>
+								<button type="submit" class="form__main-button blue-button">
+									Ik schrijf me in
+								</button>
+							</form>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section class="ovner">
-				<div class="ovner__container">
-					<div class="ovner__box text-left">
-						<div class="ovner__text-block">
-							<div class="ovner__title">Wil je verder praten over de beste aanpak voor jouw situatie?</div>
-							<div class="ovner__desc">“Ik vertel je graag alles over de mogelijkheden. Laat weten wanneer het je
-								uitkomt,
-								dan kom ik bij je langs.”</div>
-							<div class="ovner__img-mobile"></div>
-							<div class="ovner__autor"><span>Marcel Visser</span> - Business Development</div>
-							<a href="#" class="ovner__button blue-button">Plan een afspraak</a>
-							<div class="ovner__contacts">
-								<div class="ovner__contacts-title">Contact</div>
-								<ul class="ovner__contacts-items">
-									<li><a href="tel:088123456789">088-123456789</a></li>
-									<li><a href="mailto:marcelvisser@groendus.nl">marcelvisser@groendus.nl</a></li>
-								</ul>
+			<!-- form 3 -->
+			<section class="form blue-form">
+				<div class="form__container">
+					<div class="form__header form__header-second">
+						<div class="form__text">
+							<div class="form__title">
+								Aanmelden inspiratiesessies & netwerkborrel
 							</div>
-						</div>
-						<div data-da=".ovner__img-mobile, 768" class="ovner__img-block">
-							<img class="ovner__img-ovner" src="img/beheren/Mask Group.png" alt="Marcel Visser">
-							<picture><source srcset="img/beheren/border-circle.webp" type="image/webp"><img class="ovner__img-border" src="img/beheren/border-circle.png" alt="border"></picture>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="beheren-slider">
-				<div class="beheren-slider__container">
-					<div class="beheren-slider__title">Aanvullend Groendus Onderzoek</div>
-					<div class="beheren-slider__subtitle">Naast onze doorlopende dienstverlening helpen we graag met het
-						verbeteren van je energiebeheer.</div>
-					<div class="beheren-slider__slider swiper">
-						<div class="beheren-slider__wrapper swiper-wrapper">
-							<div class="beheren-slider__slide swiper-slide">
-								<div class="beheren-slider__slider-top">
-									<div class="beheren-slider__slide-subtitle">Duurzaam beheren</div>
-									<div class="beheren-slider__slide-title">Inkoopstrategie</div>
-									<div class="beheren-slider__slide-text">Energieprijzen veranderen per uur en zijn lastig te
-										voorspellen.
-										Daarom stemmen we op basis van jullie data een inkoopstrategie met jullie af. </div>
-								</div>
-								<a href="#" class="beheren-slider__slide-button blue-button">EED uitbesteden</a>
-							</div>
-							<div class="beheren-slider__slide swiper-slide">
-								<div class="beheren-slider__slider-top">
-									<div class="beheren-slider__slide-subtitle">Duurzaam beheren</div>
-									<div class="beheren-slider__slide-title">Bespaarplan</div>
-									<div class="beheren-slider__slide-text">Met een bespaarplan krijg je inzicht in belangrijke factoren
-										als
-										het gaat om het verduurzamen van je bedrijf. Denk aan verlichting, klimaatinstallatie, zonnepanelen,
-										laadpalen en tussenmeters.</div>
-								</div>
-								<a href="#" class="beheren-slider__slide-button blue-button">Bespaarplan opstellen</a>
-							</div>
-							<div class="beheren-slider__slide swiper-slide">
-								<div class="beheren-slider__slider-top">
-									<div class="beheren-slider__slide-subtitle">Duurzaam beheren</div>
-									<div class="beheren-slider__slide-title">EED-Audit</div>
-									<div class="beheren-slider__slide-text">Om bedrijven sneller te laten verduurzamen moet er elke vier
-										jaar een EED Energie-audit worden uitgevoerd. Dit brengt de energiehuishouding en besparingspotentie
-										in kaart.</div>
-								</div>
-								<a href="#" class="beheren-slider__slide-button blue-button">Haalbaarheid analyseren</a>
+							<div class="form__subtitle">
+								Het energiesysteem van de toekomst
 							</div>
 						</div>
 					</div>
+					<form class="form__main" action="#">
+						<div class="form__item-select">
+							<label for="select">Bij welke sessie ben jij aanwezig?*</label>
+							<select name="select" id="select" required>
+								<option value="17 mei" selected>17 mei</option>
+								<option value="15 mei">15 mei</option>
+							</select>
+						</div>
+						<div class="form__item">
+							<label for="firstname">Voornaam*</label>
+							<input type="text" name="firstname" id="firstname" placeholder="Voornaam" required />
+						</div>
+						<div class="form__item">
+							<label for="lastname">Achternaam*</label>
+							<input type="text" name="lastname" id="lastname" placeholder="Achternaam" required />
+						</div>
+						<div class="form__item">
+							<label for="bedrijfsnaam">Bedrijfsnaam* </label>
+							<input type="text" name="bedrijfsnaam" id="bedrijfsnaam" placeholder="Bedrijfsnaam" required />
+						</div>
+						<div class="form__item">
+							<label for="functie">Functie* </label>
+							<input type="text" name="functie" id="functie" placeholder="Functie*" required />
+						</div>
+						<div class="form__item">
+							<label for="phone">Telefoon*</label>
+							<input type="number" name="phone" id="phone" placeholder="06 12345678" required />
+						</div>
+						<div class="form__item">
+							<label for="email">Email* </label>
+							<input type="email" name="email" id="email" placeholder="naam@voorbeeld.nl" required />
+						</div>
+						<div class="form__item">
+							<label for="ik-kom-alleen">Ik kom alleen/ ik kom samen met: *
+							</label>
+							<input type="text" name="ik-kom-alleen" id="ik-kom-alleen" placeholder="Ik kom alleen/ ik kom samen met: *" required />
+						</div>
+						<div class="form__item">
+							<label for="ik-kom-metde-trein">Ik kom metde trein/ ik kom met de auto:*
+							</label>
+							<input type="text" name="ik-kom-metde-trein" id="ik-kom-metde-trein" placeholder="Ik kom metde trein/ ik kom met de auto:*
+                  " required />
+						</div>
+						<div class="form__item">
+							<label for="opmerking">Opmerking </label>
+							<input type="text" name="opmerking" id="opmerking" placeholder="Opmerking" required />
+						</div>
+						<div class="form__item-checkbox">
+							<input type="checkbox" name="ik-geef" id="ik-geef" required />
+							<label for="ik-geef">Ik geef toestemming aan Groendus mijn gegevens op te slaan en
+								te verwerken en ga akkoord met de algemene
+								voorwaarden.*</label>
+						</div>
+						<button type="submit" class="form__main-button white-button">
+							Nu aanmelden
+						</button>
+					</form>
 				</div>
 			</section>
 		</main>

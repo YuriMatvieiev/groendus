@@ -1,52 +1,52 @@
 // Заголовки, общие БЄМ блоки и проче...
 
 .blue-button {
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: 700;
   @include adaptiveValue("font-size", 15, 12);
-    @include adaptiveValue("line-height", 17, 13);
-    background-color: $blue-light;
-    display: inline-block;
-    text-align: center; 
+  @include adaptiveValue("line-height", 17, 13);
+  background-color: $blue-light;
+  display: inline-block;
+  text-align: center;
 
-    @media (any-hover: hover){
-      &:hover{
-        background-color: $mainColor;
-        transition: all 0.3s ease 0s;
-      }
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: $mainColor;
+      transition: all 0.3s ease 0s;
     }
+  }
 }
 .black-button {
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: 700;
   @include adaptiveValue("font-size", 15, 12);
-    @include adaptiveValue("line-height", 17, 13);
-    background-color: $mainColor;
-    display: inline-block;
-    text-align: center; 
+  @include adaptiveValue("line-height", 17, 13);
+  background-color: $mainColor;
+  display: inline-block;
+  text-align: center;
 
-    @media (any-hover: hover){
-      &:hover{
-        background-color: #020202;
-        transition: all 0.3s ease 0s;
-      }
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: #020202;
+      transition: all 0.3s ease 0s;
     }
+  }
 }
 .white-button {
   color: $blue-light;
   font-weight: 700;
   @include adaptiveValue("font-size", 15, 12);
-    @include adaptiveValue("line-height", 17, 13);
-    background-color: #FFFFFF;
-    display: inline-block;
-    text-align: center; 
-    @media (any-hover: hover){
-      &:hover{
-        color: #FFFFFF;
-        background-color: #020202;
-        transition: all 0.3s ease 0s;
-      }
+  @include adaptiveValue("line-height", 17, 13);
+  background-color: #ffffff;
+  display: inline-block;
+  text-align: center;
+  @media (any-hover: hover) {
+    &:hover {
+      color: #ffffff;
+      background-color: #020202;
+      transition: all 0.3s ease 0s;
     }
+  }
 }
 .blue-text {
   color: $blue-light;
@@ -57,42 +57,269 @@
 }
 
 .rotated-arrow {
-  &::before{
+  &::before {
     transform: rotate(270deg) !important;
   }
 }
 
 //Disables block display
-.dnone{
+.dnone {
   display: none !important;
 }
 
 //Disables block display at resolution less than 767.98px
-.dnone-mobile{
-@media (max-width:$mobile){
-   display: none !important; 
-}
+.dnone-mobile {
+  @media (max-width: $mobile) {
+    display: none !important;
+  }
 }
 
-.text-right{
+.text-right {
   flex-direction: row-reverse !important;
 }
 
-.text-left{
-flex-direction: row !important;
+.text-left {
+  flex-direction: row !important;
 }
-.blue-number{
-  color: #FFFFFF;
+.blue-number {
+  color: #ffffff;
   background-color: $blue-light;
   width: 42px;
-    display: inline-block;
+  display: inline-block;
 }
-.nieuw{
+.nieuw {
   margin-left: 10px;
-          color: #ffffff;
-          font-size: rem(10);
-          font-weight: 400;
-          line-height: math.div(11, 10);
-          padding: 5px 7px;
-          background: #f96023;
+  color: #ffffff;
+  font-size: rem(10);
+  font-weight: 400;
+  line-height: math.div(11, 10);
+  padding: 5px 7px;
+  background: #f96023;
+}
+
+.form {
+  @include adaptiveValue("padding-top", 70, 40);
+  @include adaptiveValue("padding-bottom", 70, 40);
+  // .form__container
+  &__container {
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include adaptiveValue("gap", 40, 20);
+    @include adaptiveValue("margin-bottom", 80, 40);
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      text-align: center;
+    }
+    &-second {
+      text-align: center;
+    }
+  }
+  // .form__img
+  &__img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 10px solid $blue-dark;
+    @include adaptiveValue("max-width", 220, 180, 0, 1240, 768);
+    @include adaptiveValue("max-height", 220, 180, 0, 1240, 768);
+    @media (max-width: $mobile) {
+      max-width: rem(220);
+      max-height: rem(220);
+    }
+  }
+  &__text {
+    width: 100%;
+  }
+  // .form__title
+  &__title {
+    font-weight: 700;
+    @include adaptiveValue("font-size", 44, 22);
+    @include adaptiveValue("line-height", 44, 28);
+    margin-bottom: rem(16);
+  }
+  // .form__subtitle
+  &__subtitle {
+    @include adaptiveValue("font-size", 26, 16);
+    @include adaptiveValue("line-height", 28, 20);
+    margin-bottom: rem(16);
+  }
+  &__sub-button {
+    padding: 14px 21px;
+  }
+  &__main-button {
+    padding: 14px 21px;
+    display: block;
+    margin: 0 0 0 auto;
+  }
+  &__main {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  // .form__item
+  &__item {
+    display: flex;
+    margin-bottom: rem(16);
+    align-items: center;
+    @include adaptiveValue("font-size", 16, 14);
+    @include adaptiveValue("line-height", 21, 18);
+    font-weight: 700;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+    label {
+      width: 28%;
+      padding-right: 10px;
+      @media (max-width: $mobile) {
+        width: 100%;
+        margin-bottom: rem(8);
+        padding: 0;
+      }
+    }
+    input {
+      width: 100%;
+      font-weight: normal;
+      background: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.07);
+      padding: 11px 15px;
+      &::placeholder {
+        color: $blue-light;
+      }
+      &:focus {
+        outline: none;
+        border: 1px solid #006eff;
+      }
+      @media (max-width: $mobile) {
+        width: 100%;
+      }
+    }
+  }
+  &__item-checkbox {
+    display: flex;
+    margin-bottom: rem(24);
+    align-items: center;
+    gap: 16px;
+    @include adaptiveValue("font-size", 16, 14);
+    @include adaptiveValue("line-height", 21, 18);
+    font-weight: 700;
+    input {
+      min-width: rem(18);
+      min-height: rem(18);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+  }
+  &__item-select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: rem(16);
+    gap: 16px;
+    @include adaptiveValue("font-size", 20, 16);
+    @include adaptiveValue("line-height", 24, 20);
+    font-weight: 700;
+    @media (max-width: $mobileSmall) {
+      flex-direction: column;
+    }
+    select {
+      padding: 5px 10px;
+      border-radius: 10px;
+      outline: none;
+      @include adaptiveValue("font-size", 18, 16);
+      @include adaptiveValue("line-height", 24, 20);
+      color: $blue-light;
+      background-color: #fff;
+    }
+  }
+
+  // .form__wrap
+  &__wrap {
+    display: flex;
+    @include adaptiveValue("gap", 120, 40, 0, 1240, 768);
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+  // .form__left
+  &__left {
+    @include adaptiveValue("max-width", 550, 320, 0, 1240, 768);
+    @media (max-width: $mobile) {
+      max-width: unset;
+    }
+  }
+  // .form__left-title
+  &__left-title {
+    font-weight: 700;
+    @include adaptiveValue("font-size", 36, 22);
+    @include adaptiveValue("line-height", 40, 24);
+    margin-bottom: rem(16);
+    @media (max-width: $mobile) {
+      text-align: center;
+    }
+  }
+  // .form__left-text
+  &__left-text {
+    margin-bottom: rem(16);
+    @include adaptiveValue("font-size", 26, 16);
+    @include adaptiveValue("line-height", 28, 20);
+  }
+  // .form__left-list
+  &__left-list {
+    @include adaptiveValue("font-size", 18, 14);
+    @include adaptiveValue("line-height", 21, 18);
+    padding-left: 24px;
+    margin-bottom: rem(16);
+    li {
+      list-style: circle;
+
+      &:not(:last-child) {
+        margin-bottom: rem(8);
+      }
+    }
+  }
+  // .form__left-link
+  &__left-link {
+    color: $blue-light;
+    @media (any-hover: hover) {
+      &:hover {
+        transition: all 0.3s ease 0s;
+        text-decoration: underline;
+      }
+    }
+  }
+  // .form__right
+  &__right {
+  }
+}
+.blue-form {
+  color: #fff;
+  background-color: $blue-light;
+}
+.white-form {
+  color: #020202;
+  background-color: #fff;
+  .form__title {
+    @include adaptiveValue("font-size", 36, 22);
+    @include adaptiveValue("line-height", 40, 24);
+  }
+  .form__item {
+    flex-direction: column;
+    gap: 8px;
+    label {
+      width: 100%;
+    }
+  }
+  .form__item-checkbox {
+    flex-wrap: wrap;
+
+    font-weight: 400;
+  }
+  .form__item-checkbox-title {
+    width: 100%;
+    font-weight: 700;
+  }
+  .form__header {
+    margin-bottom: rem(24);
+  }
 }

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/_head.htm',{ "title":"Forms" })
+
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{ "theme": "white-theme" })
+      <main class="page">
+        <!-- form 1 -->
+        <section class="form blue-form">
+          <div class="form__container">
+            <div class="form__header">
+              <img
+                class="form__img"
+                src="@img/home/Boris-Steenhuis-form.jpg"
+                alt=""
+              />
+
+              <div class="form__text">
+                <div class="form__title">
+                  Aangenaam, ik ben Boris Steenhuis, portofolioanalist bij
+                  Groendus.
+                </div>
+                <div class="form__subtitle">
+                  Je kunt mij direct bereiken, of je gegevens achterlaten, dan
+                  bel ik je terug.
+                </div>
+                <a class="form__sub-button white-button" href="tel:085-1307342"
+                  >085-1307342</a
+                >
+              </div>
+            </div>
+            <form class="form__main" action="#">
+              <div class="form__item">
+                <label for="firstname">Voornaam*</label>
+                <input
+                  type="text"
+                  name="firstname"
+                  id="firstname"
+                  placeholder="Voornaam"
+                  required
+                />
+              </div>
+              <div class="form__item">
+                <label for="tussenvoegsel">Tussenvoegsel</label>
+                <input
+                  type="text"
+                  name="tussenvoegsel"
+                  id="tussenvoegsel"
+                  placeholder="Tussenvoegsel"
+                  required
+                />
+              </div>
+              <div class="form__item">
+                <label for="lastname">Achternaam*</label>
+                <input
+                  type="text"
+                  name="lastname"
+                  id="lastname"
+                  placeholder="Achternaam"
+                  required
+                />
+              </div>
+              <div class="form__item">
+                <label for="email">Email* </label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="naam@voorbeeld.nl"
+                  required
+                />
+              </div>
+              <div class="form__item">
+                <label for="phone">Telefoon*</label>
+                <input
+                  type="number"
+                  name="phone"
+                  id="phone"
+                  placeholder="06 12345678"
+                  required
+                />
+              </div>
+              <div class="form__item-checkbox">
+                <input type="checkbox" name="ik-geef" id="ik-geef" required />
+                <label for="ik-geef"
+                  >Ik geef toestemming aan Groendus mijn gegevens op te slaan en
+                  te verwerken en ga akkoord met de algemene
+                  voorwaarden.*</label
+                >
+              </div>
+              <button type="submit" class="form__main-button white-button">
+                Verstuur
+              </button>
+            </form>
+          </div>
+        </section>
+        <!-- form 2 -->
+        <section class="form white-form">
+          <div class="form__container">
+            <div class="form__wrap">
+              <div class="form__left">
+                <div class="form__left-title">Blijf bij</div>
+                <div class="form__left-text">
+                  Altijd up-to-date energiekennis? Schrijf je in voor de
+                  Groendus Nieuwsbrief. We delen het laatste energienieuws én
+                  geven je inzicht in recente trends en ontwikkelingen op de
+                  energiemarkt. Zo weet je altijd wat er speelt en loop je geen
+                  kansen mis.
+                </div>
+                <ul class="form__left-list">
+                  <li>Energiemarkt updates</li>
+                  <li>Actualiteit</li>
+                  <li>Interviews</li>
+                  <li>Webinars</li>
+                  <li>Innovaties</li>
+                  <li>En meer</li>
+                </ul>
+                <a href="" class="form__left-link"
+                  >« Terug naar het kenniscentrum</a
+                >
+              </div>
+              <div class="form__right">
+                <div class="form__header">
+                  <div class="form__text">
+                    <div class="form__title">Ja, ik wil Groendus updates</div>
+                    <div class="form__subtitle">
+                      Vul je gegevens in en je volgt de energietransitie op de
+                      voet. We mailen je niet vaker dan één keer per maand, en
+                      zorgen voor jouw privacy.
+                    </div>
+                  </div>
+                </div>
+                <form class="form__main" action="#">
+                  <div class="form__item">
+                    <label for="firstname">Voornaam </label>
+                    <input
+                      type="text"
+                      name="firstname"
+                      id="firstname"
+                      placeholder="Typ je voornaam in"
+                      required
+                    />
+                  </div>
+                  <div class="form__item">
+                    <label for="lastname">Achternaam </label>
+                    <input
+                      type="text"
+                      name="lastname"
+                      id="lastname"
+                      placeholder="Typ je achternaam in"
+                      required
+                    />
+                  </div>
+                  <div class="form__item">
+                    <label for="email">E-mailadres* </label>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="Type your email"
+                      required
+                    />
+                  </div>
+                  <div class="form__item-checkbox">
+                    <div class="form__item-checkbox-title">
+                      Ik geef toestemming aan Groendus mijn gegevens op te slaan
+                      en te verwerken en ga akkoord met de algemene
+                      voorwaarden.*
+                    </div>
+                    <input
+                      type="checkbox"
+                      name="ik-geef"
+                      id="ik-geef"
+                      required
+                    />
+                    <label for="ik-geef">Ik ga akkoord</label>
+                  </div>
+                  <button type="submit" class="form__main-button blue-button">
+                    Ik schrijf me in
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- form 3 -->
+        <section class="form blue-form">
+          <div class="form__container">
+            <div class="form__header form__header-second">
+              <div class="form__text">
+                <div class="form__title">
+                  Aanmelden inspiratiesessies & netwerkborrel
+                </div>
+                <div class="form__subtitle">
+                  Het energiesysteem van de toekomst
+                </div>
+              </div>
+            </div>
+            <form class="form__main" action="#">
+              <div class="form__item-select">
+                <label for="select">Bij welke sessie ben jij aanwezig?*</label>
+                <select name="select" id="select" required>
+                  <option value="17 mei" selected>17 mei</option>
+                  <option value="15 mei">15 mei</option>
+                </select>
+              </div>
+              <div class="form__item">
+                <label for="firstname">Voornaam*</label>
+                <input
+                  type="text"
+                  name="firstname"
+                  id="firstname"
+                  placeholder="Voornaam"
+                  required
+                />
+              </div>
+              <div class="form__item">
+                <label for="lastname">Achternaam*</label>
+                <input
+                  type="text"
+                  name="lastname"
+                  id="lastname"
+                  placeholder="Achternaam"
+                  required
+                />
+              </div>
+              <div class="form__item">
+                <label for="bedrijfsnaam">Bedrijfsnaam* </label>
+                <input
+                  type="text"
+                  name="bedrijfsnaam"
+                  id="bedrijfsnaam"
+                  placeholder="Bedrijfsnaam"
+                  required
+                />
+              </div>
+              <div class="form__item">
+                <label for="functie">Functie* </label>
+                <input
+                  type="text"
+                  name="functie"
+                  id="functie"
+                  placeholder="Functie*"
+                  required
+                />
+              </div>
+              <div class="form__item">
+                <label for="phone">Telefoon*</label>
+                <input
+                  type="number"
+                  name="phone"
+                  id="phone"
+                  placeholder="06 12345678"
+                  required
+                />
+              </div>
+              <div class="form__item">
+                <label for="email">Email* </label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="naam@voorbeeld.nl"
+                  required
+                />
+              </div>
+              <div class="form__item">
+                <label for="ik-kom-alleen"
+                  >Ik kom alleen/ ik kom samen met: *
+                </label>
+                <input
+                  type="text"
+                  name="ik-kom-alleen"
+                  id="ik-kom-alleen"
+                  placeholder="Ik kom alleen/ ik kom samen met: *"
+                  required
+                />
+              </div>
+              <div class="form__item">
+                <label for="ik-kom-metde-trein"
+                  >Ik kom metde trein/ ik kom met de auto:*
+                </label>
+                <input
+                  type="text"
+                  name="ik-kom-metde-trein"
+                  id="ik-kom-metde-trein"
+                  placeholder="Ik kom metde trein/ ik kom met de auto:*
+                  "
+                  required
+                />
+              </div>
+              <div class="form__item">
+                <label for="opmerking">Opmerking </label>
+                <input
+                  type="text"
+                  name="opmerking"
+                  id="opmerking"
+                  placeholder="Opmerking"
+                  required
+                />
+              </div>
+              <div class="form__item-checkbox">
+                <input type="checkbox" name="ik-geef" id="ik-geef" required />
+                <label for="ik-geef"
+                  >Ik geef toestemming aan Groendus mijn gegevens op te slaan en
+                  te verwerken en ga akkoord met de algemene
+                  voorwaarden.*</label
+                >
+              </div>
+              <button type="submit" class="form__main-button white-button">
+                Nu aanmelden
+              </button>
+            </form>
+          </div>
+        </section>
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+  </body>
+</html>
