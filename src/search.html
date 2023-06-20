@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/_head.htm',{ "title":"Search" })
+
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{ "theme": "white-theme" })
+      <main class="page">
+        <section class="search-result">
+          <div class="search-result__container">
+            <h3 class="search-result__title">
+              Hoe kunnen we jouw bedrijf helpen?
+            </h3>
+            <div class="search-result__form">
+              <input type="text" class="search-result__input" />
+              <button class="search-result__button _icon-search">zoek</button>
+            </div>
+            <div class="search-result__wrap">
+              <!-- If the search does not find anything -->
+
+              <div class="search-result__not-found" style="display: none">
+                We hebben helaas geen resultaten gevonden die aansluiten op je
+                zoekopdracht.
+              </div>
+              <!-- /If the search does not find anything -->
+
+              <!-- If the search request is completed, blocks are shown -->
+
+              <a href="#" class="search-result__item">
+                <div class="search-result__item-subtitle"></div>
+                <div class="search-result__item-title">Vastgoed</div>
+                <div class="search-result__item-text">
+                  Verduurzaming van vastgoed is een uitdaging. Groendus helpt
+                  met de slimste en meest rendabele weg naar een duurzame
+                  vastgoed portefeuille.
+                </div>
+              </a>
+              <a href="#" class="search-result__item">
+                <div class="search-result__item-subtitle">Kenniscentrum</div>
+                <div class="search-result__item-title">
+                  Energielabel C voor gebouwen
+                </div>
+                <div class="search-result__item-text">
+                  Kantoren moeten vanaf 1 januari 2023 aan energielabel C of
+                  hoger voldoen. Voldoet jouw kantoorpand nog niet aan deze
+                  eisen? Gemeenten mogen boetes opleggen of zelfs kantoorpanden
+                  sluiten.
+                </div>
+              </a>
+              <a href="#" class="search-result__item">
+                <div class="search-result__item-subtitle">Project</div>
+                <div class="search-result__item-title">
+                  Utrecht Science Park Bilthoven
+                </div>
+                <div class="search-result__item-text">
+                  Samen met Groendus geeft het Utrecht Science Park invulling
+                  aan de duurzaamheidsdoelstellingen van Gemeente De Bilt. Op
+                  verschillende daken wordt hier schone energie opgewekt door te
+                  profiteren van de zon.
+                </div>
+              </a>
+              <!-- /If the search request is completed, blocks are shown -->
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+  </body>
+</html>

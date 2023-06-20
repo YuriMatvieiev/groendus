@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Klantverhalen</title>
+	<title>Search</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -12,9 +12,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body class="klantverhalen">
+<body>
 	<div class="wrapper">
-		<header class="header blue-theme">
+		<header class="header white-theme">
 			<div class="header__top-wrap">
 				<div class="header__top">
 					<div class="header__top-block">
@@ -394,187 +394,61 @@
 		</header>
 
 		<main class="page">
-			<section class="klantverhalen-hero">
-				<div class="klantverhalen-hero__container">
-					<div class="klantverhalen-hero__img-left">
-						<img src="img/klantverhalen/wooman.svg" alt="woman">
+			<section class="search-result">
+				<div class="search-result__container">
+					<h3 class="search-result__title">
+						Hoe kunnen we jouw bedrijf helpen?
+					</h3>
+					<div class="search-result__form">
+						<input type="text" class="search-result__input" />
+						<button class="search-result__button _icon-search">zoek</button>
 					</div>
-					<div class="klantverhalen-hero__text">
-						<div class="klantverhalen-hero__subtitle">Voor wie is Groendus?</div>
-						<div class="klantverhalen-hero__title">Groendus is van en voor heel zakelijk Nederland</div>
-						<div class="klantverhalen-hero__desc">Of het nou zon, wind of warmte is. En of je nou ondernemer bent, of
-							werkt bij de overheid of een instelling. Met de nieuwste technologie helpen wij jouw bedrijf energie
-							besparen, opwekken en verkopen. </div>
-						<div class="klantverhalen-hero__select-box">
-							<div class="klantverhalen-hero__select-block select-block">
-								<button class="klantverhalen-hero__select-button select-button _icon-arrow-right">Groendus
-									diensten</button>
-								<ul class="klantverhalen-hero__select-list select-list" id="groendusDiensten" style="display: none;">
-									<li>
-										<input type="radio" id="besparen-check" name="groendusDiensten">
-										<label for="besparen-check">Besparen</label>
-									</li>
-									<li>
-										<input type="radio" id="opwekken-check" name="groendusDiensten">
-										<label for="opwekken-check">Opwekken</label>
-									</li>
-									<li>
-										<input type="radio" id="energiemarktplaats-check" name="groendusDiensten">
-										<label for="energiemarktplaats-check">Energiemarktplaats</label>
-									</li>
-									<li>
-										<input type="radio" id="slimverbruiken-check" name="groendusDiensten">
-										<label for="slimverbruiken-check">Slim verbruiken</label>
-									</li>
-									<button class="klantverhalen-hero__select-fiter" id="filter-btn">Filteren</button>
-								</ul>
-							</div>
-							<div class="klantverhalen-hero__select-block select-block">
-								<button class="klantverhalen-hero__select-button select-button _icon-arrow-right">Sectoren</button>
-								<ul class="klantverhalen-hero__select-list select-list" id="sectoren" style="display: none;">
-									<li>
-										<input type="radio" id="energiemarktplaats-check" name="sectoren">
-										<label for="energiemarktplaats-check">Energiemarktplaats</label>
-									</li>
-									<li>
-										<input type="radio" id="slimverbruiken-check" name="sectoren">
-										<label for="slimverbruiken-check">Slim verbruiken</label>
-									</li>
-									<li>
-										<input type="radio" id="besparen-check" name="sectoren">
-										<label for="besparen-check">Besparen</label>
-									</li>
-									<button class="klantverhalen-hero__select-fiter" id="filter-btn">Filteren</button>
-								</ul>
-							</div>
-							<div class="klantverhalen-hero__select-block select-block">
-								<button class="klantverhalen-hero__select-button select-button _icon-arrow-right">Aantal
-									vestigingen</button>
-								<ul class="klantverhalen-hero__select-list select-list" id="aantalVestigingen" style="display: none;">
-									<li>
-										<input type="radio" id="slimverbruiken-check" name="aantalVestigingen">
-										<label for="slimverbruiken-check">Slim verbruiken</label>
-									</li>
-									<li>
-										<input type="radio" id="energiemarktplaats-check" name="aantalVestigingen">
-										<label for="energiemarktplaats-check">Energiemarktplaats</label>
-									</li>
-									<li>
-										<input type="radio" id="besparen-check" name="aantalVestigingen">
-										<label for="besparen-check">Besparen</label>
-									</li>
-									<button class="klantverhalen-hero__select-fiter" id="filter-btn">Filteren</button>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="klantverhalen-hero__img-right">
-						<img src="img/klantverhalen/man.svg" alt="man">
-					</div>
-				</div>
-			</section>
-			<section class="klantverhalen-stories">
-				<div class="klantverhalen-stories__container">
-					<div class="klantverhalen-stories__block">
-						<a href="#" class="klantverhalen-stories__item text-right">
-							<div class="klantverhalen-stories__text">
-								<div class="klantverhalen-stories__title">Windpark Sailwind</div>
-								<div class="klantverhalen-stories__desc">Systeem van 886 zonnepanelen ontwikkeld. Hiervoor is een
-									quickscan uitgevoerd, SDE+ aangevraagd, een inkooptraject georganiseerd en bouwcoördinatie uitgevoerd.
-								</div>
-								<div class="klantverhalen-stories__bottom">
-									<ul class="klantverhalen-stories__list">
-										<li>Opwekken</li>
-										<li>Besparen</li>
-									</ul>
-									<div class="klantverhalen-stories__button _icon-arrow-right">Lees verhaal</div>
-								</div>
-							</div>
-							<picture><source srcset="img/klantverhalen/windPanel.webp" type="image/webp"><img class="klantverhalen-stories__img" src="img/klantverhalen/windPanel.png" alt=""></picture>
+					<div class="search-result__wrap">
+						<!-- If the search does not find anything -->
 
-						</a>
-						<a href="#" class="klantverhalen-stories__item text-right">
-							<div class="klantverhalen-stories__text">
-								<div class="klantverhalen-stories__title">Arvato Bertelsmann</div>
-								<div class="klantverhalen-stories__desc">Systeem van 886 zonnepanelen ontwikkeld. Hiervoor is een
-									quickscan uitgevoerd, SDE+ aangevraagd, een inkooptraject georganiseerd en bouwcoördinatie uitgevoerd.
-								</div>
-								<div class="klantverhalen-stories__bottom">
-									<ul class="klantverhalen-stories__list">
-										<li>Opwekken</li>
-										<li>Energiemarktplaats</li>
-									</ul>
-									<div class="klantverhalen-stories__button _icon-arrow-right">Lees verhaal</div>
-								</div>
+						<div class="search-result__not-found" style="display: none">
+							We hebben helaas geen resultaten gevonden die aansluiten op je
+							zoekopdracht.
+						</div>
+						<!-- /If the search does not find anything -->
+
+						<!-- If the search request is completed, blocks are shown -->
+
+						<a href="#" class="search-result__item">
+							<div class="search-result__item-subtitle"></div>
+							<div class="search-result__item-title">Vastgoed</div>
+							<div class="search-result__item-text">
+								Verduurzaming van vastgoed is een uitdaging. Groendus helpt
+								met de slimste en meest rendabele weg naar een duurzame
+								vastgoed portefeuille.
 							</div>
-							<picture><source srcset="img/klantverhalen/arvato.webp" type="image/webp"><img class="klantverhalen-stories__img" src="img/klantverhalen/arvato.png" alt=""></picture>
 						</a>
-						<a href="#" class="klantverhalen-stories__item text-right">
-							<div class="klantverhalen-stories__text">
-								<div class="klantverhalen-stories__title">‘s Heeren Loo</div>
-								<div class="klantverhalen-stories__desc">Systeem van 886 zonnepanelen ontwikkeld. Hiervoor is een
-									quickscan uitgevoerd, SDE+ aangevraagd, een inkooptraject georganiseerd en bouwcoördinatie uitgevoerd.
-								</div>
-								<div class="klantverhalen-stories__bottom">
-									<ul class="klantverhalen-stories__list">
-										<li>Opwekken</li>
-										<li>Besparen</li>
-									</ul>
-									<div class="klantverhalen-stories__button _icon-arrow-right">Lees verhaal</div>
-								</div>
+						<a href="#" class="search-result__item">
+							<div class="search-result__item-subtitle">Kenniscentrum</div>
+							<div class="search-result__item-title">
+								Energielabel C voor gebouwen
 							</div>
-							<picture><source srcset="img/klantverhalen/children.webp" type="image/webp"><img class="klantverhalen-stories__img" src="img/klantverhalen/children.png" alt=""></picture>
-						</a>
-						<a href="#" class="klantverhalen-stories__item text-right">
-							<div class="klantverhalen-stories__text">
-								<div class="klantverhalen-stories__title">Picnic</div>
-								<div class="klantverhalen-stories__desc">Systeem van 886 zonnepanelen ontwikkeld. Hiervoor is een
-									quickscan uitgevoerd, SDE+ aangevraagd, een inkooptraject georganiseerd en bouwcoördinatie uitgevoerd.
-								</div>
-								<div class="klantverhalen-stories__bottom">
-									<ul class="klantverhalen-stories__list">
-										<li>Opwekken</li>
-										<li>Slim Verbruiken</li>
-									</ul>
-									<div class="klantverhalen-stories__button _icon-arrow-right">Lees verhaal</div>
-								</div>
+							<div class="search-result__item-text">
+								Kantoren moeten vanaf 1 januari 2023 aan energielabel C of
+								hoger voldoen. Voldoet jouw kantoorpand nog niet aan deze
+								eisen? Gemeenten mogen boetes opleggen of zelfs kantoorpanden
+								sluiten.
 							</div>
-							<picture><source srcset="img/klantverhalen/truck.webp" type="image/webp"><img class="klantverhalen-stories__img" src="img/klantverhalen/truck.png" alt=""></picture>
 						</a>
-						<a href="#" class="klantverhalen-stories__item text-right">
-							<div class="klantverhalen-stories__text">
-								<div class="klantverhalen-stories__title">Radiotherapiegroep Arnhem</div>
-								<div class="klantverhalen-stories__desc">Systeem van 886 zonnepanelen ontwikkeld. Hiervoor is een
-									quickscan uitgevoerd, SDE+ aangevraagd, een inkooptraject georganiseerd en bouwcoördinatie uitgevoerd.
-								</div>
-								<div class="klantverhalen-stories__bottom">
-									<ul class="klantverhalen-stories__list">
-										<li>Opwekken</li>
-										<li>Slim Verbruiken</li>
-									</ul>
-									<div class="klantverhalen-stories__button _icon-arrow-right">Lees verhaal</div>
-								</div>
+						<a href="#" class="search-result__item">
+							<div class="search-result__item-subtitle">Project</div>
+							<div class="search-result__item-title">
+								Utrecht Science Park Bilthoven
 							</div>
-							<picture><source srcset="img/klantverhalen/glassHome.webp" type="image/webp"><img class="klantverhalen-stories__img" src="img/klantverhalen/glassHome.png" alt=""></picture>
-						</a>
-						<a href="#" class="klantverhalen-stories__item text-right">
-							<div class="klantverhalen-stories__text">
-								<div class="klantverhalen-stories__title">Wereldhave</div>
-								<div class="klantverhalen-stories__desc">Systeem van 886 zonnepanelen ontwikkeld. Hiervoor is een
-									quickscan uitgevoerd, SDE+ aangevraagd, een inkooptraject georganiseerd en bouwcoördinatie uitgevoerd.
-								</div>
-								<div class="klantverhalen-stories__bottom">
-									<ul class="klantverhalen-stories__list">
-										<li>Opwekken</li>
-										<li>Besparen</li>
-									</ul>
-									<div class="klantverhalen-stories__button _icon-arrow-right">Lees verhaal</div>
-								</div>
+							<div class="search-result__item-text">
+								Samen met Groendus geeft het Utrecht Science Park invulling
+								aan de duurzaamheidsdoelstellingen van Gemeente De Bilt. Op
+								verschillende daken wordt hier schone energie opgewekt door te
+								profiteren van de zon.
 							</div>
-							<picture><source srcset="img/klantverhalen/redHome.webp" type="image/webp"><img class="klantverhalen-stories__img" src="img/klantverhalen/redHome.png" alt=""></picture>
 						</a>
+						<!-- /If the search request is completed, blocks are shown -->
 					</div>
-					<button class="klantverhalen-stories__blue-button blue-button">Meer verhalen</button>
 				</div>
 			</section>
 		</main>

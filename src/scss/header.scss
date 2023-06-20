@@ -189,6 +189,9 @@
     @media (max-width: $tablet) {
       gap: 30px;
     }
+    @media (max-width: $mobileSmall) {
+      gap: 10px;
+    }
   }
   // .header__logo
   &__logo {
