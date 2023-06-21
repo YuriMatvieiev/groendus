@@ -1,0 +1,420 @@
+.client-header {
+  @include adaptiveValue("padding-top", 100, 40);
+  @include adaptiveValue("padding-bottom", 100, 40);
+  // .client-header__container
+  &__container {
+    display: flex;
+    align-items: center;
+    @include adaptiveValue("gap", 100, 20);
+    justify-content: center;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+  // .client-header__left
+  &__left {
+  }
+  // .client-header__breadcrumb
+  &__breadcrumb {
+    color: $blue-light;
+    margin-bottom: rem(16);
+    display: inline-block;
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  // .client-header__title
+  &__title {
+    font-weight: 700;
+    @include adaptiveValue("font-size", 52, 30);
+    @include adaptiveValue("line-height", 57, 33);
+    @media (max-width: $mobile) {
+      text-align: center;
+    }
+  }
+  // .client-header__right
+  &__right {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  // .client-header__item
+  &__item {
+    width: calc(50% - 15px);
+  }
+  // .client-header__number
+  &__number {
+    font-weight: 700;
+    @include adaptiveValue("font-size", 48, 32);
+    @include adaptiveValue("line-height", 53, 35);
+    color: $blue-light;
+    margin-bottom: rem(8);
+    display: flex;
+    justify-content: center;
+    @media (max-width: $mobile) {
+    }
+    span {
+      font-weight: 400;
+      @include adaptiveValue("font-size", 18, 16);
+      align-self: flex-end;
+      line-height: math.div(22, 18);
+    }
+  }
+  // .client-header__number-text
+  &__number-text {
+    @include adaptiveValue("font-size", 18, 14);
+    @include adaptiveValue("line-height", 25, 20);
+    text-align: center;
+  }
+}
+//========================================================================================================================================================
+
+.client-bg {
+  display: flex;
+  // .client-bg__img-desktop
+  &__img {
+    width: 100%;
+
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+      z-index: 2;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      position: relative;
+      object-fit: cover;
+    }
+  }
+  &__img-desktop {
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+  // .client-bg__img-mobile
+  &__img-mobile {
+    display: none;
+    @media (max-width: $mobile) {
+      display: block;
+    }
+  }
+  &__wrap {
+    margin-left: -100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    z-index: 3;
+  }
+  // .client-bg__container
+  &__container {
+    width: 100%;
+  }
+  // .client-bg__text
+  &__text {
+    padding: 64px 0;
+    color: #fff;
+    max-width: rem(500);
+  }
+  // .client-bg__review
+  &__review {
+    @include adaptiveValue("font-size", 36, 22);
+    @include adaptiveValue("line-height", 40, 24);
+    margin-bottom: rem(8);
+    font-weight: 700;
+  }
+  // .client-bg__client
+  &__client {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  // .client-bg__client-photo
+  &__client-photo {
+    max-width: rem(70);
+    max-height: rem(70);
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+  // .client-bg__client-name
+  &__client-name {
+    @include adaptiveValue("line-height", 30, 20);
+  }
+}
+//========================================================================================================================================================
+
+.client-review {
+  @include adaptiveValue("padding-top", 100, 40);
+  @include adaptiveValue("padding-bottom", 50, 20);
+  // .client-review__container
+  &__container {
+  }
+  &__text-box {
+    text-align: center;
+    max-width: rem(720);
+    margin: 0 auto;
+  }
+  // .client-review__subtitle
+  &__subtitle {
+    color: $blue-light;
+    margin-bottom: rem(16);
+  }
+  // .client-review__title
+  &__title {
+    font-weight: 700;
+    @include adaptiveValue("font-size", 52, 30);
+    @include adaptiveValue("line-height", 57, 33);
+    margin-bottom: rem(24);
+  }
+  // .client-review__text
+  &__text {
+    @include adaptiveValue("font-size", 21, 14);
+    @include adaptiveValue("line-height", 27, 20);
+    @include adaptiveValue("padding-bottom", 80, 40);
+  }
+  .full-video__text {
+    max-width: rem(450);
+  }
+}
+//========================================================================================================================================================
+
+.client-scroll {
+  @include adaptiveValue("padding-top", 50, 20);
+  @include adaptiveValue("padding-bottom", 50, 20);
+  // .client-scroll__container
+  &__container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+  &__left {
+    position: relative;
+    @include adaptiveValue("width", 430, 340, 0, 1240, 768);
+    @media (max-width: $mobile) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  // .client-scroll__moving-block
+  &__moving-block {
+    position: sticky;
+    top: 20vh;
+  }
+  // .client-scroll__moving-block-subitile
+  &__moving-block-subitile {
+    color: $blue-light;
+    margin-bottom: rem(16);
+  }
+  // .client-scroll__moving-block-title
+  &__moving-block-title {
+    font-weight: 700;
+    @include adaptiveValue("font-size", 36, 22);
+    @include adaptiveValue("line-height", 40, 24);
+  }
+  // .client-scroll__right
+  &__right {
+    width: 50%;
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+  }
+  // .client-scroll__item
+  &__item {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -130px;
+      width: 22px;
+      height: 22px;
+      background: #006eff;
+      border-radius: 50%;
+      z-index: 1;
+      @media (max-width: 1240px) {
+        display: none;
+      }
+    }
+    &:not(:last-child) {
+      @include adaptiveValue("padding-bottom", 130, 45);
+      background-color: #fff;
+    }
+  }
+  // .client-scroll__right-title
+  &__right-title {
+    color: $blue-light;
+    @include adaptiveValue("font-size", 24, 22);
+    @include adaptiveValue("line-height", 26, 24);
+    margin-bottom: rem(8);
+    font-weight: 700;
+    @media (max-width: $mobile) {
+      text-align: center;
+    }
+  }
+  // .client-scroll__right-subtitle
+  &__right-subtitle {
+    @include adaptiveValue("font-size", 16, 14);
+    @include adaptiveValue("line-height", 19, 17);
+    margin-bottom: rem(16);
+    font-weight: 700;
+    @media (max-width: $mobile) {
+      text-align: center;
+    }
+  }
+  // .client-scroll__right-text
+  &__right-text {
+    @include adaptiveValue("font-size", 18, 14);
+    line-height: math.div(25, 18);
+  }
+  .productpagina-steps__main-line-box {
+    @include adaptiveValue("left", 525, 450, 0, 1240, 991.98);
+    height: 69.5%;
+    @media (max-width: 1240px) {
+      display: none;
+    }
+  }
+  .productpagina-steps__main-ball {
+    z-index: 2;
+    top: 20vh;
+  }
+}
+//========================================================================================================================================================
+
+.client-images {
+  @include adaptiveValue("padding-top", 50, 20);
+  @include adaptiveValue("padding-bottom", 50, 20);
+  // .client-images__container
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    @media (max-width: $mobile) {
+      gap: 16px;
+    }
+  }
+  &__img {
+    width: calc(50% - 12px);
+    @include adaptiveValue("height", 406, 155);
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    @media (max-width: $mobile) {
+      width: calc(50% - 8px);
+    }
+    &:first-child {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+//========================================================================================================================================================
+
+.client-blue {
+  @include adaptiveValue("margin-top", 50, 20);
+  @include adaptiveValue("margin-bottom", 50, 20);
+  @media (max-width: $mobile) {
+    background-color: $blue-light;
+  }
+  // .client-blue__container
+  &__container {
+  }
+  &__wrap {
+    background-color: $blue-light;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include adaptiveValue("padding-left", 105, 0);
+    @include adaptiveValue("padding-right", 105, 0);
+    @include adaptiveValue("padding-top", 65, 45);
+    @include adaptiveValue("padding-bottom", 65, 45);
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+  // .client-blue__left
+  &__left {
+    color: #fff;
+    max-width: 500px;
+  }
+  // .client-blue__title
+  &__title {
+    @include adaptiveValue("font-size", 32, 22);
+    @include adaptiveValue("line-height", 35, 24);
+    font-weight: 700;
+    margin-bottom: rem(16);
+  }
+  // .client-blue__text
+  &__text {
+    font-size: rem(14);
+    line-height: math.div(21, 14);
+    margin-bottom: rem(24);
+  }
+  // .client-blue__button
+  &__button {
+    padding: 14px 21px;
+  }
+  // .client-blue__right
+  &__right {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+//========================================================================================================================================================
+.client-contact {
+  @include adaptiveValue("padding-top", 50, 20);
+  @include adaptiveValue("padding-bottom", 100, 80);
+  // .client-contact__container
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+  }
+  // .client-contact__images
+  &__images {
+    max-width: rem(300);
+    img {
+      width: 100%;
+    }
+  }
+  // .client-contact__title
+  &__title {
+    font-weight: 700;
+    @include adaptiveValue("font-size", 46, 30);
+    @include adaptiveValue("line-height", 51, 33);
+  }
+  // .client-contact__text
+  &__text {
+    font-size: rem(14);
+    line-height: math.div(20, 14);
+  }
+  // .client-contact__button
+  &__button {
+    padding: 14px 21px;
+  }
+}
