@@ -1,8 +1,8 @@
-.opwekken{
+.opwekken {
   .wrapper {
     overflow: visible;
     overflow-x: clip;
-}
+  }
 }
 
 //========================================================================================================================================================
@@ -11,55 +11,55 @@
   position: static;
   margin-top: rem(133);
   @include adaptiveValue("padding-bottom", 80, 45);
-  @media (max-width:$mobile){
-     margin-top: rem(186); 
+  @media (max-width: $mobile) {
+    margin-top: rem(186);
   }
-  .ovner__box{
+  .ovner__box {
     box-shadow: none;
     padding: 0;
     border: none;
   }
-  .ovner__subtitle{
+  .ovner__subtitle {
     margin-bottom: rem(8);
     color: $blue-light;
     @include adaptiveValue("font-size", 16, 14);
     @include adaptiveValue("line-height", 18, 15);
   }
   .ovner__text-block {
-@include adaptiveValue("max-width", 612, 390, 0, 1240, 768);
-@include adaptiveValue("padding-left", 87, 20, 0, 1240, 768);
-@media (max-width:$mobile){
-  padding: 0;
-    max-width: rem(545);
-    @media (max-width:$mobile){
-       text-align: center; 
+    @include adaptiveValue("max-width", 612, 390, 0, 1240, 768);
+    @include adaptiveValue("padding-left", 87, 20, 0, 1240, 768);
+    @media (max-width: $mobile) {
+      padding: 0;
+      max-width: rem(545);
+      @media (max-width: $mobile) {
+        text-align: center;
+      }
     }
-}
   }
-  .ovner__img-block{
+  .ovner__img-block {
     @include adaptiveValue("margin-right", -25, 0, 0, 1240, 768);
     @include adaptiveValue("width", 334, 327, 0, 1240, 768);
     @include adaptiveValue("height", 394, 385, 0, 1240, 768);
   }
-  .ovner__img-border{
-top: 0;
-@include adaptiveValue("width", 334, 300, 0, 1240, 768);
-@media (max-width:$mobile){
-@include adaptiveValue("width", 334, 327, 0, 767.98, 375);
-}
+  .ovner__img-border {
+    top: 0;
+    @include adaptiveValue("width", 334, 300, 0, 1240, 768);
+    @media (max-width: $mobile) {
+      @include adaptiveValue("width", 334, 327, 0, 767.98, 375);
+    }
   }
-  .ovner__img-ovner{
+  .ovner__img-ovner {
     top: 6%;
     @include adaptiveValue("width", 260, 235, 0, 1240, 768);
     @include adaptiveValue("right", 37, 32, 0, 1240, 768);
     @include adaptiveValue("height", 370, 350, 0, 1240, 768);
-    @media (max-width:$mobile){
+    @media (max-width: $mobile) {
       @include adaptiveValue("width", 260, 255, 0, 767.98, 375);
       @include adaptiveValue("height", 370, 362, 0, 767.98, 375);
       @include adaptiveValue("right", 37, 36, 0, 767.98, 375);
     }
   }
-  .ovner__desc{
+  .ovner__desc {
     margin-top: rem(22);
     display: block;
     margin-bottom: 0;
@@ -74,54 +74,54 @@ top: 0;
   &__container {
     display: flex;
     justify-content: space-between;
-    @media (max-width:$mobile){
-       flex-direction: column; 
+    @media (max-width: $mobile) {
+      flex-direction: column;
     }
   }
   // .house-items__item
   &__item {
-         @media (max-width:$mobile){
-            &:not(:last-child) {
+    @media (max-width: $mobile) {
+      &:not(:last-child) {
         border-bottom: 1px solid rgba(20, 20, 20, 0.1);
         padding: 45px 0 40px;
       }
-      &:last-child{
+      &:last-child {
         padding-top: 45px;
-      } 
-         }
+      }
+    }
   }
-  &__box{
-@media (max-width:$mobile){
+  &__box {
+    @media (max-width: $mobile) {
       display: flex;
       flex-direction: row-reverse;
       align-items: center;
       justify-content: space-between;
       @include adaptiveValue("gap", 150, 10, 0, 767.98, 375);
-margin-bottom: rem(27);
+      margin-bottom: rem(27);
     }
   }
-  &__button{
+  &__button {
     display: none;
     padding: 14px 0;
-    @media (max-width:$mobile){
-       display: block; 
+    @media (max-width: $mobile) {
+      display: block;
     }
   }
   // .house-items__img
   &__img {
     margin-bottom: rem(30);
-    @media (max-width:$mobile){
-       margin-bottom: 0; 
+    @media (max-width: $mobile) {
+      margin-bottom: 0;
     }
-    img{
+    img {
       @include adaptiveValue("width", 194, 113);
     }
   }
   // .house-items__text
   &__text {
     @include adaptiveValue("width", 320, 220, 0, 1240, 768);
-    @media (max-width:$mobile){
-       width: 100%; 
+    @media (max-width: $mobile) {
+      width: 100%;
     }
   }
   // .house-items__title
@@ -134,14 +134,14 @@ margin-bottom: rem(27);
     font-weight: 700;
     color: #000;
     font-size: rem(18);
-    line-height: math.div(20 , 18);
-    @media (max-width:$mobile){
-       margin-bottom: rem(12); 
+    line-height: math.div(20, 18);
+    @media (max-width: $mobile) {
+      margin-bottom: rem(12);
     }
-    &::before{
+    &::before {
       font-size: rem(8);
-      @media (max-width:$mobile){
-         display: none; 
+      @media (max-width: $mobile) {
+        display: none;
       }
     }
   }
@@ -155,22 +155,23 @@ margin-bottom: rem(27);
 //========================================================================================================================================================
 
 .full-width-banner {
-  background: url("@img/opwekken/ful-width-bannerX2.png") no-repeat 100%; 
+  background: url("@img/opwekken/ful-width-bannerX2.png") no-repeat 100%;
   background-size: cover !important;
   @include adaptiveValue("height", 593, 354);
   background-position: center;
   display: flex;
   align-items: flex-end;
-  @media (max-width:$mobile){
-    background: url("@img/opwekken/ful-width-banner.png") no-repeat center left 75%; 
+  @media (max-width: $mobile) {
+    background: url("@img/opwekken/ful-width-banner.png") no-repeat center left
+      75%;
   }
   // .full-width-banner__container
   &__container {
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    @media (max-width:$mobile){
-       justify-content: center; 
+    @media (max-width: $mobile) {
+      justify-content: center;
     }
   }
 }
@@ -179,89 +180,72 @@ margin-bottom: rem(27);
 .opwekken-steps {
   padding-top: rem(165);
   @include adaptiveValue("padding-bottom", 145, 65);
-  @media (max-width:$mobile){
-     padding-top: rem(296); 
+  @media (max-width: $mobile) {
+    padding-top: rem(296);
   }
   // .opwekken-steps__container
   &__container {
     display: flex;
     justify-content: space-between;
-    @media (max-width:$mobile){
-       flex-direction: column-reverse; 
-       gap: 50px;
+    @media (max-width: $mobile) {
+      flex-direction: column-reverse;
+      gap: 50px;
     }
   }
   // .opwekken-steps__left
   &__left {
     width: 50%;
-    @media (max-width:$mobile){
-       width: 100%; 
+    position: relative;
+    .productpagina-steps__main-line-box {
+      @media (max-width: $mobile) {
+        display: none;
+      }
+      @include adaptiveValue("left", 44, 30, 0, 1240, 768);
+      height: 64.5%;
+      &::before {
+        z-index: 1;
+      }
+      .productpagina-steps__main-ball {
+        z-index: 3;
+        top: 20vh;
+      }
+    }
+    @media (max-width: $mobile) {
+      width: 100%;
     }
   }
   // .opwekken-steps__item
   &__item {
     @include adaptiveValue("padding-left", 150, 70, 0, 1240, 768);
     position: relative;
-    @media (max-width:$mobile){
-       padding: 0; 
+    @media (max-width: $mobile) {
+      padding: 0;
     }
-    &::before{
-      content: "";
-    display: block;
-    position: absolute;
-    height: 100%;
-    width: 0px;
-    @include adaptiveValue("left", 44, 30, 0, 1240, 768);
-    top: 0px;
-    border-left: 1px dashed rgba(0, 0, 0, 0.2);
-    @media (max-width:$mobile){
-       display: none; 
-    }
-    }
-    &::after{
-      content:'';
-      display: block;
-    position: absolute;
-    height: rem(22);
-    width: rem(22);
-    @include adaptiveValue("left", 44, 30, 0, 1240, 768);
-    top: 0px;
-    transform: translate(-50%);
-    background-color: $blue-light;
-    border-radius: 50%;
-    @media (max-width:$mobile){
-      display: none; 
-   }
-    }
-    &:first-child{
-      &::after{
-        content: url("@img/beheren/Group 698.svg");
 
-      @include adaptiveValue("width", 84, 60, 0, 1240, 768);
-      @include adaptiveValue("height", 84, 60, 0, 1240, 768);
-      background-color: #fff;
-      box-shadow: 0px 20px 24px rgba(0, 0, 0, 0.07);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      @media (max-width:$mobile){
-        display: none; 
-     }
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      height: rem(22);
+      width: rem(22);
+      @include adaptiveValue("left", 44, 30, 0, 1240, 768);
+      top: 0px;
+      transform: translate(-50%);
+      background-color: $blue-light;
+      border-radius: 50%;
+      z-index: 2;
+      @media (max-width: $mobile) {
+        display: none;
       }
     }
-    &:last-child{
-      &::before{
-        border: none;
-      }
+    &:not(:last-child) {
+      @include adaptiveValue("padding-bottom", 130, 45);
     }
-&:not(:last-child) {
-  @include adaptiveValue("padding-bottom", 130, 45);
-}
   }
   // .opwekken-steps__item-title
   &__item-title {
     @include adaptiveValue("font-size", 24, 22);
-@include adaptiveValue("line-height", 26, 24);
+    @include adaptiveValue("line-height", 26, 24);
     font-weight: 700;
     margin-bottom: rem(8);
     color: $blue-light;
@@ -282,8 +266,8 @@ margin-bottom: rem(27);
   // .opwekken-steps__item-button
   &__item-button {
     padding: 14px 21px;
-    @media (max-width:$mobile){
-       width: 100%; 
+    @media (max-width: $mobile) {
+      width: 100%;
     }
   }
   // .opwekken-steps__right
@@ -291,8 +275,8 @@ margin-bottom: rem(27);
     position: relative;
     @include adaptiveValue("margin-top", -400, -300, 0, 1240, 768);
     @include adaptiveValue("margin-right", 60, 0, 0, 1240, 768);
-    @media (max-width:$mobile){
-        @include adaptiveValue("margin-top", -375, -420, 0, 767.98, 370);
+    @media (max-width: $mobile) {
+      @include adaptiveValue("margin-top", -375, -420, 0, 767.98, 370);
     }
   }
   // .opwekken-steps__tip
@@ -303,12 +287,12 @@ margin-bottom: rem(27);
     background-color: #fff;
     position: sticky;
     top: 20vh;
-    @media (max-width:$tablet){
-       padding: 25px; 
+    @media (max-width: $tablet) {
+      padding: 25px;
     }
-    @media (max-width:$mobile){
-       position: static; 
-       width: 100%;
+    @media (max-width: $mobile) {
+      position: static;
+      width: 100%;
     }
   }
   // .opwekken-steps__tip-title
@@ -321,19 +305,19 @@ margin-bottom: rem(27);
   // .opwekken-steps__tip-list
   &__tip-list {
     @include adaptiveValue("margin-bottom", 38, 25);
-    li{
+    li {
       @include adaptiveValue("font-size", 16, 14);
-    @include adaptiveValue("line-height", 22, 20);
-    &:not(:last-child) {
-      margin-bottom: rem(25);
-    }
+      @include adaptiveValue("line-height", 22, 20);
+      &:not(:last-child) {
+        margin-bottom: rem(25);
+      }
     }
   }
   // .opwekken-steps__tip-button
   &__tip-button {
     padding: 14px 21px;
-    @media (max-width:$mobile){
-       width: 100%; 
+    @media (max-width: $mobile) {
+      width: 100%;
     }
   }
 }
@@ -343,8 +327,8 @@ margin-bottom: rem(27);
   display: none;
   background-color: $blue-light;
   padding: 15px 0;
-  @media (max-width:$mobile){
-     display: block; 
+  @media (max-width: $mobile) {
+    display: block;
   }
   // .mobile-text-button__container
   &__container {
@@ -357,10 +341,10 @@ margin-bottom: rem(27);
   &__text {
     font-weight: 700;
     font-size: rem(14);
-    line-height: math.div(15 , 14);
+    line-height: math.div(15, 14);
     color: #fff;
-    @media (max-width:520px){
-      width: rem(166); 
+    @media (max-width: 520px) {
+      width: rem(166);
     }
   }
   // .mobile-text-button__button
@@ -371,28 +355,28 @@ margin-bottom: rem(27);
 
 //========================================================================================================================================================
 
-.ovner.ovner-blue{
+.ovner.ovner-blue {
   margin-top: 0;
-  .ovner__box{
+  .ovner__box {
     background-color: $blue-light;
-    @media (max-width:$mobile){
-       background-color: #fff; 
+    @media (max-width: $mobile) {
+      background-color: #fff;
     }
   }
-  .ovner__text-block{
-    color: #fff ;
-    @media (max-width:$mobile){
-       color: #020202; 
+  .ovner__text-block {
+    color: #fff;
+    @media (max-width: $mobile) {
+      color: #020202;
     }
   }
-  .ovner__button{
-    @media (max-width:$mobile){
-       background-color: $blue-light; 
-       @media (any-hover: hover){
-        &:hover{
+  .ovner__button {
+    @media (max-width: $mobile) {
+      background-color: $blue-light;
+      @media (any-hover: hover) {
+        &:hover {
           background-color: #020202;
         }
-       }
+      }
     }
   }
 }
@@ -405,7 +389,6 @@ margin-bottom: rem(27);
   // .opwekken-slider__container
   &__container {
     text-align: center;
-
   }
   // .opwekken-slider__subtitle
   &__subtitle {
@@ -413,8 +396,8 @@ margin-bottom: rem(27);
     @include adaptiveValue("font-size", 16, 14);
     @include adaptiveValue("line-height", 18, 15);
     @include adaptiveValue("margin-bottom", 12, 5);
-    @media (max-width:$mobile){
-       text-align: left; 
+    @media (max-width: $mobile) {
+      text-align: left;
     }
   }
   // .opwekken-slider__title
@@ -424,22 +407,21 @@ margin-bottom: rem(27);
     @include adaptiveValue("font-size", 32, 22);
     @include adaptiveValue("line-height", 35, 24);
     @include adaptiveValue("margin-bottom", 28, 23);
-    @media (max-width:$mobile){
-      text-align: left; 
-   }
+    @media (max-width: $mobile) {
+      text-align: left;
+    }
   }
   // .opwekken-slider__slider
   &__slider {
     padding: 75px;
-      margin: -75px;
-      overflow: visible !important;
-      @media (min-width:$mobile){
-        cursor: url("@img/cursor.svg") 50 50, move;
+    margin: -75px;
+    overflow: visible !important;
+    @media (min-width: $mobile) {
+      cursor: url("@img/cursor.svg") 50 50, move;
     }
   }
   // .opwekken-slider__wrapper
   &__wrapper {
-    
   }
   // .opwekken-slider__slide
   &__slide {
@@ -453,13 +435,13 @@ margin-bottom: rem(27);
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    @media (max-width:$mobile){
-        padding: 52px 20px 37px;
+    @media (max-width: $mobile) {
+      padding: 52px 20px 37px;
     }
   }
   // .opwekken-slider__slide-img-block
   &__slide-img-block {
-    img{
+    img {
       @include adaptiveValue("width", 210, 163);
     }
   }
@@ -480,4 +462,3 @@ margin-bottom: rem(27);
     @include adaptiveValue("line-height", 22, 16);
   }
 }
-

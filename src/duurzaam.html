@@ -1,138 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-@@include('html/_head.htm',{
-"title":"Duurzaam Innoveren"
-})
+  @@include('html/_head.htm',{ "title":"Duurzaam Innoveren" })
 
-<body class="duurzaam">
-  <div class="wrapper">
-    @@include('html/_header.htm',{
-    "theme": "blue-theme"
-    })
-    <main class="page">
-      <section class="blue-hero">
-        <div class="blue-hero__container">
-          <div class="blue-hero__text-block">
-            <div class="blue-hero__breadcrumbs">
-              <a class="_icon-arrow-right" href="#">Groendus aanbod</a>
-              <a href="#">Duurzaam innoveren</a>
-            </div>
-            <div class="blue-hero__title">Duurzaam innoveren</div>
-            <div class="blue-hero__desc">In een ideale wereld is schone energie de hele dag beschikbaar. Maar helaas, de
-              zon
-              schijnt niet altijd en soms is het windstil. Slimme innovaties zijn dé oplossing. Met opslag van energie,
-              bijvoorbeeld in batterijen, maken we de opgewekte energie beschikbaar voor de momenten dat het nodig is.
-            </div>
-          </div>
-          <div class="blue-hero__img-block">
-            <img src="@img/duurzaam/main-img.png" alt="main-img">
-          </div>
-        </div>
-        <div class="fun-fact">
-          <div class="fun-fact__container">
-            <div class="fun-fact__box">
-              <div class="fun-fact__item">
-                <div class="fun-fact__number">48<span>%</span></div>
-                <div class="fun-fact__text">gemiddelde CO2 reductie</div>
+  <body class="duurzaam">
+    <div class="wrapper">
+      @@include('html/_header.htm',{ "theme": "blue-theme" })
+      <main class="page">
+        <section class="blue-hero">
+          <div class="blue-hero__container">
+            <div class="blue-hero__text-block">
+              <div class="blue-hero__breadcrumbs">
+                <a class="_icon-arrow-right" href="#">Groendus aanbod</a>
+                <a href="#">Duurzaam innoveren</a>
               </div>
-              <div class="fun-fact__item">
-                <div class="fun-fact__number">15<span>%</span></div>
-                <div class="fun-fact__text">gemiddelde gerealiseerd besparing</div>
-              </div>
-              <div class="fun-fact__item">
-                <div class="fun-fact__number">36<span>k</span></div>
-                <div class="fun-fact__text">besparing door factuurcontrole</div>
+              <div class="blue-hero__title">Duurzaam innoveren</div>
+              <div class="blue-hero__desc">
+                In een ideale wereld is schone energie de hele dag beschikbaar.
+                Maar helaas, de zon schijnt niet altijd en soms is het windstil.
+                Slimme innovaties zijn dé oplossing. Met opslag van energie,
+                bijvoorbeeld in batterijen, maken we de opgewekte energie
+                beschikbaar voor de momenten dat het nodig is.
               </div>
             </div>
+            <div class="blue-hero__img-block">
+              <img src="@img/duurzaam/main-img.png" alt="main-img" />
+            </div>
           </div>
-        </div>
-      </section>
-      <section class="duurzaam-steps">
-        <div class="duurzaam-steps__container">
-          <div class="duurzaam-steps__title">Onze drie innovaties op een rijtje</div>
-          <div class="duurzaam-steps__desc">Onze innovatieve oplossingen maken van jou een slimme koploper.</div>
-          <div class="duurzaam-steps__box">
-            <div class="steps__line"></div>
-            <div class="steps__top-circle"><img src="@img/beheren/Group 698.svg" alt=""></div>
-            <div class="steps__step1-circle"></div>
-            <div class="steps__step2-circle"></div>
-            <div class="duurzaam-steps__item">
-              <div data-da="#step1, 768" class="duurzaam-steps__item-img">
-                <img src="@img/duurzaam/step1.png" alt="Computer">
-              </div>
-              <div class="duurzaam-steps__item-text">
-                <div class="duurzaam-steps__item-subtitle">Loklaal en duurzaam, dus écht schoon inkopen</div>
-                <div class="duurzaam-steps__item-title"><span class="blue-text">Nieuw:</span> de Energiemarktplaats
+          <div class="fun-fact">
+            <div class="fun-fact__container">
+              <div class="fun-fact__box">
+                <div class="fun-fact__item">
+                  <div class="fun-fact__number">48<span>%</span></div>
+                  <div class="fun-fact__text">gemiddelde CO2 reductie</div>
                 </div>
-                <div id="step1" class="duurzaam-steps__mobile-img"></div>
-                <div class="duurzaam-steps__item-desc">Wissel duurzame energie uit met ondernemers in je eigen regio.
-                  Koop of verkoop duurzaam opgewekte stroom van ondernemers uit jouw regio. Afgestemd op je verbuik. Zo
-                  innoveren we de energiemarkt naar écht duurzaam. </div>
-                <a href="#" class="duurzaam-steps__item-button blue-button">Ontdek de Energiemarktplaats</a>
-              </div>
-            </div>
-            <div class="duurzaam-steps__item">
-              <div data-da="#step2, 768" class="duurzaam-steps__item-img">
-                <img src="@img/duurzaam/step2.png" alt="Engeniring">
-              </div>
-              <div class="duurzaam-steps__item-text">
-                <div class="duurzaam-steps__item-subtitle">Bewaar duurzame energie voor als het niet beschikbaar is.
+                <div class="fun-fact__item">
+                  <div class="fun-fact__number">15<span>%</span></div>
+                  <div class="fun-fact__text">
+                    gemiddelde gerealiseerd besparing
+                  </div>
                 </div>
-                <div class="duurzaam-steps__item-title">Energieopslag in batterijen</div>
-                <div id="step2" class="duurzaam-steps__mobile-img"></div>
-                <div class="duurzaam-steps__item-desc">Verduurzamen en geld verdienen gaat samen met energieopslag.
-                  Investeren in batterijopslag is slim en duurzaam. Het vergroot je aandeel in écht groene energie. En
-                  je verdient automatisch door de prijs-schommelingen in de energiemarkt.</div>
-                <a href="#" class="duurzaam-steps__item-button blue-button">Alles over duurzame batterijen</a>
-              </div>
-            </div>
-            <div class="duurzaam-steps__item">
-              <div data-da="#step3, 768" class="duurzaam-steps__item-img">
-                <img src="@img/duurzaam/step3.png" alt="car">
-              </div>
-              <div class="duurzaam-steps__item-text">
-                <div class="duurzaam-steps__item-subtitle">Met bidirectionaal laden wordt je wagenpark de accu van je
-                  bedrijf.</div>
-                <div class="duurzaam-steps__item-title">Slimme laadpalen</div>
-                <div id="step3" class="duurzaam-steps__mobile-img"></div>
-                <div class="duurzaam-steps__item-desc">Koop of verkoop duurzaam opgewekte stroom van ondernemers uit
-                  jouw regio. Afgestemd op je verbuik. Zo innoveren we de energiemarkt naar écht duurzaam. </div>
-                <a href="#" class="duurzaam-steps__item-button blue-button">Alles over Slimme laadpalen</a>
+                <div class="fun-fact__item">
+                  <div class="fun-fact__number">36<span>k</span></div>
+                  <div class="fun-fact__text">
+                    besparing door factuurcontrole
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="ovner ovner-blue">
-        <div class="ovner__container">
-          <div class="ovner__box text-left">
-            <div class="ovner__text-block">
-              <div class="ovner__title">Wil je verder praten over de beste aanpak voor jouw situatie?</div>
-              <div class="ovner__desc">“Ik vertel je graag alles over de mogelijkheden. Laat weten wanneer het je
-                uitkomt,
-                dan kom ik bij je langs.”</div>
-              <div id="ovner__img-mobile" class="ovner__img-mobile"></div>
-              <div class="ovner__autor"><span>Marcel Visser</span> - Business Development</div>
-              <a href="#" class="ovner__button black-button">Plan een afspraak</a>
-              <div class="ovner__contacts">
-                <div class="ovner__contacts-title">Contact</div>
-                <ul class="ovner__contacts-items">
-                  <li><a href="tel:088123456789">088-123456789</a></li>
-                  <li><a href="mailto:marcelvisser@groendus.nl">marcelvisser@groendus.nl</a></li>
-                </ul>
+        </section>
+        <section class="duurzaam-steps">
+          <div class="duurzaam-steps__container">
+            <div class="duurzaam-steps__title">
+              Onze drie innovaties op een rijtje
+            </div>
+            <div class="duurzaam-steps__desc">
+              Onze innovatieve oplossingen maken van jou een slimme koploper.
+            </div>
+            <div class="duurzaam-steps__box">
+              <div class="duurzaam-steps__item text-right">
+                <div class="duurzaam-steps__item-text">
+                  <div class="duurzaam-steps__item-subtitle">
+                    Loklaal en duurzaam, dus écht schoon inkopen
+                  </div>
+                  <div class="duurzaam-steps__item-title">
+                    <span class="blue-text">Nieuw:</span> de Energiemarktplaats
+                  </div>
+                  <div id="step1" class="duurzaam-steps__mobile-img"></div>
+                  <div class="duurzaam-steps__item-desc">
+                    Wissel duurzame energie uit met ondernemers in je eigen
+                    regio. Koop of verkoop duurzaam opgewekte stroom van
+                    ondernemers uit jouw regio. Afgestemd op je verbuik. Zo
+                    innoveren we de energiemarkt naar écht duurzaam.
+                  </div>
+                  <a href="#" class="duurzaam-steps__item-button blue-button"
+                    >Ontdek de Energiemarktplaats</a
+                  >
+                </div>
+                <div data-da="#step1, 768" class="duurzaam-steps__item-img">
+                  <img src="@img/duurzaam/step1.png" alt="Computer" />
+                </div>
+                <div class="productpagina-steps__main-line-box">
+                  <div class="productpagina-steps__main-ball">
+                    <img src="@img/beheren/Group 698.svg" class="" />
+                  </div>
+                </div>
+                <div class="steps__step1-circle"></div>
+                <div class="steps__step2-circle"></div>
+                <div class="steps__step3-circle"></div>
+              </div>
+              <div class="duurzaam-steps__item text-right">
+                <div class="duurzaam-steps__item-text">
+                  <div class="duurzaam-steps__item-subtitle">
+                    Bewaar duurzame energie voor als het niet beschikbaar is.
+                  </div>
+                  <div class="duurzaam-steps__item-title">
+                    Energieopslag in batterijen
+                  </div>
+                  <div id="step2" class="duurzaam-steps__mobile-img"></div>
+                  <div class="duurzaam-steps__item-desc">
+                    Verduurzamen en geld verdienen gaat samen met energieopslag.
+                    Investeren in batterijopslag is slim en duurzaam. Het
+                    vergroot je aandeel in écht groene energie. En je verdient
+                    automatisch door de prijs-schommelingen in de energiemarkt.
+                  </div>
+                  <a href="#" class="duurzaam-steps__item-button blue-button"
+                    >Alles over duurzame batterijen</a
+                  >
+                </div>
+                <div data-da="#step2, 768" class="duurzaam-steps__item-img">
+                  <img src="@img/duurzaam/step2.png" alt="Engeniring" />
+                </div>
+              </div>
+              <div class="duurzaam-steps__item text-right">
+                <div class="duurzaam-steps__item-text">
+                  <div class="duurzaam-steps__item-subtitle">
+                    Met bidirectionaal laden wordt je wagenpark de accu van je
+                    bedrijf.
+                  </div>
+                  <div class="duurzaam-steps__item-title">Slimme laadpalen</div>
+                  <div id="step3" class="duurzaam-steps__mobile-img"></div>
+                  <div class="duurzaam-steps__item-desc">
+                    Koop of verkoop duurzaam opgewekte stroom van ondernemers
+                    uit jouw regio. Afgestemd op je verbuik. Zo innoveren we de
+                    energiemarkt naar écht duurzaam.
+                  </div>
+                  <a href="#" class="duurzaam-steps__item-button blue-button"
+                    >Alles over Slimme laadpalen</a
+                  >
+                </div>
+                <div data-da="#step3, 768" class="duurzaam-steps__item-img">
+                  <img src="@img/duurzaam/step3.png" alt="car" />
+                </div>
               </div>
             </div>
-            <div data-da="#ovner__img-mobile, 768" class="ovner__img-block">
-              <img class="ovner__img-ovner" src="@img/beheren/Mask Group.png" alt="Marcel Visser">
-              <img class="ovner__img-border" src="@img/beheren/border-circle.png" alt="border">
+          </div>
+        </section>
+        <section class="ovner ovner-blue">
+          <div class="ovner__container">
+            <div class="ovner__box text-left">
+              <div class="ovner__text-block">
+                <div class="ovner__title">
+                  Wil je verder praten over de beste aanpak voor jouw situatie?
+                </div>
+                <div class="ovner__desc">
+                  “Ik vertel je graag alles over de mogelijkheden. Laat weten
+                  wanneer het je uitkomt, dan kom ik bij je langs.”
+                </div>
+                <div id="ovner__img-mobile" class="ovner__img-mobile"></div>
+                <div class="ovner__autor">
+                  <span>Marcel Visser</span> - Business Development
+                </div>
+                <a href="#" class="ovner__button black-button"
+                  >Plan een afspraak</a
+                >
+                <div class="ovner__contacts">
+                  <div class="ovner__contacts-title">Contact</div>
+                  <ul class="ovner__contacts-items">
+                    <li><a href="tel:088123456789">088-123456789</a></li>
+                    <li>
+                      <a href="mailto:marcelvisser@groendus.nl"
+                        >marcelvisser@groendus.nl</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div data-da="#ovner__img-mobile, 768" class="ovner__img-block">
+                <img
+                  class="ovner__img-ovner"
+                  src="@img/beheren/Mask Group.png"
+                  alt="Marcel Visser"
+                />
+                <img
+                  class="ovner__img-border"
+                  src="@img/beheren/border-circle.png"
+                  alt="border"
+                />
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-    </main>
-    @@include('html/_footer.htm',{})
-  </div>
-  @@include('html/_js.htm',{})
-</body>
-
+        </section>
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+  </body>
 </html>

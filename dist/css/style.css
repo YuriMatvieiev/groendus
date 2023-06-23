@@ -2667,6 +2667,19 @@ h6 {
   padding-top: 200px;
 }
 
+.steps__box .productpagina-steps__main-line-box {
+  left: 50%;
+  height: 78.7%;
+}
+
+.steps__box .productpagina-steps__main-line-box::before {
+  z-index: 1;
+}
+
+.steps__box .productpagina-steps__main-line-box .productpagina-steps__main-ball {
+  z-index: 3;
+}
+
 .steps__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2754,26 +2767,6 @@ h6 {
           justify-content: center;
 }
 
-.steps__line {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 1px;
-  height: 78%;
-  border-left: 1px dashed rgba(0, 0, 0, 0.2);
-}
-
-.steps__top-circle {
-  padding: 27px 31px;
-  background-color: #fff;
-  -webkit-box-shadow: 0px 20px 24px rgba(0, 0, 0, 0.04);
-          box-shadow: 0px 20px 24px rgba(0, 0, 0, 0.04);
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-  left: 46.5%;
-}
-
 .steps__step1-circle {
   position: absolute;
   width: 1.375rem;
@@ -2781,6 +2774,11 @@ h6 {
   background: #006eff;
   border-radius: 50%;
   top: 208px;
+  z-index: 2;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
 
 .steps__step2-circle {
@@ -2790,6 +2788,11 @@ h6 {
   background: #006eff;
   border-radius: 50%;
   top: 680px;
+  z-index: 2;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
 
 .steps__step3-circle {
@@ -2799,6 +2802,11 @@ h6 {
   background: #006eff;
   border-radius: 50%;
   bottom: 320px;
+  z-index: 2;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
 
 .services {
@@ -2848,7 +2856,7 @@ h6 {
   display: none;
   cursor: pointer;
   padding: 17px 0px;
-  border-top: 0.5px solid #A0A0A0;
+  border-top: 0.5px solid #a0a0a0;
   text-align: center;
   font-weight: 700;
   font-size: 0.875rem;
@@ -2910,7 +2918,7 @@ h6 {
 }
 
 .services__item-list li:not(:last-child) {
-  border-bottom: 0.5px solid #A0A0A0;
+  border-bottom: 0.5px solid #a0a0a0;
   padding: 10px 0;
 }
 
@@ -3090,7 +3098,7 @@ h6 {
   color: #006eff;
   font-weight: 700;
   padding-bottom: 25px;
-  border-bottom: 0.5px solid #A0A0A0;
+  border-bottom: 0.5px solid #a0a0a0;
 }
 
 .beheren-slider__slide-text {
@@ -3225,20 +3233,24 @@ h6 {
 
 .opwekken-steps__left {
   width: 50%;
+  position: relative;
+}
+
+.opwekken-steps__left .productpagina-steps__main-line-box {
+  height: 64.5%;
+}
+
+.opwekken-steps__left .productpagina-steps__main-line-box::before {
+  z-index: 1;
+}
+
+.opwekken-steps__left .productpagina-steps__main-line-box .productpagina-steps__main-ball {
+  z-index: 3;
+  top: 20vh;
 }
 
 .opwekken-steps__item {
   position: relative;
-}
-
-.opwekken-steps__item::before {
-  content: "";
-  display: block;
-  position: absolute;
-  height: 100%;
-  width: 0px;
-  top: 0px;
-  border-left: 1px dashed rgba(0, 0, 0, 0.2);
 }
 
 .opwekken-steps__item::after {
@@ -3253,26 +3265,7 @@ h6 {
           transform: translate(-50%);
   background-color: #006eff;
   border-radius: 50%;
-}
-
-.opwekken-steps__item:first-child::after {
-  content: url("../img/beheren/Group 698.svg");
-  background-color: #fff;
-  -webkit-box-shadow: 0px 20px 24px rgba(0, 0, 0, 0.07);
-          box-shadow: 0px 20px 24px rgba(0, 0, 0, 0.07);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.opwekken-steps__item:last-child::before {
-  border: none;
+  z-index: 2;
 }
 
 .opwekken-steps__item-title {
@@ -3432,12 +3425,30 @@ h6 {
   position: relative;
 }
 
+.duurzaam-steps__box .productpagina-steps__main-line-box .productpagina-steps__main-ball {
+  z-index: 3;
+}
+
 .duurzaam-steps__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 127px;
-  background-color: #fff;
+}
+
+.duurzaam-steps__item.text-left .productpagina-steps__main-line-box {
+  left: unset !important;
+}
+
+.duurzaam-steps__item.text-left .steps__step1-circle {
+  left: unset !important;
+}
+
+.duurzaam-steps__item.text-left .steps__step2-circle {
+  left: unset !important;
+}
+
+.duurzaam-steps__item.text-left .steps__step3-circle {
+  left: unset !important;
 }
 
 .duurzaam-steps__item-subtitle {
@@ -3455,6 +3466,10 @@ h6 {
 
 .duurzaam-steps__item-button {
   padding: 14px 27px;
+}
+
+.duurzaam-steps .steps__step1-circle {
+  top: 0;
 }
 
 .white-hero {
@@ -5977,6 +5992,20 @@ h6 {
     display: none;
   }
 
+  .steps__item.text-right .steps__text-block {
+    text-align: left;
+  }
+
+  .steps__item.text-right .steps__desc {
+    margin-left: 0;
+  }
+
+  .steps__item.text-right .steps__list li {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+
   .opwekken-slider__slider {
     cursor: url("../img/cursor.svg") 50 50, move;
   }
@@ -6191,20 +6220,12 @@ h6 {
     margin-bottom: 1.875rem;
   }
 
-  .steps__top-circle {
-    left: 36.25rem;
-  }
-
-  .steps__step1-circle {
-    left: 38.125rem;
-  }
-
   .steps__step2-circle {
-    left: 38.125rem;
+    bottom: 42.5rem;
   }
 
   .steps__step3-circle {
-    left: 38.125rem;
+    bottom: 20rem;
   }
 
   .services {
@@ -6315,24 +6336,16 @@ h6 {
     width: 20rem;
   }
 
+  .opwekken-steps__left .productpagina-steps__main-line-box {
+    left: 2.75rem;
+  }
+
   .opwekken-steps__item {
     padding-left: 9.375rem;
   }
 
-  .opwekken-steps__item::before {
-    left: 2.75rem;
-  }
-
   .opwekken-steps__item::after {
     left: 2.75rem;
-  }
-
-  .opwekken-steps__item:first-child::after {
-    width: 5.25rem;
-  }
-
-  .opwekken-steps__item:first-child::after {
-    height: 5.25rem;
   }
 
   .opwekken-steps__right {
@@ -6347,28 +6360,36 @@ h6 {
     width: 27.8125rem;
   }
 
+  .duurzaam-steps__box .productpagina-steps__main-line-box {
+    height: 52.375rem;
+  }
+
+  .duurzaam-steps__box .productpagina-steps__main-line-box {
+    left: 22.5625rem;
+  }
+
   .duurzaam-steps__item {
     gap: 7.9375rem;
   }
 
+  .duurzaam-steps__item.text-left .productpagina-steps__main-line-box {
+    right: 22.5625rem;
+  }
+
+  .duurzaam-steps__item.text-left .steps__step1-circle {
+    right: 21.25rem;
+  }
+
+  .duurzaam-steps__item.text-left .steps__step2-circle {
+    right: 21.25rem;
+  }
+
+  .duurzaam-steps__item.text-left .steps__step3-circle {
+    right: 21.25rem;
+  }
+
   .duurzaam-steps__item-img img {
     width: 19.375rem;
-  }
-
-  .duurzaam-steps .steps__line {
-    left: 23.1875rem;
-  }
-
-  .duurzaam-steps .steps__line {
-    height: 51.5625rem;
-  }
-
-  .duurzaam-steps .steps__top-circle {
-    left: 20.625rem;
-  }
-
-  .duurzaam-steps .steps__step1-circle {
-    top: 26.375rem;
   }
 
   .duurzaam-steps .steps__step1-circle {
@@ -6376,10 +6397,18 @@ h6 {
   }
 
   .duurzaam-steps .steps__step2-circle {
-    top: 50.9375rem;
+    top: 26.375rem;
   }
 
   .duurzaam-steps .steps__step2-circle {
+    left: 22.5625rem;
+  }
+
+  .duurzaam-steps .steps__step3-circle {
+    top: 50.9375rem;
+  }
+
+  .duurzaam-steps .steps__step3-circle {
     left: 22.5625rem;
   }
 
@@ -8998,20 +9027,12 @@ h6 {
     margin-bottom: 0.5rem;
   }
 
-  .steps__top-circle {
-    left: 20.5rem;
-  }
-
-  .steps__step1-circle {
-    left: 22.4375rem;
-  }
-
   .steps__step2-circle {
-    left: 22.4375rem;
+    bottom: 40.3125rem;
   }
 
   .steps__step3-circle {
-    left: 22.4375rem;
+    bottom: 19.125rem;
   }
 
   .services {
@@ -9122,24 +9143,16 @@ h6 {
     width: 13.75rem;
   }
 
+  .opwekken-steps__left .productpagina-steps__main-line-box {
+    left: 1.875rem;
+  }
+
   .opwekken-steps__item {
     padding-left: 4.375rem;
   }
 
-  .opwekken-steps__item::before {
-    left: 1.875rem;
-  }
-
   .opwekken-steps__item::after {
     left: 1.875rem;
-  }
-
-  .opwekken-steps__item:first-child::after {
-    width: 3.75rem;
-  }
-
-  .opwekken-steps__item:first-child::after {
-    height: 3.75rem;
   }
 
   .opwekken-steps__right {
@@ -9154,28 +9167,36 @@ h6 {
     width: 20.4375rem;
   }
 
+  .duurzaam-steps__box .productpagina-steps__main-line-box {
+    height: 56.375rem;
+  }
+
+  .duurzaam-steps__box .productpagina-steps__main-line-box {
+    left: 19.125rem;
+  }
+
   .duurzaam-steps__item {
     gap: 5.625rem;
   }
 
+  .duurzaam-steps__item.text-left .productpagina-steps__main-line-box {
+    right: 19.125rem;
+  }
+
+  .duurzaam-steps__item.text-left .steps__step1-circle {
+    right: 17.8125rem;
+  }
+
+  .duurzaam-steps__item.text-left .steps__step2-circle {
+    right: 17.8125rem;
+  }
+
+  .duurzaam-steps__item.text-left .steps__step3-circle {
+    right: 17.8125rem;
+  }
+
   .duurzaam-steps__item-img img {
     width: 17.0625rem;
-  }
-
-  .duurzaam-steps .steps__line {
-    left: 19.75rem;
-  }
-
-  .duurzaam-steps .steps__line {
-    height: 55.625rem;
-  }
-
-  .duurzaam-steps .steps__top-circle {
-    left: 17.1875rem;
-  }
-
-  .duurzaam-steps .steps__step1-circle {
-    top: 26.5625rem;
   }
 
   .duurzaam-steps .steps__step1-circle {
@@ -9183,10 +9204,18 @@ h6 {
   }
 
   .duurzaam-steps .steps__step2-circle {
-    top: 55rem;
+    top: 26.5625rem;
   }
 
   .duurzaam-steps .steps__step2-circle {
+    left: 19.125rem;
+  }
+
+  .duurzaam-steps .steps__step3-circle {
+    top: 55rem;
+  }
+
+  .duurzaam-steps .steps__step3-circle {
     left: 19.125rem;
   }
 
@@ -10539,7 +10568,7 @@ h6 {
   }
 
   .fun-fact__text {
-    color: #5B5B5B;
+    color: #5b5b5b;
     text-align: center;
   }
 
@@ -10589,6 +10618,10 @@ h6 {
     padding-top: 3.875rem;
   }
 
+  .steps__box .productpagina-steps__main-line-box {
+    display: none;
+  }
+
   .steps__item {
     background-color: #fff;
     position: relative;
@@ -10634,10 +10667,6 @@ h6 {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 35%;
             flex: 0 1 35%;
-  }
-
-  .steps__top-circle {
-    display: none;
   }
 
   .steps__step1-circle {
@@ -10725,7 +10754,7 @@ h6 {
     padding: 65px 0px;
     -webkit-box-shadow: none;
             box-shadow: none;
-    border-bottom: 0.5px solid #A0A0A0;
+    border-bottom: 0.5px solid #a0a0a0;
   }
 
   .ovner__text-block {
@@ -10864,6 +10893,10 @@ h6 {
     gap: 50px;
   }
 
+  .opwekken-steps__left .productpagina-steps__main-line-box {
+    display: none;
+  }
+
   .opwekken-steps__left {
     width: 100%;
   }
@@ -10872,15 +10905,7 @@ h6 {
     padding: 0;
   }
 
-  .opwekken-steps__item::before {
-    display: none;
-  }
-
   .opwekken-steps__item::after {
-    display: none;
-  }
-
-  .opwekken-steps__item:first-child::after {
     display: none;
   }
 
@@ -10934,9 +10959,29 @@ h6 {
     border-bottom: none;
   }
 
+  .duurzaam-steps__box::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 1px;
+    border-right: 1px dashed rgba(0, 0, 0, 0.2);
+    z-index: -3;
+  }
+
+  .duurzaam-steps__box .productpagina-steps__main-line-box {
+    display: none;
+  }
+
   .duurzaam-steps__box {
     padding-top: 100px;
     margin-top: 25px;
+  }
+
+  .duurzaam-steps__item {
+    background-color: #fff;
   }
 
   .duurzaam-steps__item {
@@ -10955,20 +11000,15 @@ h6 {
     margin-top: 1.5rem;
   }
 
-  .duurzaam-steps .steps__line {
-    left: 50%;
-    height: 100%;
-  }
-
-  .duurzaam-steps .steps__top-circle {
-    display: none;
-  }
-
   .duurzaam-steps .steps__step1-circle {
     display: none;
   }
 
   .duurzaam-steps .steps__step2-circle {
+    display: none;
+  }
+
+  .duurzaam-steps .steps__step3-circle {
     display: none;
   }
 
@@ -20809,51 +20849,27 @@ h6 {
     }
 }
 
-@supports (left: clamp( 20.5rem , -5.1271186441rem  +  53.3898305085vw , 36.25rem )) {
-    .steps__top-circle {
-      left: clamp( 20.5rem , -5.1271186441rem  +  53.3898305085vw , 36.25rem );
-    }
-}
-
-@supports not (left: clamp( 20.5rem , -5.1271186441rem  +  53.3898305085vw , 36.25rem )) {
-    .steps__top-circle {
-      left: calc(20.5rem + 15.75 * (100vw - 48rem) / 29.5);
-    }
-}
-
-@supports (left: clamp( 22.4375rem , -3.0879237288rem  +  53.1779661017vw , 38.125rem )) {
-    .steps__step1-circle {
-      left: clamp( 22.4375rem , -3.0879237288rem  +  53.1779661017vw , 38.125rem );
-    }
-}
-
-@supports not (left: clamp( 22.4375rem , -3.0879237288rem  +  53.1779661017vw , 38.125rem )) {
-    .steps__step1-circle {
-      left: calc(22.4375rem + 15.6875 * (100vw - 48rem) / 29.5);
-    }
-}
-
-@supports (left: clamp( 22.4375rem , -3.0879237288rem  +  53.1779661017vw , 38.125rem )) {
+@supports (bottom: clamp( 40.3125rem , 36.7531779661rem  +  7.4152542373vw , 42.5rem )) {
     .steps__step2-circle {
-      left: clamp( 22.4375rem , -3.0879237288rem  +  53.1779661017vw , 38.125rem );
+      bottom: clamp( 40.3125rem , 36.7531779661rem  +  7.4152542373vw , 42.5rem );
     }
 }
 
-@supports not (left: clamp( 22.4375rem , -3.0879237288rem  +  53.1779661017vw , 38.125rem )) {
+@supports not (bottom: clamp( 40.3125rem , 36.7531779661rem  +  7.4152542373vw , 42.5rem )) {
     .steps__step2-circle {
-      left: calc(22.4375rem + 15.6875 * (100vw - 48rem) / 29.5);
+      bottom: calc(40.3125rem + 2.1875 * (100vw - 48rem) / 29.5);
     }
 }
 
-@supports (left: clamp( 22.4375rem , -3.0879237288rem  +  53.1779661017vw , 38.125rem )) {
+@supports (bottom: clamp( 19.125rem , 17.7012711864rem  +  2.9661016949vw , 20rem )) {
     .steps__step3-circle {
-      left: clamp( 22.4375rem , -3.0879237288rem  +  53.1779661017vw , 38.125rem );
+      bottom: clamp( 19.125rem , 17.7012711864rem  +  2.9661016949vw , 20rem );
     }
 }
 
-@supports not (left: clamp( 22.4375rem , -3.0879237288rem  +  53.1779661017vw , 38.125rem )) {
+@supports not (bottom: clamp( 19.125rem , 17.7012711864rem  +  2.9661016949vw , 20rem )) {
     .steps__step3-circle {
-      left: calc(22.4375rem + 15.6875 * (100vw - 48rem) / 29.5);
+      bottom: calc(19.125rem + 0.875 * (100vw - 48rem) / 29.5);
     }
 }
 
@@ -21181,6 +21197,18 @@ h6 {
     }
 }
 
+@supports (left: clamp( 1.875rem , 0.4512711864rem  +  2.9661016949vw , 2.75rem )) {
+    .opwekken-steps__left .productpagina-steps__main-line-box {
+      left: clamp( 1.875rem , 0.4512711864rem  +  2.9661016949vw , 2.75rem );
+    }
+}
+
+@supports not (left: clamp( 1.875rem , 0.4512711864rem  +  2.9661016949vw , 2.75rem )) {
+    .opwekken-steps__left .productpagina-steps__main-line-box {
+      left: calc(1.875rem + 0.875 * (100vw - 48rem) / 29.5);
+    }
+}
+
 @supports (padding-left: clamp( 4.375rem , -3.7605932203rem  +  16.9491525424vw , 9.375rem )) {
     .opwekken-steps__item {
       padding-left: clamp( 4.375rem , -3.7605932203rem  +  16.9491525424vw , 9.375rem );
@@ -21194,18 +21222,6 @@ h6 {
 }
 
 @supports (left: clamp( 1.875rem , 0.4512711864rem  +  2.9661016949vw , 2.75rem )) {
-    .opwekken-steps__item::before {
-      left: clamp( 1.875rem , 0.4512711864rem  +  2.9661016949vw , 2.75rem );
-    }
-}
-
-@supports not (left: clamp( 1.875rem , 0.4512711864rem  +  2.9661016949vw , 2.75rem )) {
-    .opwekken-steps__item::before {
-      left: calc(1.875rem + 0.875 * (100vw - 48rem) / 29.5);
-    }
-}
-
-@supports (left: clamp( 1.875rem , 0.4512711864rem  +  2.9661016949vw , 2.75rem )) {
     .opwekken-steps__item::after {
       left: clamp( 1.875rem , 0.4512711864rem  +  2.9661016949vw , 2.75rem );
     }
@@ -21214,30 +21230,6 @@ h6 {
 @supports not (left: clamp( 1.875rem , 0.4512711864rem  +  2.9661016949vw , 2.75rem )) {
     .opwekken-steps__item::after {
       left: calc(1.875rem + 0.875 * (100vw - 48rem) / 29.5);
-    }
-}
-
-@supports (width: clamp( 3.75rem , 1.3093220339rem  +  5.0847457627vw , 5.25rem )) {
-    .opwekken-steps__item:first-child::after {
-      width: clamp( 3.75rem , 1.3093220339rem  +  5.0847457627vw , 5.25rem );
-    }
-}
-
-@supports not (width: clamp( 3.75rem , 1.3093220339rem  +  5.0847457627vw , 5.25rem )) {
-    .opwekken-steps__item:first-child::after {
-      width: calc(3.75rem + 1.5 * (100vw - 48rem) / 29.5);
-    }
-}
-
-@supports (height: clamp( 3.75rem , 1.3093220339rem  +  5.0847457627vw , 5.25rem )) {
-    .opwekken-steps__item:first-child::after {
-      height: clamp( 3.75rem , 1.3093220339rem  +  5.0847457627vw , 5.25rem );
-    }
-}
-
-@supports not (height: clamp( 3.75rem , 1.3093220339rem  +  5.0847457627vw , 5.25rem )) {
-    .opwekken-steps__item:first-child::after {
-      height: calc(3.75rem + 1.5 * (100vw - 48rem) / 29.5);
     }
 }
 
@@ -21277,6 +21269,30 @@ h6 {
     }
 }
 
+@supports (height: clamp( 52.375rem , 62.8834745763rem  +  -13.5593220339vw , 56.375rem )) {
+    .duurzaam-steps__box .productpagina-steps__main-line-box {
+      height: clamp( 52.375rem , 62.8834745763rem  +  -13.5593220339vw , 56.375rem );
+    }
+}
+
+@supports not (height: clamp( 52.375rem , 62.8834745763rem  +  -13.5593220339vw , 56.375rem )) {
+    .duurzaam-steps__box .productpagina-steps__main-line-box {
+      height: calc(56.375rem + -4 * (100vw - 48rem) / 29.5);
+    }
+}
+
+@supports (left: clamp( 19.125rem , 13.531779661rem  +  11.6525423729vw , 22.5625rem )) {
+    .duurzaam-steps__box .productpagina-steps__main-line-box {
+      left: clamp( 19.125rem , 13.531779661rem  +  11.6525423729vw , 22.5625rem );
+    }
+}
+
+@supports not (left: clamp( 19.125rem , 13.531779661rem  +  11.6525423729vw , 22.5625rem )) {
+    .duurzaam-steps__box .productpagina-steps__main-line-box {
+      left: calc(19.125rem + 3.4375 * (100vw - 48rem) / 29.5);
+    }
+}
+
 @supports (gap: clamp( 5.625rem , 1.8622881356rem  +  7.8389830508vw , 7.9375rem )) {
     .duurzaam-steps__item {
       gap: clamp( 5.625rem , 1.8622881356rem  +  7.8389830508vw , 7.9375rem );
@@ -21286,6 +21302,54 @@ h6 {
 @supports not (gap: clamp( 5.625rem , 1.8622881356rem  +  7.8389830508vw , 7.9375rem )) {
     .duurzaam-steps__item {
       gap: calc(5.625rem + 2.3125 * (100vw - 48rem) / 29.5);
+    }
+}
+
+@supports (right: clamp( 19.125rem , 13.531779661rem  +  11.6525423729vw , 22.5625rem )) {
+    .duurzaam-steps__item.text-left .productpagina-steps__main-line-box {
+      right: clamp( 19.125rem , 13.531779661rem  +  11.6525423729vw , 22.5625rem );
+    }
+}
+
+@supports not (right: clamp( 19.125rem , 13.531779661rem  +  11.6525423729vw , 22.5625rem )) {
+    .duurzaam-steps__item.text-left .productpagina-steps__main-line-box {
+      right: calc(19.125rem + 3.4375 * (100vw - 48rem) / 29.5);
+    }
+}
+
+@supports (right: clamp( 17.8125rem , 12.219279661rem  +  11.6525423729vw , 21.25rem )) {
+    .duurzaam-steps__item.text-left .steps__step1-circle {
+      right: clamp( 17.8125rem , 12.219279661rem  +  11.6525423729vw , 21.25rem );
+    }
+}
+
+@supports not (right: clamp( 17.8125rem , 12.219279661rem  +  11.6525423729vw , 21.25rem )) {
+    .duurzaam-steps__item.text-left .steps__step1-circle {
+      right: calc(17.8125rem + 3.4375 * (100vw - 48rem) / 29.5);
+    }
+}
+
+@supports (right: clamp( 17.8125rem , 12.219279661rem  +  11.6525423729vw , 21.25rem )) {
+    .duurzaam-steps__item.text-left .steps__step2-circle {
+      right: clamp( 17.8125rem , 12.219279661rem  +  11.6525423729vw , 21.25rem );
+    }
+}
+
+@supports not (right: clamp( 17.8125rem , 12.219279661rem  +  11.6525423729vw , 21.25rem )) {
+    .duurzaam-steps__item.text-left .steps__step2-circle {
+      right: calc(17.8125rem + 3.4375 * (100vw - 48rem) / 29.5);
+    }
+}
+
+@supports (right: clamp( 17.8125rem , 12.219279661rem  +  11.6525423729vw , 21.25rem )) {
+    .duurzaam-steps__item.text-left .steps__step3-circle {
+      right: clamp( 17.8125rem , 12.219279661rem  +  11.6525423729vw , 21.25rem );
+    }
+}
+
+@supports not (right: clamp( 17.8125rem , 12.219279661rem  +  11.6525423729vw , 21.25rem )) {
+    .duurzaam-steps__item.text-left .steps__step3-circle {
+      right: calc(17.8125rem + 3.4375 * (100vw - 48rem) / 29.5);
     }
 }
 
@@ -21301,54 +21365,6 @@ h6 {
     }
 }
 
-@supports (left: clamp( 19.75rem , 14.156779661rem  +  11.6525423729vw , 23.1875rem )) {
-    .duurzaam-steps .steps__line {
-      left: clamp( 19.75rem , 14.156779661rem  +  11.6525423729vw , 23.1875rem );
-    }
-}
-
-@supports not (left: clamp( 19.75rem , 14.156779661rem  +  11.6525423729vw , 23.1875rem )) {
-    .duurzaam-steps .steps__line {
-      left: calc(19.75rem + 3.4375 * (100vw - 48rem) / 29.5);
-    }
-}
-
-@supports (height: clamp( 51.5625rem , 62.2351694915rem  +  -13.7711864407vw , 55.625rem )) {
-    .duurzaam-steps .steps__line {
-      height: clamp( 51.5625rem , 62.2351694915rem  +  -13.7711864407vw , 55.625rem );
-    }
-}
-
-@supports not (height: clamp( 51.5625rem , 62.2351694915rem  +  -13.7711864407vw , 55.625rem )) {
-    .duurzaam-steps .steps__line {
-      height: calc(55.625rem + -4.0625 * (100vw - 48rem) / 29.5);
-    }
-}
-
-@supports (left: clamp( 17.1875rem , 11.594279661rem  +  11.6525423729vw , 20.625rem )) {
-    .duurzaam-steps .steps__top-circle {
-      left: clamp( 17.1875rem , 11.594279661rem  +  11.6525423729vw , 20.625rem );
-    }
-}
-
-@supports not (left: clamp( 17.1875rem , 11.594279661rem  +  11.6525423729vw , 20.625rem )) {
-    .duurzaam-steps .steps__top-circle {
-      left: calc(17.1875rem + 3.4375 * (100vw - 48rem) / 29.5);
-    }
-}
-
-@supports (top: clamp( 26.375rem , 26.8675847458rem  +  -0.6355932203vw , 26.5625rem )) {
-    .duurzaam-steps .steps__step1-circle {
-      top: clamp( 26.375rem , 26.8675847458rem  +  -0.6355932203vw , 26.5625rem );
-    }
-}
-
-@supports not (top: clamp( 26.375rem , 26.8675847458rem  +  -0.6355932203vw , 26.5625rem )) {
-    .duurzaam-steps .steps__step1-circle {
-      top: calc(26.5625rem + -0.1875 * (100vw - 48rem) / 29.5);
-    }
-}
-
 @supports (left: clamp( 19.125rem , 13.531779661rem  +  11.6525423729vw , 22.5625rem )) {
     .duurzaam-steps .steps__step1-circle {
       left: clamp( 19.125rem , 13.531779661rem  +  11.6525423729vw , 22.5625rem );
@@ -21361,15 +21377,15 @@ h6 {
     }
 }
 
-@supports (top: clamp( 50.9375rem , 61.6101694915rem  +  -13.7711864407vw , 55rem )) {
+@supports (top: clamp( 26.375rem , 26.8675847458rem  +  -0.6355932203vw , 26.5625rem )) {
     .duurzaam-steps .steps__step2-circle {
-      top: clamp( 50.9375rem , 61.6101694915rem  +  -13.7711864407vw , 55rem );
+      top: clamp( 26.375rem , 26.8675847458rem  +  -0.6355932203vw , 26.5625rem );
     }
 }
 
-@supports not (top: clamp( 50.9375rem , 61.6101694915rem  +  -13.7711864407vw , 55rem )) {
+@supports not (top: clamp( 26.375rem , 26.8675847458rem  +  -0.6355932203vw , 26.5625rem )) {
     .duurzaam-steps .steps__step2-circle {
-      top: calc(55rem + -4.0625 * (100vw - 48rem) / 29.5);
+      top: calc(26.5625rem + -0.1875 * (100vw - 48rem) / 29.5);
     }
 }
 
@@ -21381,6 +21397,30 @@ h6 {
 
 @supports not (left: clamp( 19.125rem , 13.531779661rem  +  11.6525423729vw , 22.5625rem )) {
     .duurzaam-steps .steps__step2-circle {
+      left: calc(19.125rem + 3.4375 * (100vw - 48rem) / 29.5);
+    }
+}
+
+@supports (top: clamp( 50.9375rem , 61.6101694915rem  +  -13.7711864407vw , 55rem )) {
+    .duurzaam-steps .steps__step3-circle {
+      top: clamp( 50.9375rem , 61.6101694915rem  +  -13.7711864407vw , 55rem );
+    }
+}
+
+@supports not (top: clamp( 50.9375rem , 61.6101694915rem  +  -13.7711864407vw , 55rem )) {
+    .duurzaam-steps .steps__step3-circle {
+      top: calc(55rem + -4.0625 * (100vw - 48rem) / 29.5);
+    }
+}
+
+@supports (left: clamp( 19.125rem , 13.531779661rem  +  11.6525423729vw , 22.5625rem )) {
+    .duurzaam-steps .steps__step3-circle {
+      left: clamp( 19.125rem , 13.531779661rem  +  11.6525423729vw , 22.5625rem );
+    }
+}
+
+@supports not (left: clamp( 19.125rem , 13.531779661rem  +  11.6525423729vw , 22.5625rem )) {
+    .duurzaam-steps .steps__step3-circle {
       left: calc(19.125rem + 3.4375 * (100vw - 48rem) / 29.5);
     }
 }

@@ -1,21 +1,19 @@
-.duurzaam{
-
-  .ovner{
+.duurzaam {
+  .ovner {
     @include adaptiveValue("margin-bottom", 135, 55);
-    @media (max-width:$mobile){
-       background-color: $blue-light ; 
-       
+    @media (max-width: $mobile) {
+      background-color: $blue-light;
     }
-    .ovner__box{
-      @media (max-width:$mobile){
-        background-color: $blue-light; 
-        border-bottom:   none;
+    .ovner__box {
+      @media (max-width: $mobile) {
+        background-color: $blue-light;
+        border-bottom: none;
       }
     }
-    .ovner__text-block{
+    .ovner__text-block {
       color: #fff !important;
     }
-    .ovner__button{
+    .ovner__button {
       background-color: #141414 !important;
     }
   }
@@ -40,7 +38,7 @@
   // .duurzaam-steps__desc
   &__desc {
     font-size: rem(18);
-    line-height: math.div(25 , 18);
+    line-height: math.div(25, 18);
     text-align: center;
   }
   // .duurzaam-steps__box
@@ -50,21 +48,62 @@
     flex-direction: column;
     @include adaptiveValue("gap", 155, 100);
     position: relative;
-    @media (max-width:$mobile){
-       padding-top: 100px; 
-       margin-top: 25px;
+    @media (max-width: $mobile) {
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        height: 100%;
+        width: 1px;
+        border-right: 1px dashed rgba(0, 0, 0, 0.2);
+        z-index: -3;
+      }
+    }
+    .productpagina-steps__main-line-box {
+      @include adaptiveValue("height", 838, 902, 0, 1240, 768);
+      @include adaptiveValue("left", 361, 306, 0, 1240, 768);
+      @media (max-width: $mobile) {
+        display: none;
+      }
+      .productpagina-steps__main-ball {
+        z-index: 3;
+      }
+    }
+    @media (max-width: $mobile) {
+      padding-top: 100px;
+      margin-top: 25px;
     }
   }
   // .duurzaam-steps__item
   &__item {
     display: flex;
-    gap: 127px;
     @include adaptiveValue("gap", 127, 90, 0, 1240, 768);
-    background-color: #fff;
-    
-    @media (max-width:$mobile){
+    @media (max-width: $mobile) {
+      background-color: #fff;
+    }
+    &.text-left {
+      .productpagina-steps__main-line-box {
+        left: unset !important;
+        @include adaptiveValue("right", 361, 306, 0, 1240, 768);
+      }
+      .steps__step1-circle {
+        left: unset !important;
+        @include adaptiveValue("right", 340, 285, 0, 1240, 768);
+      }
+      .steps__step2-circle {
+        left: unset !important;
+        @include adaptiveValue("right", 340, 285, 0, 1240, 768);
+      }
+      .steps__step3-circle {
+        left: unset !important;
+        @include adaptiveValue("right", 340, 285, 0, 1240, 768);
+      }
+    }
+    @media (max-width: $mobile) {
       position: relative;
-      z-index: 2; 
+      z-index: 2;
       padding: 25px 0;
       max-width: rem(500);
       margin: 0 auto;
@@ -72,14 +111,14 @@
   }
   // .duurzaam-steps__item-img
   &__item-img {
-    img{
+    img {
       @include adaptiveValue("width", 310, 273, 0, 1240, 768);
     }
   }
   // .duurzaam-steps__item-text
   &__item-text {
-    @media (max-width:$mobile){
-       text-align: center; 
+    @media (max-width: $mobile) {
+      text-align: center;
     }
   }
   // .duurzaam-steps__item-subtitle
@@ -103,8 +142,8 @@
     @include adaptiveValue("font-size", 18, 14);
     @include adaptiveValue("line-height", 29, 20);
     @include adaptiveValue("margin-bottom", 22, 24);
-    @media (max-width:$mobile){
-       margin-top: rem(24); 
+    @media (max-width: $mobile) {
+      margin-top: rem(24);
     }
   }
   // .duurzaam-steps__item-button
@@ -112,33 +151,25 @@
     padding: 14px 27px;
   }
   .steps {
-    // .steps__line
-    &__line{
-      @include adaptiveValue("left", 371, 316, 0, 1240, 768);
-      @include adaptiveValue("height", 825, 890, 0, 1240, 768);
-      @media (max-width:$mobile){
-         left: 50%;
-         height: 100%; 
+    &__step1-circle {
+      top: 0;
+      @include adaptiveValue("left", 361, 306, 0, 1240, 768);
+      @media (max-width: $mobile) {
+        display: none;
       }
     }
-    &__top-circle{
-      @include adaptiveValue("left", 330, 275, 0, 1240, 768);
-      @media (max-width:$mobile){
-         display: none; 
-      }
-    }
-    &__step1-circle{
+    &__step2-circle {
       @include adaptiveValue("top", 422, 425, 0, 1240, 768);
       @include adaptiveValue("left", 361, 306, 0, 1240, 768);
-      @media (max-width:$mobile){
-         display: none; 
+      @media (max-width: $mobile) {
+        display: none;
       }
     }
-    &__step2-circle{
+    &__step3-circle {
       @include adaptiveValue("top", 815, 880, 0, 1240, 768);
       @include adaptiveValue("left", 361, 306, 0, 1240, 768);
-      @media (max-width:$mobile){
-         display: none; 
+      @media (max-width: $mobile) {
+        display: none;
       }
     }
   }
