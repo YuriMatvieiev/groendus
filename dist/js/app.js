@@ -5775,7 +5775,7 @@
             }
             new core(".home-hero__slider", {
                 modules: [ Autoplay, Navigation ],
-                slidesPerView: "1",
+                slidesPerView: "auto",
                 spaceBetween: 300,
                 autoHeight: false,
                 speed: 800,
