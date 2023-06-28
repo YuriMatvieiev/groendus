@@ -5,33 +5,42 @@ import { flsModules } from "./modules.js";
 
 //=====================================================HEADER===================================================================================================
 
-const opwekkenLink = document.getElementById("opwekken-link");
-const inzichtLink = document.getElementById("inzicht-link");
-const duurzaamLink = document.getElementById("duurzaam-link");
-const opwekkenSubmenu = document.getElementById("opwekken");
-const inzichtSubmenu = document.getElementById("inzicht");
-const duurzaamSubmenu = document.getElementById("duurzaam");
+// Select the elements using querySelector instead of getElementById for brevity
+const opwekkenLink = document.querySelector("#opwekken-link");
+const inzichtLink = document.querySelector("#inzicht-link");
+const duurzaamLink = document.querySelector("#duurzaam-link");
+const opwekkenSubmenu = document.querySelector("#opwekken");
+const inzichtSubmenu = document.querySelector("#inzicht");
+const duurzaamSubmenu = document.querySelector("#duurzaam");
 
 function showSubmenu(submenu, link) {
+  // Hide all submenus
   opwekkenSubmenu.style.display = "none";
   inzichtSubmenu.style.display = "none";
   duurzaamSubmenu.style.display = "none";
+
+  // Display the selected submenu
   submenu.style.display = "flex";
+
+  // Remove "active" class from all links
   opwekkenLink.classList.remove("active");
   inzichtLink.classList.remove("active");
   duurzaamLink.classList.remove("active");
+
+  // Add "active" class to the selected link
   link.classList.add("active");
 }
 
-opwekkenLink.addEventListener("click", () => {
+// Add event listeners to the links
+opwekkenLink.addEventListener("mouseover", () => {
   showSubmenu(opwekkenSubmenu, opwekkenLink);
 });
 
-inzichtLink.addEventListener("click", () => {
+inzichtLink.addEventListener("mouseover", () => {
   showSubmenu(inzichtSubmenu, inzichtLink);
 });
 
-duurzaamLink.addEventListener("click", () => {
+duurzaamLink.addEventListener("mouseover", () => {
   showSubmenu(duurzaamSubmenu, duurzaamLink);
 });
 
@@ -159,18 +168,17 @@ if (window.innerWidth < 991.98) {
   const spoilerLinks = document.querySelectorAll(
     ".menu__submenu-main-nav-item-wrap"
   );
-  const firstSubmenu = document.querySelector(".menu__submenu-sub-nav");
 
-  firstSubmenu.style.display = "flex";
+  spoilerLinks.forEach((link, index) => {
+    const arrow = link.querySelector("._icon-arrow-right");
+    const submenu = link.nextElementSibling;
+    const anchor = link.querySelector("a");
 
-  spoilerLinks.forEach((link) => {
-    link.addEventListener("click", (e) => {
+    arrow.addEventListener("click", (e) => {
+      e.stopPropagation();
       e.preventDefault();
 
-      const submenu = link.nextElementSibling;
-      const arrow = link.querySelector("._icon-arrow-right");
-
-      if (submenu && submenu.style.display === "flex") {
+      if (submenu.style.display === "flex") {
         // Submenu is already open, close it
         submenu.style.display = "none";
         arrow.classList.remove("open");
@@ -189,13 +197,20 @@ if (window.innerWidth < 991.98) {
         });
 
         // Open this submenu
-        if (submenu) {
-          submenu.style.display = "flex";
-        }
-
+        submenu.style.display = "flex";
         arrow.classList.add("open");
       }
     });
+
+    anchor.addEventListener("click", (e) => {
+      e.stopPropagation();
+    });
+
+    // Open the first spoiler by default
+    if (index === 0) {
+      submenu.style.display = "flex";
+      arrow.classList.add("open");
+    }
   });
 }
 

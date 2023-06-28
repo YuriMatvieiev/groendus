@@ -9877,7 +9877,7 @@ h6 {
             transform: rotate(90deg);
   }
 
-  .menu__submenu-main-nav-item span {
+  .menu__submenu-main-nav-item a {
     width: 80%;
   }
 

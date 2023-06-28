@@ -6235,12 +6235,12 @@
     }
     const da = new DynamicAdapt("max");
     da.init();
-    const opwekkenLink = document.getElementById("opwekken-link");
-    const inzichtLink = document.getElementById("inzicht-link");
-    const duurzaamLink = document.getElementById("duurzaam-link");
-    const opwekkenSubmenu = document.getElementById("opwekken");
-    const inzichtSubmenu = document.getElementById("inzicht");
-    const duurzaamSubmenu = document.getElementById("duurzaam");
+    const opwekkenLink = document.querySelector("#opwekken-link");
+    const inzichtLink = document.querySelector("#inzicht-link");
+    const duurzaamLink = document.querySelector("#duurzaam-link");
+    const opwekkenSubmenu = document.querySelector("#opwekken");
+    const inzichtSubmenu = document.querySelector("#inzicht");
+    const duurzaamSubmenu = document.querySelector("#duurzaam");
     function showSubmenu(submenu, link) {
         opwekkenSubmenu.style.display = "none";
         inzichtSubmenu.style.display = "none";
@@ -6251,13 +6251,13 @@
         duurzaamLink.classList.remove("active");
         link.classList.add("active");
     }
-    opwekkenLink.addEventListener("click", (() => {
+    opwekkenLink.addEventListener("mouseover", (() => {
         showSubmenu(opwekkenSubmenu, opwekkenLink);
     }));
-    inzichtLink.addEventListener("click", (() => {
+    inzichtLink.addEventListener("mouseover", (() => {
         showSubmenu(inzichtSubmenu, inzichtLink);
     }));
-    duurzaamLink.addEventListener("click", (() => {
+    duurzaamLink.addEventListener("mouseover", (() => {
         showSubmenu(duurzaamSubmenu, duurzaamLink);
     }));
     let openDropdown = null;
@@ -6337,14 +6337,14 @@
     }));
     if (window.innerWidth < 991.98) {
         const spoilerLinks = document.querySelectorAll(".menu__submenu-main-nav-item-wrap");
-        const firstSubmenu = document.querySelector(".menu__submenu-sub-nav");
-        firstSubmenu.style.display = "flex";
-        spoilerLinks.forEach((link => {
-            link.addEventListener("click", (e => {
+        spoilerLinks.forEach(((link, index) => {
+            const arrow = link.querySelector("._icon-arrow-right");
+            const submenu = link.nextElementSibling;
+            const anchor = link.querySelector("a");
+            arrow.addEventListener("click", (e => {
+                e.stopPropagation();
                 e.preventDefault();
-                const submenu = link.nextElementSibling;
-                const arrow = link.querySelector("._icon-arrow-right");
-                if (submenu && submenu.style.display === "flex") {
+                if (submenu.style.display === "flex") {
                     submenu.style.display = "none";
                     arrow.classList.remove("open");
                 } else {
@@ -6354,10 +6354,17 @@
                         const openArrow = openSubmenu.previousElementSibling.querySelector("._icon-arrow-right");
                         openArrow.classList.remove("open");
                     }));
-                    if (submenu) submenu.style.display = "flex";
+                    submenu.style.display = "flex";
                     arrow.classList.add("open");
                 }
             }));
+            anchor.addEventListener("click", (e => {
+                e.stopPropagation();
+            }));
+            if (index === 0) {
+                submenu.style.display = "flex";
+                arrow.classList.add("open");
+            }
         }));
     }
     const backButtonMenu = document.querySelector(".icon-menu");
