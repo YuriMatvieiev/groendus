@@ -312,6 +312,9 @@
   &__img {
     width: calc(50% - 12px);
     @include adaptiveValue("height", 406, 155);
+    &-full-width {
+      width: 100%;
+    }
     img {
       width: 100%;
       height: 100%;
@@ -319,10 +322,6 @@
     }
     @media (max-width: $mobile) {
       width: calc(50% - 8px);
-    }
-    &:first-child {
-      width: 100%;
-      height: 100%;
     }
   }
 }

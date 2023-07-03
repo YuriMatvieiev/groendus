@@ -261,20 +261,31 @@ showMoreBtns.forEach((btn) => {
 
 //=====================================video play button===================================================================================================================
 
-// get all the elements with the class name 'full-video__play-button'
+import Plyr from "plyr";
+
 const playButtons = document.querySelectorAll(".full-video__play-button");
-const videoText = document.querySelector("#full-video__text");
-// loop through each play button and add click event listener
+const videoTexts = document.querySelectorAll("#full-video__text");
+
 playButtons.forEach(function (button) {
   button.addEventListener("click", function () {
-    const thumbnail = button.previousElementSibling; // get the thumbnail image
-    const videoContainer = button.nextElementSibling; // get the video container
+    const thumbnail = button.previousElementSibling;
+    const videoContainer = button.nextElementSibling;
 
-    thumbnail.style.display = "none"; // hide the thumbnail
-    videoContainer.style.display = "block"; // show the video container
-    if (!isMobileTest && videoText) {
-      videoText.style.display = "none";
+    thumbnail.style.display = "none";
+    videoContainer.style.display = "block";
+
+    // Play the video
+    const iframe = videoContainer.querySelector("iframe");
+    if (iframe) {
+      iframe.src += "&autoplay=1"; // Add autoplay parameter to the video URL
     }
+
+    // Hide the video text
+    videoTexts.forEach(function (videoText) {
+      if (videoText) {
+        videoText.style.display = "none";
+      }
+    });
   });
 });
 

@@ -72,6 +72,7 @@
 		"webpack-stream": "latest"
 	},
 	"dependencies": {
+		"plyr": "^3.7.8",
 		"simplebar": "latest"
 	}
 }
