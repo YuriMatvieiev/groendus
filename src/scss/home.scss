@@ -538,9 +538,6 @@
     @media (max-width: $mobile) {
       flex-direction: column;
     }
-    &.swiper-slide-active {
-      z-index: 1;
-    }
   }
   // .home-steps__slide-circle
   &__slide-circle {
@@ -673,7 +670,7 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    z-index: 2;
+    z-index: 5;
     @media (max-width: $mobile) {
       bottom: 39%;
     }

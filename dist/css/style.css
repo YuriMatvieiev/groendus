@@ -2157,10 +2157,6 @@ h6 {
   background-color: #fff;
 }
 
-.home-steps__slide.swiper-slide-active {
-  z-index: 1;
-}
-
 .home-steps__slide-circle {
   position: relative;
   min-width: 32.75rem;
@@ -2236,7 +2232,7 @@ h6 {
   position: absolute;
   left: 0;
   bottom: 0;
-  z-index: 2;
+  z-index: 5;
 }
 
 .home-logos__container {
