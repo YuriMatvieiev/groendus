@@ -458,3 +458,15 @@
     height: 100%;
   }
 }
+
+.list-disc {
+  li {
+    list-style-type: disc;
+  }
+}
+
+.list-number {
+  li {
+    list-style: decimal;
+  }
+}

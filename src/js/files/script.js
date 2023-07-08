@@ -556,3 +556,84 @@ headerLogo.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 });
+
+//========================================================================================================================================================
+
+if (window.innerWidth > 991.98) {
+  // Function to move pillar-content__inhoud to pillar-content__steps-right
+  function moveContentToRight() {
+    var contentWrap = document.querySelector(".pillar-content__inhoud-wrap");
+    var content = document.querySelector(".pillar-content__inhoud");
+    var stepsRight = document.querySelector(".pillar-content__steps-right");
+
+    stepsRight.appendChild(content);
+  }
+
+  // Function to move pillar-content__inhoud back to pillar-content__inhoud-wrap
+  function moveContentToWrap() {
+    var contentWrap = document.querySelector(".pillar-content__inhoud-wrap");
+    var content = document.querySelector(".pillar-content__inhoud");
+
+    contentWrap.appendChild(content);
+  }
+
+  // Intersection Observer callback function
+  function handleIntersection(entries, observer) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        moveContentToWrap();
+      } else {
+        moveContentToRight();
+      }
+    });
+  }
+
+  // Get all the relevant elements
+  const sections = document.querySelectorAll(".pillar-content__steps-item");
+  const links = document.querySelectorAll(".pillar-content__inhoud-box li a");
+
+  // Create options for the Intersection Observer
+  const options = {
+    rootMargin: "-20% 0px -80% 0px", // Adjust the rootMargin as needed
+  };
+
+  // Create a callback function for the Intersection Observer
+  const callback = (entries, observer) => {
+    entries.forEach((entry) => {
+      // Get the target element and its corresponding link
+      const target = entry.target;
+      const targetLink = document.querySelector(
+        `.pillar-content__inhoud-box li a[href="#${target.id}"]`
+      );
+
+      if (entry.isIntersecting) {
+        // Add the "active" class to the link
+        targetLink.classList.add("active");
+      } else {
+        // Remove the "active" class from the link
+        targetLink.classList.remove("active");
+      }
+    });
+  };
+
+  // Create a new Intersection Observer instance for highlighting links
+  const linkObserver = new IntersectionObserver(callback, options);
+
+  // Observe each section only if the elements exist
+  if (sections.length > 0 && links.length > 0) {
+    if (window.innerWidth > 991.98) {
+      sections.forEach((section) => {
+        linkObserver.observe(section);
+      });
+    }
+
+    // Create an intersection observer instance for moving content
+    var contentObserver = new IntersectionObserver(handleIntersection);
+
+    // Target the pillar-content__inhoud-wrap element
+    var contentWrap = document.querySelector(".pillar-content__inhoud-wrap");
+
+    // Start observing the visibility changes of contentWrap
+    contentObserver.observe(contentWrap);
+  }
+}

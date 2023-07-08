@@ -9937,6 +9937,45 @@
                 });
             }
         }));
+        if (window.innerWidth > 991.98) {
+            function moveContentToRight() {
+                document.querySelector(".pillar-content__inhoud-wrap");
+                var content = document.querySelector(".pillar-content__inhoud");
+                var stepsRight = document.querySelector(".pillar-content__steps-right");
+                stepsRight.appendChild(content);
+            }
+            function moveContentToWrap() {
+                var contentWrap = document.querySelector(".pillar-content__inhoud-wrap");
+                var content = document.querySelector(".pillar-content__inhoud");
+                contentWrap.appendChild(content);
+            }
+            function handleIntersection(entries, observer) {
+                entries.forEach((function(entry) {
+                    if (entry.isIntersecting) moveContentToWrap(); else moveContentToRight();
+                }));
+            }
+            const sections = document.querySelectorAll(".pillar-content__steps-item");
+            const links = document.querySelectorAll(".pillar-content__inhoud-box li a");
+            const options = {
+                rootMargin: "-20% 0px -80% 0px"
+            };
+            const callback = (entries, observer) => {
+                entries.forEach((entry => {
+                    const target = entry.target;
+                    const targetLink = document.querySelector(`.pillar-content__inhoud-box li a[href="#${target.id}"]`);
+                    if (entry.isIntersecting) targetLink.classList.add("active"); else targetLink.classList.remove("active");
+                }));
+            };
+            const linkObserver = new IntersectionObserver(callback, options);
+            if (sections.length > 0 && links.length > 0) {
+                if (window.innerWidth > 991.98) sections.forEach((section => {
+                    linkObserver.observe(section);
+                }));
+                var contentObserver = new IntersectionObserver(handleIntersection);
+                var contentWrap = document.querySelector(".pillar-content__inhoud-wrap");
+                contentObserver.observe(contentWrap);
+            }
+        }
         window["FLS"] = false;
         isWebp();
         menuInit();

@@ -60,9 +60,9 @@ const config = {
     // Расскоментировать на слабом ПК
     // (в режиме разработчика, папка с результаттом будет создаваться на диске)
 
-    /* devMiddleware: {
+    devMiddleware: {
 			writeToDisk: true,
-		}, */
+		},
 
     watchFiles: [
       `${paths.src}/**/*.html`,
