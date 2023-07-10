@@ -547,7 +547,6 @@
     @include adaptiveValue("min-width", 524, 295, 0, 1240, 768);
     @include adaptiveValue("min-height", 524, 295, 0, 1240, 768);
     @media (max-width: $mobile) {
-      order: 3;
       margin-bottom: rem(50);
     }
   }
@@ -615,7 +614,6 @@
     @include adaptiveValue("line-height", 18, 13);
     margin-bottom: rem(8);
     @media (max-width: $mobile) {
-      order: 1;
       text-align: center;
     }
   }
@@ -626,7 +624,6 @@
     @include adaptiveValue("line-height", 44, 24);
     @include adaptiveValue("margin-bottom", 30, 20);
     @media (max-width: $mobile) {
-      order: 2;
       text-align: center;
     }
   }
@@ -636,7 +633,6 @@
     @include adaptiveValue("line-height", 25, 20);
     margin-bottom: rem(24);
     @media (max-width: $mobile) {
-      order: 4;
     }
   }
   // .home-steps__slide-text-list
@@ -647,7 +643,6 @@
     justify-content: space-between;
     gap: 8px;
     @media (max-width: $mobile) {
-      order: 5;
       width: 100%;
     }
     li {
