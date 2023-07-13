@@ -1,57 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-@@include('html/_head.htm',{
-"title":"Productpagina"
-})
+  @@include('html/_head.htm',{ "title":"Productpagina" })
 
-<body class="productpagina">
-  <div class="wrapper">
-    @@include('html/_header.htm',{
-    "theme": "white-theme"
-    })
-    <main class="page">
-      <section class="white-hero">
-        <div class="white-hero__container">
-          <div class="white-hero__text-block">
-            <div class="white-hero__breadcrumbs">
-              <a class="_icon-arrow-right" href="#">Groendus aanbod</a>
-              <a href="#">Laadpalen</a>
+  <body class="productpagina">
+    <div class="wrapper">
+      @@include('html/_header.htm',{ "theme": "white-theme" })
+      <main class="page">
+        <section class="white-hero">
+          <div class="white-hero__container">
+            <div class="white-hero__text-block">
+              <div class="white-hero__breadcrumbs">
+                <a class="_icon-arrow-right" href="#">Groendus aanbod</a>
+                <a href="#">Laadpalen</a>
+              </div>
+              <div class="white-hero__title">Groendus Laadpalen</div>
+              <div class="white-hero__desc">
+                Mede dankzij Elon gaan elektrische auto’s als warme broodjes
+                over de toonbank. En we hebben geen glazen bol nodig om te weten
+                dat die trend de komende jaren flink doorzet. Om die groei bij
+                te houden zijn veel meer laadpunten nodig.
+              </div>
+              <a href="#" class="white-hero__button blue-button"
+                >Ik wil meer laadpunten</a
+              >
             </div>
-            <div class="white-hero__title">Groendus Laadpalen</div>
-            <div class="white-hero__desc">Mede dankzij Elon gaan elektrische auto’s als warme broodjes over de toonbank.
-              En we hebben geen glazen bol nodig om te weten dat die trend de komende jaren flink doorzet. Om die groei
-              bij te houden zijn veel meer laadpunten nodig.
+            <div class="white-hero__img-block">
+              <img src="@img/productpagina/main-img.png" alt="main-img" />
             </div>
-            <a href="#" class="white-hero__button blue-button">Ik wil meer laadpunten</a>
           </div>
-          <div class="white-hero__img-block">
-            <img src="@img/productpagina/main-img.png" alt="main-img">
-          </div>
-        </div>
-      </section>
-      <section class="full-video">
-        <div class="full-video__container">
-          <div class="full-video__box">
-            <div id="full-video__text" class="full-video__text">
-              <div class="full-video__subtitle">Picnic’s beste laadpalen</div>
-              <div class="full-video__title">Zo plaatsten we laadpalen bij Picnic</div>
-            </div>
-            <div class="full-video__video">
-              <img class="full-video__img" src="@img/productpagina/prevue.png" alt="video thumbnail" id="thumbnail">
-              <button class="full-video__play-button" id="play-button"><img src="@img/productpagina/play.svg"
-                  alt=""></button>
-              <div id="video-container" style="display:none">
-                <script src="https://fast.wistia.com/embed/medias/222bm49bvb.jsonp" async></script>
-                <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
-                <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
-                  <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
-                    <div class="wistia_embed wistia_async_222bm49bvb autoPlay=true videoFoam=true"
-                      style="height:100%;position:relative;width:100%">
-                      <div class="wistia_swatch"
-                        style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
-                        <img src="https://fast.wistia.com/embed/medias/222bm49bvb/swatch"
-                          style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true"
-                          onload="this.parentNode.style.opacity=1;" />
+        </section>
+        <section class="full-video">
+          <div class="full-video__container">
+            <div class="full-video__box">
+              <div id="full-video__text" class="full-video__text">
+                <div class="full-video__subtitle">Picnic’s beste laadpalen</div>
+                <div class="full-video__title">
+                  Zo plaatsten we laadpalen bij Picnic
+                </div>
+              </div>
+              <div class="full-video__video">
+                <img
+                  class="full-video__img"
+                  src="@img/productpagina/prevue.png"
+                  alt="video thumbnail"
+                  id="thumbnail"
+                />
+                <button class="full-video__play-button" id="play-button">
+                  <img src="@img/productpagina/play.svg" alt="" />
+                </button>
+                <div id="video-container" style="display: none">
+                  <script
+                    src="https://fast.wistia.com/embed/medias/222bm49bvb.jsonp"
+                    async
+                  ></script>
+                  <script
+                    src="https://fast.wistia.com/assets/external/E-v1.js"
+                    async
+                  ></script>
+                  <div
+                    class="wistia_responsive_padding"
+                    style="padding: 56.25% 0 0 0; position: relative"
+                  >
+                    <div
+                      class="wistia_responsive_wrapper"
+                      style="
+                        height: 100%;
+                        left: 0;
+                        position: absolute;
+                        top: 0;
+                        width: 100%;
+                      "
+                    >
+                      <div
+                        class="wistia_embed wistia_async_222bm49bvb autoPlay=true videoFoam=true"
+                        style="height: 100%; position: relative; width: 100%"
+                      >
+                        <div
+                          class="wistia_swatch"
+                          style="
+                            height: 100%;
+                            left: 0;
+                            opacity: 0;
+                            overflow: hidden;
+                            position: absolute;
+                            top: 0;
+                            transition: opacity 200ms;
+                            width: 100%;
+                          "
+                        >
+                          <img
+                            src="https://fast.wistia.com/embed/medias/222bm49bvb/swatch"
+                            style="
+                              filter: blur(5px);
+                              height: 100%;
+                              object-fit: contain;
+                              width: 100%;
+                            "
+                            alt=""
+                            aria-hidden="true"
+                            onload="this.parentNode.style.opacity=1;"
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -59,323 +108,533 @@
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="voorop">
-        <div class="voorop__container">
-          <div class="voorop__title">Loop voorop in de energie-transitie...</div>
-          <div class="voorop__subtitle">Onze drie innovatieve oplossingen maken van jou een slimme koploper.</div>
-          <div class="voorop__box">
-            <div class="voorop__item">
-              <img src="@img/productpagina/loop1.png" alt="Computer" class="voorop__item-img">
-              <div class="voorop__item-subtitle">De Groendus</div>
-              <div class="voorop__item-title">Energiemarktplaats</div>
-              <a href="#" class="voorop__item-button _icon-arrow-right">Lees meer</a>
+        </section>
+        <section class="voorop">
+          <div class="voorop__container">
+            <div class="voorop__title">
+              Loop voorop in de energie-transitie...
             </div>
-            <div class="voorop__item voorop__item-active ">
-              <img src="@img/productpagina/loop2.png" alt="Car" class="voorop__item-img">
-              <div class="voorop__item-subtitle">Verbruik energie als het er iss</div>
-              <div class="voorop__item-title">Slimme laadpalen</div>
-              <a href="#" class="voorop__item-button _icon-arrow-right">Lees meer</a>
+            <div class="voorop__subtitle">
+              Onze drie innovatieve oplossingen maken van jou een slimme
+              koploper.
             </div>
-            <div class="voorop__item">
-              <img src="@img/productpagina/loop3.png" alt="Sollar panels" class="voorop__item-img">
-              <div class="voorop__item-subtitle">Bewaar energie voor later</div>
-              <div class="voorop__item-title">Opslag in batterijen</div>
-              <a href="#" class="voorop__item-button _icon-arrow-right">Lees meer</a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="productpagina-steps">
-        <div class="productpagina-steps__container">
+            <div class="voorop__box">
+              <div class="voorop__item">
+                <div class="voorop__item-img-wrap">
+                  <img
+                    src="@img/productpagina/loop1.png"
+                    alt="Computer"
+                    class="voorop__item-img"
+                  />
+                </div>
 
+                <div class="voorop__item-subtitle">De Groendus</div>
+                <div class="voorop__item-title">Energiemarktplaats</div>
+                <a href="#" class="voorop__item-button _icon-arrow-right"
+                  >Lees meer</a
+                >
+              </div>
+              <div class="voorop__item voorop__item-active">
+                <div class="voorop__item-img-wrap">
+                  <img
+                    src="@img/productpagina/loop2.png"
+                    alt="Car"
+                    class="voorop__item-img"
+                  />
+                </div>
 
-          <div class="productpagina-steps__items">
-            <div class="productpagina-steps__main-line-box">
-              <div class="productpagina-steps__main-ball">
-                <img src="@img/beheren/Group 698.svg" class="">
+                <div class="voorop__item-subtitle">
+                  Verbruik energie als het er iss
+                </div>
+                <div class="voorop__item-title">Slimme laadpalen</div>
+                <a href="#" class="voorop__item-button _icon-arrow-right"
+                  >Lees meer</a
+                >
               </div>
-            </div>
-            <div class="productpagina-steps__item">
-              <div class="productpagina-steps__left">
-                <div class="productpagina-steps__left-subtitle">Opgeladen op pad</div>
-                <div class="productpagina-steps__left-title">Nooit meer een lege accu</div>
-                <a data-da="#step1, 768" href="#" class="productpagina-steps__left-button blue-button">Hier wil ik over
-                  doorpraten!</a>
-              </div>
-              <div id="step1" class="productpagina-steps__right">
-                <div class="productpagina-steps__right-text">Een laadpaal bij
-                  je bedrijf, organisatie of in je gemeente
-                  is een goed idee. Handig voor bezoekers en medewerkers, goed voor het milieu én een slimme
-                  investering. Nu is het bovendien nog vrijblijvend, maar daar komt verandering in. Bedrijven moeten bij
-                  renovatie of nieuwbouw 1 laadpaal per 10 parkeerplekken realiseren. Vanaf 2025 moeten bestaande
-                  bedrijven minimaal 1 laadpaal per 20 parkeerplekken beschikbaar hebben. Profileer je bedrijf dus met
-                  laadpalen nu het nog kan!</div>
+              <div class="voorop__item">
+                <div class="voorop__item-img-wrap">
+                  <img
+                    src="@img/productpagina/loop3.png"
+                    alt="Sollar panels"
+                    class="voorop__item-img"
+                  />
+                </div>
 
-
-              </div>
-            </div>
-            <div class="productpagina-steps__item">
-              <div class="productpagina-steps__blue-ball"></div>
-              <div class="productpagina-steps__left">
-                <div class="productpagina-steps__left-subtitle">Duurzaam investeren</div>
-                <div class="productpagina-steps__left-title">Met één laadbeurt per dag maak je al winst</div>
-                <a data-da="#step2, 768" href="#" class="productpagina-steps__left-button blue-button">Bereken
-                  investering / maandtartief</a>
-              </div>
-              <div id="step2" class="productpagina-steps__right">
-                <div class="productpagina-steps__right-text">Het aanbieden van elektrisch laden is niet alleen gastvrij,
-                  een laadpaal verdient zichzelf ook nog eens terug. Jouw gasten betalen immers voor het gebruik van de
-                  laadpaal. Voor huur betekent het dat je zonder eigen investering winst kunt maken op het aanbieden van
-                  elektrisch laden. Voor koop betekent het dat je jouw investering al in zo’n 4 jaar kunt
-                  terugverdienen, terwijl de laadpaal een levensduur van minimaal 10 jaar heeft.</div>
-              </div>
-
-            </div>
-            <div class="productpagina-steps__full-width text-left">
-              <div class="productpagina-steps__full-width-text">
-                <div class="productpagina-steps__full-width-subtitle">Dag en nacht zorgeloos laden</div>
-                <div class="productpagina-steps__full-width-title">Laadpalen plaatsen</div>
-                <div class="productpagina-steps__full-width-desc">Wil je laadpalen op jouw parkeerterrein? Dan
-                  inventariseren we eerst al jouw wensen om een passende offerte te maken. Daarna gaan we aan de slag.
-                  En we blijven betrokken, ook na de plaatsing. Onze storingsdienst staat dag en nacht klaar. Dat is nog
-                  eens zorgeloos laden!</div>
-                <a href="#" class="productpagina-steps__full-width-button blue-button">Klinkt goed, ik wil contact!</a>
-              </div>
-              <div class="productpagina-steps__full-width-img">
-                <img src="@img/productpagina/item1.png" alt="">
-              </div>
-            </div>
-            <div class="productpagina-steps__item">
-              <div class="productpagina-steps__blue-ball"></div>
-
-              <div class="productpagina-steps__left">
-                <div class="productpagina-steps__left-subtitle">Opgeladen op pad</div>
-                <div class="productpagina-steps__left-title">Nooit meer een lege accu</div>
-                <a data-da="#step3, 768" href="#" class="productpagina-steps__left-button blue-button">Hier wil ik over
-                  doorpraten!</a>
-              </div>
-              <div id="step3" class="productpagina-steps__right">
-                <div class="productpagina-steps__right-text">Een laadpaal bij
-                  je bedrijf, organisatie of in je gemeente
-                  is een goed idee. Handig voor bezoekers en medewerkers, goed voor het milieu én een slimme
-                  investering. Nu is het bovendien nog vrijblijvend, maar daar komt verandering in. Bedrijven moeten bij
-                  renovatie of nieuwbouw 1 laadpaal per 10 parkeerplekken realiseren. Vanaf 2025 moeten bestaande
-                  bedrijven minimaal 1 laadpaal per 20 parkeerplekken beschikbaar hebben. Profileer je bedrijf dus met
-                  laadpalen nu het nog kan!</div>
-
-              </div>
-            </div>
-            <div class="productpagina-steps__item">
-              <div class="productpagina-steps__blue-ball"></div>
-
-              <div class="productpagina-steps__left">
-                <div class="productpagina-steps__left-subtitle">Duurzaam investeren</div>
-                <div class="productpagina-steps__left-title">Met één laadbeurt per dag maak je al winst</div>
-                <a data-da="#step4, 768" href="#" class="productpagina-steps__left-button blue-button">Bereken
-                  investering / maandtartief</a>
-              </div>
-              <div id="step4" class="productpagina-steps__right">
-                <div class="productpagina-steps__right-text">Het aanbieden van elektrisch laden is niet alleen gastvrij,
-                  een laadpaal verdient zichzelf ook nog eens terug. Jouw gasten betalen immers voor het gebruik van de
-                  laadpaal. Voor huur betekent het dat je zonder eigen investering winst kunt maken op het aanbieden van
-                  elektrisch laden. Voor koop betekent het dat je jouw investering al in zo’n 4 jaar kunt
-                  terugverdienen, terwijl de laadpaal een levensduur van minimaal 10 jaar heeft.</div>
-
-              </div>
-            </div>
-            <div class="productpagina-steps__full-width productpagina-steps__full-width-first text-left">
-              <div class="productpagina-steps__full-width-text">
-                <div class="productpagina-steps__full-width-subtitle">Dag en nacht zorgeloos laden</div>
-                <div class="productpagina-steps__full-width-title">Laadpalen plaatsen</div>
-                <div class="productpagina-steps__full-width-desc">Wil je laadpalen op jouw parkeerterrein? Dan
-                  inventariseren we eerst al jouw wensen om een passende offerte te maken. Daarna gaan we aan de slag.
-                  En we blijven betrokken, ook na de plaatsing. Onze storingsdienst staat dag en nacht klaar. Dat is nog
-                  eens zorgeloos laden!</div>
-                <a href="#" class="productpagina-steps__full-width-button blue-button">Klinkt goed, ik wil contact!</a>
-              </div>
-              <div class="productpagina-steps__full-width-img">
-                <img src="@img/productpagina/car.png" alt="">
-              </div>
-            </div>
-            <div class="werken-main__three-col three-col">
-              <div class="three-col__subtitle">Dag en nacht zorgeloos laden</div>
-              <div class="three-col__title">Laadpalen plaatsen</div>
-              <div class="three-col__desc"><span>Een laadpaal bij je bedrijf, organisatie of in je gemeente is een goed
-                  idee. Handig voor bezoekers en medewerkers, goed voor het milieu én een slimme investering. Nu is
-                  het</span> <span>een laadpaal bij je bedrijf, organisatie of in je gemeente is een goed idee. Handig
-                  voor bezoekers en medewerkers, goed voor het milieu én een slimme investering. Nu is het</span>
-                <span>een laadpaal bij je bedrijf, organisatie of in je gemeente is een goed idee. Handig voor bezoekers
-                  en medewerkers, goed voor het milieu én een slimme investering.</span>
-              </div>
-              <a href="#" class="three-col__button blue-button">Klinkt goed, ik wil contact!</a>
-            </div>
-            <div class="productpagina-steps__item">
-              <div class="productpagina-steps__blue-ball"></div>
-
-              <div class="productpagina-steps__left">
-                <div class="productpagina-steps__left-subtitle">Opgeladen op pad</div>
-                <div class="productpagina-steps__left-title">Nooit meer een lege accu</div>
-                <a data-da="#step5, 768" href="#" class="productpagina-steps__left-button blue-button">Hier wil ik over
-                  doorpraten!</a>
-              </div>
-              <div id="step5" class="productpagina-steps__right">
-                <div class="productpagina-steps__right-text">Een laadpaal bij
-                  je bedrijf, organisatie of in je gemeente
-                  is een goed idee. Handig voor bezoekers en medewerkers, goed voor het milieu én een slimme
-                  investering. Nu is het bovendien nog vrijblijvend, maar daar komt verandering in. Bedrijven moeten bij
-                  renovatie of nieuwbouw 1 laadpaal per 10 parkeerplekken realiseren. Vanaf 2025 moeten bestaande
-                  bedrijven minimaal 1 laadpaal per 20 parkeerplekken beschikbaar hebben. Profileer je bedrijf dus met
-                  laadpalen nu het nog kan!</div>
-
-              </div>
-            </div>
-            <div class="productpagina-steps__item">
-              <div class="productpagina-steps__blue-ball"></div>
-              <div class="productpagina-steps__left">
-                <div class="productpagina-steps__left-subtitle">Duurzaam investeren</div>
-                <div class="productpagina-steps__left-title">Met één laadbeurt per dag maak je al winst</div>
-                <a data-da="#step6, 768" href="#" class="productpagina-steps__left-button blue-button">Bereken
-                  investering / maandtartief</a>
-              </div>
-              <div id="step6" class="productpagina-steps__right">
-                <div class="productpagina-steps__right-text">Het aanbieden van elektrisch laden is niet alleen gastvrij,
-                  een laadpaal verdient zichzelf ook nog eens terug. Jouw gasten betalen immers voor het gebruik van de
-                  laadpaal. Voor huur betekent het dat je zonder eigen investering winst kunt maken op het aanbieden van
-                  elektrisch laden. Voor koop betekent het dat je jouw investering al in zo’n 4 jaar kunt
-                  terugverdienen, terwijl de laadpaal een levensduur van minimaal 10 jaar heeft.</div>
+                <div class="voorop__item-subtitle">
+                  Bewaar energie voor later
+                </div>
+                <div class="voorop__item-title">Opslag in batterijen</div>
+                <a href="#" class="voorop__item-button _icon-arrow-right"
+                  >Lees meer</a
+                >
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="ovner ovner-blue">
-        <div class="ovner__container">
-          <div class="ovner__box text-left">
-            <div class="ovner__text-block">
-              <div class="ovner__title">Wil je verder praten over de beste aanpak voor jouw situatie?</div>
-              <div class="ovner__desc">“Ik vertel je graag alles over de mogelijkheden. Laat weten wanneer het je
-                uitkomt,
-                dan kom ik bij je langs.”</div>
-              <div id="ovner__img-mobile" class="ovner__img-mobile"></div>
-              <div class="ovner__autor"><span>Marcel Visser</span> - Business Development</div>
-              <a href="#" class="ovner__button black-button">Plan een afspraak</a>
-              <div class="ovner__contacts">
-                <div class="ovner__contacts-title">Contact</div>
-                <ul class="ovner__contacts-items">
-                  <li><a href="tel:088123456789">088-123456789</a></li>
-                  <li><a href="mailto:marcelvisser@groendus.nl">marcelvisser@groendus.nl</a></li>
-                </ul>
-              </div>
-            </div>
-            <div data-da="#ovner__img-mobile, 768" class="ovner__img-block">
-              <img class="ovner__img-ovner" src="@img/beheren/Mask Group.png" alt="Marcel Visser">
-              <img class="ovner__img-border" src="@img/beheren/border-circle.png" alt="border">
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="productpagina-options">
-        <div class="productpagina-options__container text-left">
-          <div class="productpagina-options__left">
-            <div class="productpagina-options__left-title">Bekijk ook eens deze opties</div>
-            <div class="productpagina-options__left-desc">Deze producten optimaliseren de stap naar opwekken van schone
-              energie.</div>
-            <img src="@img/productpagina/item2.png" alt="" class="productpagina-options__left-img">
-          </div>
-          <div class="productpagina-options__slider swiper">
-            <div class="productpagina-options__wrapper swiper-wrapper">
-              <div class="productpagina-options__slide swiper-slide">
-                <div class="productpagina-options__slide-left">
-                  <div class="productpagina-options__slide-subtitle">Opwekken</div>
-                  <div class="productpagina-options__slide-title">Inkoopmanagement</div>
-                </div>
-                <div class="productpagina-options__slide-right">
-                  <div class="productpagina-options__slide-text">Energie inkopen is werk voor specialisten. Groendus
-                    gebruik van geautomatiseerde analyses op marktdata. </div>
+        </section>
+        <section class="productpagina-steps">
+          <div class="productpagina-steps__container">
+            <div class="productpagina-steps__items">
+              <div class="productpagina-steps__main-line-box">
+                <div class="productpagina-steps__main-ball">
+                  <img src="@img/beheren/Group 698.svg" class="" />
                 </div>
               </div>
+              <div class="productpagina-steps__item">
+                <div class="productpagina-steps__left">
+                  <div class="productpagina-steps__left-subtitle">
+                    Opgeladen op pad
+                  </div>
+                  <div class="productpagina-steps__left-title">
+                    Nooit meer een lege accu
+                  </div>
+                  <a
+                    data-da="#step1, 768"
+                    href="#"
+                    class="productpagina-steps__left-button blue-button"
+                    >Hier wil ik over doorpraten!</a
+                  >
+                </div>
+                <div id="step1" class="productpagina-steps__right">
+                  <div class="productpagina-steps__right-text">
+                    Een laadpaal bij je bedrijf, organisatie of in je gemeente
+                    is een goed idee. Handig voor bezoekers en medewerkers, goed
+                    voor het milieu én een slimme investering. Nu is het
+                    bovendien nog vrijblijvend, maar daar komt verandering in.
+                    Bedrijven moeten bij renovatie of nieuwbouw 1 laadpaal per
+                    10 parkeerplekken realiseren. Vanaf 2025 moeten bestaande
+                    bedrijven minimaal 1 laadpaal per 20 parkeerplekken
+                    beschikbaar hebben. Profileer je bedrijf dus met laadpalen
+                    nu het nog kan!
+                  </div>
+                </div>
+              </div>
+              <div class="productpagina-steps__item">
+                <div class="productpagina-steps__blue-ball"></div>
+                <div class="productpagina-steps__left">
+                  <div class="productpagina-steps__left-subtitle">
+                    Duurzaam investeren
+                  </div>
+                  <div class="productpagina-steps__left-title">
+                    Met één laadbeurt per dag maak je al winst
+                  </div>
+                  <a
+                    data-da="#step2, 768"
+                    href="#"
+                    class="productpagina-steps__left-button blue-button"
+                    >Bereken investering / maandtartief</a
+                  >
+                </div>
+                <div id="step2" class="productpagina-steps__right">
+                  <div class="productpagina-steps__right-text">
+                    Het aanbieden van elektrisch laden is niet alleen gastvrij,
+                    een laadpaal verdient zichzelf ook nog eens terug. Jouw
+                    gasten betalen immers voor het gebruik van de laadpaal. Voor
+                    huur betekent het dat je zonder eigen investering winst kunt
+                    maken op het aanbieden van elektrisch laden. Voor koop
+                    betekent het dat je jouw investering al in zo’n 4 jaar kunt
+                    terugverdienen, terwijl de laadpaal een levensduur van
+                    minimaal 10 jaar heeft.
+                  </div>
+                </div>
+              </div>
+              <div class="productpagina-steps__full-width text-left">
+                <div class="productpagina-steps__full-width-text">
+                  <div class="productpagina-steps__full-width-subtitle">
+                    Dag en nacht zorgeloos laden
+                  </div>
+                  <div class="productpagina-steps__full-width-title">
+                    Laadpalen plaatsen
+                  </div>
+                  <div class="productpagina-steps__full-width-desc">
+                    Wil je laadpalen op jouw parkeerterrein? Dan inventariseren
+                    we eerst al jouw wensen om een passende offerte te maken.
+                    Daarna gaan we aan de slag. En we blijven betrokken, ook na
+                    de plaatsing. Onze storingsdienst staat dag en nacht klaar.
+                    Dat is nog eens zorgeloos laden!
+                  </div>
+                  <a
+                    href="#"
+                    class="productpagina-steps__full-width-button blue-button"
+                    >Klinkt goed, ik wil contact!</a
+                  >
+                </div>
+                <div class="productpagina-steps__full-width-img">
+                  <img src="@img/productpagina/item1.png" alt="" />
+                </div>
+              </div>
+              <div class="productpagina-steps__item">
+                <div class="productpagina-steps__blue-ball"></div>
 
-              <div class="productpagina-options__slide swiper-slide">
-                <div class="productpagina-options__slide-left">
-                  <div class="productpagina-options__slide-subtitle">Besparen</div>
-                  <div class="productpagina-options__slide-title">Verkoopmanagement</div>
+                <div class="productpagina-steps__left">
+                  <div class="productpagina-steps__left-subtitle">
+                    Opgeladen op pad
+                  </div>
+                  <div class="productpagina-steps__left-title">
+                    Nooit meer een lege accu
+                  </div>
+                  <a
+                    data-da="#step3, 768"
+                    href="#"
+                    class="productpagina-steps__left-button blue-button"
+                    >Hier wil ik over doorpraten!</a
+                  >
                 </div>
-                <div class="productpagina-options__slide-right">
-                  <div class="productpagina-options__slide-text">Groendus specialisten lokaliseren de best mogelijke
-                    verkoopmomenten.</div>
+                <div id="step3" class="productpagina-steps__right">
+                  <div class="productpagina-steps__right-text">
+                    Een laadpaal bij je bedrijf, organisatie of in je gemeente
+                    is een goed idee. Handig voor bezoekers en medewerkers, goed
+                    voor het milieu én een slimme investering. Nu is het
+                    bovendien nog vrijblijvend, maar daar komt verandering in.
+                    Bedrijven moeten bij renovatie of nieuwbouw 1 laadpaal per
+                    10 parkeerplekken realiseren. Vanaf 2025 moeten bestaande
+                    bedrijven minimaal 1 laadpaal per 20 parkeerplekken
+                    beschikbaar hebben. Profileer je bedrijf dus met laadpalen
+                    nu het nog kan!
+                  </div>
                 </div>
               </div>
-              <div class="productpagina-options__slide productpagina-options__slide-active swiper-slide">
-                <div class="productpagina-options__slide-left">
-                  <div class="productpagina-options__slide-subtitle">Opwekken</div>
-                  <div class="productpagina-options__slide-title">P2P-platform</div>
+              <div class="productpagina-steps__item">
+                <div class="productpagina-steps__blue-ball"></div>
+
+                <div class="productpagina-steps__left">
+                  <div class="productpagina-steps__left-subtitle">
+                    Duurzaam investeren
+                  </div>
+                  <div class="productpagina-steps__left-title">
+                    Met één laadbeurt per dag maak je al winst
+                  </div>
+                  <a
+                    data-da="#step4, 768"
+                    href="#"
+                    class="productpagina-steps__left-button blue-button"
+                    >Bereken investering / maandtartief</a
+                  >
                 </div>
-                <div class="productpagina-options__slide-right">
-                  <div class="productpagina-options__slide-text">Als iedereen producent én afnemer kan zijn dan denk je
-                    niet alleen aan je eigen begroting.</div>
+                <div id="step4" class="productpagina-steps__right">
+                  <div class="productpagina-steps__right-text">
+                    Het aanbieden van elektrisch laden is niet alleen gastvrij,
+                    een laadpaal verdient zichzelf ook nog eens terug. Jouw
+                    gasten betalen immers voor het gebruik van de laadpaal. Voor
+                    huur betekent het dat je zonder eigen investering winst kunt
+                    maken op het aanbieden van elektrisch laden. Voor koop
+                    betekent het dat je jouw investering al in zo’n 4 jaar kunt
+                    terugverdienen, terwijl de laadpaal een levensduur van
+                    minimaal 10 jaar heeft.
+                  </div>
+                </div>
+              </div>
+              <div
+                class="productpagina-steps__full-width productpagina-steps__full-width-first text-left"
+              >
+                <div class="productpagina-steps__full-width-text">
+                  <div class="productpagina-steps__full-width-subtitle">
+                    Dag en nacht zorgeloos laden
+                  </div>
+                  <div class="productpagina-steps__full-width-title">
+                    Laadpalen plaatsen
+                  </div>
+                  <div class="productpagina-steps__full-width-desc">
+                    Wil je laadpalen op jouw parkeerterrein? Dan inventariseren
+                    we eerst al jouw wensen om een passende offerte te maken.
+                    Daarna gaan we aan de slag. En we blijven betrokken, ook na
+                    de plaatsing. Onze storingsdienst staat dag en nacht klaar.
+                    Dat is nog eens zorgeloos laden!
+                  </div>
+                  <a
+                    href="#"
+                    class="productpagina-steps__full-width-button blue-button"
+                    >Klinkt goed, ik wil contact!</a
+                  >
+                </div>
+                <div class="productpagina-steps__full-width-img">
+                  <img src="@img/productpagina/car.png" alt="" />
+                </div>
+              </div>
+              <div class="werken-main__three-col three-col">
+                <div class="three-col__subtitle">
+                  Dag en nacht zorgeloos laden
+                </div>
+                <div class="three-col__title">Laadpalen plaatsen</div>
+                <div class="three-col__desc">
+                  <span
+                    >Een laadpaal bij je bedrijf, organisatie of in je gemeente
+                    is een goed idee. Handig voor bezoekers en medewerkers, goed
+                    voor het milieu én een slimme investering. Nu is het</span
+                  >
+                  <span
+                    >een laadpaal bij je bedrijf, organisatie of in je gemeente
+                    is een goed idee. Handig voor bezoekers en medewerkers, goed
+                    voor het milieu én een slimme investering. Nu is het</span
+                  >
+                  <span
+                    >een laadpaal bij je bedrijf, organisatie of in je gemeente
+                    is een goed idee. Handig voor bezoekers en medewerkers, goed
+                    voor het milieu én een slimme investering.</span
+                  >
+                </div>
+                <a href="#" class="three-col__button blue-button"
+                  >Klinkt goed, ik wil contact!</a
+                >
+              </div>
+              <div class="productpagina-steps__item">
+                <div class="productpagina-steps__blue-ball"></div>
+
+                <div class="productpagina-steps__left">
+                  <div class="productpagina-steps__left-subtitle">
+                    Opgeladen op pad
+                  </div>
+                  <div class="productpagina-steps__left-title">
+                    Nooit meer een lege accu
+                  </div>
+                  <a
+                    data-da="#step5, 768"
+                    href="#"
+                    class="productpagina-steps__left-button blue-button"
+                    >Hier wil ik over doorpraten!</a
+                  >
+                </div>
+                <div id="step5" class="productpagina-steps__right">
+                  <div class="productpagina-steps__right-text">
+                    Een laadpaal bij je bedrijf, organisatie of in je gemeente
+                    is een goed idee. Handig voor bezoekers en medewerkers, goed
+                    voor het milieu én een slimme investering. Nu is het
+                    bovendien nog vrijblijvend, maar daar komt verandering in.
+                    Bedrijven moeten bij renovatie of nieuwbouw 1 laadpaal per
+                    10 parkeerplekken realiseren. Vanaf 2025 moeten bestaande
+                    bedrijven minimaal 1 laadpaal per 20 parkeerplekken
+                    beschikbaar hebben. Profileer je bedrijf dus met laadpalen
+                    nu het nog kan!
+                  </div>
+                </div>
+              </div>
+              <div class="productpagina-steps__item">
+                <div class="productpagina-steps__blue-ball"></div>
+                <div class="productpagina-steps__left">
+                  <div class="productpagina-steps__left-subtitle">
+                    Duurzaam investeren
+                  </div>
+                  <div class="productpagina-steps__left-title">
+                    Met één laadbeurt per dag maak je al winst
+                  </div>
+                  <a
+                    data-da="#step6, 768"
+                    href="#"
+                    class="productpagina-steps__left-button blue-button"
+                    >Bereken investering / maandtartief</a
+                  >
+                </div>
+                <div id="step6" class="productpagina-steps__right">
+                  <div class="productpagina-steps__right-text">
+                    Het aanbieden van elektrisch laden is niet alleen gastvrij,
+                    een laadpaal verdient zichzelf ook nog eens terug. Jouw
+                    gasten betalen immers voor het gebruik van de laadpaal. Voor
+                    huur betekent het dat je zonder eigen investering winst kunt
+                    maken op het aanbieden van elektrisch laden. Voor koop
+                    betekent het dat je jouw investering al in zo’n 4 jaar kunt
+                    terugverdienen, terwijl de laadpaal een levensduur van
+                    minimaal 10 jaar heeft.
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="opwekken-slider">
-        <div class="opwekken-slider__container">
-          <div class="opwekken-slider__subtitle">Onze trots</div>
-          <div class="opwekken-slider__title">Bekijk onze ervaring met zonprojecten</div>
-          <div class="opwekken-slider__slider swiper">
-            <div class="opwekken-slider__wrapper swiper-wrapper">
-              <div class="opwekken-slider__slide swiper-slide">
-                <div class="opwekken-slider__slide-img-block">
-                  <img src="@img/opwekken/slider1.png" alt="Erasmus Universiteit Rotterdam">
-                  <div class="opwekken-slider__slide-title">Erasmus Universiteit Rotterdam</div>
+        </section>
+        <section class="ovner ovner-blue">
+          <div class="ovner__container">
+            <div class="ovner__box text-left">
+              <div class="ovner__text-block">
+                <div class="ovner__title">
+                  Wil je verder praten over de beste aanpak voor jouw situatie?
                 </div>
-                <div class="opwekken-slider__slide-text-block">
-                  <div class="opwekken-slider__slide-desc">Ontwikkeling en realisatie van totaal 574 zonnepanelen (172,2
-                    kWp) op drie gebouwen van de Erasmus Universiteit</div>
+                <div class="ovner__desc">
+                  “Ik vertel je graag alles over de mogelijkheden. Laat weten
+                  wanneer het je uitkomt, dan kom ik bij je langs.”
                 </div>
-              </div>
-              <div class="opwekken-slider__slide swiper-slide">
-                <div class="opwekken-slider__slide-img-block">
-                  <img src="@img/opwekken/slider2.png" alt="Prins Willem Alexanderschool">
-                  <div class="opwekken-slider__slide-title">Prins Willem Alexanderschool</div>
+                <div id="ovner__img-mobile" class="ovner__img-mobile"></div>
+                <div class="ovner__autor">
+                  <span>Marcel Visser</span> - Business Development
                 </div>
-                <div class="opwekken-slider__slide-text-block">
-                  <div class="opwekken-slider__slide-desc">Ontwikkeling en realisatie van totaal 574 zonnepanelen (172,2
-                    kWp) op drie gebouwen van de Erasmus Universiteit</div>
-                </div>
-              </div>
-              <div class="opwekken-slider__slide swiper-slide">
-                <div class="opwekken-slider__slide-img-block">
-                  <img src="@img/opwekken/slider3.png" alt="Op den Toren">
-                  <div class="opwekken-slider__slide-title">Op den Toren</div>
-                </div>
-                <div class="opwekken-slider__slide-text-block">
-                  <div class="opwekken-slider__slide-desc">Ontwikkeling en realisatie van totaal 574 zonnepanelen (172,2
-                    kWp) op drie gebouwen van de Erasmus Universiteit</div>
+                <a href="#" class="ovner__button black-button"
+                  >Plan een afspraak</a
+                >
+                <div class="ovner__contacts">
+                  <div class="ovner__contacts-title">Contact</div>
+                  <ul class="ovner__contacts-items">
+                    <li><a href="tel:088123456789">088-123456789</a></li>
+                    <li>
+                      <a href="mailto:marcelvisser@groendus.nl"
+                        >marcelvisser@groendus.nl</a
+                      >
+                    </li>
+                  </ul>
                 </div>
               </div>
-              <div class="opwekken-slider__slide swiper-slide">
-                <div class="opwekken-slider__slide-img-block">
-                  <img src="@img/opwekken/slider1.png" alt="Erasmus Universiteit Rotterdam">
-                  <div class="opwekken-slider__slide-title">Erasmus Universiteit Rotterdam</div>
-                </div>
-                <div class="opwekken-slider__slide-text-block">
-                  <div class="opwekken-slider__slide-desc">Ontwikkeling en realisatie van totaal 574 zonnepanelen (172,2
-                    kWp) op drie gebouwen van de Erasmus Universiteit</div>
-                </div>
+              <div data-da="#ovner__img-mobile, 768" class="ovner__img-block">
+                <img
+                  class="ovner__img-ovner"
+                  src="@img/beheren/Mask Group.png"
+                  alt="Marcel Visser"
+                />
+                <img
+                  class="ovner__img-border"
+                  src="@img/beheren/border-circle.png"
+                  alt="border"
+                />
               </div>
-
             </div>
           </div>
-        </div>
-      </section>
-    </main>
-    @@include('html/_footer.htm',{})
-  </div>
-  @@include('html/_js.htm',{})
-</body>
+        </section>
+        <section class="productpagina-options">
+          <div class="productpagina-options__container text-left">
+            <div class="productpagina-options__left">
+              <div class="productpagina-options__left-title">
+                Bekijk ook eens deze opties
+              </div>
+              <div class="productpagina-options__left-desc">
+                Deze producten optimaliseren de stap naar opwekken van schone
+                energie.
+              </div>
+              <img
+                src="@img/productpagina/item2.png"
+                alt=""
+                class="productpagina-options__left-img"
+              />
+            </div>
+            <div class="productpagina-options__slider swiper">
+              <div class="productpagina-options__wrapper swiper-wrapper">
+                <div class="productpagina-options__slide swiper-slide">
+                  <div class="productpagina-options__slide-left">
+                    <div class="productpagina-options__slide-subtitle">
+                      Opwekken
+                    </div>
+                    <div class="productpagina-options__slide-title">
+                      Inkoopmanagement
+                    </div>
+                  </div>
+                  <div class="productpagina-options__slide-right">
+                    <div class="productpagina-options__slide-text">
+                      Energie inkopen is werk voor specialisten. Groendus
+                      gebruik van geautomatiseerde analyses op marktdata.
+                    </div>
+                  </div>
+                </div>
 
+                <div class="productpagina-options__slide swiper-slide">
+                  <div class="productpagina-options__slide-left">
+                    <div class="productpagina-options__slide-subtitle">
+                      Besparen
+                    </div>
+                    <div class="productpagina-options__slide-title">
+                      Verkoopmanagement
+                    </div>
+                  </div>
+                  <div class="productpagina-options__slide-right">
+                    <div class="productpagina-options__slide-text">
+                      Groendus specialisten lokaliseren de best mogelijke
+                      verkoopmomenten.
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="productpagina-options__slide productpagina-options__slide-active swiper-slide"
+                >
+                  <div class="productpagina-options__slide-left">
+                    <div class="productpagina-options__slide-subtitle">
+                      Opwekken
+                    </div>
+                    <div class="productpagina-options__slide-title">
+                      P2P-platform
+                    </div>
+                  </div>
+                  <div class="productpagina-options__slide-right">
+                    <div class="productpagina-options__slide-text">
+                      Als iedereen producent én afnemer kan zijn dan denk je
+                      niet alleen aan je eigen begroting.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="opwekken-slider">
+          <div class="opwekken-slider__container">
+            <div class="opwekken-slider__subtitle">Onze trots</div>
+            <div class="opwekken-slider__title">
+              Bekijk onze ervaring met zonprojecten
+            </div>
+            <div class="opwekken-slider__slider swiper">
+              <div class="opwekken-slider__wrapper swiper-wrapper">
+                <div class="opwekken-slider__slide swiper-slide">
+                  <div class="opwekken-slider__slide-img-block">
+                    <img
+                      src="@img/opwekken/slider1.png"
+                      alt="Erasmus Universiteit Rotterdam"
+                    />
+                    <div class="opwekken-slider__slide-title">
+                      Erasmus Universiteit Rotterdam
+                    </div>
+                  </div>
+                  <div class="opwekken-slider__slide-text-block">
+                    <div class="opwekken-slider__slide-desc">
+                      Ontwikkeling en realisatie van totaal 574 zonnepanelen
+                      (172,2 kWp) op drie gebouwen van de Erasmus Universiteit
+                    </div>
+                  </div>
+                </div>
+                <div class="opwekken-slider__slide swiper-slide">
+                  <div class="opwekken-slider__slide-img-block">
+                    <img
+                      src="@img/opwekken/slider2.png"
+                      alt="Prins Willem Alexanderschool"
+                    />
+                    <div class="opwekken-slider__slide-title">
+                      Prins Willem Alexanderschool
+                    </div>
+                  </div>
+                  <div class="opwekken-slider__slide-text-block">
+                    <div class="opwekken-slider__slide-desc">
+                      Ontwikkeling en realisatie van totaal 574 zonnepanelen
+                      (172,2 kWp) op drie gebouwen van de Erasmus Universiteit
+                    </div>
+                  </div>
+                </div>
+                <div class="opwekken-slider__slide swiper-slide">
+                  <div class="opwekken-slider__slide-img-block">
+                    <img src="@img/opwekken/slider3.png" alt="Op den Toren" />
+                    <div class="opwekken-slider__slide-title">Op den Toren</div>
+                  </div>
+                  <div class="opwekken-slider__slide-text-block">
+                    <div class="opwekken-slider__slide-desc">
+                      Ontwikkeling en realisatie van totaal 574 zonnepanelen
+                      (172,2 kWp) op drie gebouwen van de Erasmus Universiteit
+                    </div>
+                  </div>
+                </div>
+                <div class="opwekken-slider__slide swiper-slide">
+                  <div class="opwekken-slider__slide-img-block">
+                    <img
+                      src="@img/opwekken/slider1.png"
+                      alt="Erasmus Universiteit Rotterdam"
+                    />
+                    <div class="opwekken-slider__slide-title">
+                      Erasmus Universiteit Rotterdam
+                    </div>
+                  </div>
+                  <div class="opwekken-slider__slide-text-block">
+                    <div class="opwekken-slider__slide-desc">
+                      Ontwikkeling en realisatie van totaal 574 zonnepanelen
+                      (172,2 kWp) op drie gebouwen van de Erasmus Universiteit
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+  </body>
 </html>

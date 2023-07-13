@@ -3660,7 +3660,7 @@ h6 {
 }
 
 .voorop__item-active {
-  background: #FFFFFF;
+  background: #ffffff;
   -webkit-box-shadow: 0px 20px 48px rgba(0, 0, 0, 0.07);
           box-shadow: 0px 20px 48px rgba(0, 0, 0, 0.07);
 }
@@ -3669,11 +3669,14 @@ h6 {
   opacity: 1;
 }
 
-.voorop__item-img {
+.voorop__item-img-wrap {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 190px;
           flex: 1 0 190px;
-  max-width: 16.25rem;
+}
+
+.voorop__item-img {
+  width: 100%;
 }
 
 .voorop__item-subtitle {
@@ -6887,7 +6890,7 @@ h6 {
     line-height: 2.125rem;
   }
 
-  .voorop__item-img {
+  .voorop__item-img-wrap {
     max-width: 16.25rem;
   }
 
@@ -9858,7 +9861,7 @@ h6 {
     gap: 1.875rem;
   }
 
-  .voorop__item-img {
+  .voorop__item-img-wrap {
     max-width: 13.75rem;
   }
 
@@ -11718,12 +11721,12 @@ h6 {
   .voorop__item {
     width: 100%;
     padding: 38px 25px 42px;
-    background: #FFFFFF;
+    background: #ffffff;
     -webkit-box-shadow: 0px 20px 48px rgba(0, 0, 0, 0.07);
             box-shadow: 0px 20px 48px rgba(0, 0, 0, 0.07);
   }
 
-  .voorop__item-img {
+  .voorop__item-img-wrap {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 155px;
             flex: 1 0 155px;
@@ -22815,13 +22818,13 @@ h6 {
 }
 
 @supports (max-width: clamp( 13.75rem , 9.6822033898rem  +  8.4745762712vw , 16.25rem )) {
-    .voorop__item-img {
+    .voorop__item-img-wrap {
       max-width: clamp( 13.75rem , 9.6822033898rem  +  8.4745762712vw , 16.25rem );
     }
 }
 
 @supports not (max-width: clamp( 13.75rem , 9.6822033898rem  +  8.4745762712vw , 16.25rem )) {
-    .voorop__item-img {
+    .voorop__item-img-wrap {
       max-width: calc(13.75rem + 2.5 * (100vw - 48rem) / 29.5);
     }
 }
