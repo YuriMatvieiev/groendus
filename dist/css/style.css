@@ -4065,12 +4065,6 @@ h6 {
   } */
 }
 
-.ons-platform__item:last-child .ons-platform__item-box {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 .ons-platform__title {
   text-align: center;
   font-weight: 700;
@@ -4103,6 +4097,12 @@ h6 {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+}
+
+.ons-platform__item-box-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .ons-platform__item-box-right {
@@ -8539,14 +8539,6 @@ h6 {
 
   .ons-platform__steps {
     padding-top: 11.25rem;
-  }
-
-  .ons-platform__item:not(:last-child) {
-    margin-bottom: 18.75rem;
-  }
-
-  .ons-platform__item:last-child {
-    padding-bottom: 11.25rem;
   }
 
   .ons-platform__title {
@@ -14234,14 +14226,6 @@ h6 {
     padding-top: 4.375rem;
   }
 
-  .ons-platform__item:not(:last-child) {
-    margin-bottom: 6.25rem;
-  }
-
-  .ons-platform__item:last-child {
-    padding-bottom: 4.375rem;
-  }
-
   .ons-platform__title {
     font-size: 1.875rem;
   }
@@ -19045,30 +19029,6 @@ h6 {
 @supports not (padding-top: clamp( 4.375rem , 1.5573770492rem  +  12.0218579235vw , 11.25rem )) {
     .ons-platform__steps {
       padding-top: calc(4.375rem + 6.875 * (100vw - 23.4375rem) / 57.1875);
-    }
-}
-
-@supports (margin-bottom: clamp( 6.25rem , 1.1270491803rem  +  21.8579234973vw , 18.75rem )) {
-    .ons-platform__item:not(:last-child) {
-      margin-bottom: clamp( 6.25rem , 1.1270491803rem  +  21.8579234973vw , 18.75rem );
-    }
-}
-
-@supports not (margin-bottom: clamp( 6.25rem , 1.1270491803rem  +  21.8579234973vw , 18.75rem )) {
-    .ons-platform__item:not(:last-child) {
-      margin-bottom: calc(6.25rem + 12.5 * (100vw - 23.4375rem) / 57.1875);
-    }
-}
-
-@supports (padding-bottom: clamp( 4.375rem , 1.5573770492rem  +  12.0218579235vw , 11.25rem )) {
-    .ons-platform__item:last-child {
-      padding-bottom: clamp( 4.375rem , 1.5573770492rem  +  12.0218579235vw , 11.25rem );
-    }
-}
-
-@supports not (padding-bottom: clamp( 4.375rem , 1.5573770492rem  +  12.0218579235vw , 11.25rem )) {
-    .ons-platform__item:last-child {
-      padding-bottom: calc(4.375rem + 6.875 * (100vw - 23.4375rem) / 57.1875);
     }
 }
 
