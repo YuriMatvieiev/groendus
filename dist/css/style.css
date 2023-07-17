@@ -3223,10 +3223,8 @@ h6 {
   color: #020202;
 }
 
-.no-webp .full-width-banner{
-  background: url("../img/opwekken/ful-width-bannerX2.png") no-repeat 100%; }
-
 .full-width-banner {
+  background: url("../img/opwekken/ful-width-bannerX2.png") no-repeat 100%;
   background-size: cover !important;
   background-position: center;
   display: -webkit-box;
@@ -4063,6 +4061,10 @@ h6 {
      }
     }
   } */
+}
+
+.ons-platform__item-end-line {
+  margin-bottom: -10px !important;
 }
 
 .ons-platform__title {
@@ -7024,7 +7026,7 @@ h6 {
   }
 
   .ons-platform__item-img-iMac {
-    width: 38.125rem;
+    max-width: 38.125rem;
   }
 
   .klantverhalen-hero__container {
@@ -8538,7 +8540,11 @@ h6 {
   }
 
   .ons-platform__steps {
-    padding-top: 11.25rem;
+    padding-bottom: 11.25rem;
+  }
+
+  .ons-platform__item {
+    margin-bottom: 18.75rem;
   }
 
   .ons-platform__title {
@@ -8614,11 +8620,11 @@ h6 {
   }
 
   .ons-platform__item-img-iPhone {
-    width: 20.3125rem;
+    max-width: 20.3125rem;
   }
 
   .ons-platform__item-img-iPad {
-    width: 51.5625rem;
+    max-width: 51.5625rem;
   }
 
   .klantverhalen-hero {
@@ -9983,7 +9989,7 @@ h6 {
   }
 
   .ons-platform__item-img-iMac {
-    width: 20rem;
+    max-width: 20rem;
   }
 
   .klantverhalen-hero__container {
@@ -11522,8 +11528,9 @@ h6 {
     display: none;
   }
 
-  .no-webp .full-width-banner{
-    background: url("../img/opwekken/ful-width-banner.png") no-repeat center left 75%; }
+  .full-width-banner {
+    background: url("../img/opwekken/ful-width-banner.png") no-repeat center left 75%;
+  }
 
   .full-width-banner__container {
     -webkit-box-pack: center;
@@ -12632,7 +12639,7 @@ h6 {
   }
 
   .ons-platform__item-img-iMac {
-    width: 15rem;
+    max-width: 15rem;
   }
 
   .klantverhalen-hero__img-left img {
@@ -14223,7 +14230,11 @@ h6 {
   }
 
   .ons-platform__steps {
-    padding-top: 4.375rem;
+    padding-bottom: 4.375rem;
+  }
+
+  .ons-platform__item {
+    margin-bottom: 6.25rem;
   }
 
   .ons-platform__title {
@@ -14299,11 +14310,11 @@ h6 {
   }
 
   .ons-platform__item-img-iPhone {
-    width: 6.875rem;
+    max-width: 6.875rem;
   }
 
   .ons-platform__item-img-iPad {
-    width: 15rem;
+    max-width: 15rem;
   }
 
   .klantverhalen-hero {
@@ -19020,15 +19031,27 @@ h6 {
     }
 }
 
-@supports (padding-top: clamp( 4.375rem , 1.5573770492rem  +  12.0218579235vw , 11.25rem )) {
+@supports (padding-bottom: clamp( 4.375rem , 1.5573770492rem  +  12.0218579235vw , 11.25rem )) {
     .ons-platform__steps {
-      padding-top: clamp( 4.375rem , 1.5573770492rem  +  12.0218579235vw , 11.25rem );
+      padding-bottom: clamp( 4.375rem , 1.5573770492rem  +  12.0218579235vw , 11.25rem );
     }
 }
 
-@supports not (padding-top: clamp( 4.375rem , 1.5573770492rem  +  12.0218579235vw , 11.25rem )) {
+@supports not (padding-bottom: clamp( 4.375rem , 1.5573770492rem  +  12.0218579235vw , 11.25rem )) {
     .ons-platform__steps {
-      padding-top: calc(4.375rem + 6.875 * (100vw - 23.4375rem) / 57.1875);
+      padding-bottom: calc(4.375rem + 6.875 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (margin-bottom: clamp( 6.25rem , 1.1270491803rem  +  21.8579234973vw , 18.75rem )) {
+    .ons-platform__item {
+      margin-bottom: clamp( 6.25rem , 1.1270491803rem  +  21.8579234973vw , 18.75rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 6.25rem , 1.1270491803rem  +  21.8579234973vw , 18.75rem )) {
+    .ons-platform__item {
+      margin-bottom: calc(6.25rem + 12.5 * (100vw - 23.4375rem) / 57.1875);
     }
 }
 
@@ -19248,27 +19271,27 @@ h6 {
     }
 }
 
-@supports (width: clamp( 6.875rem , 1.3678278689rem  +  23.4972677596vw , 20.3125rem )) {
+@supports (max-width: clamp( 6.875rem , 1.3678278689rem  +  23.4972677596vw , 20.3125rem )) {
     .ons-platform__item-img-iPhone {
-      width: clamp( 6.875rem , 1.3678278689rem  +  23.4972677596vw , 20.3125rem );
+      max-width: clamp( 6.875rem , 1.3678278689rem  +  23.4972677596vw , 20.3125rem );
     }
 }
 
-@supports not (width: clamp( 6.875rem , 1.3678278689rem  +  23.4972677596vw , 20.3125rem )) {
+@supports not (max-width: clamp( 6.875rem , 1.3678278689rem  +  23.4972677596vw , 20.3125rem )) {
     .ons-platform__item-img-iPhone {
-      width: calc(6.875rem + 13.4375 * (100vw - 23.4375rem) / 57.1875);
+      max-width: calc(6.875rem + 13.4375 * (100vw - 23.4375rem) / 57.1875);
     }
 }
 
-@supports (width: clamp( 15rem , 0.0153688525rem  +  63.9344262295vw , 51.5625rem )) {
+@supports (max-width: clamp( 15rem , 0.0153688525rem  +  63.9344262295vw , 51.5625rem )) {
     .ons-platform__item-img-iPad {
-      width: clamp( 15rem , 0.0153688525rem  +  63.9344262295vw , 51.5625rem );
+      max-width: clamp( 15rem , 0.0153688525rem  +  63.9344262295vw , 51.5625rem );
     }
 }
 
-@supports not (width: clamp( 15rem , 0.0153688525rem  +  63.9344262295vw , 51.5625rem )) {
+@supports not (max-width: clamp( 15rem , 0.0153688525rem  +  63.9344262295vw , 51.5625rem )) {
     .ons-platform__item-img-iPad {
-      width: calc(15rem + 36.5625 * (100vw - 23.4375rem) / 57.1875);
+      max-width: calc(15rem + 36.5625 * (100vw - 23.4375rem) / 57.1875);
     }
 }
 
@@ -23162,15 +23185,15 @@ h6 {
     }
 }
 
-@supports (width: clamp( 20rem , -9.4915254237rem  +  61.4406779661vw , 38.125rem )) {
+@supports (max-width: clamp( 20rem , -9.4915254237rem  +  61.4406779661vw , 38.125rem )) {
     .ons-platform__item-img-iMac {
-      width: clamp( 20rem , -9.4915254237rem  +  61.4406779661vw , 38.125rem );
+      max-width: clamp( 20rem , -9.4915254237rem  +  61.4406779661vw , 38.125rem );
     }
 }
 
-@supports not (width: clamp( 20rem , -9.4915254237rem  +  61.4406779661vw , 38.125rem )) {
+@supports not (max-width: clamp( 20rem , -9.4915254237rem  +  61.4406779661vw , 38.125rem )) {
     .ons-platform__item-img-iMac {
-      width: calc(20rem + 18.125 * (100vw - 48rem) / 29.5);
+      max-width: calc(20rem + 18.125 * (100vw - 48rem) / 29.5);
     }
 }
 
@@ -24072,7 +24095,7 @@ h6 {
   }
 
   .ons-platform__item-img-iMac {
-    width: 20rem;
+    max-width: 20rem;
   }
 
   .klantverhalen-hero__img-left img {
@@ -24245,15 +24268,15 @@ h6 {
     }
 }
 
-@supports (width: clamp( 15rem , 10.2287648226rem  +  20.3572700901vw , 20rem )) {
+@supports (max-width: clamp( 15rem , 10.2287648226rem  +  20.3572700901vw , 20rem )) {
     .ons-platform__item-img-iMac {
-      width: clamp( 15rem , 10.2287648226rem  +  20.3572700901vw , 20rem );
+      max-width: clamp( 15rem , 10.2287648226rem  +  20.3572700901vw , 20rem );
     }
 }
 
-@supports not (width: clamp( 15rem , 10.2287648226rem  +  20.3572700901vw , 20rem )) {
+@supports not (max-width: clamp( 15rem , 10.2287648226rem  +  20.3572700901vw , 20rem )) {
     .ons-platform__item-img-iMac {
-      width: calc(15rem + 5 * (100vw - 23.4375rem) / 24.56125);
+      max-width: calc(15rem + 5 * (100vw - 23.4375rem) / 24.56125);
     }
 }
 
@@ -24867,11 +24890,4 @@ h6 {
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
   }
-}
-
-.webp .full-width-banner{ background: url(../img/opwekken/ful-width-bannerX2.webp) no-repeat 100%; }
-
-@media (max-width: 47.99875em){
-
-  .webp .full-width-banner{ background: url(../img/opwekken/ful-width-banner.webp) no-repeat center left 75%; }
 }
