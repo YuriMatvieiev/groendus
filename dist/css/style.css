@@ -4181,6 +4181,7 @@ h6 {
 .ons-platform__item-img img {
   -webkit-filter: drop-shadow(-10px 12px 25px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(-10px 12px 25px rgba(0, 0, 0, 0.25));
+  width: 100%;
 }
 
 .klantverhalen-hero {
