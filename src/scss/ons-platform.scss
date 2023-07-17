@@ -236,6 +236,17 @@
     }
     &-center {
       justify-content: center;
+      text-align: center;
+      .ons-platform__item-text {
+        text-align: center;
+        align-items: center;
+        width: unset;
+      }
+      .ons-platform__item-title,
+      .ons-platform__item-desc {
+        width: 100%;
+        max-width: 800px;
+      }
     }
     &-right {
       flex-direction: row-reverse;
