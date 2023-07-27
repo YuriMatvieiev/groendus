@@ -3452,6 +3452,7 @@ h6 {
 .opwekken-hero .blue-hero__img-block img {
   width: 100%;
   height: 100%;
+  border-radius: 50%;
 }
 
 .opwekken-hero .fun-fact {
