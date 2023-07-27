@@ -194,6 +194,8 @@
   }
   // .opwekken-steps__left
   &__left {
+    display: flex;
+    flex-direction: column;
     width: 50%;
     position: relative;
     .productpagina-steps__main-line-box {
