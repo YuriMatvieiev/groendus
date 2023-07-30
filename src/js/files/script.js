@@ -2,7 +2,8 @@
 import { isMobile } from "./functions.js";
 // Подключение списка активных модулей
 import { flsModules } from "./modules.js";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 //=====================================================HEADER===================================================================================================
 
 // Select the elements using querySelector instead of getElementById for brevity
@@ -637,3 +638,48 @@ if (window.innerWidth > 991.98) {
     contentObserver.observe(contentWrap);
   }
 }
+
+/* function updateSVGSize() {
+  const svgElement = document.getElementById("growing-svg");
+  const scrollPosition = window.scrollY;
+  const windowHeight = window.innerHeight;
+  const svgTop = svgElement.getBoundingClientRect().top;
+
+  // Calculate the maximum size (400px) and the starting size (50px)
+  const maxSize = 470;
+  const minSize = 20;
+
+  // Calculate the new size based on the scroll position
+  const newSize = Math.min(
+    maxSize,
+    minSize +
+      ((scrollPosition + windowHeight / 2 - svgTop) / windowHeight) *
+        (maxSize - minSize)
+  );
+
+  // Update the SVG size
+  svgElement.style.height = newSize + "px";
+}
+
+// Attach the updateSVGSize function to the scroll event
+window.addEventListener("scroll", updateSVGSize);
+
+// Call the function once on page load to set the initial size
+updateSVGSize();
+ */
+
+function initAOS() {
+  var offsetValue = window.innerWidth < 768 ? 100 : 200;
+  AOS.init({
+    offset: offsetValue,
+    once: true,
+    delay: 200,
+    duration: 300,
+  });
+}
+
+// Call the function initially to set the correct offset value
+initAOS();
+
+// Update AOS initialization whenever the window is resized
+window.addEventListener("resize", initAOS);

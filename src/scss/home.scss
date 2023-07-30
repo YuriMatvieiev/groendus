@@ -469,6 +469,8 @@
   // .home-number__top-svg
   &__top-svg {
     @include adaptiveValue("height", 470, 347);
+    /* height: 50px; 
+    transform-origin: center; */
   }
   // .home-number__top-text
   &__top-text {

@@ -6,8 +6,8 @@
 	<meta charset="UTF-8" />
 	<meta name="format-detection" content="telephone=no" />
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css?_v=20230727162122" />
-	<link rel="stylesheet" href="css/style.min.css?_v=20230727162122" />
+	<link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css?_v=20230730165120" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20230730165120" />
 	<link rel="shortcut icon" href="favicon.ico" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -406,7 +406,7 @@
 							</div>
 							<div class="home-hero__slide-circle"></div>
 							<div class="home-hero__container">
-								<div class="home-hero__slide-text">
+								<div data-aos="zoom-in" class="home-hero__slide-text">
 									<div class="home-hero__slide-text-title">
 										Wij zien kansen in 100% schone zakelijke energie.
 									</div>
@@ -416,7 +416,7 @@
 									</div>
 									<a href="#" class="home-hero__slide-text-button blue-button">Spreek een adviseur</a>
 								</div>
-								<div class="home-hero__slide-bottom">
+								<div data-aos="zoom-in" class="home-hero__slide-bottom">
 									<div class="home-hero__slide-bottom-title">
 										Dit hebben we
 										<span class="blue-text">samen met onze klanten</span>
@@ -549,17 +549,17 @@
 			</section>
 			<section class="home-solutions">
 				<div class="home-solutions__container">
-					<div class="home-solutions__title">
+					<div data-aos="fade-up" class="home-solutions__title">
 						Álle benodigde diensten voor een slimme, duurzame en betaalbare
 						energiehuishouding.
 					</div>
-					<div class="home-solutions__text">
+					<div data-aos="fade-up" class="home-solutions__text">
 						Wat je ook nodig hebt, we regelen het voor je. Als onafhankelijke
 						gids voor zakelijk Nederland helpen we ook jouw organisatie op weg
 						naar 100% schone energie.
 					</div>
 					<div class="home-solutions__slider-box">
-						<div class="home-solutions__slider swiper">
+						<div data-aos="fade-up" class="home-solutions__slider swiper">
 							<div class="home-solutions__wrapper swiper-wrapper">
 								<a href="#" class="home-solutions__slide swiper-slide">
 									<img src="img/home/articles.png" alt="" class="home-solutions__slide-img" />
@@ -695,10 +695,10 @@
 								</a>
 							</div>
 						</div>
-						<button type="button" class="home-solutions__swiper-button-prev">
+						<button data-aos="fade-left" type="button" class="home-solutions__swiper-button-prev">
 							<img src="img/home/arrow-white.svg" alt="" />
 						</button>
-						<button type="button" class="home-solutions__swiper-button-next">
+						<button data-aos="fade-right" type="button" class="home-solutions__swiper-button-next">
 							<img src="img/home/arrow-white.svg" alt="" />
 						</button>
 					</div>
@@ -706,21 +706,30 @@
 					<a href="#" class="home-solutions__button blue-button">Bekijk al onze oplossingen</a>
 				</div>
 			</section>
-			<section class="home-number">
+			<section class="home-number" id="home-number-section">
 				<div class="home-number__container">
 					<div class="home-number__top">
-						<img src="img/home/number.svg" alt="" class="home-number__top-svg" />
+						<!--  <img
+                src="img/home/number.svg"
+                alt=""
+                class="home-number__top-svg"
+                id="growing-svg"
+              /> -->
+						<svg width="208" class="home-number__top-svg" id="growing-svg" height="472" viewBox="0 0 208 472" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M82.5397 141.6L0 198.914V67.4286L95.746 0H208V472H82.5397V141.6Z" fill="#006EFF" />
+						</svg>
+
 						<div class="home-number__top-text">
-							<div class="home-number__top-text-title">
+							<div data-aos="fade-up" class="home-number__top-text-title">
 								<div class="blue-text">Één</div>
 								integrale oplossing
 							</div>
-							<div class="home-number__top-text-desc">
+							<div data-aos="fade-up" class="home-number__top-text-desc">
 								Lekker simpel en groen dus. Daar houden we van.
 							</div>
 						</div>
 					</div>
-					<div class="home-number__bottom">
+					<div data-aos="fade-right" class="home-number__bottom">
 						Bij Groendus bouwen we aan een duurzame energiehuishouding met
 						<span class="blue-text">drie onderdelen</span>. Deze onderdelen
 						maken optimaal gebruik van de elementen zodat je stroom 100% groen
@@ -733,7 +742,7 @@
 					<div class="home-steps__slider swiper">
 						<div class="home-steps__wrapper swiper-wrapper">
 							<div class="home-steps__slide swiper-slide">
-								<div data-da="#home-steps__slide-first, 768,2" class="home-steps__slide-circle">
+								<div data-da="#home-steps__slide-first, 768,2" class="home-steps__slide-circle" data-aos="zoom-in">
 									<div class="home-steps__slide-circle-parts home-steps__slide-circle-top-left steps-next">
 										<img src="img/home/top-left-circle.svg" alt="" />
 										<span>Inzicht & sturing</span>
@@ -746,7 +755,7 @@
 										<img src="img/home/right-center3.png" alt="" />
 									</div>
 								</div>
-								<div id="home-steps__slide-first" class="home-steps__slide-text">
+								<div id="home-steps__slide-first" class="home-steps__slide-text" data-aos="fade-up">
 									<div class="home-steps__slide-text-subtitle">
 										Slim en groen dus
 									</div>
@@ -855,17 +864,17 @@
 			</section>
 			<section class="home-logos">
 				<div class="home-logos__container">
-					<div data-watch data-watch-once class="home-logos__title">
+					<div data-aos="fade-up" data-watch data-watch-once class="home-logos__title">
 						Voor <span class="blue-number">4</span> .
 						<span class="blue-number">2</span>
 						<span class="blue-number">1</span>
 						<span data-digits-counter data-digits-counter-speed="2000" class="blue-number">4</span>
 						organisaties is 100% schone energie geen uitdaging meer.
 					</div>
-					<div class="home-logos__subtitle">
+					<div data-aos="fade-up" class="home-logos__subtitle">
 						We vormen het nieuwe energienetwerk van en voor zakelijk Nederland
 					</div>
-					<div class="home-logos__box">
+					<div data-aos="zoom-in" class="home-logos__box">
 						<a href="#"><img src="img/home/logo/1200px-Compact_Logo_gemeente_Den_Haag.svg" alt="" /></a>
 						<a href="#"><img src="img/home/logo/2560px-Logo_DB_Schenker.svg" alt="" /></a>
 						<a href="#"><img src="img/home/logo/Amphia.svg" alt="" /></a>
@@ -902,24 +911,26 @@
 						<a href="#"><img src="img/home/logo/van-der-valk.svg" alt="" /></a>
 						<a href="#"><img src="img/home/logo/wereldhave.svg" alt="" /></a>
 					</div>
-					<a href="#" class="home-logos__button blue-button">Klantverhalen</a>
+					<a data-aos="fade-up" href="#" class="home-logos__button blue-button">Klantverhalen</a>
 				</div>
 			</section>
 			<section class="home-video">
 				<div class="home-video__container">
-					<div class="home-video__title">Wij zijn Groendus.</div>
-					<div class="home-video__subtitle">
+					<div data-aos="fade-up" class="home-video__title">
+						Wij zijn Groendus.
+					</div>
+					<div data-aos="fade-up" class="home-video__subtitle">
 						Vanuit de ruimte gezien niets meer dan een kleine blauwe stip.
 						Daar moeten we samen goed op passen.
 					</div>
-					<div class="full-video__video">
+					<div data-aos="zoom-in" class="full-video__video">
 						<img class="full-video__img" src="img/productpagina/prevue.png" alt="video thumbnail" id="thumbnail" />
 						<button class="full-video__play-button" id="play-button">
 							<img src="img/productpagina/play.svg" alt="" />
 						</button>
 						<div id="video-container" style="display: none">
-							<script src="https://fast.wistia.com/embed/medias/222bm49bvb.jsonp?_v=20230727162122" async></script>
-							<script src="https://fast.wistia.com/assets/external/E-v1.js?_v=20230727162122" async></script>
+							<script src="https://fast.wistia.com/embed/medias/222bm49bvb.jsonp?_v=20230730165120" async></script>
+							<script src="https://fast.wistia.com/assets/external/E-v1.js?_v=20230730165120" async></script>
 							<div class="wistia_responsive_padding" style="padding: 56.25% 0 0 0; position: relative">
 								<div class="wistia_responsive_wrapper" style="
                       height: 100%;
@@ -951,15 +962,19 @@
 							</div>
 						</div>
 					</div>
-					<a href="#" class="home-video__black-button black-button">Ontdek meer over Groendus</a>
-					<a href="#" class="home-video__link">Waarom Groendus?</a>
+					<a data-aos="fade-up" href="#" class="home-video__black-button black-button">Ontdek meer over Groendus</a>
+					<a data-aos="fade-up" href="#" class="home-video__link">Waarom Groendus?</a>
 				</div>
 			</section>
 			<section class="home-news">
 				<div class="home-news__container">
-					<div class="home-news__title">Razendsnelle ontwikkelingen</div>
-					<div class="home-news__subtitle">Wij zorgen dat je bij blijft.</div>
-					<div class="home-news__slider swiper">
+					<div data-aos="fade-up" class="home-news__title">
+						Razendsnelle ontwikkelingen
+					</div>
+					<div data-aos="fade-up" class="home-news__subtitle">
+						Wij zorgen dat je bij blijft.
+					</div>
+					<div data-aos="zoom-in" class="home-news__slider swiper">
 						<div class="home-news__wrapper swiper-wrapper">
 							<a href="#" class="home-news__slide swiper-slide">
 								<div class="home-news__image">
@@ -998,18 +1013,20 @@
 							</a>
 						</div>
 					</div>
-					<a href="#" class="home-news__button blue-button">Bekijk meer nieuwberichten</a>
+					<a data-aos="fade-up" href="#" class="home-news__button blue-button">Bekijk meer nieuwberichten</a>
 				</div>
 			</section>
 			<section class="energiekennis-subscribe">
 				<div class="energiekennis-subscribe__container">
-					<div class="energiekennis-subscribe__subtitle">Nieuwsbrief</div>
-					<div class="energiekennis-subscribe__title">
+					<div data-aos="fade-up" class="energiekennis-subscribe__subtitle">
+						Nieuwsbrief
+					</div>
+					<div data-aos="fade-up" class="energiekennis-subscribe__title">
 						Altijd als eerste weten wat er speelt?
 					</div>
 					<form class="energiekennis-subscribe__form" action="#">
-						<input class="energiekennis-subscribe__input" type="email" name="Email" placeholder="E-mailadres voor aanmelden nieuwsbrief" id="" />
-						<button class="energiekennis-subscribe__button blue-button" type="submit">
+						<input data-aos="fade-right" class="energiekennis-subscribe__input" type="email" name="Email" placeholder="E-mailadres voor aanmelden nieuwsbrief" id="" />
+						<button data-aos="fade-left" class="energiekennis-subscribe__button blue-button" type="submit">
 							Ik blijf graag bij
 						</button>
 					</form>
@@ -1073,7 +1090,7 @@
 		</footer>
 
 	</div>
-	<script src="js/app.min.js?_v=20230727162122"></script>
+	<script src="js/app.min.js?_v=20230730165120"></script>
 
 </body>
 
