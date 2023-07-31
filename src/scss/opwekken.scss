@@ -509,7 +509,7 @@
     }
   }
   .fun-fact {
-    @include adaptiveValue("max-width", 485, 375, 0, 1240, 767.98);
+    @include adaptiveValue("max-width", 500, 425, 0, 1240, 767.98);
     @include adaptiveValue("bottom", -60, -130, 0, 1240, 767.98);
     box-shadow: 0px 20px 24px 0px rgba(0, 0, 0, 0.04);
     @media (max-width: $mobile) {
@@ -517,12 +517,10 @@
     }
   }
   .fun-fact__box {
-    gap: 20px;
     align-items: flex-start;
-    padding: 35px 70px 25px;
-    @media (max-width: $tablet) {
-      padding: 25px 30px;
-    }
+    justify-content: center;
+    padding: 25px 20px;
+    @include adaptiveValue("gap", 20, 10);
     @media (max-width: $mobile) {
       padding: 20px;
     }
@@ -535,7 +533,7 @@
     gap: 5px;
     align-items: center;
     &:not(:last-child) {
-      padding-right: 20px;
+      @include adaptiveValue("padding-right", 20, 10);
     }
   }
   .fun-fact__number {

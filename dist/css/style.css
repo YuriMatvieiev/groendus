@@ -3473,11 +3473,13 @@ h6 {
 }
 
 .opwekken-hero .fun-fact__box {
-  gap: 20px;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding: 35px 70px 25px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 25px 20px;
 }
 
 .opwekken-hero .fun-fact__item {
@@ -3489,10 +3491,6 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.opwekken-hero .fun-fact__item:not(:last-child) {
-  padding-right: 20px;
 }
 
 .opwekken-hero .fun-fact__number {
@@ -8556,7 +8554,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   }
 
   .opwekken-hero .fun-fact {
-    max-width: 30.3125rem;
+    max-width: 31.25rem;
   }
 
   .opwekken-hero .fun-fact {
@@ -9959,6 +9957,14 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
   .opwekken-hero {
     padding-top: 0.0000000625rem;
+  }
+
+  .opwekken-hero .fun-fact__box {
+    gap: 1.25rem;
+  }
+
+  .opwekken-hero .fun-fact__item:not(:last-child) {
+    padding-right: 1.25rem;
   }
 
   .duurzaam .ovner {
@@ -12489,10 +12495,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     padding: 25px;
   }
 
-  .opwekken-hero .fun-fact__box {
-    padding: 25px 30px;
-  }
-
   .productpagina-options__slide {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -13378,7 +13380,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   }
 
   .opwekken-hero .fun-fact {
-    max-width: 23.4375rem;
+    max-width: 26.5625rem;
   }
 
   .opwekken-hero .fun-fact {
@@ -15713,6 +15715,14 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
   .opwekken-hero {
     padding-top: 5rem;
+  }
+
+  .opwekken-hero .fun-fact__box {
+    gap: 0.625rem;
+  }
+
+  .opwekken-hero .fun-fact__item:not(:last-child) {
+    padding-right: 0.625rem;
   }
 
   .duurzaam .ovner {
@@ -19894,6 +19904,30 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 @supports not (padding-top: clamp( 0.0000000625rem , 7.0491803023rem  +  -8.7431692896vw , 5rem )) {
     .opwekken-hero {
       padding-top: calc(5rem + -4.9999999375 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (gap: clamp( 0.625rem , 0.368852459rem  +  1.0928961749vw , 1.25rem )) {
+    .opwekken-hero .fun-fact__box {
+      gap: clamp( 0.625rem , 0.368852459rem  +  1.0928961749vw , 1.25rem );
+    }
+}
+
+@supports not (gap: clamp( 0.625rem , 0.368852459rem  +  1.0928961749vw , 1.25rem )) {
+    .opwekken-hero .fun-fact__box {
+      gap: calc(0.625rem + 0.625 * (100vw - 23.4375rem) / 57.1875);
+    }
+}
+
+@supports (padding-right: clamp( 0.625rem , 0.368852459rem  +  1.0928961749vw , 1.25rem )) {
+    .opwekken-hero .fun-fact__item:not(:last-child) {
+      padding-right: clamp( 0.625rem , 0.368852459rem  +  1.0928961749vw , 1.25rem );
+    }
+}
+
+@supports not (padding-right: clamp( 0.625rem , 0.368852459rem  +  1.0928961749vw , 1.25rem )) {
+    .opwekken-hero .fun-fact__item:not(:last-child) {
+      padding-right: calc(0.625rem + 0.625 * (100vw - 23.4375rem) / 57.1875);
     }
 }
 
@@ -26362,15 +26396,15 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     }
 }
 
-@supports (max-width: clamp( 23.4375rem , 12.2518246049rem  +  23.304097284vw , 30.3125rem )) {
+@supports (max-width: clamp( 26.5625rem , 18.9359031397rem  +  15.8891572391vw , 31.25rem )) {
     .opwekken-hero .fun-fact {
-      max-width: clamp( 23.4375rem , 12.2518246049rem  +  23.304097284vw , 30.3125rem );
+      max-width: clamp( 26.5625rem , 18.9359031397rem  +  15.8891572391vw , 31.25rem );
     }
 }
 
-@supports not (max-width: clamp( 23.4375rem , 12.2518246049rem  +  23.304097284vw , 30.3125rem )) {
+@supports not (max-width: clamp( 26.5625rem , 18.9359031397rem  +  15.8891572391vw , 31.25rem )) {
     .opwekken-hero .fun-fact {
-      max-width: calc(23.4375rem + 6.875 * (100vw - 47.99875rem) / 29.50125);
+      max-width: calc(26.5625rem + 4.6875 * (100vw - 47.99875rem) / 29.50125);
     }
 }
 
