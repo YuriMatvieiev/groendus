@@ -485,7 +485,7 @@
 }
 .opwekken-hero {
   @include adaptiveValue("padding-top", 0, 80);
-  padding-bottom: 0;
+  padding-bottom: 0 !important;
   margin-bottom: rem(210);
   @media (max-width: $mobile) {
     margin-bottom: rem(300);
