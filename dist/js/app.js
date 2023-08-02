@@ -10486,7 +10486,7 @@
                 offset: offsetValue,
                 once: true,
                 delay: 200,
-                duration: 300
+                duration: 600
             });
         }
         initAOS();

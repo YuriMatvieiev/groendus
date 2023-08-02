@@ -1,0 +1,160 @@
+.integrale {
+  .white-theme {
+    background-color: transparent;
+    position: relative;
+  }
+  .header__top-second {
+    ul {
+      a {
+        color: #fff;
+        @media (max-width: $mobile) {
+          color: #141414;
+        }
+      }
+    }
+  }
+  .header__top-wrap {
+    background-color: rgba(2, 2, 2, 0.25) !important;
+  }
+  .header__top-first-title,
+  .menu__link-wrap,
+  .menu__link,
+  .header__top-text-title,
+  .header__top-text-desc {
+    color: #fff;
+  }
+  .menu__link-wrap,
+  .menu__link {
+    @media (max-width: $mobile) {
+      color: #020202;
+    }
+  }
+  .header__top-first-button {
+    span {
+      background-color: $blue-light;
+      color: #fff;
+    }
+  }
+  .header__logo-letter {
+    fill: #fff;
+  }
+}
+.menu-open {
+  .integrale .white-theme {
+    background-color: #fff;
+  }
+  .integrale .header__top-wrap {
+    background-color: transparent !important;
+  }
+  .header__top-first-title {
+    color: #5b5b5b;
+  }
+  .integrale .header__logo-letter {
+    fill: #020202;
+  }
+}
+.integrale-wrapper {
+  background: url("@img/integrale-energieoplossing/baner-x2.png") center -1px / cover
+    no-repeat;
+}
+.integrale-hero {
+  @include adaptiveValue("padding-top", 120, 55);
+  @include adaptiveValue("padding-bottom", 350, 130);
+  position: relative;
+  z-index: 1;
+  // .integrale-hero__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+  }
+  // .integrale-hero__title
+  &__title {
+    max-width: 675px;
+    font-weight: 700;
+    line-height: 110%;
+    margin-bottom: 16px;
+    @include adaptiveValue("font-size", 46, 30);
+    @media (max-width: $mobile) {
+      @include adaptiveValue("max-width", 675, 270);
+    }
+  }
+  // .integrale-hero__subtitle
+  &__subtitle {
+    max-width: 675px;
+    line-height: 140%;
+    @include adaptiveValue("font-size", 16, 14);
+    @media (max-width: $mobile) {
+      @include adaptiveValue("max-width", 675, 270);
+    }
+    span {
+      font-weight: 700;
+      @media (max-width: $mobileSmall) {
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.integrale-steps {
+  position: relative;
+
+  @include adaptiveValue("margin-top", -210, -50);
+  @include adaptiveValue("padding-top", 130, 70);
+  // .integrale-steps__circle
+  &__circle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    /* width: 3245px;
+    height: 3245px; */
+    border-radius: 50%;
+    @include adaptiveValue("width", 3245, 915);
+    @include adaptiveValue("height", 3245, 915);
+  }
+  // .integrale-steps__container
+  &__container {
+    z-index: 2;
+    position: relative;
+  }
+  // .integrale-steps__header
+  &__header {
+    display: flex;
+    gap: 20px;
+    max-width: 820px;
+    margin: 0 auto;
+    @media (max-width: $mobile) {
+      @include adaptiveValue("max-width", 820, 300);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  // .integrale-steps__title
+  &__title {
+    font-weight: 700;
+    line-height: 110%;
+    @include adaptiveValue("font-size", 44, 30);
+  }
+  // .integrale-steps__desc
+  &__desc {
+    line-height: 150%;
+    @include adaptiveValue("font-size", 16, 14);
+    @media (max-width: $mobile) {
+      line-height: 140%;
+    }
+    span {
+      margin-top: 20px;
+      font-weight: 700;
+      display: block;
+    }
+  }
+}
+.blue-text {
+}
