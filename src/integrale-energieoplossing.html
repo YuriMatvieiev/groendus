@@ -4,10 +4,9 @@
 
   <body class="integrale">
     <div class="wrapper">
+      @@include('html/_header.htm',{ "theme": "white-theme" })
       <main class="page">
         <div class="integrale-wrapper">
-          @@include('html/_header.htm',{ "theme": "white-theme" })
-
           <section class="integrale-hero">
             <div class="integrale-hero__container">
               <div class="integrale-hero__title">
@@ -24,31 +23,321 @@
             </div>
           </section>
         </div>
-          <section class="integrale-steps">
-            <div class="integrale-steps__circle"></div>
-            <div class="integrale-steps__container">
-              <div class="integrale-steps__header">
-                <div class="integrale-steps__title">
-                  <span class="blue-text">Flexibiliteit</span> wordt de
-                  standaard
-                </div>
-                <div class="integrale-steps__desc">
-                  In het nieuwe energiesysteem gaan we anders met energie om. We
-                  produceren het niet meer grijs op de momenten dat het ons
-                  uitkomt. Maar we verbruiken het groen op de momenten dat we
-                  het duurzaam opwekken. Slimme organisaties passen hun
-                  bedrijfsvoering aan op de momenten dat energie goedkoop en
-                  beschikbaar is. Flexibiliteit wordt het uitgangspunt.
+        <section class="integrale-circle">
+          <div class="integrale-circle__circle"></div>
+          <div class="integrale-circle__container">
+            <div class="integrale-circle__header">
+              <div class="integrale-circle__title">
+                <span class="blue-text">Flexibiliteit</span> wordt de standaard
+              </div>
+              <div class="integrale-circle__desc">
+                In het nieuwe energiesysteem gaan we anders met energie om. We
+                produceren het niet meer grijs op de momenten dat het ons
+                uitkomt. Maar we verbruiken het groen op de momenten dat we het
+                duurzaam opwekken. Slimme organisaties passen hun
+                bedrijfsvoering aan op de momenten dat energie goedkoop en
+                beschikbaar is. Flexibiliteit wordt het uitgangspunt.
 
-                  <span
-                    >Hoe regel je dat? Met onze integrale
-                    energieoplossing!</span
-                  >
+                <span
+                  >Hoe regel je dat? Met onze integrale energieoplossing!</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="integrale-steps">
+          <div class="integrale-steps__container">
+            <div class="integrale-steps__main-circle">
+              <div class="integrale-steps__main-circle-images">
+                <div class="integrale-steps__main-circle-img1">
+                  <img
+                    src="@img/integrale-energieoplossing/circle-top-left.png"
+                    alt=""
+                  />
+                </div>
+                <div class="integrale-steps__main-circle-img2">
+                  <img
+                    src="@img/integrale-energieoplossing/circle-mid-right.png"
+                    alt=""
+                  />
+                </div>
+                <div class="integrale-steps__main-circle-img3">
+                  <img
+                    src="@img/integrale-energieoplossing/circle-bottom-left.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="integrale-steps__main-circle-text">
+                <div class="integrale-steps__main-circle-title">
+                  Van <span class="blue-text">opwekken</span> tot
+                  <span class="blue-text">inkopen</span>
+                </div>
+                <div class="integrale-steps__main-circle-desc">
+                  Drie elementen vormen samen onze integrale oplossing. Daarmee
+                  verduurzamen we de energiehuishouding van elke organisatie.
+                  Onze oplossing maakt jouw groene ambities waar én zorgt ervoor
+                  dat je geld bespaart. Een oplossing met interessant rendement.
+
+                  <span>Slim, simpel en groen dus.</span>
                 </div>
               </div>
             </div>
-          </section>
-        
+            <div class="integrale-steps__slider swiper">
+              <div class="integrale-steps__wrapper swiper-wrapper">
+                <div
+                  class="integrale-steps__slide swiper-slide"
+                  id="integrale-steps__item-first"
+                >
+                  <div class="integrale-steps__item-title">
+                    Opwekken, opslaan <span class="blue-text">&</span> opladen
+                  </div>
+                  <div class="integrale-steps__item-circle">
+                    <div class="integrale-steps__item-circle-t-l opacity">
+                      <img
+                        src="@img/integrale-energieoplossing/circle-smal-t-l.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="integrale-steps__item-circle-m-r">
+                      <img
+                        src="@img/integrale-energieoplossing/circle-smal-m-r.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="integrale-steps__item-circle-b-l opacity">
+                      <img
+                        src="@img/integrale-energieoplossing/circle-smal-b-l.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="integrale-steps__item-desc">
+                    <p>
+                      Zelf groene stroom opwekken met zonnepanelen. Energie
+                      opslaan in grote batterijen om het te gebruiken als de zon
+                      niet schijnt. En je wagenpark verduurzamen met elektrische
+                      laadoplossingen. Achter de elektriciteitsmeter van jouw
+                      organisatie kunnen wij jullie energiehuishouding flink
+                      verduurzamen. Dat is nog eens economisch rendabel ook.
+                      Onafhankelijk van het elektriciteitsnet en de fossiele
+                      energiemarkt neem je hiermee het heft in eigen handen.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="integrale-steps__slide swiper-slide"
+                  id="integrale-steps__item-second"
+                >
+                  <div class="integrale-steps__item-title">
+                    Inzicht <span class="blue-text">&</span> sturing
+                  </div>
+                  <div class="integrale-steps__item-circle">
+                    <div class="integrale-steps__item-circle-t-l">
+                      <img
+                        src="@img/integrale-energieoplossing/circle-smal-t-l.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="integrale-steps__item-circle-m-r opacity">
+                      <img
+                        src="@img/integrale-energieoplossing/circle-smal-m-r.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="integrale-steps__item-circle-b-l opacity">
+                      <img
+                        src="@img/integrale-energieoplossing/circle-smal-b-l.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="integrale-steps__item-desc">
+                    <p>
+                      Beschikbare en goedkope energie wil je zo goed mogelijk
+                      benutten. Dat begint met inzicht. Door te meten wat je
+                      wanneer verbruikt, weet je wanneer je een overschot of
+                      tekort aan energie hebt. Met die inzichten en met
+                      algoritmische sturing vanuit ons energiemanagement
+                      systeem, stem je vervolgens automatisch jullie
+                      energieverbruik af op het groene aanbod. Slimme
+                      energiesturing op basis van gelijktijdigheid noemen we
+                      dat: duurzaam én lucratief.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="integrale-steps__slide swiper-slide"
+                  id="integrale-steps__item-third"
+                >
+                  <div class="integrale-steps__item-title">
+                    <span class="blue-text">Duurzaam</span> inkopen
+                  </div>
+                  <div class="integrale-steps__item-circle">
+                    <div class="integrale-steps__item-circle-t-l opacity">
+                      <img
+                        src="@img/integrale-energieoplossing/circle-smal-t-l.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="integrale-steps__item-circle-m-r opacity">
+                      <img
+                        src="@img/integrale-energieoplossing/circle-smal-m-r.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="integrale-steps__item-circle-b-l">
+                      <img
+                        src="@img/integrale-energieoplossing/circle-smal-b-l.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="integrale-steps__item-desc">
+                    <p>
+                      Wat je niet duurzaam opwekt of bespaart, koop je tot slot
+                      zo groen mogelijk in. Dat kan via de Groendus
+                      Energiemarktplaats. Hier handelen duurzame producenten en
+                      afnemers rechtstreeks met elkaar in zonne- en windenergie.
+                      Vind jouw match op basis van gelijktijdigheid en nabijheid
+                      en maak samen gunstige prijsafspraken waar jullie allebei
+                      van profiteren.
+                    </p>
+                    <p>
+                      Is er geen duurzame stroom van zon of wind beschikbaar?
+                      Dan krijg je automatisch grijze stroom geleverd. We maken
+                      precies inzichtelijk hoe groen en grijs je stroomverbruik
+                      is. Met dit inzicht zetten we samen stappen om je groene
+                      stroomverbruik kosten-effectief te maximaliseren.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="integrale-solution">
+          <div class="integrale-solution__container">
+            <img
+              src="@img/integrale-energieoplossing/Ellipse 509 (2).png"
+              alt=""
+              class="integrale-solution__img"
+            />
+            <img
+              src="@img/integrale-energieoplossing/Ellipse 509 (3).png"
+              alt=""
+              class="integrale-solution__img-mobile"
+            />
+            <div class="integrale-solution__text">
+              <div class="integrale-solution__title">
+                De <span class="blue-text">integrale</span> oplossing
+              </div>
+              <div class="integrale-solution__desc">
+                Dit zijn de drie ingrediënten voor een duurzame
+                energiehuishouding. Groendus is jouw alles-in-één energiepartner
+                en integreert al deze energieoplossingen. We laten ze harmonieus
+                samenwerken zodat jij optimaal gebruik maakt van goedkope en
+                duurzame energie. Zo ben jij klaar voor het energiesysteem van
+                de toekomst!
+              </div>
+              <a href="#" class="integrale-solution__button blue-button"
+                >Bekijk ons aanbod</a
+              >
+            </div>
+          </div>
+        </section>
+        <section class="integrale-energiebedrijf">
+          <div class="integrale-energiebedrijf__container">
+            <div class="integrale-energiebedrijf__left">
+              <div class="integrale-energiebedrijf__subtitle">
+                Het energiebedrijf van de toekomst
+              </div>
+              <div class="integrale-energiebedrijf__title">
+                Energiebedrijf <span class="blue-text">2.0</span>
+              </div>
+              <a
+                href="#"
+                class="integrale-energiebedrijf__button blue-button"
+                data-da=".integrale-energiebedrijf__right, 991.98"
+                >Lees meer Over Groendus</a
+              >
+            </div>
+            <div class="integrale-energiebedrijf__right">
+              <span
+                >Groendus helpt bedrijven om hun energiehuishouding te
+                verduurzamen. Door energie te besparen, zelf op te wekken en
+                slim te verbruiken.</span
+              >
+              <p>
+                Verduurzamen áchter de meter heet dat. Maar om de
+                energietransitie te laten slagen, is er meer nodig. Daarom
+                bouwen we ook vóór de meter aan een toekomstbestendig
+                energiesysteem: samen met onze klanten vormen we een nieuw
+                energienetwerk.
+              </p>
+
+              <p>
+                We kijken verder dan individuele bedrijven. We optimaliseren
+                opwek en verbruik over verschillende bedrijfslocaties, supply
+                chains en stakeholders heen. Want wat de één tekort komt, heeft
+                de ander misschien wel over. Dus verdelen we beschikbare energie
+                zo efficiënt mogelijk zodat we schone bronnen optimaal kunnen
+                gebruiken.
+              </p>
+
+              <p>
+                Dat is energiebedrijf 2.0. Een energiebedrijf dat verder kijkt.
+                Met oog voor de huidige realiteit én voor het toekomstige
+                ideaal.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="ovner ovner-blue">
+          <div class="ovner__container">
+            <div class="ovner__box text-left">
+              <div class="ovner__text-block">
+                <div class="ovner__title">
+                  Wil je verder praten over de beste aanpak voor jouw situatie?
+                </div>
+                <div class="ovner__desc">
+                  “Ik vertel je graag alles over de mogelijkheden. Laat weten
+                  wanneer het je uitkomt, dan kom ik bij je langs.”
+                </div>
+                <div id="ovner__img-mobile" class="ovner__img-mobile"></div>
+                <div class="ovner__autor">
+                  <span>Marcel Visser</span> - Business Development
+                </div>
+                <a href="#" class="ovner__button black-button"
+                  >Plan een afspraak</a
+                >
+                <div class="ovner__contacts">
+                  <div class="ovner__contacts-title">Contact</div>
+                  <ul class="ovner__contacts-items">
+                    <li><a href="tel:088123456789">088-123456789</a></li>
+                    <li>
+                      <a href="mailto:marcelvisser@groendus.nl"
+                        >marcelvisser@groendus.nl</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div data-da="#ovner__img-mobile, 768" class="ovner__img-block">
+                <img
+                  class="ovner__img-ovner"
+                  src="@img/ons-aanbod/ovner.png"
+                  alt="Marcel Visser"
+                />
+                <img
+                  class="ovner__img-border"
+                  src="@img/beheren/border-circle.png"
+                  alt="border"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       @@include('html/_footer.htm',{})
     </div>

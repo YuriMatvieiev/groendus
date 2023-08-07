@@ -7,8 +7,8 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper from 'swiper';
-import { Navigation, Autoplay, EffectFade } from "swiper/modules";
+import Swiper from "swiper";
+import { Navigation, Autoplay, EffectFade, Mousewheel } from "swiper/modules";
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -74,6 +74,48 @@ function initSliders() {
       },
     });
   }
+  if (
+    document.querySelector(".integrale-steps__slider") &&
+    window.innerWidth > 991.98
+  ) {
+    // Initialize the Swiper slider
+    new Swiper(".integrale-steps__slider", {
+      modules: [Navigation, Mousewheel, EffectFade],
+      autoHeight: false,
+      speed: 800,
+      direction: "vertical",
+      slidesPerView: 1,
+      spaceBetween: 30,
+      eventsTarget: "integrale-steps__slider",
+      mousewheel: {
+        forceToAxis: true,
+        sensitivity: 1,
+        releaseOnEdges: true,
+
+        noMousewheelClass: "integrale-steps__main-circle",
+      },
+      effect: "fade",
+      fadeEffect: {
+        crossFade: true,
+      },
+      breakpoints: {
+        375: {
+          mousewheel: false,
+          enabled: false,
+        },
+
+        991.98: {
+          mousewheel: {
+            forceToAxis: true,
+            sensitivity: 1,
+            releaseOnEdges: true,
+          },
+          enabled: true,
+        },
+      },
+    });
+  }
+
   if (document.querySelector(".home-solutions__slider")) {
     // Указываем скласс нужного слайдера
 

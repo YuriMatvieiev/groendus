@@ -1057,7 +1057,7 @@
 .white-theme {
   background-color: #fff;
   &._header-scroll {
-    position: sticky !important;
+    position: sticky;
     top: 0;
     background-color: transparent;
     .header__top-wrap {

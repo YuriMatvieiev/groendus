@@ -683,3 +683,232 @@ initAOS();
 
 // Update AOS initialization whenever the window is resized
 window.addEventListener("resize", initAOS);
+
+/* document.addEventListener("DOMContentLoaded", function () {
+  const mainCircle = document.querySelector(".integrale-steps__main-circle");
+  const img1 = document.querySelector(".integrale-steps__main-circle-img1");
+  const img2 = document.querySelector(".integrale-steps__main-circle-img2");
+  const img3 = document.querySelector(".integrale-steps__main-circle-img3");
+
+  const startImg1 = { x: 0, y: 0 };
+  const startImg2 = { x: 0, y: -55 };
+  const startImg3 = { x: 0, y: 0 };
+
+  const endImg1 = { x: 60, y: 87 };
+  const endImg2 = { x: -88, y: -53 };
+  const endImg3 = { x: 55, y: -87 };
+
+  let hasReachedTop = false;
+  let hasTransformReachedEnd = false;
+  let hasReachedBottom = false;
+
+  window.addEventListener("scroll", function () {
+    const stepsSection = document.getElementById("integrale-steps-section");
+    const elemTop = stepsSection.getBoundingClientRect().top;
+    const isVisible = elemTop <= 0;
+
+    if (isVisible && !hasReachedTop) {
+      hasReachedTop = true;
+    }
+
+    if (hasReachedTop && isVisible && !hasTransformReachedEnd) {
+      const scrollPercentage = Math.min(1, -elemTop / window.innerHeight);
+
+      const img1X = lerp(startImg1.x, endImg1.x, scrollPercentage);
+      const img1Y = lerp(startImg1.y, endImg1.y, scrollPercentage);
+      img1.style.transform = `translate(${img1X}%, ${img1Y}%)`;
+
+      const img2X = lerp(startImg2.x, endImg2.x, scrollPercentage);
+      const img2Y = lerp(startImg2.y, endImg2.y, scrollPercentage);
+      img2.style.transform = `translate(${img2X}%, ${img2Y}%)`;
+
+      const img3X = lerp(startImg3.x, endImg3.x, scrollPercentage);
+      const img3Y = lerp(startImg3.y, endImg3.y, scrollPercentage);
+      img3.style.transform = `translate(${img3X}%, ${img3Y}%)`;
+
+      // Check if it's time to hide the main-circle element
+      if (scrollPercentage >= 1) {
+        hasTransformReachedEnd = true;
+      }
+      if (hasTransformReachedEnd && !isVisible && !hasReachedBottom) {
+        // Reversing the transform back to the start
+        const scrollPercentage = Math.max(0, -elemTop / window.innerHeight);
+
+        const img1X = lerp(endImg1.x, startImg1.x, scrollPercentage);
+        const img1Y = lerp(endImg1.y, startImg1.y, scrollPercentage);
+        img1.style.transform = `translate(${img1X}%, ${img1Y}%)`;
+
+        const img2X = lerp(endImg2.x, startImg2.x, scrollPercentage);
+        const img2Y = lerp(endImg2.y, startImg2.y, scrollPercentage);
+        img2.style.transform = `translate(${img2X}%, ${img2Y}%)`;
+
+        const img3X = lerp(endImg3.x, startImg3.x, scrollPercentage);
+        const img3Y = lerp(endImg3.y, startImg3.y, scrollPercentage);
+        img3.style.transform = `translate(${img3X}%, ${img3Y}%)`;
+
+        // Check if it's time to reset the state to the initial state
+        if (scrollPercentage <= 0) {
+          hasReachedBottom = true;
+        }
+      }
+    }
+
+    if (hasTransformReachedEnd && !isVisible) {
+      // Reset the state when the user scrolls back up
+      hasReachedTop = false;
+      hasTransformReachedEnd = false;
+    }
+    if (hasTransformReachedEnd && isVisible) {
+      // Reset the state when the user scrolls back up
+      hasReachedTop = false;
+      hasTransformReachedEnd = false;
+      hasReachedBottom = false;
+    }
+  });
+
+  function lerp(start, end, t) {
+    return start * (1 - t) + end * t;
+  }
+});
+ */
+
+/* document.addEventListener("DOMContentLoaded", function () {
+  const mainCircleImages = document.querySelector(
+    ".integrale-steps__main-circle-images"
+  );
+  const mainCircle = document.querySelector(".integrale-steps__main-circle");
+  const stepsSection = document.getElementById("integrale-steps-section");
+  const itemFirst = document.getElementById("integrale-steps__item-first");
+
+  // Initial dimensions
+  const initialWidth = 820;
+  const initialHeight = 820;
+  const finalWidth = 440;
+  const finalHeight = 440;
+
+  let isDelayInProgress = false; // Variable to track delay progress
+
+  // Calculate the distance between the top of the section and the top of the viewport
+  function getDistanceFromTop() {
+    const rect = stepsSection.getBoundingClientRect();
+    return rect.top;
+  }
+
+  // Update the dimensions of the main circle images
+  function updateMainCircleDimensions() {
+    const distanceFromTop = getDistanceFromTop();
+    let newWidth, newHeight;
+
+    if (distanceFromTop <= 0) {
+      const progress = Math.min(
+        1,
+        Math.abs(distanceFromTop) / (stepsSection.offsetHeight * 0.6)
+      );
+      newWidth = initialWidth - (initialWidth - finalWidth) * progress;
+      newHeight = initialHeight - (initialHeight - finalHeight) * progress;
+
+      mainCircleImages.style.width = newWidth + "px";
+      mainCircleImages.style.height = newHeight + "px";
+
+      if (newWidth <= finalWidth && newHeight <= finalHeight) {
+        // If the dimensions have reached the final values and delay is not already in progress
+        if (!isDelayInProgress) {
+          isDelayInProgress = true;
+          itemFirst.style.display = "flex";
+          setTimeout(() => {
+            mainCircle.style.display = "none";
+            itemFirst.style.opacity = "1";
+          }, 1000); // 2 seconds delay
+        }
+      } else {
+        mainCircle.style.display = "block";
+        itemFirst.style.opacity = "0";
+        itemFirst.style.display = "none";
+        isDelayInProgress = false; // Reset the delay progress when not at final values
+      }
+    } else {
+      mainCircleImages.style.width = initialWidth + "px";
+      mainCircleImages.style.height = initialHeight + "px";
+
+      mainCircle.style.display = "block";
+      itemFirst.style.opacity = "0";
+      isDelayInProgress = false; // Reset the delay progress when scrolling back to the top
+    }
+  }
+
+  // Call the function on initial load
+  updateMainCircleDimensions();
+
+  // Attach scroll event listener
+  window.addEventListener("scroll", updateMainCircleDimensions);
+});
+ */
+
+const mainCircleImages = document.querySelector(
+  ".integrale-steps__main-circle-images"
+);
+const mainCircle = document.querySelector(".integrale-steps__main-circle");
+const stepsSection = document.querySelector(".integrale-steps");
+
+if (stepsSection) {
+  // Initial dimensions
+  const initialWidth = 820;
+  const initialHeight = 820;
+  const finalWidth = 440;
+  const finalHeight = 440;
+
+  // Calculate the distance between the top of the section and the top of the viewport
+  function getDistanceFromTop() {
+    const rect = stepsSection.getBoundingClientRect();
+    return rect.top;
+  }
+
+  // Update the dimensions of the main circle images
+  function updateMainCircleDimensions() {
+    const distanceFromTop = getDistanceFromTop();
+    let newWidth, newHeight;
+
+    if (distanceFromTop <= 0) {
+      const progress = Math.min(
+        1,
+        Math.abs(distanceFromTop) / (stepsSection.offsetHeight * 0.4)
+      );
+      newWidth = initialWidth - (initialWidth - finalWidth) * progress;
+      newHeight = initialHeight - (initialHeight - finalHeight) * progress;
+
+      mainCircleImages.style.width = newWidth + "px";
+      mainCircleImages.style.height = newHeight + "px";
+
+      if (newWidth <= finalWidth && newHeight <= finalHeight) {
+        mainCircle.style.display = "none";
+        // Show the integrale-steps__slide elements when the main circle disappears
+        document.querySelector(".integrale-steps__slider").style.opacity = 1;
+      } else {
+        mainCircle.style.display = "flex";
+        document.querySelector(".integrale-steps__slider").style.opacity = 0;
+      }
+    } else {
+      mainCircleImages.style.width = initialWidth + "px";
+      mainCircleImages.style.height = initialHeight + "px";
+
+      mainCircle.style.display = "flex";
+      // Hide the integrale-steps__slider when the main circle is visible
+      document.querySelector(".integrale-steps__slider").style.opacity = 0;
+    }
+  }
+
+  // Call the function on initial load
+  updateMainCircleDimensions();
+
+  // Attach debounced scroll event listener
+  let isScrolling = false;
+  window.addEventListener("scroll", function () {
+    if (!isScrolling) {
+      window.requestAnimationFrame(function () {
+        updateMainCircleDimensions();
+        isScrolling = false;
+      });
+    }
+    isScrolling = true;
+  });
+}
