@@ -191,8 +191,8 @@
 .integrale-circle {
   position: relative;
   z-index: 4;
-  // @include adaptiveValue("padding-top", 100, 40);
-  // @include adaptiveValue("padding-bottom", 160, 100);
+  @include adaptiveValue("padding-top", 100, 40);
+  @include adaptiveValue("padding-bottom", 160, 100);
 
   // .integrale-circle__container
   &__container {
@@ -203,11 +203,10 @@
   &__main-circle {
     max-width: 820px;
     margin: 0 auto;
-
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 1000px;
     position: sticky;
     top: 0;
     z-index: 10;
@@ -285,7 +284,7 @@
   }
 }
 .integrale-steps {
-  padding-top: 255px;
+  padding-top: 80px;
   opacity: 0;
   transition: opacity 0.3s ease 0s;
   display: none;
@@ -307,8 +306,8 @@
   height: 22px;
   opacity: 0;
   transition:
-    scale 1s ease-in-out,
-    opacity 0.5s ease 1s;
+    scale 0.8s ease-in-out,
+    opacity 0.5s ease 0.8s;
 }
 
 //========================================================================================================================================================
