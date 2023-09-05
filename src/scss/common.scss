@@ -3,32 +3,38 @@
 .blue-button {
   color: #ffffff;
   font-weight: 700;
-  @include adaptiveValue("font-size", 15, 12);
-  @include adaptiveValue("line-height", 17, 13);
+  @include adaptiveValue("font-size", 16, 12);
+  line-height: 110%;
   background-color: $blue-light;
   display: inline-block;
   text-align: center;
-
+  padding: 14px 20px;
+  transition:
+    background-color,
+    color 0.3s ease 0s;
   @media (any-hover: hover) {
     &:hover {
       background-color: $mainColor;
-      transition: all 0.3s ease 0s;
     }
   }
 }
 .black-button {
   color: #ffffff;
   font-weight: 700;
-  @include adaptiveValue("font-size", 15, 12);
-  @include adaptiveValue("line-height", 17, 13);
+  @include adaptiveValue("font-size", 16, 12);
+  line-height: 110%;
   background-color: $mainColor;
   display: inline-block;
   text-align: center;
+  padding: 14px 20px;
+  transition:
+    background-color,
+    color 0.3s ease 0s;
 
   @media (any-hover: hover) {
     &:hover {
-      background-color: #020202;
-      transition: all 0.3s ease 0s;
+      background-color: #fff;
+      color: $mainColor;
     }
   }
 }

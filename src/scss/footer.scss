@@ -2,7 +2,7 @@
 .footer {
   color: $gray;
   font-size: rem(14);
-  line-height: math.div(15, 14);
+  line-height: 110%;
   padding-top: 56px;
   @include adaptiveValue("padding-bottom", 66, 18);
   border-top: 1px solid rgba(20, 20, 20, 0.1);

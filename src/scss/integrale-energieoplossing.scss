@@ -15,9 +15,11 @@
       }
     }
   }
+
   .header__top-wrap {
     background-color: rgba(2, 2, 2, 0.25) !important;
   }
+
   .header__top-first-title,
   .menu__link-wrap,
   .menu__link,
@@ -40,6 +42,7 @@
   .header__logo-letter {
     fill: #fff;
   }
+
   .ovner {
     @include adaptiveValue("margin-bottom", 135, 55);
     @media (max-width: $mobile) {

@@ -733,7 +733,7 @@
   &__link {
     font-weight: 700;
     @include adaptiveValue("font-size", 14, 13, 0, 1240, 991.98);
-    line-height: math.div(15, 14);
+    line-height: 110%;
     @media (max-width: $tablet) {
       font-size: rem(30);
       line-height: math.div(48, 30);
