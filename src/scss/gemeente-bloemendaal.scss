@@ -252,6 +252,22 @@
         display: none;
       }
     }
+    &:last-child {
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: -130px;
+        width: 22px;
+        height: 22px;
+        background: #006eff;
+        border-radius: 50%;
+        z-index: 1;
+        @media (max-width: 1240px) {
+          display: none;
+        }
+      }
+    }
     &:not(:last-child) {
       @include adaptiveValue("padding-bottom", 130, 45);
       background-color: #fff;
@@ -285,7 +301,6 @@
   }
   .productpagina-steps__main-line-box {
     @include adaptiveValue("left", 525, 450, 0, 1240, 991.98);
-    height: 69.5%;
     @media (max-width: 1240px) {
       display: none;
     }

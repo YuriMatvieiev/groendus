@@ -2761,7 +2761,6 @@ h6 {
 
 .steps__desc {
   color: #141414;
-  width: 20.625rem;
   margin-left: auto;
 }
 
@@ -2817,63 +2816,6 @@ h6 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.steps__step1-circle {
-  position: absolute;
-  width: 1.375rem;
-  height: 1.375rem;
-  background: #006eff;
-  border-radius: 50%;
-  top: 208px;
-  z-index: 2;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-      -ms-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-}
-
-.steps__step2-circle {
-  position: absolute;
-  width: 1.375rem;
-  height: 1.375rem;
-  background: #006eff;
-  border-radius: 50%;
-  top: 680px;
-  z-index: 2;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-      -ms-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-}
-
-.steps__step3-circle {
-  position: absolute;
-  width: 1.375rem;
-  height: 1.375rem;
-  background: #006eff;
-  border-radius: 50%;
-  bottom: 320px;
-  z-index: 2;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-      -ms-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-}
-
-.steps__step3-circle-last {
-  position: absolute;
-  width: 1.375rem;
-  height: 1.375rem;
-  background: #006eff;
-  border-radius: 50%;
-  bottom: 320px;
-  z-index: 2;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-      -ms-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
 }
 
 .services {
@@ -3586,21 +3528,39 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
 }
 
-.duurzaam-steps__item.text-left .productpagina-steps__main-line-box {
-  left: unset !important;
+.duurzaam-steps__item::before {
+  content: "";
+  position: absolute;
+  width: 1.375rem;
+  height: 1.375rem;
+  background: #006eff;
+  border-radius: 50%;
+  top: 0;
+  z-index: 2;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
 
-.duurzaam-steps__item.text-left .steps__step1-circle {
-  left: unset !important;
+.duurzaam-steps__item:last-child::after {
+  content: "";
+  position: absolute;
+  width: 1.375rem;
+  height: 1.375rem;
+  background: #006eff;
+  border-radius: 50%;
+  bottom: 0;
+  z-index: 2;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
 
-.duurzaam-steps__item.text-left .steps__step2-circle {
-  left: unset !important;
-}
-
-.duurzaam-steps__item.text-left .steps__step3-circle {
+.duurzaam-steps__item.text-left::before {
+  content: "";
   left: unset !important;
 }
 
@@ -3847,6 +3807,20 @@ h6 {
   position: relative;
 }
 
+.productpagina-steps__item:last-child::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  width: 1.375rem;
+  height: 1.375rem;
+  background-color: #006eff;
+  border-radius: 50%;
+  z-index: -2;
+}
+
 .productpagina-steps__left {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3878,14 +3852,10 @@ h6 {
 
 .productpagina-steps #step6 {
   padding-bottom: 0;
-  border: none;
-  background-color: #fff;
-  position: relative;
-  z-index: -3;
 }
 
 .productpagina-steps__main-line-box {
-  height: 95%;
+  height: 100%;
   position: absolute;
   top: 0;
   width: 1px;
@@ -5866,6 +5836,18 @@ h6 {
   z-index: 1;
 }
 
+.client-scroll__item:last-child::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -130px;
+  width: 22px;
+  height: 22px;
+  background: #006eff;
+  border-radius: 50%;
+  z-index: 1;
+}
+
 .client-scroll__item:not(:last-child) {
   background-color: #fff;
 }
@@ -5883,10 +5865,6 @@ h6 {
 
 .client-scroll__right-text {
   line-height: 1.3888888889;
-}
-
-.client-scroll .productpagina-steps__main-line-box {
-  height: 69.5%;
 }
 
 .client-scroll .productpagina-steps__main-ball {
@@ -6460,6 +6438,19 @@ h6 {
   display: none;
 }
 
+.integrale .integrale-steps {
+  padding-top: 80px;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
+  display: none;
+}
+
+.integrale .integrale-steps.visible {
+  opacity: 1;
+  display: block;
+}
+
 .menu-open .integrale .white-theme {
   background-color: #fff;
 }
@@ -6678,23 +6669,6 @@ h6 {
   font-weight: 700;
 }
 
-.integrale-steps {
-  padding-top: 80px;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s ease 0s;
-  transition: opacity 0.3s ease 0s;
-  display: none;
-}
-
-.integrale-steps .steps__desc {
-  width: 100%;
-}
-
-.integrale-steps.visible {
-  opacity: 1;
-  display: block;
-}
-
 .scaled {
   translate: -50%;
   scale: 0.05;
@@ -6706,6 +6680,10 @@ h6 {
   opacity: 0;
   -webkit-transition: scale 0.8s ease-in-out, opacity 0.5s ease 0.8s;
   transition: scale 0.8s ease-in-out, opacity 0.5s ease 0.8s;
+}
+
+.integrale-solution {
+  height: 375px;
 }
 
 .integrale-solution__container {
@@ -8595,14 +8573,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     margin-bottom: 1.875rem;
   }
 
-  .steps__step2-circle {
-    bottom: 42.5rem;
-  }
-
-  .steps__step3-circle {
-    bottom: 20rem;
-  }
-
   .services {
     padding-bottom: 22.875rem;
   }
@@ -8760,10 +8730,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   }
 
   .duurzaam-steps__box .productpagina-steps__main-line-box {
-    height: 52.375rem;
-  }
-
-  .duurzaam-steps__box .productpagina-steps__main-line-box {
     left: 22.5625rem;
   }
 
@@ -8771,19 +8737,15 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     gap: 7.9375rem;
   }
 
-  .duurzaam-steps__item.text-left .productpagina-steps__main-line-box {
-    right: 22.5625rem;
+  .duurzaam-steps__item::before {
+    left: 22.5625rem;
   }
 
-  .duurzaam-steps__item.text-left .steps__step1-circle {
-    right: 21.25rem;
+  .duurzaam-steps__item:last-child::after {
+    left: 22.5625rem;
   }
 
-  .duurzaam-steps__item.text-left .steps__step2-circle {
-    right: 21.25rem;
-  }
-
-  .duurzaam-steps__item.text-left .steps__step3-circle {
+  .duurzaam-steps__item.text-left::before {
     right: 21.25rem;
   }
 
@@ -8837,6 +8799,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
   .productpagina-steps__item {
     gap: 5.9375rem;
+  }
+
+  .productpagina-steps__item:last-child::after {
+    left: 32.8125rem;
   }
 
   .productpagina-steps__left {
@@ -9181,10 +9147,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
   .pillar-content__steps-item {
     gap: 2.1875rem;
-  }
-
-  .integrale-solution {
-    height: 23.25rem;
   }
 
   .integrale-solution__img {
@@ -11575,6 +11537,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     display: none;
   }
 
+  .client-scroll__item:last-child::after {
+    display: none;
+  }
+
   .client-scroll .productpagina-steps__main-line-box {
     display: none;
   }
@@ -11704,14 +11670,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
   .macbook__text-block p:not(:last-of-type) {
     margin-bottom: 0.5rem;
-  }
-
-  .steps__step2-circle {
-    bottom: 40.3125rem;
-  }
-
-  .steps__step3-circle {
-    bottom: 19.125rem;
   }
 
   .services {
@@ -11851,10 +11809,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   }
 
   .duurzaam-steps__box .productpagina-steps__main-line-box {
-    height: 56.375rem;
-  }
-
-  .duurzaam-steps__box .productpagina-steps__main-line-box {
     left: 19.125rem;
   }
 
@@ -11862,19 +11816,15 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     gap: 5.625rem;
   }
 
-  .duurzaam-steps__item.text-left .productpagina-steps__main-line-box {
-    right: 19.125rem;
+  .duurzaam-steps__item::before {
+    left: 19.125rem;
   }
 
-  .duurzaam-steps__item.text-left .steps__step1-circle {
-    right: 17.8125rem;
+  .duurzaam-steps__item:last-child::after {
+    left: 19.125rem;
   }
 
-  .duurzaam-steps__item.text-left .steps__step2-circle {
-    right: 17.8125rem;
-  }
-
-  .duurzaam-steps__item.text-left .steps__step3-circle {
+  .duurzaam-steps__item.text-left::before {
     right: 17.8125rem;
   }
 
@@ -11920,6 +11870,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
   .productpagina-steps__item {
     gap: 2.5rem;
+  }
+
+  .productpagina-steps__item:last-child::after {
+    left: 16.25rem;
   }
 
   .productpagina-steps__left {
@@ -13386,22 +13340,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
             flex: 0 1 35%;
   }
 
-  .steps__step1-circle {
-    display: none;
-  }
-
-  .steps__step2-circle {
-    display: none;
-  }
-
-  .steps__step3-circle {
-    display: none;
-  }
-
-  .steps__step3-circle-last {
-    display: none;
-  }
-
   .services__box {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -13720,20 +13658,8 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     border-bottom: none;
   }
 
-  .duurzaam-steps__box::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    height: 100%;
-    width: 1px;
-    border-right: 1px dashed rgba(0, 0, 0, 0.2);
-    z-index: -3;
-  }
-
   .duurzaam-steps__box .productpagina-steps__main-line-box {
-    display: none;
+    left: 50%;
   }
 
   .duurzaam-steps__box {
@@ -13745,8 +13671,15 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     background-color: #fff;
   }
 
+  .duurzaam-steps__item::before {
+    display: none;
+  }
+
+  .duurzaam-steps__item:last-child::after {
+    display: none;
+  }
+
   .duurzaam-steps__item {
-    position: relative;
     z-index: 2;
     padding: 25px 0;
     max-width: 31.25rem;
@@ -13871,6 +13804,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
   .productpagina-steps__item:not(:last-child) {
     margin-bottom: 80px;
+  }
+
+  .productpagina-steps__item:last-child::after {
+    display: none;
   }
 
   .productpagina-steps__left {
@@ -14708,6 +14645,34 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     display: flex;
   }
 
+  .integrale .integrale-steps {
+    display: block;
+    opacity: 1;
+  }
+
+  .integrale .steps__mobile-text {
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto;
+  }
+
+  .integrale .steps__title {
+    text-align: center;
+    margin-bottom: 0.9375rem;
+  }
+
+  .integrale .steps__item {
+    padding: 0;
+  }
+
+  .integrale .steps__img-block {
+    margin: 0 auto;
+  }
+
+  .integrale .steps__img-block img {
+    width: 100%;
+  }
+
   .integrale-wrapper {
     background: url("../img/integrale-energieoplossing/baner.png") center -1px/cover no-repeat;
   }
@@ -14730,12 +14695,12 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     line-height: 140%;
   }
 
-  .integrale-circle__main-circle-images {
-    display: none;
+  .integrale-circle__main-circle {
+    height: auto;
   }
 
-  .integrale-solution {
-    height: 18.125rem;
+  .integrale-circle__main-circle-images {
+    display: none;
   }
 
   .integrale-solution {
@@ -14905,6 +14870,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
   .pillar-hero__banner {
     width: 18.125rem;
+  }
+
+  .integrale .steps__img-block {
+    width: 12.5rem;
   }
 
   .integrale-hero__title {
@@ -24854,30 +24823,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     }
 }
 
-@supports (bottom: clamp( 40.3125rem , 36.7531779661rem  +  7.4152542373vw , 42.5rem )) {
-    .steps__step2-circle {
-      bottom: clamp( 40.3125rem , 36.7531779661rem  +  7.4152542373vw , 42.5rem );
-    }
-}
-
-@supports not (bottom: clamp( 40.3125rem , 36.7531779661rem  +  7.4152542373vw , 42.5rem )) {
-    .steps__step2-circle {
-      bottom: calc(40.3125rem + 2.1875 * (100vw - 48rem) / 29.5);
-    }
-}
-
-@supports (bottom: clamp( 19.125rem , 17.7012711864rem  +  2.9661016949vw , 20rem )) {
-    .steps__step3-circle {
-      bottom: clamp( 19.125rem , 17.7012711864rem  +  2.9661016949vw , 20rem );
-    }
-}
-
-@supports not (bottom: clamp( 19.125rem , 17.7012711864rem  +  2.9661016949vw , 20rem )) {
-    .steps__step3-circle {
-      bottom: calc(19.125rem + 0.875 * (100vw - 48rem) / 29.5);
-    }
-}
-
 @supports (padding-bottom: clamp( 3.75rem , -27.3686440678rem  +  64.8305084746vw , 22.875rem )) {
     .services {
       padding-bottom: clamp( 3.75rem , -27.3686440678rem  +  64.8305084746vw , 22.875rem );
@@ -25286,18 +25231,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     }
 }
 
-@supports (height: clamp( 52.375rem , 62.8834745763rem  +  -13.5593220339vw , 56.375rem )) {
-    .duurzaam-steps__box .productpagina-steps__main-line-box {
-      height: clamp( 52.375rem , 62.8834745763rem  +  -13.5593220339vw , 56.375rem );
-    }
-}
-
-@supports not (height: clamp( 52.375rem , 62.8834745763rem  +  -13.5593220339vw , 56.375rem )) {
-    .duurzaam-steps__box .productpagina-steps__main-line-box {
-      height: calc(56.375rem + -4 * (100vw - 48rem) / 29.5);
-    }
-}
-
 @supports (left: clamp( 19.125rem , 13.531779661rem  +  11.6525423729vw , 22.5625rem )) {
     .duurzaam-steps__box .productpagina-steps__main-line-box {
       left: clamp( 19.125rem , 13.531779661rem  +  11.6525423729vw , 22.5625rem );
@@ -25322,50 +25255,38 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     }
 }
 
-@supports (right: clamp( 19.125rem , 13.531779661rem  +  11.6525423729vw , 22.5625rem )) {
-    .duurzaam-steps__item.text-left .productpagina-steps__main-line-box {
-      right: clamp( 19.125rem , 13.531779661rem  +  11.6525423729vw , 22.5625rem );
+@supports (left: clamp( 19.125rem , 13.531779661rem  +  11.6525423729vw , 22.5625rem )) {
+    .duurzaam-steps__item::before {
+      left: clamp( 19.125rem , 13.531779661rem  +  11.6525423729vw , 22.5625rem );
     }
 }
 
-@supports not (right: clamp( 19.125rem , 13.531779661rem  +  11.6525423729vw , 22.5625rem )) {
-    .duurzaam-steps__item.text-left .productpagina-steps__main-line-box {
-      right: calc(19.125rem + 3.4375 * (100vw - 48rem) / 29.5);
+@supports not (left: clamp( 19.125rem , 13.531779661rem  +  11.6525423729vw , 22.5625rem )) {
+    .duurzaam-steps__item::before {
+      left: calc(19.125rem + 3.4375 * (100vw - 48rem) / 29.5);
+    }
+}
+
+@supports (left: clamp( 19.125rem , 13.531779661rem  +  11.6525423729vw , 22.5625rem )) {
+    .duurzaam-steps__item:last-child::after {
+      left: clamp( 19.125rem , 13.531779661rem  +  11.6525423729vw , 22.5625rem );
+    }
+}
+
+@supports not (left: clamp( 19.125rem , 13.531779661rem  +  11.6525423729vw , 22.5625rem )) {
+    .duurzaam-steps__item:last-child::after {
+      left: calc(19.125rem + 3.4375 * (100vw - 48rem) / 29.5);
     }
 }
 
 @supports (right: clamp( 17.8125rem , 12.219279661rem  +  11.6525423729vw , 21.25rem )) {
-    .duurzaam-steps__item.text-left .steps__step1-circle {
+    .duurzaam-steps__item.text-left::before {
       right: clamp( 17.8125rem , 12.219279661rem  +  11.6525423729vw , 21.25rem );
     }
 }
 
 @supports not (right: clamp( 17.8125rem , 12.219279661rem  +  11.6525423729vw , 21.25rem )) {
-    .duurzaam-steps__item.text-left .steps__step1-circle {
-      right: calc(17.8125rem + 3.4375 * (100vw - 48rem) / 29.5);
-    }
-}
-
-@supports (right: clamp( 17.8125rem , 12.219279661rem  +  11.6525423729vw , 21.25rem )) {
-    .duurzaam-steps__item.text-left .steps__step2-circle {
-      right: clamp( 17.8125rem , 12.219279661rem  +  11.6525423729vw , 21.25rem );
-    }
-}
-
-@supports not (right: clamp( 17.8125rem , 12.219279661rem  +  11.6525423729vw , 21.25rem )) {
-    .duurzaam-steps__item.text-left .steps__step2-circle {
-      right: calc(17.8125rem + 3.4375 * (100vw - 48rem) / 29.5);
-    }
-}
-
-@supports (right: clamp( 17.8125rem , 12.219279661rem  +  11.6525423729vw , 21.25rem )) {
-    .duurzaam-steps__item.text-left .steps__step3-circle {
-      right: clamp( 17.8125rem , 12.219279661rem  +  11.6525423729vw , 21.25rem );
-    }
-}
-
-@supports not (right: clamp( 17.8125rem , 12.219279661rem  +  11.6525423729vw , 21.25rem )) {
-    .duurzaam-steps__item.text-left .steps__step3-circle {
+    .duurzaam-steps__item.text-left::before {
       right: calc(17.8125rem + 3.4375 * (100vw - 48rem) / 29.5);
     }
 }
@@ -25499,6 +25420,18 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 @supports not (gap: clamp( 2.5rem , -3.093220339rem  +  11.6525423729vw , 5.9375rem )) {
     .productpagina-steps__item {
       gap: calc(2.5rem + 3.4375 * (100vw - 48rem) / 29.5);
+    }
+}
+
+@supports (left: clamp( 16.25rem , -10.6991525424rem  +  56.1440677966vw , 32.8125rem )) {
+    .productpagina-steps__item:last-child::after {
+      left: clamp( 16.25rem , -10.6991525424rem  +  56.1440677966vw , 32.8125rem );
+    }
+}
+
+@supports not (left: clamp( 16.25rem , -10.6991525424rem  +  56.1440677966vw , 32.8125rem )) {
+    .productpagina-steps__item:last-child::after {
+      left: calc(16.25rem + 16.5625 * (100vw - 48rem) / 29.5);
     }
 }
 
@@ -26783,6 +26716,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     width: 31.5625rem;
   }
 
+  .integrale .steps__img-block {
+    width: 21.875rem;
+  }
+
   .integrale-solution__img-mobile {
     width: 31.25rem;
   }
@@ -27041,6 +26978,18 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     }
 }
 
+@supports (width: clamp( 12.5rem , 3.5539340424rem  +  38.1698814189vw , 21.875rem )) {
+    .integrale .steps__img-block {
+      width: clamp( 12.5rem , 3.5539340424rem  +  38.1698814189vw , 21.875rem );
+    }
+}
+
+@supports not (width: clamp( 12.5rem , 3.5539340424rem  +  38.1698814189vw , 21.875rem )) {
+    .integrale .steps__img-block {
+      width: calc(12.5rem + 9.375 * (100vw - 23.4375rem) / 24.56125);
+    }
+}
+
 @supports (width: clamp( 23.125rem , 15.3717428368rem  +  33.0805638964vw , 31.25rem )) {
     .integrale-solution__img-mobile {
       width: clamp( 23.125rem , 15.3717428368rem  +  33.0805638964vw , 31.25rem );
@@ -27286,18 +27235,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 @supports not (gap: clamp( 0.625rem , -0.3918795814rem  +  2.1185542985vw , 1.25rem )) {
     .pillar-content__inhoud-box {
       gap: calc(0.625rem + 0.625 * (100vw - 47.99875rem) / 29.50125);
-    }
-}
-
-@supports (height: clamp( 18.125rem , 9.7865874327rem  +  17.3721452481vw , 23.25rem )) {
-    .integrale-solution {
-      height: clamp( 18.125rem , 9.7865874327rem  +  17.3721452481vw , 23.25rem );
-    }
-}
-
-@supports not (height: clamp( 18.125rem , 9.7865874327rem  +  17.3721452481vw , 23.25rem )) {
-    .integrale-solution {
-      height: calc(18.125rem + 5.125 * (100vw - 47.99875rem) / 29.50125);
     }
 }
 

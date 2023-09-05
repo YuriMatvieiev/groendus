@@ -49,23 +49,11 @@
     @include adaptiveValue("gap", 155, 100);
     position: relative;
     @media (max-width: $mobile) {
-      &::before {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 50%;
-        height: 100%;
-        width: 1px;
-        border-right: 1px dashed rgba(0, 0, 0, 0.2);
-        z-index: -3;
-      }
     }
     .productpagina-steps__main-line-box {
-      @include adaptiveValue("height", 838, 902, 0, 1240, 768);
       @include adaptiveValue("left", 361, 306, 0, 1240, 768);
       @media (max-width: $mobile) {
-        display: none;
+        left: 50%;
       }
       .productpagina-steps__main-ball {
         z-index: 3;
@@ -80,29 +68,51 @@
   &__item {
     display: flex;
     @include adaptiveValue("gap", 127, 90, 0, 1240, 768);
+    position: relative;
     @media (max-width: $mobile) {
       background-color: #fff;
     }
+    &::before {
+      content: "";
+      position: absolute;
+      width: rem(22);
+      height: rem(22);
+      background: $blue-light;
+      border-radius: 50%;
+      top: 0;
+
+      z-index: 2;
+      @include adaptiveValue("left", 361, 306, 0, 1240, 768);
+      transform: translate(-50%, 0);
+      @media (max-width: $mobile) {
+        display: none;
+      }
+    }
+    &:last-child {
+      &::after {
+        content: "";
+        position: absolute;
+        width: rem(22);
+        height: rem(22);
+        background: $blue-light;
+        border-radius: 50%;
+        bottom: 0;
+        z-index: 2;
+        @include adaptiveValue("left", 361, 306, 0, 1240, 768);
+        transform: translate(-50%, 0);
+        @media (max-width: $mobile) {
+          display: none;
+        }
+      }
+    }
     &.text-left {
-      .productpagina-steps__main-line-box {
-        left: unset !important;
-        @include adaptiveValue("right", 361, 306, 0, 1240, 768);
-      }
-      .steps__step1-circle {
-        left: unset !important;
-        @include adaptiveValue("right", 340, 285, 0, 1240, 768);
-      }
-      .steps__step2-circle {
-        left: unset !important;
-        @include adaptiveValue("right", 340, 285, 0, 1240, 768);
-      }
-      .steps__step3-circle {
+      &::before {
+        content: "";
         left: unset !important;
         @include adaptiveValue("right", 340, 285, 0, 1240, 768);
       }
     }
     @media (max-width: $mobile) {
-      position: relative;
       z-index: 2;
       padding: 25px 0;
       max-width: rem(500);

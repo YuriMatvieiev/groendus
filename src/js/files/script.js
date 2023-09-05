@@ -693,7 +693,7 @@ const stepsSection = document.querySelector(".integrale-circle");
 const integraleSteps = document.querySelector(".integrale-steps");
 
 // Перевірка наявності розділу
-if (stepsSection) {
+if (stepsSection && window.innerWidth > 767.98) {
   const initialWidth = 820;
   const initialHeight = 820;
   const finalWidth = 440;
