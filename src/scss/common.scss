@@ -98,7 +98,7 @@
   color: #ffffff;
   font-size: rem(10);
   font-weight: 400;
-  line-height: math.div(11, 10);
+  line-height: 110%;
   padding: 5px 7px;
   background: #f96023;
 }
@@ -106,6 +106,7 @@
 .form {
   @include adaptiveValue("padding-top", 70, 40);
   @include adaptiveValue("padding-bottom", 70, 40);
+  margin-bottom: rem(160);
   // .form__container
   &__container {
   }
@@ -142,15 +143,15 @@
   // .form__title
   &__title {
     font-weight: 700;
-    @include adaptiveValue("font-size", 44, 22);
-    @include adaptiveValue("line-height", 44, 28);
-    margin-bottom: rem(16);
+    @include adaptiveValue("font-size", 46, 30);
+    line-height: 110%;
+    margin-bottom: rem(20);
   }
   // .form__subtitle
   &__subtitle {
-    @include adaptiveValue("font-size", 26, 16);
-    @include adaptiveValue("line-height", 28, 20);
-    margin-bottom: rem(16);
+    @include adaptiveValue("font-size", 18, 14);
+    line-height: 160%;
+    margin-bottom: rem(30);
   }
   &__sub-button {
     padding: 14px 21px;
@@ -257,25 +258,25 @@
   // .form__left-title
   &__left-title {
     font-weight: 700;
-    @include adaptiveValue("font-size", 36, 22);
-    @include adaptiveValue("line-height", 40, 24);
-    margin-bottom: rem(16);
+    @include adaptiveValue("font-size", 36, 30);
+    line-height: 110%;
+    margin-bottom: rem(20);
     @media (max-width: $mobile) {
       text-align: center;
     }
   }
   // .form__left-text
   &__left-text {
-    margin-bottom: rem(16);
-    @include adaptiveValue("font-size", 26, 16);
-    @include adaptiveValue("line-height", 28, 20);
+    margin-bottom: rem(20);
+    @include adaptiveValue("font-size", 18, 14);
+    line-height: 160%;
   }
   // .form__left-list
   &__left-list {
     @include adaptiveValue("font-size", 18, 14);
-    @include adaptiveValue("line-height", 21, 18);
+    line-height: 160%;
     padding-left: 24px;
-    margin-bottom: rem(16);
+    margin-bottom: rem(30);
     li {
       list-style: circle;
 
@@ -331,8 +332,8 @@
 }
 
 .search-result {
-  @include adaptiveValue("padding-top", 100, 40);
-  @include adaptiveValue("padding-bottom", 100, 40);
+  padding-top: 100px;
+  padding-bottom: 160px;
   // .search-result__container
   &__container {
   }
@@ -340,10 +341,10 @@
   &__title {
     font-weight: 700;
     @include adaptiveValue("font-size", 46, 30);
-    @include adaptiveValue("line-height", 51, 33);
+    line-height: 110%;
     max-width: rem(740);
     text-align: center;
-    margin: 0 auto rem(24);
+    margin: 0 auto rem(20);
   }
   // .search-result__form
   &__form {
@@ -361,7 +362,7 @@
     padding: 20px 120px 20px 32px;
     outline: none;
     font-size: rem(16);
-    line-height: math.div(24, 16);
+    line-height: 110%;
   }
   // .search-result__button
   &__button {
@@ -399,7 +400,7 @@
     gap: 32px;
   }
   &__not-found {
-    line-height: math.div(24, 16);
+    line-height: 110%;
     font-size: rem(16);
     text-align: center;
     margin: 0 auto;
@@ -424,18 +425,18 @@
   // .search-result__item-subtitle
   &__item-subtitle {
     color: $blue-light;
-    margin-bottom: rem(16);
-    min-height: rem(24);
-    line-height: math.div(24, 16);
-    font-size: rem(16);
+    margin-bottom: rem(8);
+    min-height: rem(18);
+    line-height: 110%;
+    @include adaptiveValue("font-size", 16, 14);
   }
   // .search-result__item-title
   &__item-title {
     color: $blue-light;
-    @include adaptiveValue("font-size", 32, 22);
-    @include adaptiveValue("line-height", 35, 24);
+    @include adaptiveValue("font-size", 36, 30);
+    line-height: 110%;
     font-weight: 700;
-    margin-bottom: rem(16);
+    margin-bottom: rem(20);
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
@@ -446,9 +447,8 @@
   }
   // .search-result__item-text
   &__item-text {
-    line-height: math.div(24, 16);
-    font-size: rem(16);
-
+    line-height: 160%;
+    @include adaptiveValue("font-size", 18, 14);
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;

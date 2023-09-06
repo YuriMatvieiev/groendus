@@ -1,6 +1,6 @@
 .client-header {
-  @include adaptiveValue("padding-top", 100, 40);
-  @include adaptiveValue("padding-bottom", 100, 40);
+  padding-top: 100px;
+  padding-bottom: 180px;
   // .client-header__container
   &__container {
     display: flex;
@@ -17,7 +17,9 @@
   // .client-header__breadcrumb
   &__breadcrumb {
     color: $blue-light;
-    margin-bottom: rem(16);
+    margin-bottom: rem(8);
+    @include adaptiveValue("font-size", 16, 14);
+    line-height: 110%;
     display: inline-block;
     @media (any-hover: hover) {
       &:hover {
@@ -28,8 +30,8 @@
   // .client-header__title
   &__title {
     font-weight: 700;
-    @include adaptiveValue("font-size", 52, 30);
-    @include adaptiveValue("line-height", 57, 33);
+    @include adaptiveValue("font-size", 46, 30);
+    line-height: 110%;
     @media (max-width: $mobile) {
       text-align: center;
     }
@@ -47,8 +49,8 @@
   // .client-header__number
   &__number {
     font-weight: 700;
-    @include adaptiveValue("font-size", 48, 32);
-    @include adaptiveValue("line-height", 53, 35);
+    @include adaptiveValue("font-size", 46, 30);
+    line-height: 110%;
     color: $blue-light;
     margin-bottom: rem(8);
     display: flex;
@@ -57,21 +59,22 @@
     }
     span {
       font-weight: 400;
-      @include adaptiveValue("font-size", 18, 16);
+      @include adaptiveValue("font-size", 18, 14);
       align-self: flex-end;
-      line-height: math.div(22, 18);
+      line-height: 110%;
     }
   }
   // .client-header__number-text
   &__number-text {
     @include adaptiveValue("font-size", 18, 14);
-    @include adaptiveValue("line-height", 25, 20);
+    line-height: 110%;
     text-align: center;
   }
 }
 //========================================================================================================================================================
 
 .client-bg {
+  padding-bottom: 160px;
   display: flex;
   // .client-bg__img-desktop
   &__img {
@@ -128,9 +131,9 @@
   }
   // .client-bg__review
   &__review {
-    @include adaptiveValue("font-size", 36, 22);
-    @include adaptiveValue("line-height", 40, 24);
-    margin-bottom: rem(8);
+    @include adaptiveValue("font-size", 36, 26);
+    line-height: 110%;
+    margin-bottom: rem(20);
     font-weight: 700;
   }
   // .client-bg__client
@@ -151,14 +154,14 @@
   }
   // .client-bg__client-name
   &__client-name {
-    @include adaptiveValue("line-height", 30, 20);
+    line-height: 160%;
+    @include adaptiveValue("font-size", 18, 14);
   }
 }
 //========================================================================================================================================================
 
 .client-review {
-  @include adaptiveValue("padding-top", 100, 40);
-  @include adaptiveValue("padding-bottom", 50, 20);
+  padding-bottom: 160px;
   // .client-review__container
   &__container {
   }
@@ -170,19 +173,21 @@
   // .client-review__subtitle
   &__subtitle {
     color: $blue-light;
-    margin-bottom: rem(16);
+    margin-bottom: rem(8);
+    @include adaptiveValue("font-size", 16, 14);
+    line-height: 110%;
   }
   // .client-review__title
   &__title {
     font-weight: 700;
-    @include adaptiveValue("font-size", 52, 30);
-    @include adaptiveValue("line-height", 57, 33);
-    margin-bottom: rem(24);
+    @include adaptiveValue("font-size", 46, 30);
+    line-height: 110%;
+    margin-bottom: rem(20);
   }
   // .client-review__text
   &__text {
-    @include adaptiveValue("font-size", 21, 14);
-    @include adaptiveValue("line-height", 27, 20);
+    @include adaptiveValue("font-size", 18, 14);
+    line-height: 160%;
     @include adaptiveValue("padding-bottom", 80, 40);
   }
   .full-video__text {
@@ -192,8 +197,7 @@
 //========================================================================================================================================================
 
 .client-scroll {
-  @include adaptiveValue("padding-top", 50, 20);
-  @include adaptiveValue("padding-bottom", 50, 20);
+  padding-bottom: 160px;
   // .client-scroll__container
   &__container {
     position: relative;
@@ -220,13 +224,15 @@
   // .client-scroll__moving-block-subitile
   &__moving-block-subitile {
     color: $blue-light;
-    margin-bottom: rem(16);
+    margin-bottom: rem(8);
+    @include adaptiveValue("font-size", 16, 14);
+    line-height: 110%;
   }
   // .client-scroll__moving-block-title
   &__moving-block-title {
     font-weight: 700;
-    @include adaptiveValue("font-size", 36, 22);
-    @include adaptiveValue("line-height", 40, 24);
+    @include adaptiveValue("font-size", 36, 30);
+    line-height: 110%;
   }
   // .client-scroll__right
   &__right {
@@ -276,8 +282,8 @@
   // .client-scroll__right-title
   &__right-title {
     color: $blue-light;
-    @include adaptiveValue("font-size", 24, 22);
-    @include adaptiveValue("line-height", 26, 24);
+    @include adaptiveValue("font-size", 32, 22);
+    line-height: 110%;
     margin-bottom: rem(8);
     font-weight: 700;
     @media (max-width: $mobile) {
@@ -286,9 +292,9 @@
   }
   // .client-scroll__right-subtitle
   &__right-subtitle {
-    @include adaptiveValue("font-size", 16, 14);
-    @include adaptiveValue("line-height", 19, 17);
-    margin-bottom: rem(16);
+    @include adaptiveValue("font-size", 18, 16);
+    line-height: 110%;
+    margin-bottom: rem(20);
     font-weight: 700;
     @media (max-width: $mobile) {
       text-align: center;
@@ -297,7 +303,7 @@
   // .client-scroll__right-text
   &__right-text {
     @include adaptiveValue("font-size", 18, 14);
-    line-height: math.div(25, 18);
+    line-height: 160%;
   }
   .productpagina-steps__main-line-box {
     @include adaptiveValue("left", 525, 450, 0, 1240, 991.98);
@@ -313,8 +319,7 @@
 //========================================================================================================================================================
 
 .client-images {
-  @include adaptiveValue("padding-top", 50, 20);
-  @include adaptiveValue("padding-bottom", 50, 20);
+  padding-bottom: 160px;
   // .client-images__container
   &__container {
     display: flex;
@@ -343,8 +348,7 @@
 //========================================================================================================================================================
 
 .client-blue {
-  @include adaptiveValue("margin-top", 50, 20);
-  @include adaptiveValue("margin-bottom", 50, 20);
+  margin-bottom: 160px;
   @media (max-width: $mobile) {
     background-color: $blue-light;
   }
@@ -374,19 +378,18 @@
   // .client-blue__title
   &__title {
     @include adaptiveValue("font-size", 32, 22);
-    @include adaptiveValue("line-height", 35, 24);
+    line-height: 110%;
     font-weight: 700;
-    margin-bottom: rem(16);
+    margin-bottom: rem(20);
   }
   // .client-blue__text
   &__text {
-    font-size: rem(14);
-    line-height: math.div(21, 14);
-    margin-bottom: rem(24);
+    @include adaptiveValue("font-size", 18, 14);
+    line-height: 160%;
+    margin-bottom: rem(30);
   }
   // .client-blue__button
   &__button {
-    padding: 14px 21px;
   }
   // .client-blue__right
   &__right {
@@ -398,20 +401,19 @@
 }
 //========================================================================================================================================================
 .client-contact {
-  @include adaptiveValue("padding-top", 50, 20);
-  @include adaptiveValue("padding-bottom", 100, 80);
+  padding-bottom: 160px;
   // .client-contact__container
   &__container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 24px;
     text-align: center;
   }
   // .client-contact__images
   &__images {
     max-width: rem(300);
+    margin-bottom: 20px;
     img {
       width: 100%;
     }
@@ -420,15 +422,16 @@
   &__title {
     font-weight: 700;
     @include adaptiveValue("font-size", 46, 30);
-    @include adaptiveValue("line-height", 51, 33);
+    line-height: 110%;
+    margin-bottom: 20px;
   }
   // .client-contact__text
   &__text {
-    font-size: rem(14);
-    line-height: math.div(20, 14);
+    @include adaptiveValue("font-size", 18, 14);
+    line-height: 160%;
+    margin-bottom: 30px;
   }
   // .client-contact__button
   &__button {
-    padding: 14px 21px;
   }
 }

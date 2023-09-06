@@ -3,6 +3,7 @@
   position: relative;
   padding-top: 40px;
   @include adaptiveValue("padding-bottom", 175, 90, 0, 1240, 768);
+  margin-bottom: 280px;
   background-color: $blue-light;
   color: #fff;
   @media (max-width: $mobile) {
@@ -23,7 +24,7 @@
   }
   // .blue-hero__breadcrumbs
   &__breadcrumbs {
-    @include adaptiveValue("margin-bottom", 17, 5);
+    margin-bottom: 8px;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -34,7 +35,7 @@
       gap: 12px;
       flex-direction: row-reverse;
       @include adaptiveValue("font-size", 16, 12);
-      @include adaptiveValue("line-height", 18, 13);
+      line-height: 110%;
       &::before {
         font-size: rem(8);
       }
@@ -48,15 +49,15 @@
   }
   // .blue-hero__title
   &__title {
-    margin-bottom: rem(10);
+    margin-bottom: rem(20);
     font-weight: 700;
     @include adaptiveValue("font-size", 46, 30);
-    @include adaptiveValue("line-height", 51, 33);
+    line-height: 110%;
   }
   // .blue-hero__desc
   &__desc {
-    @include adaptiveValue("font-size", 21, 14, 0, 1240, 479.98);
-    @include adaptiveValue("line-height", 34, 20, 0, 1240, 479.98);
+    @include adaptiveValue("font-size", 20, 16);
+    line-height: 160%;
   }
   // .blue-hero__img-block
   &__img-block {
@@ -139,7 +140,7 @@
   // .fun-fact__text
   &__text {
     @include adaptiveValue("font-size", 18, 12);
-    @include adaptiveValue("line-height", 22, 14);
+    line-height: 160%;
     @media (max-width: $mobile) {
       color: #5b5b5b;
       text-align: center;
@@ -149,8 +150,7 @@
 //========================================================================================================================================================
 
 .macbook {
-  padding-top: 185px;
-  @include adaptiveValue("padding-bottom", 50, 40);
+  margin-bottom: 180px;
   // .macbook__container
   &__container {
     display: flex;
@@ -179,12 +179,11 @@
     }
     p {
       @include adaptiveValue("font-size", 18, 14);
-      @include adaptiveValue("line-height", 29, 20);
-      margin-bottom: rem(8);
+      line-height: 160%;
+      margin-bottom: rem(20);
       &:not(:last-of-type) {
-        @include adaptiveValue("margin-bottom", 30, 8, 0, 1240, 768);
         @media (max-width: $mobile) {
-          margin-top: rem(24);
+          margin-top: rem(20);
         }
       }
       @media (max-width: $mobile) {
@@ -195,7 +194,7 @@
   // .macbook__subtitle
   &__subtitle {
     @include adaptiveValue("font-size", 16, 14);
-    @include adaptiveValue("line-height", 18, 15);
+    line-height: 110%;
     color: $blue-light;
     margin-bottom: rem(8);
     @media (max-width: $mobile) {
@@ -204,9 +203,9 @@
   }
   // .macbook__title
   &__title {
-    @include adaptiveValue("font-size", 36, 22);
-    @include adaptiveValue("line-height", 40, 24);
-    margin-bottom: rem(8);
+    @include adaptiveValue("font-size", 36, 30);
+    line-height: 110%;
+    margin-bottom: rem(20);
     font-weight: 700;
     @media (max-width: $mobile) {
       text-align: center;
@@ -226,7 +225,13 @@
         margin-bottom: rem(8);
       }
       a {
-        text-decoration: underline;
+        line-height: 160%;
+        @media (any-hover: hover) {
+          &:hover {
+            text-decoration: underline;
+            transition: all 0.3s ease 0s;
+          }
+        }
       }
     }
   }
@@ -234,8 +239,7 @@
 //========================================================================================================================================================
 
 .steps {
-  @include adaptiveValue("padding-bottom", 110, 70);
-  @include adaptiveValue("padding-top", 50, 40);
+  padding-bottom: 160px;
   // .steps__container
   &__container {
   }
@@ -244,7 +248,7 @@
     position: relative;
     padding-top: 200px;
     @media (max-width: $mobile) {
-      padding-top: rem(62);
+      padding-top: 0;
     }
     .productpagina-steps__main-line-box {
       left: 50%;
@@ -333,11 +337,12 @@
   &__mobile-block {
     @media (max-width: $mobile) {
       display: flex;
+      flex-direction: column-reverse;
       @include adaptiveValue("gap", 120, 30, 0, 768, 370);
-      align-items: flex-start;
+      align-items: center;
     }
     &:not(:last-child) {
-      @include adaptiveValue("margin-bottom", 20, 8);
+      margin-bottom: 30px;
     }
   }
   &__mobile-text {
@@ -351,22 +356,22 @@
     font-weight: 700;
     color: #000;
     @include adaptiveValue("font-size", 36, 30);
-    @include adaptiveValue("line-height", 40, 33);
-    @include adaptiveValue("margin-bottom", 35, 25);
+    line-height: 110%;
+    margin-bottom: 20px;
   }
   // .steps__sub-title
   &__sub-title {
     font-weight: 700;
     color: #000;
-    @include adaptiveValue("font-size", 18, 14);
-    @include adaptiveValue("line-height", 25, 24);
-    @include adaptiveValue("margin-bottom", 12, 8);
+    @include adaptiveValue("font-size", 26, 16);
+    line-height: 110%;
+    margin-bottom: 20px;
   }
   // .steps__desc
   &__desc {
     color: #141414;
     @include adaptiveValue("font-size", 18, 14);
-    @include adaptiveValue("line-height", 23, 24);
+    line-height: 160%;
     margin-left: auto;
     @media (max-width: $mobile) {
       width: 100%;
@@ -382,7 +387,7 @@
   }
   // .steps__list
   &__list {
-    @include adaptiveValue("margin-top", 34, 28);
+    margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
@@ -398,7 +403,7 @@
       color: $blue-light;
       font-weight: 700;
       font-size: rem(14);
-      line-height: math.div(15, 14);
+      line-height: 160%;
       cursor: pointer;
       &::before {
         font-size: rem(8);
@@ -445,17 +450,17 @@
     font-weight: 700;
     color: #fff;
     @include adaptiveValue("font-size", 46, 30);
-    @include adaptiveValue("line-height", 51, 33);
-    margin-bottom: rem(8);
+    line-height: 110%;
+    margin-bottom: rem(20);
     text-align: center;
   }
   // .services__subtitle
   &__subtitle {
     text-align: center;
     color: #fff;
-    @include adaptiveValue("font-size", 24, 14);
-    @include adaptiveValue("line-height", 38, 24);
-    @include adaptiveValue("margin-bottom", 50, 30);
+    @include adaptiveValue("font-size", 26, 16);
+    line-height: 110%;
+    @include adaptiveValue("margin-bottom", 40, 20);
   }
   // .services__box
   &__box {
@@ -537,15 +542,15 @@
   // .services__item-subtitle
   &__item-subtitle {
     color: $blue-light;
-    @include adaptiveValue("font-size", 16, 13, 0, 1240, 768);
-    @include adaptiveValue("line-height", 18, 15);
+    @include adaptiveValue("font-size", 16, 14);
+    line-height: 110%;
     margin-bottom: rem(8);
   }
   // .services__item-title
   &__item-title {
     font-weight: 700;
     @include adaptiveValue("font-size", 36, 22);
-    @include adaptiveValue("line-height", 40, 24);
+    line-height: 110%;
     @media (max-width: $mobile) {
       margin-bottom: rem(20);
     }
@@ -566,7 +571,7 @@
     }
     li {
       @include adaptiveValue("font-size", 16, 14);
-      @include adaptiveValue("line-height", 22, 20);
+      line-height: 160%;
       padding-top: 10px;
       &:not(:last-child) {
         border-bottom: 0.5px solid #a0a0a0;
@@ -581,7 +586,6 @@
   // .services__item-button
   &__item-button {
     width: 100%;
-    padding: 22px 0;
   }
   // .services__item-tip
   &__item-tip {
@@ -610,6 +614,7 @@
 .ovner {
   position: relative;
   @include adaptiveValue("margin-top", -200, -30, 0, 1240, 768);
+  margin-bottom: 160px;
   @media (max-width: $mobile) {
     margin-top: rem(0);
   }
@@ -645,26 +650,26 @@
   &__title {
     font-weight: 700;
     @include adaptiveValue("font-size", 32, 22);
-    @include adaptiveValue("line-height", 35, 24);
-    margin-bottom: rem(25);
+    line-height: 110%;
+    margin-bottom: rem(20);
     @media (max-width: $mobile) {
       text-align: center;
     }
   }
   // .ovner__desc
   &__desc {
-    @include adaptiveValue("font-size", 18, 16);
-    @include adaptiveValue("line-height", 29, 24);
-    margin-bottom: rem(8);
+    @include adaptiveValue("font-size", 18, 14);
+    line-height: 160%;
+    margin-bottom: rem(20);
     @media (max-width: $mobile) {
       display: none;
     }
   }
   // .ovner__autor
   &__autor {
-    font-size: rem(14);
-    line-height: math.div(22, 14);
-    @include adaptiveValue("margin-bottom", 30, 20);
+    @include adaptiveValue("font-size", 16, 14);
+    line-height: 160%;
+    margin-bottom: 30px;
     span {
       font-weight: 700;
     }
@@ -682,14 +687,14 @@
   }
   // .ovner__contacts
   &__contacts {
-    @include adaptiveValue("margin-top", 14, 20);
+    margin-top: 20px;
     display: flex;
     gap: 20px;
   }
   // .ovner__contacts-title
   &__contacts-title {
     font-size: rem(14);
-    line-height: math.div(22, 14);
+    line-height: 160%;
     @media (max-width: $mobile) {
       display: none;
     }
@@ -698,7 +703,7 @@
   &__contacts-items {
     font-weight: 700;
     font-size: rem(14);
-    line-height: math.div(15, 14);
+    line-height: 160%;
     @media (max-width: $mobile) {
       text-align: center;
       width: 100%;
@@ -757,25 +762,24 @@
 //========================================================================================================================================================
 
 .beheren-slider {
-  @include adaptiveValue("padding-top", 115, 60);
-  @include adaptiveValue("padding-bottom", 110, 60);
+  padding-bottom: 160px;
   // .beheren-slider__container
   &__container {
   }
   // .beheren-slider__title
   &__title {
-    margin-bottom: rem(8);
+    margin-bottom: rem(20);
     text-align: center;
     font-weight: 700;
     color: #000;
-    @include adaptiveValue("font-size", 32, 24);
-    @include adaptiveValue("line-height", 35, 26);
+    @include adaptiveValue("font-size", 32, 22);
+    line-height: 110%;
   }
   // .beheren-slider__subtitle
   &__subtitle {
     color: #141414;
     @include adaptiveValue("font-size", 18, 14);
-    @include adaptiveValue("line-height", 29, 20);
+    line-height: 160%;
     text-align: center;
     @include adaptiveValue("max-width", 564, 273);
     margin: 0 auto;
@@ -812,7 +816,7 @@
   // .beheren-slider__slide-subtitle
   &__slide-subtitle {
     @include adaptiveValue("font-size", 16, 14);
-    @include adaptiveValue("line-height", 18, 15);
+    line-height: 110%;
     margin-bottom: rem(8);
     font-weight: 700;
     color: #000;
@@ -821,11 +825,11 @@
   &__slide-title {
     color: $blue-light;
     font-weight: 700;
-    @include adaptiveValue("font-size", 22, 20);
-    @include adaptiveValue("line-height", 24, 22);
-    padding-bottom: 25px;
+    @include adaptiveValue("font-size", 26, 16);
+    line-height: 110%;
+    padding-bottom: 20px;
     border-bottom: 0.5px solid #a0a0a0;
-    @include adaptiveValue("margin-bottom", 23, 16);
+    margin-bottom: 20px;
     @media (max-width: $mobile) {
       border-bottom: none;
       padding-bottom: 0;
@@ -833,14 +837,13 @@
   }
   // .beheren-slider__slide-text
   &__slide-text {
-    font-size: rem(16);
-    line-height: math.div(22, 16);
-    @include adaptiveValue("margin-bottom", 27, 20);
+    @include adaptiveValue("font-size", 16, 14);
+    line-height: 160%;
+    margin-bottom: 30px;
   }
   // .beheren-slider__slide-button
   &__slide-button {
     width: rem(260);
-    padding: 22px 0px;
     @media (max-width: $mobile) {
       padding: 14px 0;
       width: 100%;

@@ -1,7 +1,7 @@
 //========================================================================================================================================================
 .ons-platform {
   .blue-hero {
-    @include adaptiveValue("padding-bottom", 225, 125);
+    @include adaptiveValue("padding-bottom", 180, 50);
     // .blue-hero__container
     &__container {
       display: flex;
@@ -29,9 +29,9 @@
     }
     // .blue-hero__subtitle
     &__subtitle {
-      @include adaptiveValue("font-size", 16, 12);
-      @include adaptiveValue("line-height", 18, 13);
-      @include adaptiveValue("margin-bottom", 20, 5);
+      @include adaptiveValue("font-size", 16, 14);
+      line-height: 110%;
+      margin-bottom: rem(8);
       @media (max-width: $mobile) {
         text-align: center;
         order: 1;
@@ -39,7 +39,6 @@
     }
     // .blue-hero__title
     &__title {
-      @include adaptiveValue("margin-bottom", 20, 25);
       @media (max-width: $mobile) {
         text-align: center;
         order: 2;
@@ -47,7 +46,7 @@
     }
     // .blue-hero__desc
     &__desc {
-      @include adaptiveValue("margin-bottom", 40, 20);
+      margin-bottom: rem(20);
       @media (max-width: $mobile) {
         text-align: center;
         order: 4;
@@ -67,8 +66,8 @@
           }
         }
         a {
-          @include adaptiveValue("font-size", 21, 14);
-          @include adaptiveValue("line-height", 34, 20);
+          @include adaptiveValue("font-size", 18, 14);
+          line-height: 160%;
           text-decoration: underline;
 
           &:not(:last-child) {
@@ -142,8 +141,7 @@
 .ons-platform {
   // .ons-platform__steps
   &__steps {
-    @include adaptiveValue("padding-top", 150, 100);
-    @include adaptiveValue("padding-bottom", 180, 70);
+    padding-bottom: 160px;
     position: relative;
   }
   // .ons-platform__container
@@ -155,54 +153,21 @@
     position: relative;
     z-index: 2;
     background-color: #fff;
-    @include adaptiveValue("margin-bottom", 300, 100);
+    margin-bottom: 180px;
     @media (max-width: $mobile) {
       padding: 20px 0;
     }
     &-end-line {
       margin-bottom: -10px !important;
     }
-    /* &:nth-child(even){
-      .ons-platform__item-box{
-        flex-direction: row;
-        @media (max-width:$mobile){
-           flex-direction: column-reverse;
-        }
-      }
-
-      .ons-platform__item-text{
-        align-items: flex-end;
-        @media (max-width:$mobile){
-           align-items: center; 
-        }
-      }
-    } */
-    /* &:nth-child(odd){
-      @media (max-width:$mobile){
-        display: none; 
-     }
-      .ons-platform__item-box{
-        flex-direction: row-reverse;
-        @media (max-width:$mobile){
-          flex-direction: column;
-       }
-        
-      }
-      .ons-platform__item-text{
-        text-align: start;
-        @media (max-width:$mobile){
-          align-items: center; 
-       }
-      }
-    } */
   }
   // .ons-platform__title
   &__title {
     text-align: center;
     font-weight: 700;
     @include adaptiveValue("font-size", 36, 30);
-    @include adaptiveValue("line-height", 40, 33);
-    @include adaptiveValue("margin-bottom", 20, 5);
+    line-height: 110%;
+    margin-bottom: 20px;
     img {
       @include adaptiveValue("height", 34, 28);
     }
@@ -210,8 +175,8 @@
   // .ons-platform__subtitle
   &__subtitle {
     text-align: center;
-    @include adaptiveValue("font-size", 24, 14);
-    @include adaptiveValue("line-height", 26, 20);
+    @include adaptiveValue("font-size", 18, 14);
+    line-height: 160%;
     @include adaptiveValue("margin-bottom", 70, 30);
     max-width: rem(800);
     margin-left: auto;
@@ -287,7 +252,7 @@
   // .ons-platform__item-subtitle
   &__item-subtitle {
     @include adaptiveValue("font-size", 16, 14);
-    @include adaptiveValue("line-height", 18, 15);
+    line-height: 110%;
     margin-bottom: rem(8);
     color: $blue-light;
     @media (max-width: $mobile) {
@@ -297,9 +262,9 @@
   // .ons-platform__item-title
   &__item-title {
     font-weight: 700;
-    @include adaptiveValue("font-size", 36, 22);
-    @include adaptiveValue("line-height", 40, 24);
-    @include adaptiveValue("margin-bottom", 34, 8);
+    @include adaptiveValue("font-size", 36, 30);
+    line-height: 110%;
+    margin-bottom: 20px;
     @include adaptiveValue("width", 455, 360, 0, 1240, 768);
     @media (max-width: $mobile) {
       text-align: center;
@@ -309,10 +274,10 @@
   // .ons-platform__item-desc
   &__item-desc {
     @include adaptiveValue("width", 455, 360, 0, 1240, 768);
-    @include adaptiveValue("font-size", 24, 14);
-    @include adaptiveValue("line-height", 38, 20);
+    @include adaptiveValue("font-size", 18, 14);
+    line-height: 160%;
     &:not(:last-child) {
-      @include adaptiveValue("margin-bottom", 62, 23);
+      margin-bottom: 30px;
     }
     @media (max-width: $mobile) {
       text-align: center;
@@ -322,9 +287,9 @@
   &__line {
     position: absolute;
     left: 50%;
-    @include adaptiveValue("top", -170, -100);
+    top: -200px;
     border-left: 1px dashed rgba(0, 0, 0, 0.4);
-    height: 100%;
+    height: calc(100% + 150px);
     z-index: 1;
     &::before {
       content: "";

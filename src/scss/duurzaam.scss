@@ -1,6 +1,5 @@
 .duurzaam {
   .ovner {
-    @include adaptiveValue("margin-bottom", 135, 55);
     @media (max-width: $mobile) {
       background-color: $blue-light;
     }
@@ -22,8 +21,7 @@
 //========================================================================================================================================================
 
 .duurzaam-steps {
-  @include adaptiveValue("padding-top", 169, 223);
-  @include adaptiveValue("padding-bottom", 133, 48);
+  padding-bottom: 160px;
   // .duurzaam-steps__container
   &__container {
   }
@@ -31,14 +29,14 @@
   &__title {
     font-weight: 700;
     @include adaptiveValue("font-size", 46, 30);
-    @include adaptiveValue("line-height", 51, 33);
+    line-height: 110%;
     text-align: center;
-    margin-bottom: rem(8);
+    margin-bottom: rem(20);
   }
   // .duurzaam-steps__desc
   &__desc {
-    font-size: rem(18);
-    line-height: math.div(25, 18);
+    @include adaptiveValue("font-size", 18, 14);
+    line-height: 160%;
     text-align: center;
   }
   // .duurzaam-steps__box
@@ -135,23 +133,23 @@
   &__item-subtitle {
     color: $blue-light;
     @include adaptiveValue("font-size", 16, 14);
-    @include adaptiveValue("line-height", 18, 15);
-    @include adaptiveValue("margin-bottom", 16, 8);
+    line-height: 110%;
+    margin-bottom: rem(8);
   }
   // .duurzaam-steps__item-title
   &__item-title {
     font-weight: 700;
     color: #020202;
     @include adaptiveValue("font-size", 36, 22);
-    @include adaptiveValue("line-height", 40, 24);
-    @include adaptiveValue("margin-bottom", 12, 27);
+    line-height: 110%;
+    margin-bottom: 20px;
   }
   // .duurzaam-steps__item-desc
   &__item-desc {
     color: #020202;
     @include adaptiveValue("font-size", 18, 14);
-    @include adaptiveValue("line-height", 29, 20);
-    @include adaptiveValue("margin-bottom", 22, 24);
+    line-height: 160%;
+    margin-bottom: 30px;
     @media (max-width: $mobile) {
       margin-top: rem(24);
     }

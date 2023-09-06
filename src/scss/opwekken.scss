@@ -9,8 +9,8 @@
 
 .ovner.blue-border {
   position: static;
-  margin-top: rem(133);
-  @include adaptiveValue("padding-bottom", 80, 45);
+  margin-bottom: 160px;
+  margin-top: 0;
   @media (max-width: $mobile) {
     margin-top: rem(186);
   }
@@ -23,7 +23,7 @@
     margin-bottom: rem(8);
     color: $blue-light;
     @include adaptiveValue("font-size", 16, 14);
-    @include adaptiveValue("line-height", 18, 15);
+    line-height: 110%;
   }
   .ovner__text-block {
     @include adaptiveValue("max-width", 612, 390, 0, 1240, 768);
@@ -60,16 +60,17 @@
     }
   }
   .ovner__desc {
-    margin-top: rem(22);
     display: block;
     margin-bottom: 0;
+    @media (max-width: $mobile) {
+      margin-top: rem(20);
+    }
   }
 }
 //========================================================================================================================================================
 
 .house-items {
-  @include adaptiveValue("padding-top", 80, 45);
-  @include adaptiveValue("padding-bottom", 140, 60);
+  padding-bottom: 160px;
   // .house-items__container
   &__container {
     display: flex;
@@ -133,11 +134,10 @@
     justify-content: flex-end;
     font-weight: 700;
     color: #000;
-    font-size: rem(18);
-    line-height: math.div(20, 18);
-    @media (max-width: $mobile) {
-      margin-bottom: rem(12);
-    }
+    @include adaptiveValue("font-size", 18, 14);
+    line-height: 110%;
+    margin-bottom: rem(8);
+
     &::before {
       font-size: rem(8);
       @media (max-width: $mobile) {
@@ -148,7 +148,7 @@
   // .house-items__desc
   &__desc {
     @include adaptiveValue("font-size", 18, 14);
-    @include adaptiveValue("line-height", 31, 20);
+    line-height: 160%;
     color: #020202;
   }
 }
@@ -161,6 +161,7 @@
   background-position: center;
   display: flex;
   align-items: flex-end;
+  margin-bottom: 180px;
   @media (max-width: $mobile) {
     background: url("@img/opwekken/ful-width-banner.png") no-repeat center left
       75%;
@@ -178,11 +179,8 @@
 //========================================================================================================================================================
 
 .opwekken-steps {
-  padding-top: rem(165);
-  @include adaptiveValue("padding-bottom", 145, 65);
-  @media (max-width: $mobile) {
-    padding-top: rem(296);
-  }
+  padding-bottom: 160px;
+
   // .opwekken-steps__container
   &__container {
     display: flex;
@@ -264,8 +262,8 @@
   }
   // .opwekken-steps__item-title
   &__item-title {
-    @include adaptiveValue("font-size", 24, 22);
-    @include adaptiveValue("line-height", 26, 24);
+    @include adaptiveValue("font-size", 26, 22);
+    line-height: 110%;
     font-weight: 700;
     margin-bottom: rem(8);
     color: $blue-light;
@@ -273,19 +271,20 @@
   // .opwekken-steps__item-subtitle
   &__item-subtitle {
     font-weight: 700;
-    @include adaptiveValue("margin-bottom", 21, 8);
+    margin-bottom: 20px;
     @include adaptiveValue("font-size", 16, 14);
-    @include adaptiveValue("line-height", 19, 17);
+    line-height: 110%;
   }
   // .opwekken-steps__item-text
   &__item-text {
     @include adaptiveValue("font-size", 18, 14);
-    @include adaptiveValue("line-height", 25, 27);
-    @include adaptiveValue("margin-bottom", 34, 13);
+    line-height: 160%;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
   // .opwekken-steps__item-button
   &__item-button {
-    padding: 14px 21px;
     @media (max-width: $mobile) {
       width: 100%;
     }
@@ -317,25 +316,24 @@
   }
   // .opwekken-steps__tip-title
   &__tip-title {
-    @include adaptiveValue("font-size", 25, 22);
-    @include adaptiveValue("line-height", 28, 24);
-    @include adaptiveValue("margin-bottom", 25, 20);
+    @include adaptiveValue("font-size", 26, 22);
+    line-height: 110%;
+    margin-bottom: 20px;
     font-weight: 700;
   }
   // .opwekken-steps__tip-list
   &__tip-list {
-    @include adaptiveValue("margin-bottom", 38, 25);
+    margin-bottom: 30px;
     li {
       @include adaptiveValue("font-size", 16, 14);
-      @include adaptiveValue("line-height", 22, 20);
+      line-height: 160%;
       &:not(:last-child) {
-        margin-bottom: rem(25);
+        margin-bottom: rem(20);
       }
     }
   }
   // .opwekken-steps__tip-button
   &__tip-button {
-    padding: 14px 21px;
     @media (max-width: $mobile) {
       width: 100%;
     }
@@ -404,8 +402,7 @@
 //========================================================================================================================================================
 
 .opwekken-slider {
-  @include adaptiveValue("padding-top", 135, 60);
-  @include adaptiveValue("padding-bottom", 110, 75);
+  padding-bottom: 160px;
   // .opwekken-slider__container
   &__container {
     text-align: center;
@@ -414,8 +411,8 @@
   &__subtitle {
     color: $blue-light;
     @include adaptiveValue("font-size", 16, 14);
-    @include adaptiveValue("line-height", 18, 15);
-    @include adaptiveValue("margin-bottom", 12, 5);
+    line-height: 110%;
+    margin-bottom: rem(8);
     @media (max-width: $mobile) {
       text-align: left;
     }
@@ -425,8 +422,8 @@
     color: #000000;
     font-weight: 700;
     @include adaptiveValue("font-size", 32, 22);
-    @include adaptiveValue("line-height", 35, 24);
-    @include adaptiveValue("margin-bottom", 28, 23);
+    line-height: 110%;
+    margin-bottom: 20px;
     @media (max-width: $mobile) {
       text-align: left;
     }
@@ -437,7 +434,9 @@
     margin: -75px;
     overflow: visible !important;
     @media (min-width: $mobile) {
-      cursor: url("@img/cursor.svg") 50 50, move;
+      cursor:
+        url("@img/cursor.svg") 50 50,
+        move;
     }
   }
   // .opwekken-slider__wrapper
@@ -471,16 +470,16 @@
   }
   // .opwekken-slider__slide-title
   &__slide-title {
-    @include adaptiveValue("margin-top", 35, 30);
+    margin-top: 30px;
     font-weight: 700;
     color: $blue-light;
-    @include adaptiveValue("font-size", 22, 19);
-    @include adaptiveValue("line-height", 24, 21);
+    @include adaptiveValue("font-size", 22, 18);
+    line-height: 110%;
   }
   // .opwekken-slider__slide-desc
   &__slide-desc {
-    @include adaptiveValue("font-size", 16, 12);
-    @include adaptiveValue("line-height", 22, 16);
+    @include adaptiveValue("font-size", 16, 14);
+    line-height: 160%;
   }
 }
 .opwekken-hero {

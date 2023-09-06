@@ -18,12 +18,12 @@
   &__title {
     font-weight: 700;
     @include adaptiveValue("font-size", 46, 30);
-    @include adaptiveValue("line-height", 51, 33);
+    line-height: 110%;
   }
   // .energiekennis-hero__desc
   &__desc {
-    @include adaptiveValue("font-size", 20, 18);
-    @include adaptiveValue("line-height", 28, 24);
+    @include adaptiveValue("font-size", 18, 14);
+    line-height: 160%;
     @include adaptiveValue("width", 610, 360, 0, 1240, 768);
     @media (max-width: $mobile) {
       width: 100%;
@@ -34,6 +34,7 @@
 
 .main-blog {
   @include adaptiveValue("margin-top", -290, -250);
+  padding-bottom: 160px;
   // .main-blog__container
   &__container {
     display: flex;
@@ -54,8 +55,8 @@
   }
   // .main-blog__title
   &__title {
-    @include adaptiveValue("font-size", 36, 22);
-    @include adaptiveValue("line-height", 40, 24);
+    @include adaptiveValue("font-size", 36, 30);
+    line-height: 110%;
     font-weight: 700;
   }
   // .main-blog__filter
@@ -68,7 +69,7 @@
   // .main-blog__filter-text
   &__filter-text {
     @include adaptiveValue("font-size", 20, 18);
-    @include adaptiveValue("line-height", 28, 24);
+    line-height: 110%;
     @media (max-width: $mobile) {
       display: none;
     }
@@ -109,7 +110,7 @@
       padding: 10px 0;
       display: block;
       font-size: rem(15);
-      line-height: math.div(15, 14);
+      line-height: 110%;
       cursor: pointer;
     }
     &.show {
@@ -168,16 +169,16 @@
   }
   // .main-blog__8col-date
   &__8col-date {
-    margin-bottom: rem(4);
+    margin-bottom: rem(8);
     @include adaptiveValue("font-size", 16, 14);
-    @include adaptiveValue("line-height", 22, 20);
+    line-height: 110%;
   }
   // .main-blog__8col-title
   &__8col-title {
-    margin-bottom: rem(10);
+    margin-bottom: rem(20);
     font-weight: 700;
     @include adaptiveValue("font-size", 46, 30);
-    @include adaptiveValue("line-height", 51, 33);
+    line-height: 110%;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -186,7 +187,7 @@
   // .main-blog__8col-desc
   &__8col-desc {
     @include adaptiveValue("font-size", 16, 14);
-    @include adaptiveValue("line-height", 22, 20);
+    line-height: 160%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -233,7 +234,7 @@
   &__4col-date {
     margin-bottom: rem(8);
     @include adaptiveValue("font-size", 16, 14);
-    @include adaptiveValue("line-height", 22, 20);
+    line-height: 110%;
     color: $blue-light;
     @media (max-width: $tablet) {
       margin-bottom: 0;
@@ -247,10 +248,10 @@
   }
   // .main-blog__4col-title
   &__4col-title {
-    @include adaptiveValue("font-size", 24, 14);
-    @include adaptiveValue("line-height", 26, 20, 0, 1240, 768);
+    @include adaptiveValue("font-size", 26, 16);
+    line-height: 110%;
     font-weight: 700;
-    margin-bottom: rem(8);
+    margin-bottom: rem(20);
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -268,7 +269,7 @@
   // .main-blog__4col-desc
   &__4col-desc {
     @include adaptiveValue("font-size", 16, 14);
-    @include adaptiveValue("line-height", 22, 20, 0, 1240, 768);
+    line-height: 160%;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -312,18 +313,16 @@
   }
   // .main-blog__4col-small-date
   &__4col-small-date {
-    @include adaptiveValue("font-size", 14, 13);
-    @include adaptiveValue("line-height", 20, 16);
+    @include adaptiveValue("font-size", 16, 14);
+    line-height: 110%;
     color: $blue-light;
-    @media (max-width: $mobile) {
-      margin-bottom: rem(8);
-    }
+    margin-bottom: rem(8);
   }
   // .main-blog__4col-small-title
   &__4col-small-title {
     font-weight: 700;
     @include adaptiveValue("font-size", 18, 16);
-    @include adaptiveValue("line-height", 20, 18);
+    line-height: 110%;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
@@ -341,14 +340,9 @@
 //========================================================================================================================================================
 
 .energiekennis-slider {
-  @include adaptiveValue("padding-top", 140, 80);
-  @include adaptiveValue("padding-bottom", 70, 40);
-  @include adaptiveValue("margin-top", -20, 0, 0, 1240, 768);
-  /* background-color: #f4f4f4; */
-  background-image: url("@img/energiekennis/bg.svg");
-  background-size: cover;
-  background-position: 0 0;
-  background-repeat: repeat-x;
+  padding-bottom: 160px;
+  background: url("@img/energiekennis/bg.svg") 0 0 / cover repeat-x;
+
   // .energiekennis-slider__container
   &__container {
   }
@@ -356,13 +350,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @include adaptiveValue("margin-bottom", 24, 8);
   }
   // .energiekennis-slider__title
   &__title {
     font-weight: 700;
-    @include adaptiveValue("font-size", 36, 22);
-    @include adaptiveValue("line-height", 40, 24);
+    @include adaptiveValue("font-size", 36, 30);
+    line-height: 110%;
+    margin-bottom: 20px;
   }
   // .energiekennis-slider__block
   &__block {
@@ -411,21 +405,21 @@
   &__slide-subtitle {
     color: $blue-light;
     @include adaptiveValue("font-size", 16, 14);
-    @include adaptiveValue("line-height", 18, 16);
+    line-height: 110%;
     margin-bottom: rem(8);
   }
   // .energiekennis-slider__slide-title
   &__slide-title {
-    margin-bottom: rem(8);
+    margin-bottom: rem(20);
     font-weight: 700;
-    @include adaptiveValue("font-size", 36, 22);
-    @include adaptiveValue("line-height", 40, 24);
+    @include adaptiveValue("font-size", 36, 30);
+    line-height: 110%;
   }
   // .energiekennis-slider__slide-desc
   &__slide-desc {
-    @include adaptiveValue("font-size", 16, 14);
-    @include adaptiveValue("line-height", 22, 20);
-    @include adaptiveValue("margin-bottom", 30, 15);
+    @include adaptiveValue("font-size", 18, 14);
+    line-height: 160%;
+    margin-bottom: 30px;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
@@ -491,7 +485,7 @@
   // .energiekennis-slider__bottom-title
   &__bottom-title {
     @include adaptiveValue("font-size", 20, 18);
-    @include adaptiveValue("line-height", 28, 24);
+    line-height: 110%;
     font-weight: 700;
     @media (max-width: $tablet) {
       width: 100%;
@@ -529,8 +523,7 @@
 
 .energiekennis-term {
   background-color: #f4f4f4;
-  @include adaptiveValue("padding-top", 70, 40);
-  @include adaptiveValue("padding-bottom", 150, 80);
+  padding-bottom: 160px;
   // .energiekennis-term__container
   &__container {
     @media (max-width: $mobile) {
@@ -564,19 +557,19 @@
   // .energiekennis-term__subtitle
   &__subtitle {
     @include adaptiveValue("font-size", 16, 14);
-    @include adaptiveValue("line-height", 18, 16);
+    line-height: 110%;
     margin-bottom: rem(8);
   }
   // .energiekennis-term__title
   &__title {
-    @include adaptiveValue("font-size", 36, 22);
-    @include adaptiveValue("line-height", 40, 24);
+    @include adaptiveValue("font-size", 36, 30);
+    line-height: 110%;
     font-weight: 700;
   }
   // .energiekennis-term__desc
   &__desc {
-    @include adaptiveValue("font-size", 20, 18);
-    @include adaptiveValue("line-height", 28, 24);
+    @include adaptiveValue("font-size", 18, 14);
+    line-height: 160%;
   }
   // .energiekennis-term__terms-wrap
   &__terms-wrap {
@@ -646,7 +639,7 @@
       a {
         font-weight: 700;
         @include adaptiveValue("font-size", 20, 18);
-        @include adaptiveValue("line-height", 28, 24);
+        line-height: 110%;
         color: #fff;
         display: flex;
         flex-direction: row-reverse;
@@ -681,15 +674,12 @@
 //========================================================================================================================================================
 
 .blog-articles {
-  @include adaptiveValue("padding-bottom", 70, 40);
+  padding-bottom: 160px;
   &__gray {
     background-color: #f4f4f4;
     @include adaptiveValue("padding-bottom", 325, 170, 0, 1240, 768);
-    padding-bottom: 325px;
   }
   &__white {
-    /* margin-top: -175px;
-        @include adaptiveValue("margin-top", -175px, -130, 0, 1240, 768); */
   }
   // .blog-articles__container
   &__container {
@@ -707,10 +697,10 @@
   }
   // .blog-articles__box-title
   &__box-title {
-    @include adaptiveValue("font-size", 36, 22);
-    @include adaptiveValue("line-height", 40, 24);
+    @include adaptiveValue("font-size", 36, 30);
+    line-height: 110%;
     font-weight: 700;
-    margin-bottom: rem(18);
+    margin-bottom: rem(20);
   }
   // .blog-articles__box-items
   &__box-items {
@@ -718,7 +708,7 @@
     justify-content: space-between;
     gap: 20px;
     flex-wrap: wrap;
-    @include adaptiveValue("margin-bottom", 40, 20);
+    margin-bottom: 30px;
     @media (max-width: $mobile) {
       justify-content: flex-start;
     }
@@ -730,9 +720,6 @@
       width: calc(50% - 10px);
     }
 
-    /* @media (max-width:590px){
-            width: calc(50% - 10px);
-        } */
     @media (any-hover: hover) {
       &:hover {
         .blog-articles__box-item-title {
@@ -752,13 +739,13 @@
   // .blog-articles__box-item-date
   &__box-item-date {
     @include adaptiveValue("font-size", 16, 14);
-    @include adaptiveValue("line-height", 22, 20);
+    line-height: 110%;
     margin-bottom: rem(8);
   }
   // .blog-articles__box-item-title
   &__box-item-title {
     @include adaptiveValue("font-size", 24, 14);
-    @include adaptiveValue("line-height", 26, 20);
+    line-height: 110%;
     font-weight: 700;
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -766,9 +753,9 @@
     overflow: hidden;
   }
   &__box-item-desc {
-    @include adaptiveValue("margin-top", 18, 8);
+    margin-top: 20px;
     @include adaptiveValue("font-size", 16, 14);
-    @include adaptiveValue("line-height", 22, 20);
+    line-height: 130%;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
@@ -787,8 +774,7 @@
 //========================================================================================================================================================
 
 .energiekennis-subscribe {
-  @include adaptiveValue("padding-top", 70, 40);
-  @include adaptiveValue("padding-bottom", 130, 70);
+  padding-bottom: 160px;
   // .energiekennis-subscribe__container
   &__container {
     display: flex;

@@ -1,115 +1,78 @@
 //--------------------------------------------------------------------------------------------------------------
 
 .campagne {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    // .campagne__container
-    &__container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  // .campagne__container
+  &__container {
+  }
+  // .campagne__text
+  &__text {
+  }
+  // .campagne__title
+  &__title {
+    max-width: rem(824);
+    margin: 0 auto 20px;
+    font-weight: 700;
+    @include adaptiveValue("font-size", 46, 30);
+    line-height: 110%;
+    text-align: center;
+  }
+  // .campagne__slider
+  &__slider {
+  }
+  // .campagne__wrapper
+  &__wrapper {
+  }
+  // .campagne__slide
+  &__slide {
+    position: relative;
+  }
+  &__img {
+    width: 100%;
+    height: rem(473);
+    object-fit: cover;
+    @media (max-width: $mobile) {
+      height: rem(300);
     }
-    // .campagne__text
-    &__text {
-       
+  }
+  // .campagne__svg
+  &__svg {
+    position: absolute;
+    @include adaptiveValue("right", 85, 20, 0, 1240, 768);
+    top: 50%;
+    transform: translate(0, -50%);
+    @media (max-width: $mobile) {
+      display: none;
     }
-    // .campagne__title
-    &__title {
-        max-width: rem(824);
-        margin: 0 auto 20px;
-        font-weight: 700;
-        @include adaptiveValue("font-size", 46, 30);
-        @include adaptiveValue("line-height", 51, 33);
-        text-align: center;
-    }
-    // .campagne__slider
-    &__slider {
-    }
-    // .campagne__wrapper
-    &__wrapper {
-    }
-    // .campagne__slide
-    &__slide {
-        position: relative;
-        
-    }
-    &__img{
-        width: 100%;
-        height: rem(473);
-        object-fit: cover;
-        @media (max-width:$mobile){
-             height: rem(300); 
-        }
-    }
-    // .campagne__svg
-    &__svg {
-        position: absolute;
-        @include adaptiveValue("right", 85, 20, 0, 1240, 768);
-        top: 50%;
-        transform: translate(0, -50%);
-        @media (max-width:$mobile){
-             display: none; 
-        }
-        svg{
-            /* &:active{
+    svg {
+      /* &:active{
                 pointer-events: none;
             } */
-            path{
-                cursor: pointer;
-                &:focus{
-                    outline: none;
-                }
-                @media (any-hover: hover){
-                    &:hover{
-                        fill-opacity: 1;
-                        transition: all 0.3s ease 0s;
-                    }
-                }
-            }
+      path {
+        cursor: pointer;
+        &:focus {
+          outline: none;
         }
+        @media (any-hover: hover) {
+          &:hover {
+            fill-opacity: 1;
+            transition: all 0.3s ease 0s;
+          }
+        }
+      }
     }
-    // .campagne__svg-nl-dr
-    &__svg-nl-dr {
-    }
-    // .campagne__svg-nl-fl
-    &__svg-nl-fl {
-    }
-    // .campagne__svg-nl-fr
-    &__svg-nl-fr {
-    }
-    // .campagne__svg-nl-ge
-    &__svg-nl-ge {
-    }
-    // .campagne__svg-nl-gr
-    &__svg-nl-gr {
-    }
-    // .campagne__svg-nl-li
-    &__svg-nl-li {
-    }
-    // .campagne__svg-nl-nb
-    &__svg-nl-nb {
-    }
-    // .campagne__svg-nl-nh
-    &__svg-nl-nh {
-    }
-    // .campagne__svg-nl-ov
-    &__svg-nl-ov {
-    }
-    // .campagne__svg-nl-ut
-    &__svg-nl-ut {
-    }
-    // .campagne__svg-nl-ze
-    &__svg-nl-ze {
-    }
-    // .campagne__svg-nl-zh
-    &__svg-nl-zh {
-    }
-    // .campagne__button
-    &__button {
-        position: absolute;
-        bottom: 10%;
-        left: 50%;
-        transform: translate(-50%, 0);
-        padding: 14px 21px;
-        font-weight: 700;
-        @include adaptiveValue("font-size", 15, 12);
-        @include adaptiveValue("line-height", 17, 13);
-    }
+  }
+
+  // .campagne__button
+  &__button {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 14px 21px;
+    font-weight: 700;
+    @include adaptiveValue("font-size", 15, 12);
+    @include adaptiveValue("line-height", 17, 13);
+  }
 }
