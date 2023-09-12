@@ -4,6 +4,22 @@
     position: fixed;
     top: 0;
     width: 100%;
+    &.active {
+      .header__bottom {
+        background-color: #fff;
+      }
+      &._header-scroll {
+        .header__bottom {
+          background-color: transparent;
+        }
+      }
+      .header__logo-letter {
+        fill: #000 !important;
+      }
+      .header__top-wrap {
+        background-color: rgba(2, 2, 2, 0.9) !important;
+      }
+    }
   }
   .header__top-second {
     ul {
@@ -14,10 +30,6 @@
         }
       }
     }
-  }
-
-  .header__top-wrap {
-    background-color: rgba(2, 2, 2, 0.25) !important;
   }
 
   .header__top-first-title,
@@ -41,6 +53,12 @@
   }
   .header__logo-letter {
     fill: #fff;
+  }
+  .header__top-wrap {
+    background-color: rgba(2, 2, 2, 0.25) !important;
+  }
+  .header__bottom.active {
+    background-color: #fff;
   }
 
   .ovner {

@@ -6731,12 +6731,24 @@ h6 {
   width: 100%;
 }
 
-.integrale .header__top-second ul a {
-  color: #fff;
+.integrale .white-theme.active .header__bottom {
+  background-color: #fff;
 }
 
-.integrale .header__top-wrap {
-  background-color: rgba(2, 2, 2, 0.25) !important;
+.integrale .white-theme.active._header-scroll .header__bottom {
+  background-color: transparent;
+}
+
+.integrale .white-theme.active .header__logo-letter {
+  fill: #000 !important;
+}
+
+.integrale .white-theme.active .header__top-wrap {
+  background-color: rgba(2, 2, 2, 0.9) !important;
+}
+
+.integrale .header__top-second ul a {
+  color: #fff;
 }
 
 .integrale .header__top-first-title,
@@ -6754,6 +6766,14 @@ h6 {
 
 .integrale .header__logo-letter {
   fill: #fff;
+}
+
+.integrale .header__top-wrap {
+  background-color: rgba(2, 2, 2, 0.25) !important;
+}
+
+.integrale .header__bottom.active {
+  background-color: #fff;
 }
 
 .integrale .ovner .ovner__text-block {

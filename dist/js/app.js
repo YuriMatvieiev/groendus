@@ -4072,8 +4072,10 @@
         }
         const functions_button = document.querySelector(".header__top-first-button");
         const menu = document.querySelector(".header__top-menu");
+        const headerActive = document.querySelector(".header");
         functions_button.addEventListener("click", (() => {
             menu.classList.toggle("active");
+            headerActive.classList.toggle("active");
             functions_menuClose();
         }));
         function functions_FLS(message) {
